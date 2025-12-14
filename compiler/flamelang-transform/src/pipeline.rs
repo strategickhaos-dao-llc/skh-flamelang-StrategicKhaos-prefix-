@@ -89,6 +89,13 @@ impl WaveTransformStage {
         // This is a simplified model - actual implementation would use
         // physics-validated dimensional analysis
         
+        // Guard against empty input
+        if self.unicode_input.is_empty() {
+            return Err(TransformError::WaveError(
+                "Cannot transform empty input to wave representation".to_string()
+            ));
+        }
+        
         let char_sum: u32 = self.unicode_input.chars().map(|c| c as u32).sum();
         let char_count = self.unicode_input.chars().count() as f64;
         
