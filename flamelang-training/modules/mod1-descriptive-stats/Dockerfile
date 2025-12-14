@@ -28,11 +28,11 @@ RUN pip install --no-cache-dir \
 # Copy corpus configuration
 COPY corpus.yml /app/corpus.yml
 
+# Training script
+COPY train.py /app/train.py
+
 # Create vectors output directory
 RUN mkdir -p /app/vectors
-
-# Training script
-COPY train.py /app/train.py 2>/dev/null || echo "print('Training module: Descriptive Statistics')" > /app/train.py
 
 # Environment variables
 ENV MODULE_NAME=mod1-descriptive-stats

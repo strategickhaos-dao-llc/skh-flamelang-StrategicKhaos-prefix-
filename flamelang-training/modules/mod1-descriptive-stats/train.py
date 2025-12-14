@@ -13,7 +13,8 @@ from sentence_transformers import SentenceTransformer
 
 def load_corpus():
     """Load the training corpus from YAML"""
-    with open('/app/corpus.yml', 'r') as f:
+    corpus_path = os.environ.get('CORPUS_PATH', '/app/corpus.yml')
+    with open(corpus_path, 'r') as f:
         return yaml.safe_load(f)
 
 def generate_embeddings(corpus, model):
