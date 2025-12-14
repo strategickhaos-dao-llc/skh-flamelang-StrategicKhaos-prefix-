@@ -1,0 +1,384 @@
+# FlameLang Training Corpus: Module 2 - Bar Charts
+# 5-layer transformation: English→Hebrew→Unicode→Wave→DNA→LLVM
+# Converting Python/SeaBorn visualization concepts to glyph-annotated FlameLang
+
+module:
+  id: mod2-bar-charts
+  version: "1.0.0"
+  title: "Bar Charts and Categorical Data Visualization"
+  description: "Visual representation of categorical data using bar charts"
+  flamelang_version: "2.0.0"
+  dependencies:
+    - mod1-descriptive-stats
+
+# Transformation layers
+layers:
+  english:
+    # Layer 1: Natural language concepts
+    concepts:
+      - name: "bar_chart"
+        definition: "Visual representation using rectangular bars for categorical data"
+        purpose: "Compare quantities across categories"
+        properties: ["categorical_x", "quantitative_y", "rectangular_encoding"]
+      
+      - name: "categorical_variable"
+        definition: "Variable that can take discrete, distinct values"
+        examples: ["colors", "species", "countries", "product_types"]
+      
+      - name: "frequency"
+        definition: "Count of occurrences for each category"
+        relationship: "height of bar represents frequency"
+      
+      - name: "bar_height"
+        definition: "Visual encoding of quantitative value"
+        encoding: "position on y-axis"
+      
+      - name: "bar_width"
+        definition: "Fixed width for visual clarity"
+        properties: ["uniform", "spacing_matters"]
+      
+      - name: "axes"
+        components:
+          x_axis: "categorical values"
+          y_axis: "quantitative measures (frequency, count, value)"
+      
+      - name: "comparison"
+        definition: "Primary analytical task enabled by bar charts"
+        operations: ["identify_maximum", "identify_minimum", "rank_categories"]
+  
+  hebrew:
+    # Layer 2: Mathematical/symbolic representation with glyphs
+    glyphs:
+      - symbol: "📊"
+        maps_to: "bar_chart"
+        unicode: "U+1F4CA"
+        semantic: "chart_glyph"
+      
+      - symbol: "█"
+        maps_to: "bar_element"
+        unicode: "U+2588"
+        semantic: "filled_bar"
+      
+      - symbol: "▓"
+        maps_to: "bar_pattern"
+        unicode: "U+2593"
+        semantic: "shaded_bar"
+      
+      - symbol: "│"
+        maps_to: "y_axis"
+        unicode: "U+2502"
+        semantic: "vertical_axis"
+      
+      - symbol: "─"
+        maps_to: "x_axis"
+        unicode: "U+2500"
+        semantic: "horizontal_axis"
+      
+      - symbol: "├"
+        maps_to: "axis_tick"
+        unicode: "U+251C"
+        semantic: "tick_mark"
+      
+      - symbol: "ℎ"
+        maps_to: "height"
+        unicode: "U+210E"
+        semantic: "height_variable"
+      
+      - symbol: "𝑐"
+        maps_to: "category"
+        unicode: "U+1D450"
+        semantic: "category_variable"
+  
+  unicode:
+    # Layer 3: Operator and transformation mappings
+    operators:
+      - glyph: "→"
+        operation: "maps_to"
+        unicode: "U+2192"
+        usage: "category → bar_height"
+      
+      - glyph: "⊕"
+        operation: "concatenate_categories"
+        unicode: "U+2295"
+        usage: "combine multiple categorical dimensions"
+      
+      - glyph: "∀"
+        operation: "for_all_categories"
+        unicode: "U+2200"
+        usage: "iterate over all categories"
+      
+      - glyph: "≡"
+        operation: "visual_equivalence"
+        unicode: "U+2261"
+        usage: "bar_height ≡ data_value"
+      
+      - glyph: "⊢"
+        operation: "render"
+        unicode: "U+22A2"
+        usage: "data ⊢ visualization"
+    
+    transformations:
+      - name: "data_to_visual"
+        formula: "∀𝑐 ∈ Categories: 𝑐 → █(ℎ(𝑐))"
+        meaning: "For each category, create a bar with height proportional to value"
+      
+      - name: "scale_mapping"
+        formula: "ℎ_visual = (value - min) / (max - min) × display_height"
+        glyph_notation: "ℎ_v ≡ (v - v_min) / Δv × 𝐻"
+  
+  wave:
+    # Layer 4: Dimensional analysis and physics validation
+    dimensions:
+      - concept: "bar_height"
+        dimension: "[length]"
+        physical_meaning: "spatial encoding of quantity"
+        constraints: ["positive", "proportional_to_value"]
+      
+      - concept: "bar_width"
+        dimension: "[length]"
+        physical_meaning: "fixed spacing unit"
+        constraints: ["constant", "uniform"]
+      
+      - concept: "frequency_count"
+        dimension: "[dimensionless]"
+        physical_meaning: "counting measure"
+        preserves: "discrete_nature"
+      
+      - concept: "visual_scale"
+        dimension: "[pixels/value_unit]"
+        physical_meaning: "resolution of visual encoding"
+        transforms: "[value] → [length]"
+      
+      - concept: "aspect_ratio"
+        dimension: "[dimensionless]"
+        physical_meaning: "width/height relationship"
+        affects: "visual_perception"
+    
+    conservation_laws:
+      - principle: "data_preservation"
+        statement: "Total area under bars preserves sum of values"
+        formula: "∑(bar_width × bar_height) ∝ ∑(values)"
+      
+      - principle: "perceptual_accuracy"
+        statement: "Visual ratio matches data ratio"
+        formula: "h₁/h₂ = v₁/v₂"
+  
+  dna:
+    # Layer 5: Computational primitives and implementation
+    primitives:
+      - function: "create_bar_chart"
+        signature: "Dict[Category, Float] -> BarChart"
+        implementation: |
+          fn create_bar_chart(data: Dict[Category, Float]) -> BarChart {
+            let categories = data.keys()
+            let values = data.values()
+            let scale = calculate_scale(values)
+            
+            ∀ category ∈ categories:
+              render_bar(category, scale(data[category]))
+          }
+      
+      - function: "calculate_scale"
+        signature: "List[Float] -> (Float -> Float)"
+        dependencies: ["min", "max"]
+        implementation: |
+          fn calculate_scale(values: List[Float]) -> (Float -> Float) {
+            let v_min = min(values)
+            let v_max = max(values)
+            let display_h = config.display_height
+            
+            return λv: (v - v_min) / (v_max - v_min) × display_h
+          }
+      
+      - function: "render_bar"
+        signature: "(Category, Float) -> VisualElement"
+        implementation: |
+          fn render_bar(category: Category, height: Float) -> VisualElement {
+            Bar {
+              x_position: category.index × bar_spacing,
+              y_position: 0,
+              width: bar_width,
+              height: height,
+              fill_color: category.color,
+              label: category.name
+            }
+          }
+      
+      - function: "aggregate_categories"
+        signature: "List[DataPoint] -> Dict[Category, Float]"
+        implementation: |
+          fn aggregate_categories(data: List[DataPoint]) -> Dict[Category, Float] {
+            data
+              .group_by(λp: p.category)
+              .map(λgroup: (group.key, group.count() or group.sum(λp: p.value)))
+          }
+
+# Python/SeaBorn to FlameLang glyph-annotated examples
+flamelang_examples:
+  - title: "Basic Bar Chart"
+    python_code: |
+      import seaborn as sns
+      import matplotlib.pyplot as plt
+      
+      # Data
+      categories = ['A', 'B', 'C', 'D']
+      values = [23, 45, 12, 67]
+      
+      # Create bar chart
+      sns.barplot(x=categories, y=values)
+      plt.show()
+    
+    flamelang_code: |
+      ⟨import⟩ flamelang.viz as 📊
+      
+      ⟦data⟧ ≔ {
+        'A' → 23,
+        'B' → 45,
+        'C' → 12,
+        'D' → 67
+      }
+      
+      ⟦chart⟧ ≔ 📊.create_bar_chart(⟦data⟧)
+      ⊢ render(⟦chart⟧)
+    
+    layer_mapping:
+      english: "Create bars for four categories with their respective values"
+      hebrew: "∀𝑐 ∈ {A,B,C,D}: 𝑐 → █(ℎ(𝑐))"
+      unicode: "categories → visualization"
+      wave: "[dimensionless counts] → [pixel heights]"
+      dna: "aggregate_categories → scale → render_bars"
+  
+  - title: "Frequency Bar Chart"
+    python_code: |
+      import pandas as pd
+      import seaborn as sns
+      
+      # Data
+      df = pd.DataFrame({'species': ['cat', 'dog', 'cat', 'bird', 'dog', 'cat']})
+      
+      # Create frequency bar chart
+      sns.countplot(data=df, x='species')
+      plt.show()
+    
+    flamelang_code: |
+      ⟨import⟩ flamelang.data as 📋
+      ⟨import⟩ flamelang.viz as 📊
+      
+      ⟦df⟧ ≔ 📋.DataFrame(['cat', 'dog', 'cat', 'bird', 'dog', 'cat'])
+      
+      ⟦frequencies⟧ ≔ ⟦df⟧
+        ⊳ group_by(λx: x)
+        ⊳ map(λg: (g.key, g.count()))
+      
+      ⟦chart⟧ ≔ 📊.create_bar_chart(⟦frequencies⟧)
+      ⊢ render(⟦chart⟧)
+    
+    layer_mapping:
+      english: "Count occurrences of each species and display as bars"
+      hebrew: "∀species: frequency(species) → █(count)"
+      unicode: "group_by → count → visualize"
+      wave: "[counts: dimensionless] → [heights: length]"
+      dna: "aggregate_categories(count) → create_bar_chart → render"
+  
+  - title: "Grouped Bar Chart"
+    python_code: |
+      import seaborn as sns
+      import pandas as pd
+      
+      df = pd.DataFrame({
+          'category': ['A', 'A', 'B', 'B'],
+          'group': ['X', 'Y', 'X', 'Y'],
+          'value': [10, 15, 20, 25]
+      })
+      
+      sns.barplot(data=df, x='category', y='value', hue='group')
+      plt.show()
+    
+    flamelang_code: |
+      ⟨import⟩ flamelang.viz as 📊
+      
+      ⟦data⟧ ≔ [
+        {category: 'A', group: 'X', value: 10},
+        {category: 'A', group: 'Y', value: 15},
+        {category: 'B', group: 'X', value: 20},
+        {category: 'B', group: 'Y', value: 25}
+      ]
+      
+      ⟦chart⟧ ≔ 📊.create_grouped_bars(
+        data: ⟦data⟧,
+        x: 'category',
+        y: 'value',
+        hue: 'group'
+      )
+      ⊢ render(⟦chart⟧)
+    
+    layer_mapping:
+      english: "Display values grouped by category and subdivided by group"
+      hebrew: "∀(𝑐,𝑔): (𝑐,𝑔) → █(value(𝑐,𝑔))"
+      unicode: "cartesian(categories, groups) → bars"
+      wave: "[value units] → [length], preserving grouping structure"
+      dna: "nest(group_by(category), group_by(group)) → render_grouped"
+
+# Visualization principles in FlameLang
+visualization_theory:
+  encoding_principles:
+    - name: "position_accuracy"
+      description: "Bar height accurately encodes quantitative value"
+      validation: "Visual ratio equals data ratio"
+    
+    - name: "category_separation"
+      description: "Distinct bars for distinct categories"
+      validation: "No overlap, uniform spacing"
+    
+    - name: "zero_baseline"
+      description: "Bars start at zero for accurate comparison"
+      validation: "y_min = 0 for ratio judgments"
+    
+    - name: "ordering"
+      description: "Categories can be ordered for insight"
+      options: ["alphabetical", "by_value", "semantic"]
+  
+  perceptual_constraints:
+    - "Human eye best at comparing bar lengths"
+    - "Width should be uniform for fair comparison"
+    - "Aspect ratio affects perception (avoid distortion)"
+    - "Color used for grouping, not encoding value"
+
+# Vector embedding schema
+embedding:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  dimensions: 384
+  normalization: "l2"
+  concepts_to_embed:
+    - "bar_chart_visualization"
+    - "categorical_data"
+    - "visual_encoding"
+    - "graphical_comparison"
+    - "frequency_distribution"
+    - "grouped_categories"
+    - "seaborn_matplotlib"
+    - "flamelang_glyphs"
+  
+  code_embeddings:
+    embed_python: true
+    embed_flamelang: true
+    align_semantics: true
+    
+  vector_storage:
+    format: "numpy"
+    path: "/app/vectors/mod2-bar-charts.npy"
+    metadata_path: "/app/vectors/mod2-bar-charts-meta.json"
+
+# Training objectives
+training:
+  objectives:
+    - "Map Python/SeaBorn bar chart code to FlameLang glyphs"
+    - "Understand 5-layer transformation for visualization"
+    - "Generate idiomatic FlameLang from natural language descriptions"
+    - "Preserve semantic meaning across layer transformations"
+  
+  metrics:
+    - "Code generation accuracy"
+    - "Glyph usage correctness"
+    - "Dimensional analysis validation"
+    - "Visual encoding principles adherence"

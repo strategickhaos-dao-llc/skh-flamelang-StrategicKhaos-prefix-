@@ -1,0 +1,112 @@
+# FlameLang Training Corpus: Module 1 - Descriptive Statistics
+# 5-layer transformation: English→Hebrew→Unicode→Wave→DNA→LLVM
+
+module:
+  id: mod1-descriptive-stats
+  version: "1.0.0"
+  title: "Descriptive Statistics Fundamentals"
+  description: "Core statistical concepts for data analysis"
+  flamelang_version: "2.0.0"
+
+# Transformation layers
+layers:
+  english:
+    concepts:
+      - name: "mean"
+        definition: "The arithmetic average of a dataset"
+        formula: "sum(values) / count(values)"
+      - name: "median"
+        definition: "The middle value when data is sorted"
+        properties: ["robust", "central_tendency"]
+      - name: "mode"
+        definition: "The most frequently occurring value"
+        properties: ["categorical_applicable"]
+      - name: "variance"
+        definition: "Average squared deviation from mean"
+        formula: "sum((x - mean)^2) / n"
+      - name: "standard_deviation"
+        definition: "Square root of variance"
+        formula: "sqrt(variance)"
+  
+  hebrew:
+    # Hebrew layer: Mathematical/symbolic representation
+    glyphs:
+      - symbol: "μ"
+        maps_to: "mean"
+        unicode: "U+03BC"
+      - symbol: "σ"
+        maps_to: "standard_deviation"
+        unicode: "U+03C3"
+      - symbol: "σ²"
+        maps_to: "variance"
+        unicode: "U+03C3 U+00B2"
+  
+  unicode:
+    # Unicode layer: Operator and symbol mappings
+    operators:
+      - glyph: "∑"
+        operation: "summation"
+        unicode: "U+2211"
+      - glyph: "√"
+        operation: "square_root"
+        unicode: "U+221A"
+      - glyph: "∈"
+        operation: "element_of"
+        unicode: "U+2208"
+  
+  wave:
+    # Wave layer: Dimensional analysis
+    dimensions:
+      - concept: "mean"
+        dimension: "[value_unit]"
+        preserves: "unit_of_measurement"
+      - concept: "variance"
+        dimension: "[value_unit²]"
+        preserves: "squared_units"
+      - concept: "standard_deviation"
+        dimension: "[value_unit]"
+        preserves: "original_units"
+  
+  dna:
+    # DNA layer: Computational primitives
+    primitives:
+      - function: "calculate_mean"
+        signature: "List[Float] -> Float"
+        implementation: "fold_left(add, 0) / length"
+      - function: "calculate_variance"
+        signature: "List[Float] -> Float"
+        dependencies: ["calculate_mean"]
+      - function: "calculate_std_dev"
+        signature: "List[Float] -> Float"
+        dependencies: ["calculate_variance"]
+
+# Training examples
+examples:
+  - input: "Calculate the mean of [1, 2, 3, 4, 5]"
+    layers:
+      english: "sum all values and divide by count"
+      hebrew: "μ = Σx / n"
+      unicode: "∑(x) / n where x ∈ {1,2,3,4,5}"
+      wave: "[dimensionless] → [dimensionless]"
+      dna: "fold([1,2,3,4,5], (+), 0) / 5"
+    output: "3.0"
+  
+  - input: "Find standard deviation of [2, 4, 6, 8]"
+    layers:
+      english: "measure spread from the mean"
+      hebrew: "σ = √(Σ(x-μ)² / n)"
+      unicode: "√(∑(x-μ)² / n)"
+      wave: "[value] → [value]"
+      dna: "sqrt(variance([2,4,6,8]))"
+    output: "2.236"
+
+# Vector embedding schema
+embedding:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  dimensions: 384
+  normalization: "l2"
+  concepts_to_embed:
+    - "statistical_measures"
+    - "central_tendency"
+    - "dispersion"
+    - "data_summarization"

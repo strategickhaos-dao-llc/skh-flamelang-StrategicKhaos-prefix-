@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Module 1: Descriptive Statistics
+  mod1-descriptive-stats:
+    build:
+      context: ./modules/mod1-descriptive-stats
+      dockerfile: Dockerfile
+    container_name: flamelang-mod1-descriptive-stats
+    volumes:
+      - ./modules/mod1-descriptive-stats/vectors:/app/vectors
+      - ./modules/mod1-descriptive-stats/corpus.yml:/app/corpus.yml:ro
+    environment:
+      - MODULE_NAME=mod1-descriptive-stats
+      - FLAMELANG_LAYER=5-layer-transform
+      - VECTOR_OUTPUT=/app/vectors
+    networks:
+      - flamelang-training
+
+  # Module 2: Bar Charts
+  mod2-bar-charts:
+    build:
+      context: ./modules/mod2-bar-charts
+      dockerfile: Dockerfile
+    container_name: flamelang-mod2-bar-charts
+    volumes:
+      - ./modules/mod2-bar-charts/vectors:/app/vectors
+      - ./modules/mod2-bar-charts/corpus.yml:/app/corpus.yml:ro
+    environment:
+      - MODULE_NAME=mod2-bar-charts
+      - FLAMELANG_LAYER=5-layer-transform
+      - VECTOR_OUTPUT=/app/vectors
+    networks:
+      - flamelang-training
+    depends_on:
+      - mod1-descriptive-stats
+
+networks:
+  flamelang-training:
+    driver: bridge
+    name: flamelang-training-network
+
+volumes:
+  mod1-vectors:
+  mod2-vectors:
