@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Module 1: Descriptive Statistics
   mod1-descriptive-stats:
