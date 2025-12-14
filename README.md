@@ -251,6 +251,7 @@ You may choose either license at your option.
 
 - **Repository**: https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-
 - **StrategicKhaos DAO**: https://strategickhaos.com
+- **TODO & Roadmap**: See [TODO.md](TODO.md) for known limitations and planned features
 
 ## 🙏 Acknowledgments
 

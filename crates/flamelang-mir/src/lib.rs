@@ -322,7 +322,11 @@ impl MirLowering {
             hir::BinaryOp::Le => BinOp::Le,
             hir::BinaryOp::Gt => BinOp::Gt,
             hir::BinaryOp::Ge => BinOp::Ge,
-            _ => BinOp::Add, // Default
+            hir::BinaryOp::And | hir::BinaryOp::Or => {
+                // Logical operators not yet implemented in MIR
+                // For now, map to equality as a placeholder
+                BinOp::Eq
+            }
         }
     }
 

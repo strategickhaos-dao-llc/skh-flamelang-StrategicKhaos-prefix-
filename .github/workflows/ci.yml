@@ -14,6 +14,8 @@ jobs:
   test:
     name: Test
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -32,19 +34,19 @@ jobs:
         run: |
           wget https://apt.llvm.org/llvm.sh
           chmod +x llvm.sh
-          sudo ./llvm.sh 18
-          echo "LLVM_SYS_180_PREFIX=/usr/lib/llvm-18" >> $GITHUB_ENV
+          sudo ./llvm.sh 17
+          echo "LLVM_SYS_170_PREFIX=/usr/lib/llvm-17" >> $GITHUB_ENV
       
       - name: Install LLVM (macOS)
         if: matrix.os == 'macos-latest'
         run: |
-          brew install llvm@18
-          echo "LLVM_SYS_180_PREFIX=$(brew --prefix llvm@18)" >> $GITHUB_ENV
+          brew install llvm@17
+          echo "LLVM_SYS_170_PREFIX=$(brew --prefix llvm@17)" >> $GITHUB_ENV
       
       - name: Install LLVM (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          choco install llvm --version=18.1.0
+          choco install llvm --version=17.0.6
       
       - name: Cache cargo registry
         uses: actions/cache@v4
@@ -79,6 +81,8 @@ jobs:
   build:
     name: Build Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       
@@ -89,8 +93,8 @@ jobs:
         run: |
           wget https://apt.llvm.org/llvm.sh
           chmod +x llvm.sh
-          sudo ./llvm.sh 18
-          echo "LLVM_SYS_180_PREFIX=/usr/lib/llvm-18" >> $GITHUB_ENV
+          sudo ./llvm.sh 17
+          echo "LLVM_SYS_170_PREFIX=/usr/lib/llvm-17" >> $GITHUB_ENV
       
       - name: Build release
         run: cargo build --release --verbose
@@ -104,6 +108,9 @@ jobs:
   security:
     name: Security Audit
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v4
       
