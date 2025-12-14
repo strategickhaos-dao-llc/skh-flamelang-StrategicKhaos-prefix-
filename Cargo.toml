@@ -1,0 +1,45 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/flamelang-lexer",
+    "crates/flamelang-parser",
+    "crates/flamelang-ast",
+    "crates/flamelang-hir",
+    "crates/flamelang-mir",
+    "crates/flamelang-codegen",
+    "crates/flamelang-cli",
+]
+
+[workspace.package]
+version = "2.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["StrategicKhaos DAO LLC"]
+repository = "https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-"
+
+[workspace.dependencies]
+# Core dependencies
+logos = "0.14"
+lalrpop = "0.20"
+lalrpop-util = "0.20"
+inkwell = { version = "0.4", features = ["llvm17-0"] }
+clap = { version = "4.5", features = ["derive", "cargo"] }
+
+# Internal workspace crates
+flamelang-lexer = { path = "crates/flamelang-lexer" }
+flamelang-parser = { path = "crates/flamelang-parser" }
+flamelang-ast = { path = "crates/flamelang-ast" }
+flamelang-hir = { path = "crates/flamelang-hir" }
+flamelang-mir = { path = "crates/flamelang-mir" }
+flamelang-codegen = { path = "crates/flamelang-codegen" }
+
+# Utility dependencies
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

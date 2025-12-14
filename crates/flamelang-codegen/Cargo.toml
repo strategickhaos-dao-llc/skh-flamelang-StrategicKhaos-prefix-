@@ -1,0 +1,13 @@
+[package]
+name = "flamelang-codegen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+flamelang-mir.workspace = true
+flamelang-hir.workspace = true
+inkwell.workspace = true
+thiserror.workspace = true
