@@ -1,14 +1,12 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+// FlameLang v2.0.0 Code Generation (Layer 5: DNA→LLVM)
+// This module will contain LLVM IR generation from DNA sequences
+// TODO: Implement LLVM backend using inkwell
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn placeholder_test() {
+        // Code generation tests will be implemented here
+        assert!(true);
     }
 }
