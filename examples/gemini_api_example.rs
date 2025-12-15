@@ -1,12 +1,12 @@
 //! Example: Using the Gemini API
-//! 
+//!
 //! This example demonstrates how to use the Gemini API client to generate
 //! AI-powered explanations.
-//! 
+//!
 //! Usage:
 //!   1. Set the GEMINI_API_KEY environment variable:
 //!      export GEMINI_API_KEY="your-api-key-here"
-//! 
+//!
 //!   2. Run the example:
 //!      cargo run --example gemini_api_example
 
@@ -32,7 +32,10 @@ async fn main() {
     println!("📝 Sending prompt: \"Explain how AI works in a few words\"\n");
 
     // Generate content
-    match client.generate_content("Explain how AI works in a few words").await {
+    match client
+        .generate_content("Explain how AI works in a few words")
+        .await
+    {
         Ok(response) => {
             println!("🤖 Response from Gemini:\n");
             println!("{}", response);

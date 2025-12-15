@@ -1,5 +1,5 @@
 //! AI Integration Module
-//! 
+//!
 //! Provides integration with Google Vertex AI Gemini API for AI-powered explanations
 //! and code generation assistance.
 
@@ -55,7 +55,7 @@ pub struct GeminiClient {
 
 impl GeminiClient {
     /// Create a new Gemini client
-    /// 
+    ///
     /// # Arguments
     /// * `api_key` - The API key for authentication
     /// * `model` - The model to use (e.g., "gemini-2.5-flash-lite")
@@ -68,7 +68,7 @@ impl GeminiClient {
     }
 
     /// Create a client from environment variable
-    /// 
+    ///
     /// Reads the API key from the `GEMINI_API_KEY` environment variable
     pub fn from_env() -> Result<Self, String> {
         let api_key = env::var("GEMINI_API_KEY")
@@ -77,10 +77,10 @@ impl GeminiClient {
     }
 
     /// Generate content using the Gemini API
-    /// 
+    ///
     /// # Arguments
     /// * `prompt` - The text prompt to send to the AI
-    /// 
+    ///
     /// # Returns
     /// The generated text response or an error
     pub async fn generate_content(&self, prompt: &str) -> Result<String, String> {
@@ -108,7 +108,10 @@ impl GeminiClient {
             .map_err(|e| format!("Failed to send request: {}", e))?;
 
         if !response.status().is_success() {
-            return Err(format!("API request failed with status: {}", response.status()));
+            return Err(format!(
+                "API request failed with status: {}",
+                response.status()
+            ));
         }
 
         let gemini_response: GeminiResponse = response
@@ -132,10 +135,10 @@ impl GeminiClient {
     }
 
     /// Synchronous version of generate_content
-    /// 
+    ///
     /// # Arguments
     /// * `prompt` - The text prompt to send to the AI
-    /// 
+    ///
     /// # Returns
     /// The generated text response or an error
     pub fn generate_content_blocking(&self, prompt: &str) -> Result<String, String> {
@@ -162,7 +165,10 @@ impl GeminiClient {
             .map_err(|e| format!("Failed to send request: {}", e))?;
 
         if !response.status().is_success() {
-            return Err(format!("API request failed with status: {}", response.status()));
+            return Err(format!(
+                "API request failed with status: {}",
+                response.status()
+            ));
         }
 
         let gemini_response: GeminiResponse = response
@@ -191,7 +197,10 @@ mod tests {
 
     #[test]
     fn test_gemini_client_creation() {
-        let client = GeminiClient::new("test-api-key".to_string(), "gemini-2.5-flash-lite".to_string());
+        let client = GeminiClient::new(
+            "test-api-key".to_string(),
+            "gemini-2.5-flash-lite".to_string(),
+        );
         assert_eq!(client.api_key, "test-api-key");
         assert_eq!(client.model, "gemini-2.5-flash-lite");
     }
