@@ -16,14 +16,14 @@ scraper = "0.18"
 reqwest = { version = "0.11", features = ["blocking", "cookies"] }
 url = "2.5"
 
-# HTML processing (for future enhancements)
-# html5ever = "0.26"
-# markup5ever_rcdom = "0.2"
-# cssparser = "0.31"
+# HTML processing
+html5ever = "0.26"
+markup5ever_rcdom = "0.2"
+cssparser = "0.31"
 
 # File I/O
-tokio = { version = "1.35", features = ["full"] }  # For future async operations
-# walkdir = "2.4"  # For future directory traversal features
+tokio = { version = "1.35", features = ["full"] }
+walkdir = "2.4"
 base64 = "0.21"
 
 # Cryptographic proof
@@ -35,7 +35,7 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 
 # Asset inlining
-# data-url = "0.3"  # For future data URL parsing features
+data-url = "0.3"
 mime_guess = "2.0"
 
 # Timestamp
