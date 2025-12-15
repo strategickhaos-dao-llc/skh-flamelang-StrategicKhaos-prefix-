@@ -85,10 +85,17 @@ echo ""
 echo "================================"
 echo "Summary"
 echo "================================"
-echo "✅ Repository is properly configured for pushing"
-echo "✅ Remote repository is accessible"
-echo ""
-echo "To push your changes, simply run:"
-echo "  git push"
+
+# Only show success summary if all checks passed
+if [ -n "$UPSTREAM" ]; then
+    echo "✅ Repository is properly configured for pushing"
+    echo "✅ Remote repository is accessible"
+    echo ""
+    echo "To push your changes, simply run:"
+    echo "  git push"
+else
+    echo "⚠️  Repository needs configuration"
+    echo "   Run: git push -u origin $CURRENT_BRANCH"
+fi
 echo ""
 echo "For more detailed instructions, see GIT_PUSH_GUIDE.md"

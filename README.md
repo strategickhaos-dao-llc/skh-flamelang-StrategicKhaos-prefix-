@@ -9,6 +9,10 @@ This repository is properly configured and ready for pushing changes to the remo
 
 To verify your git setup is working:
 ```bash
+# Make script executable (if needed)
+chmod +x verify-git-setup.sh
+
+# Run verification
 ./verify-git-setup.sh
 ```
 
