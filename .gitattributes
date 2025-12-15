@@ -1,0 +1,22 @@
+# Git attributes for consistent line endings
+
+# Auto detect text files and normalize to LF
+* text=auto
+
+# Bash scripts should always use LF
+*.sh text eol=lf
+
+# PowerShell scripts should use CRLF on Windows, LF elsewhere
+*.ps1 text eol=crlf
+
+# Markdown files
+*.md text eol=lf
+
+# Source code
+*.rs text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Ensure scripts are executable on Unix systems
+fix-git-auth.sh -diff -merge
