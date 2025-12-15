@@ -39,3 +39,14 @@
 
 # debug information files
 *.dwo
+
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# FlameViz generated outputs
+*.svg
+*.wav
+/tmp/
