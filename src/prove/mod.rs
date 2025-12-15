@@ -52,8 +52,8 @@ pub struct GeneratorInfo {
     pub ein: String,
 }
 
-pub fn run(input: &Path, chain: &str, output: &Path) {
-    let content = fs::read_to_string(input).expect("Failed to read input");
+pub fn run(input: &Path, chain: &str, output: &Path) -> Result<(), Box<dyn std::error::Error>> {
+    let content = fs::read_to_string(input)?;
     
     // Compute content hash
     let mut content_hasher = Sha256::new();
@@ -84,7 +84,7 @@ pub fn run(input: &Path, chain: &str, output: &Path) {
         size_bytes: content.len(),
         timestamp: std::time::SystemTime::now()
             .duration_since(std::time::UNIX_EPOCH)
-            .unwrap()
+            .map_err(|_| "System clock is set before Unix epoch")?
             .as_secs(),
         chain: chain.to_string(),
         generator: GeneratorInfo {
@@ -105,47 +105,63 @@ pub fn run(input: &Path, chain: &str, output: &Path) {
     println!("  ├─ Node 137: {}", node_137);
     
     // Write proof JSON
-    let proof_json = serde_json::to_string_pretty(&proof).expect("Failed to serialize proof");
-    fs::write(output, &proof_json).expect("Failed to write proof");
+    let proof_json = serde_json::to_string_pretty(&proof)?;
+    fs::write(output, &proof_json)?;
     println!("  └─ ✅ Proof: {:?}", output);
     
     // Generate on-chain payload based on target
     match chain.to_lowercase().as_str() {
-        "swarmgate" => generate_swarmgate_payload(&proof, output),
-        "ethereum" | "eth" => generate_ethereum_payload(&proof, output),
-        "solana" | "sol" => generate_solana_payload(&proof, output),
+        "swarmgate" => generate_swarmgate_payload(&proof, output)?,
+        "ethereum" | "eth" => generate_ethereum_payload(&proof, output)?,
+        "solana" | "sol" => generate_solana_payload(&proof, output)?,
         _ => println!("  └─ ⚠️ Unknown chain: {}, proof saved locally only", chain),
     }
+    
+    Ok(())
 }
 
 fn strip_to_structure(html: &str) -> String {
     let mut result = html.to_string();
     
     // Remove script tags and content
+    // Look for <script (with space or >) to ensure proper tag boundaries
     while let Some(start) = result.find("<script") {
-        if let Some(end) = result[start..].find("</script>") {
-            result = format!("{}{}", &result[..start], &result[start + end + 9..]);
-        } else {
-            break;
+        // Check if it's a proper tag by ensuring next char is space or >
+        if start + 7 < result.len() {
+            let next_char = result.chars().nth(start + 7).unwrap_or('\0');
+            if next_char == ' ' || next_char == '>' {
+                if let Some(end_pos) = result[start..].find("</script>") {
+                    result = format!("{}{}", &result[..start], &result[start + end_pos + 9..]);
+                    continue;
+                }
+            }
         }
+        break;
     }
     
     // Remove style tags and content
+    // Look for <style (with space or >) to ensure proper tag boundaries
     while let Some(start) = result.find("<style") {
-        if let Some(end) = result[start..].find("</style>") {
-            result = format!("{}{}", &result[..start], &result[start + end + 8..]);
-        } else {
-            break;
+        // Check if it's a proper tag by ensuring next char is space or >
+        if start + 6 < result.len() {
+            let next_char = result.chars().nth(start + 6).unwrap_or('\0');
+            if next_char == ' ' || next_char == '>' {
+                if let Some(end_pos) = result[start..].find("</style>") {
+                    result = format!("{}{}", &result[..start], &result[start + end_pos + 8..]);
+                    continue;
+                }
+            }
         }
+        break;
     }
     
-    // Remove inline styles
-    result = result.replace(|c: char| c.is_whitespace(), " ");
+    // Normalize whitespace for structural comparison
+    result = result.split_whitespace().collect::<Vec<_>>().join(" ");
     
     result
 }
 
-fn generate_swarmgate_payload(proof: &VesselProof, output: &Path) {
+fn generate_swarmgate_payload(proof: &VesselProof, output: &Path) -> Result<(), Box<dyn std::error::Error>> {
     let payload = serde_json::json!({
         "protocol": "swarmgate_v1",
         "action": "attest",
@@ -165,12 +181,12 @@ fn generate_swarmgate_payload(proof: &VesselProof, output: &Path) {
     });
     
     let payload_path = output.with_extension("swarmgate.json");
-    fs::write(&payload_path, serde_json::to_string_pretty(&payload).unwrap())
-        .expect("Failed to write SwarmGate payload");
+    fs::write(&payload_path, serde_json::to_string_pretty(&payload)?)?;
     println!("  └─ SwarmGate payload: {:?}", payload_path);
+    Ok(())
 }
 
-fn generate_ethereum_payload(proof: &VesselProof, output: &Path) {
+fn generate_ethereum_payload(proof: &VesselProof, output: &Path) -> Result<(), Box<dyn std::error::Error>> {
     // EIP-712 typed data structure for Ethereum attestation
     let payload = serde_json::json!({
         "types": {
@@ -201,12 +217,12 @@ fn generate_ethereum_payload(proof: &VesselProof, output: &Path) {
     });
     
     let payload_path = output.with_extension("eth.json");
-    fs::write(&payload_path, serde_json::to_string_pretty(&payload).unwrap())
-        .expect("Failed to write Ethereum payload");
+    fs::write(&payload_path, serde_json::to_string_pretty(&payload)?)?;
     println!("  └─ Ethereum payload: {:?}", payload_path);
+    Ok(())
 }
 
-fn generate_solana_payload(proof: &VesselProof, output: &Path) {
+fn generate_solana_payload(proof: &VesselProof, output: &Path) -> Result<(), Box<dyn std::error::Error>> {
     let payload = serde_json::json!({
         "program": "VesselMirrorAttestation",
         "instruction": "attest",
@@ -220,7 +236,7 @@ fn generate_solana_payload(proof: &VesselProof, output: &Path) {
     });
     
     let payload_path = output.with_extension("sol.json");
-    fs::write(&payload_path, serde_json::to_string_pretty(&payload).unwrap())
-        .expect("Failed to write Solana payload");
+    fs::write(&payload_path, serde_json::to_string_pretty(&payload)?)?;
     println!("  └─ Solana payload: {:?}", payload_path);
+    Ok(())
 }
