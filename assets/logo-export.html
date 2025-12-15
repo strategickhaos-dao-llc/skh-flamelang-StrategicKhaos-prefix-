@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategickhaos Logo - PNG Export</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            font-family: monospace;
+            color: #00FFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #FF6B35;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+        
+        #logo {
+            margin: 20px 0;
+            border: 2px solid #00FFFF;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #00FFFF, #00CED1);
+            border: none;
+            color: #0A0E27;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        
+        .instructions {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        .instructions ol {
+            margin: 10px 0;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+        }
+        
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 STRATEGICKHAOS LOGO</h1>
+        <p>Ratio Ex Nihilo | Node 137</p>
+        
+        <img id="logo" src="strategickhaos-logo.svg" width="500" height="500" alt="Strategickhaos Logo">
+        
+        <div>
+            <button onclick="downloadPNG()">📥 Download PNG (500x500)</button>
+            <button onclick="downloadLarge()">📥 Download PNG (1024x1024)</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>For GitHub OAuth Logo:</h3>
+            <ol>
+                <li>Click "Download PNG (500x500)" or "Download PNG (1024x1024)"</li>
+                <li>The file will save to your Downloads folder</li>
+                <li>Go to GitHub → Settings → Developer Settings → OAuth Apps</li>
+                <li>Edit your app and upload the downloaded PNG</li>
+            </ol>
+            <p><strong>Alternative:</strong> Right-click the logo above → "Save Image As..." → Choose PNG format</p>
+        </div>
+        
+        <canvas id="canvas"></canvas>
+    </div>
+    
+    <script>
+        function downloadPNG(size = 500) {
+            const img = document.getElementById('logo');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Draw SVG to canvas
+            const svgBlob = new Blob([fetch('strategickhaos-logo.svg').then(r => r.text())], 
+                {type: 'image/svg+xml;charset=utf-8'});
+            
+            // Create image from SVG
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                ctx.drawImage(tempImg, 0, 0, size, size);
+                
+                // Convert to PNG and download
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `strategickhaos-logo-${size}x${size}.png`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            };
+            
+            tempImg.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(
+                new XMLSerializer().serializeToString(img)
+            )));
+        }
+        
+        function downloadLarge() {
+            downloadPNG(1024);
+        }
+        
+        // Alternative method: Load SVG directly
+        async function downloadPNGDirect(size = 500) {
+            const img = document.getElementById('logo');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Load SVG
+            const response = await fetch('strategickhaos-logo.svg');
+            const svgText = await response.text();
+            const svgBlob = new Blob([svgText], {type: 'image/svg+xml;charset=utf-8'});
+            const url = URL.createObjectURL(svgBlob);
+            
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                ctx.drawImage(tempImg, 0, 0, size, size);
+                
+                canvas.toBlob(function(blob) {
+                    const downloadUrl = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = `strategickhaos-logo-${size}x${size}.png`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(downloadUrl);
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            };
+            
+            tempImg.src = url;
+        }
+        
+        // Override download functions to use direct method
+        window.downloadPNG = () => downloadPNGDirect(500);
+        window.downloadLarge = () => downloadPNGDirect(1024);
+    </script>
+</body>
+</html>
