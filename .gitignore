@@ -39,3 +39,33 @@
 
 # debug information files
 *.dwo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Vector embeddings and training artifacts
+flamelang-training/modules/*/vectors/*.npy
+flamelang-training/modules/*/vectors/*.json
+flamelang-training/modules/*/vectors/*.pkl
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
