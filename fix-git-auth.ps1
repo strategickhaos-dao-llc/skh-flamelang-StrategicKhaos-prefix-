@@ -81,13 +81,9 @@ if (-not $SkipCredentialClear) {
     $confirmation = Read-Host "    Continue? (y/n)"
     if ($confirmation -eq 'y') {
         try {
-            # Create input for git credential reject (include blank line at end)
-            $input = @"
-protocol=https
-host=github.com
-
-
-"@
+            # Create input for git credential reject
+            # Format: protocol=https\nhost=github.com\n\n (two newlines at end)
+            $input = "protocol=https`nhost=github.com`n`n"
             $input | git credential reject
             Write-Success "Cached credentials cleared"
         }

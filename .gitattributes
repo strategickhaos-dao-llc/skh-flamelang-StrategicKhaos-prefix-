@@ -17,6 +17,3 @@
 *.toml text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
-
-# Ensure scripts are executable on Unix systems
-fix-git-auth.sh -diff -merge
