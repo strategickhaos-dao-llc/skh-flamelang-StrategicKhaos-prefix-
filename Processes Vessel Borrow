@@ -1,0 +1,569 @@
+Image	PID	Description	Status	Threads	CPU	Average CPU
+Secure System	188		Suspended	-	0	0.00
+ShellExperienceHost.exe	29856	Windows Shell Experience Host	Suspended	20	0	0.00
+LockApp.exe	33236	LockApp.exe	Suspended	12	0	0.00
+SystemSettings.exe	49012	Settings	Suspended	44	0	0.00
+backgroundTaskHost.exe	57700	Background Task Host	Suspended	12	0	0.00
+Taskmgr.exe	34412	Task Manager	Running	20	2	2.36
+rider64.exe	46880	JetBrains Rider	Running	151	1	1.50
+System Interrupts	-	Deferred Procedure Calls and Interrupt Service Routines	Running	-	2	1.49
+WmiPrvSE.exe	7580	WMI Provider Host	Running	11	0	0.98
+dwm.exe	2988	Desktop Window Manager	Running	20	1	0.97
+svchost.exe (appmodel -p)	4564	Host Process for Windows Services	Running	5	0	0.80
+perfmon.exe	73912	Resource and Performance Monitor	Running	20	0	0.78
+explorer.exe	14116	Windows Explorer	Running	750	1	0.51
+System	4	NT Kernel & System	Running	663	1	0.49
+RuntimeBroker.exe	14840	Runtime Broker	Running	7	0	0.49
+svchost.exe (netsvcs -p)	5444	Host Process for Windows Services	Running	21	0	0.46
+DuckDuckGo.exe	24192	DuckDuckGo	Running	198	0	0.37
+idea64.exe	60384	IntelliJ IDEA Ultimate Edition	Running	113	0	0.33
+perfmon.exe	31440	Resource and Performance Monitor	Running	20	0	0.31
+JetBrains.DPA.Protocol.Backend.exe	48572	JetBrains JetBrains.DPA.Protocol.Backend	Running	33	0	0.31
+6f1b83ee0-dotTrace64.2025.3.0.1.exe	33660	JetBrains dotTrace	Running	48	0	0.30
+6f1b83ee0-dotTrace64.2025.3.0.1.exe	67880	JetBrains dotTrace	Running	46	0	0.30
+msedgewebview2.exe	69736	Microsoft Edge WebView2	Running	26	0	0.29
+audiodg.exe	48172	Windows Audio Device Graph Isolation 	Running	12	0	0.27
+firefox.exe	8080	Firefox	Running	109	0	0.27
+webstorm64.exe	38604	WebStorm	Running	122	0	0.19
+MsMpEng.exe	14900		Running	56	0	0.18
+svchost.exe (osprivacy -p)	12588	Host Process for Windows Services	Running	7	0	0.18
+firefox.exe	39668	Firefox	Running	76	0	0.16
+firefox.exe	25028	Firefox	Running	76	0	0.14
+msedgewebview2.exe	3220	Microsoft Edge WebView2	Running	56	0	0.14
+svchost.exe (NetworkService -p)	3940	Host Process for Windows Services	Running	13	0	0.13
+msedgewebview2.exe	23788	Microsoft Edge WebView2	Running	33	0	0.12
+msedgewebview2.exe	31080	Microsoft Edge WebView2	Running	30	0	0.11
+Rider.Backend.exe	43300	JetBrains Rider.Backend	Running	70	0	0.11
+services.exe	2352		Running	7	0	0.10
+firefox.exe	28976	Firefox	Running	30	0	0.09
+firefox.exe	24016	Firefox	Running	28	0	0.09
+firefox.exe	27672	Firefox	Running	28	0	0.09
+firefox.exe	48268	Firefox	Running	28	0	0.09
+firefox.exe	28032	Firefox	Running	28	0	0.09
+svchost.exe (RPCSS -p)	2644	Host Process for Windows Services	Running	10	0	0.06
+msrdc.exe	61396	Remote Desktop	Running	17	0	0.06
+msedgewebview2.exe	35232	Microsoft Edge WebView2	Running	24	0	0.06
+firefox.exe	56792	Firefox	Running	35	0	0.06
+uihost.exe	4392	McAfee WebAdvisor(user level process)	Running	64	0	0.05
+csrss.exe	2276		Running	14	0	0.05
+mc-fw-host.exe	6996		Running	157	0	0.05
+vmmemWSL	44140		Running	40	0	0.04
+svchost.exe (utcsvc -p)	6392	Host Process for Windows Services	Running	13	0	0.04
+firefox.exe	7244	Firefox	Running	29	0	0.04
+NitroSense.exe	19372	NitroSense	Running	42	0	0.03
+gitkraken.exe	40264	GitKraken	Running	57	1	0.03
+msedgewebview2.exe	21684	Microsoft Edge WebView2	Running	22	0	0.03
+SwUSB.exe	8388	Switch USB2.0/USB3.0 for WinXP SP2+ ~ Win8.1	Running	3	0	0.03
+svchost.exe (DcomLaunch -p)	2512	Host Process for Windows Services	Running	15	0	0.03
+gitkraken.exe	28892	GitKraken	Running	70	0	0.03
+ctfmon.exe	23016	CTF Loader	Running	12	0	0.02
+gitkraken.exe	39784	GitKraken	Running	78	0	0.02
+ipf_helper.exe	5532	Intel(R) Innovation Platform Framework Utility Application	Running	4	0	0.02
+claude.exe	46280	Claude	Running	20	0	0.02
+RtWLan.exe	8368	RtWLan	Running	2	0	0.02
+MouseWithoutBorders.exe	13100	Mouse without Borders	Running	15	0	0.02
+msedgewebview2.exe	45464	Microsoft Edge WebView2	Running	29	0	0.02
+svchost.exe (LocalServiceNoNetwork -p)	6440	Host Process for Windows Services	Running	18	0	0.02
+MicrosoftSecurityApp.exe	18816	MicrosoftSecurityApp.exe	Running	45	0	0.02
+TextInputHost.exe	15644	TextInputHost.exe	Running	38	0	0.02
+AWCC.SCSubAgent.exe	6252	AWCC.SCSubAgent	Running	29	0	0.01
+lsass.exe	2380		Running	11	0	0.01
+AcerCentralService.exe	5248	Acer Agent Service Central	Running	4	0	0.01
+AWCC.UCSubAgent.exe	24300	AWCC.UCSubAgent	Running	31	0	0.01
+ACCStd.exe	26384	ACCStd	Running	30	0	0.01
+svchost.exe (LocalServiceNoNetworkFirewall -p)	5700	Host Process for Windows Services	Running	16	0	0.01
+msedge.exe	44300	Microsoft Edge	Running	62	0	0.01
+ServiceShell.exe	16748	ServiceShell	Running	31	0	0.01
+AcerSysHardwareService.exe	17768	Acer System Hardware Service	Running	2	0	0.01
+JetBrains.ProcessEnumerator.Worker32.exe	58860	JetBrains JetBrains.ProcessEnumerator.Worker	Running	16	0	0.01
+svchost.exe (LocalSystemNetworkRestricted -p)	5396	Host Process for Windows Services	Running	16	0	0.01
+svchost.exe (LocalServiceNetworkRestricted -p)	4432	Host Process for Windows Services	Running	7	0	0.01
+jetbrains-toolbox.exe	24220	JetBrains Toolbox	Running	49	0	0.01
+SearchIndexer.exe	4948	Microsoft Windows Search Indexer	Running	11	0	0.01
+AcerHardwareService.exe	5384	Acer Hardware Service	Running	2	0	0.01
+Discord.exe	21784	Discord	Running	44	0	0.01
+NitroSense.exe	19416	NitroSense	Running	24	0	0.01
+ProtonDrive.exe	26612	Proton Drive	Running	52	0	0.01
+Discord.exe	16912	Discord	Running	54	0	0.01
+Dell.Update.SubAgent.exe	2828	 	Running	20	0	0.01
+powershell.exe	30496	Windows PowerShell	Running	9	0	0.01
+svchost.exe (netprofm -p)	3560	Host Process for Windows Services	Running	12	0	0.01
+NVDisplay.Container.exe	3960	NVIDIA Container	Running	37	0	0.01
+servicehost.exe	7068	McAfee WebAdvisor(service)	Running	92	0	0.01
+gitkraken.exe	30824	GitKraken	Running	57	0	0.01
+Fleet.exe	33900	Fleet	Running	78	0	0.01
+claude.exe	68472	Claude Code	Running	9	0	0.01
+claude.exe	13052	Claude	Running	50	0	0.01
+firefox.exe	24760	Firefox	Running	30	0	0.01
+fsdaemon-1.48.261.exe	43040	fsdaemon-1.48.261.exe	Running	46	0	0.01
+AcerSystemCentralService.exe	6412	Acer System Monitoring Cnetral Service	Running	2	0	0.01
+firefox.exe	56492	Firefox	Running	27	0	0.01
+logi_lamparray_service.exe	7120	LampArray Translation Service	Running	8	0	0.01
+firefox.exe	42648	Firefox	Running	31	0	0.01
+svchost.exe (netsvcs -p)	3840	Host Process for Windows Services	Running	9	0	0.01
+msedgewebview2.exe	56880	Microsoft Edge WebView2	Running	21	0	0.01
+msedgewebview2.exe	23876	Microsoft Edge WebView2	Running	24	0	0.01
+JetBrains.ProcessEnumerator.Worker.exe	64660	JetBrains JetBrains.ProcessEnumerator.Worker	Running	18	0	0.00
+msedgewebview2.exe	51620	Microsoft Edge WebView2	Running	45	0	0.00
+AQAUserPS.exe	17956	Acer Quick Access User Process	Running	8	0	0.00
+fsnotifier.exe	13572	Filesystem events processor	Running	2	0	0.00
+conhost.exe	6244	Console Window Host	Running	4	0	0.00
+bash.exe	40784	bash.exe	Running	4	0	0.00
+JetBrains.Etw.Collector.Host.exe	6876	JetBrains ETW Collector Host	Running	4	0	0.00
+MpDefenderCoreService.exe	7324		Running	9	0	0.00
+NitroSense.exe	18328	NitroSense	Running	15	0	0.00
+powershell.exe	62652	Windows PowerShell	Running	9	0	0.00
+PresentMonService.exe	13320	Service for Intel(R) PresentMon API clients	Running	10	0	0.00
+firefox.exe	43528	Firefox	Running	29	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p -s Wcmsvc)	5192	Host Process for Windows Services	Running	8	0	0.00
+firefox.exe	44540	Firefox	Running	28	0	0.00
+AcerService.exe	8484	AcerService	Running	15	0	0.00
+firefox.exe	69236	Firefox	Running	27	0	0.00
+svchost.exe (DcomLaunch -p)	2696	Host Process for Windows Services	Running	6	0	0.00
+Memory Compression	4368		Running	78	0	0.00
+firefox.exe	33188	Firefox	Running	29	0	0.00
+firefox.exe	22120	Firefox	Running	67	0	0.00
+powershell.exe	48644	Windows PowerShell	Running	9	0	0.00
+firefox.exe	23216	Firefox	Running	29	0	0.00
+powershell.exe	62180	Windows PowerShell	Running	9	0	0.00
+conhost.exe	6224	Console Window Host	Running	4	0	0.00
+firefox.exe	71584	Firefox	Running	32	0	0.00
+powershell.exe	57208	Windows PowerShell	Running	9	0	0.00
+explorer.exe	34636	Windows Explorer	Running	25	0	0.00
+ONENOTE.EXE	72856	Microsoft OneNote	Running	58	0	0.00
+kubectl.exe	50888	kubectl.exe	Running	10	0	0.00
+svchost.exe (NetworkService -p)	16976		Running	12	0	0.00
+msedgewebview2.exe	74860	Microsoft Edge WebView2	Running	25	0	0.00
+Obsidian.exe	31648	Obsidian	Running	48	0	0.00
+conhost.exe	6648	Console Window Host	Running	4	0	0.00
+firefox.exe	59524	Firefox	Running	28	0	0.00
+conhost.exe	5628	Console Window Host	Running	4	0	0.00
+msedgewebview2.exe	45804	Microsoft Edge WebView2	Running	22	0	0.00
+csrss.exe	2120		Running	14	0	0.00
+firefox.exe	15256	Firefox	Running	6	0	0.00
+svchost.exe (LocalService)	17088	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (UnistackSvcGroup)	9464	Host Process for Windows Services	Running	4	0	0.00
+WUDFHost.exe	2580	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	21	0	0.00
+Discord.exe	26028	Discord	Running	16	0	0.00
+M365Copilot.exe	22912	Microsoft 365 Copilot App	Running	40	0	0.00
+Dell.TechHub.Instrumentation.SubAgent.exe	6692	Dell Instrumentation	Running	237	0	0.00
+Intel_PIE_Service.exe	10992	SHA1:0xe8eb25df	Running	5	0	0.00
+firefox.exe	24620	Firefox	Running	27	0	0.00
+msedgewebview2.exe	22088	Microsoft Edge WebView2	Running	10	0	0.00
+gitkraken.exe	34072	GitKraken	Running	16	0	0.00
+Obsidian.exe	31412	Obsidian	Running	20	0	0.00
+explorer.exe	49852	Windows Explorer	Running	91	0	0.00
+less.exe	62184	less.exe	Running	3	0	0.00
+firefox.exe	59768	Firefox	Running	29	0	0.00
+gamingservices.exe	12916	GamingServices	Running	50	0	0.00
+WmiPrvSE.exe	6844	WMI Provider Host	Running	8	0	0.00
+taskhostw.exe	11620	Host Process for Windows Tasks	Running	8	0	0.00
+Obsidian.exe	31524	Obsidian	Running	31	0	0.00
+msedgewebview2.exe	72204	Microsoft Edge WebView2	Running	25	0	0.00
+QuantumService.exe	7296	Device monitor	Running	31	0	0.00
+Obsidian.exe	32324	Obsidian	Running	36	0	0.00
+claude.exe	63172	Claude	Running	16	0	0.00
+Dell.CoreServices.Client.exe	6172	Dell.CoreServices.Client	Running	36	0	0.00
+svchost.exe (ClipboardSvcGroup -p)	18360	Host Process for Windows Services	Running	9	0	0.00
+svchost.exe (whesvc -p)	14996	Host Process for Windows Services	Running	18	0	0.00
+cef_server.exe	52016	Server with Chromium Embedded Framework	Running	43	0	0.00
+explorer.exe	42136	Windows Explorer	Running	26	0	0.00
+explorer.exe	60948	Windows Explorer	Running	28	0	0.00
+HostAppServiceUpdater.exe	22052	Host App Service Updater	Running	8	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	4144	Host Process for Windows Services	Running	6	0	0.00
+msedgewebview2.exe	65292	Microsoft Edge WebView2	Running	26	0	0.00
+firefox.exe	60448	Firefox	Running	27	0	0.00
+gitkraken.exe	15620	GitKraken	Running	8	0	0.00
+Dell.TechHub.Instrumentation.UserProcess.exe	23148	Dell Instrumentation's User Process	Running	26	0	0.00
+embeddings-server.exe	57776	embeddings-server.exe	Running	23	0	0.00
+vmwp.exe	54680	Virtual Machine Worker Process	Running	76	0	0.00
+claude.exe	63292	Claude	Running	19	0	0.00
+powershell.exe	55620	Windows PowerShell	Running	9	0	0.00
+AggregatorHost.exe	13328	Microsoft (R) Aggregator Host	Running	3	0	0.00
+svchost.exe (LocalService -p)	2996	Host Process for Windows Services	Running	8	0	0.00
+AcerDIAgent.exe	6084	Acer Device Info Software Component	Running	4	0	0.00
+AcerCCAgent.exe	6092	Acer Care Center Driver	Running	3	0	0.00
+bash.exe	7904	bash.exe	Running	2	0	0.00
+fsnotifier.exe	40868	Filesystem events processor	Running	2	0	0.00
+fsnotifier.exe	37096	Filesystem events processor	Running	2	0	0.00
+firefox.exe	45884	Firefox	Running	28	0	0.00
+svchost.exe (NetworkService -p)	6360	Host Process for Windows Services	Running	7	0	0.00
+FileSyncHelper.exe	25812	Microsoft OneDriveFileSyncHelper	Running	6	0	0.00
+svchost.exe (LocalServiceHttp -p)	4736	Host Process for Windows Services	Running	3	0	0.00
+cef_server.exe	64924	Server with Chromium Embedded Framework	Running	18	0	0.00
+msedgewebview2.exe	40404	Microsoft Edge WebView2	Running	19	0	0.00
+msedgewebview2.exe	50660	Microsoft Edge WebView2	Running	23	0	0.00
+OpenConsole.exe	48324	OpenConsole.exe	Running	4	0	0.00
+sihost.exe	13692	Shell Infrastructure Host	Running	15	0	0.00
+PhoneExperienceHost.exe	23412	Microsoft Phone Link	Running	20	0	0.00
+Registry	232		Running	4	0	0.00
+Obsidian.exe	30976	Obsidian	Running	20	0	0.00
+msedge.exe	39124	Microsoft Edge	Running	24	0	0.00
+conhost.exe	50008	Console Window Host	Running	4	0	0.00
+firefox.exe	67940	Firefox	Running	30	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	3080	Host Process for Windows Services	Running	4	0	0.00
+dllhost.exe	52460	COM Surrogate	Running	5	0	0.00
+svchost.exe (netsvcs -p)	3244	Host Process for Windows Services	Running	8	0	0.00
+msedgewebview2.exe	75172	Microsoft Edge WebView2	Running	25	0	0.00
+claude.exe	58464	Claude	Running	23	0	0.00
+powershell.exe	45136	Windows PowerShell	Running	11	0	0.00
+msedgewebview2.exe	9980	Microsoft Edge WebView2	Running	46	0	0.00
+Discord.exe	20548	Discord	Running	7	0	0.00
+svchost.exe (NetworkService -p)	20756	Host Process for Windows Services	Running	18	0	0.00
+MicUsage.exe	20452	MicUsage	Running	7	0	0.00
+msedgewebview2.exe	37372	Microsoft Edge WebView2	Running	26	0	0.00
+firefox.exe	55156	Firefox	Running	30	0	0.00
+Okta.Coordinator.Service.exe	7260	Okta.Coordinator.Service	Running	10	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	Host Process for Windows Services	Running	8	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	4872	Host Process for Windows Services	Running	8	0	0.00
+barrierd.exe	6572	Open source KVM software daemon	Running	7	0	0.00
+RtlService.exe	7348	RtlService	Running	2	0	0.00
+cef_server.exe	25512	Server with Chromium Embedded Framework	Running	20	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	2360	Host Process for Windows Services	Running	14	0	0.00
+embeddings-server.exe	34404	embeddings-server.exe	Running	23	0	0.00
+svchost.exe (LocalService -p)	33720	Host Process for Windows Services	Running	5	0	0.00
+firefox.exe	28600	Firefox	Running	27	0	0.00
+svchost.exe (netsvcs -p)	4528	Host Process for Windows Services	Running	7	0	0.00
+gitkraken.exe	27036	GitKraken	Running	21	0	0.00
+conhost.exe	6552	Console Window Host	Running	4	0	0.00
+FxDisplayService.exe	26120	FxDisplayService	Running	12	0	0.00
+conhost.exe	8540	Console Window Host	Running	4	0	0.00
+keyboxd.exe	29160	GnuPG’s public key daemon	Running	1	0	0.00
+svchost.exe (LocalService -p)	3832	Host Process for Windows Services	Running	2	0	0.00
+vmcompute.exe	37720	Hyper-V Host Compute Service	Running	4	0	0.00
+msedgewebview2.exe	19704	Microsoft Edge WebView2	Running	49	0	0.00
+wlanext.exe	12960	Windows Wireless LAN 802.11 Extensibility Framework	Running	6	0	0.00
+WindowsTerminal.exe	21792	Windows Terminal Host	Running	11	0	0.00
+firefox.exe	60392	Firefox	Running	27	0	0.00
+OktaVerify.exe	3432	Okta Verify	Running	44	0	0.00
+svchost.exe (netsvcs -p)	13500	Host Process for Windows Services	Running	7	0	0.00
+msedgewebview2.exe	70780	Microsoft Edge WebView2	Running	22	0	0.00
+Widgets.exe	5308	Widgets.exe	Running	9	0	0.00
+MouseWithoutBordersHelper.exe	71464	Mouse Without Borders Helper	Running	7	0	0.00
+keyboxd.exe	41576	keyboxd.exe	Running	4	0	0.00
+OfficeClickToRun.exe	6404	Microsoft Office Click-to-Run (SxS)	Running	19	0	0.00
+NisSrv.exe	15204		Running	10	0	0.00
+svchost.exe (wsappx -p)	39012		Running	27	0	0.00
+svchost.exe (NetworkService -p)	12764	Host Process for Windows Services	Running	5	0	0.00
+AlienFXSubAgent.exe	12076	AlienFXSubAgent	Running	71	0	0.00
+NitroSense.exe	22980	NitroSense	Running	29	0	0.00
+AcerQAAgent.exe	6192	Acer Quick Access Agent Service	Running	2	0	0.00
+spoolsv.exe	5620	Spooler SubSystem App	Running	7	0	0.00
+smss.exe	716		Running	2	0	0.00
+wininit.exe	2268		Running	1	0	0.00
+LsaIso.exe	2372	Credential Guard & VBS Key Isolation	Running	1	0	0.00
+fontdrvhost.exe	2544	Usermode Font Driver Host	Running	5	0	0.00
+winlogon.exe	2772	Windows Logon Application	Running	3	0	0.00
+fontdrvhost.exe	2820	Usermode Font Driver Host	Running	5	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	2904	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalServiceNetworkRestricted)	2952	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalService -p)	2980	Host Process for Windows Services	Running	4	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	2528	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (UserProfileService -p)	3088	Host Process for Windows Services	Running	3	0	0.00
+IntelCpHDCPSvc.exe	3232	Intel HD Graphics Drivers for Windows(R)	Running	3	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	3252	Host Process for Windows Services	Running	9	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	3296	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	3368	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (LocalService -p)	3396	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalServiceNoNetwork -p)	3408	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	3724	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	3968	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (netsvcs -p)	4136	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalService -p)	4160	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (netsvcsRedirectionGuard -p)	4476	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	4584	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalService -p)	4596	Host Process for Windows Services	Running	7	0	0.00
+svchost.exe (NetSvcs -p)	4656	Host Process for Windows Services	Running	7	0	0.00
+svchost.exe (LocalService -p)	4896	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	4964	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p -s DusmSvc)	5184	Host Process for Windows Services	Running	4	0	0.00
+WUDFHost.exe	5420	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	5	0	0.00
+svchost.exe (netsvcs -p)	5460	Host Process for Windows Services	Running	4	0	0.00
+svchost.exe (NetworkService -p)	5816	Host Process for Windows Services	Running	4	0	0.00
+AcerGAICameraService.exe	6104	Acer GAI Camera Service	Running	1	0	0.00
+AcerLightingService.exe	6112	Acer Lighting Service	Running	3	0	0.00
+AcerPixyService.exe	6120	Acer Pixy Service	Running	2	0	0.00
+AcerEZService.exe	6132	AcerEZService.exe	Running	12	0	0.00
+AcerServiceWrapper.exe	6140	Windows Service Wrapper	Running	4	0	0.00
+ARTAimmxService.exe	5180	Acer ART-AIMMX Service	Running	3	0	0.00
+ADESv2Svc.exe	5808	Acer Device Enabling Service V2	Running	4	0	0.00
+AAADSvc.exe	6148	AAADSvc	Running	2	0	0.00
+ACCSvc.exe	6160	ACCSvc	Running	3	0	0.00
+svchost.exe (DevToolsGroup)	6384	Host Process for Windows Services	Running	2	0	0.00
+Dell.TechHub.exe	6428	Dell.TechHub	Running	35	0	0.00
+DtsApo4Service.exe	6484	Controls the DTS audio processing object.	Running	4	0	0.00
+mDNSResponder.exe	6496	Bonjour Service	Running	2	0	0.00
+ipfsvc.exe	6544	Intel(R) Innovation Platform Framework Service Container	Running	8	0	0.00
+svchost.exe (netsvcs -p)	6668	Host Process for Windows Services	Running	5	0	0.00
+OneApp.IGCC.WinService.exe	6768	Intel® Graphics Command Center Service	Running	6	0	0.00
+IntelAudioService.exe	6788	IntelAudioService	Running	7	0	0.00
+AcerAgentService.exe	6832	Acer Agent Service	Running	6	0	0.00
+ipf_uf.exe	6860	Intel(R) Innovation Platform Framework Service	Running	3	0	0.00
+svchost.exe (NetSvcs -p)	6868	Host Process for Windows Services	Running	6	0	0.00
+jhi_service.exe	6952	Intel(R) Dynamic Application Loader Host Interface	Running	2	0	0.00
+RstMwService.exe	7360	Intel(R) Rapid Storage Technology Management Service	Running	8	0	0.00
+RtkAudUService64.exe	7368	Realtek HD Audio Universal Service	Running	34	0	0.00
+runSW.exe	7396	runSW.exe	Running	1	0	0.00
+ssh-agent.exe	7428	ssh-agent.exe	Running	2	0	0.00
+sqlwriter.exe	7452	SQL Server VSS Writer - 64 Bit	Running	2	0	0.00
+svchost.exe (imgsvc)	7472	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	7640	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (NetSvcs)	7844	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (netsvcs -p)	7956	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (netsvcs -p)	9148	Host Process for Windows Services	Running	3	0	0.00
+RTUWPSrvcMain.exe	7784	RealTek Service Main Program (UWP)	Running	7	0	0.00
+svchost.exe (SshBrokerGroup)	9568	Host Process for Windows Services	Running	1	0	0.00
+WUDFHost.exe	11312	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	6	0	0.00
+dasHost.exe	11624	Device Association Framework Provider Host	Running	3	0	0.00
+WUDFHost.exe	11704	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	18	0	0.00
+WUDFHost.exe	11780	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	11	0	0.00
+WUDFHost.exe	11856	Windows Driver Foundation - User-mode Driver Framework Host Process	Running	5	0	0.00
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	Host Process for Windows Services	Running	11	0	0.00
+RtkAudUService64.exe	12440	Realtek HD Audio Universal Service	Running	6	0	0.00
+SAService.exe	12776	SAService	Running	3	0	0.00
+IntelGraphicsSoftware.Service.exe	12924	IntelGraphicsSoftware.Service	Running	16	0	0.00
+gamingservicesnet.exe	12936	GamingServices	Running	38	0	0.00
+QuickShareService.exe	12944	QuickShareService	Running	5	0	0.00
+AcerSysMonitorService.exe	13084	Acer System Monitor Service	Running	7	0	0.00
+MouseWithoutBorders.exe	13108	Mouse without Borders	Running	9	0	0.00
+conhost.exe	13336	Console Window Host	Running	2	0	0.00
+svchost.exe (NetworkServiceNetworkRestricted -p)	13608	Host Process for Windows Services	Running	4	0	0.00
+svchost.exe (DcomLaunch -p)	13680	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	11244	Host Process for Windows Services	Running	2	0	0.00
+unsecapp.exe	14740	Sink to receive asynchronous callbacks for WMI client application	Running	2	0	0.00
+svchost.exe (netsvcs -p)	14860	Host Process for Windows Services	Running	8	0	0.00
+vncserver.exe	14868	VNC® Server	Running	4	0	0.00
+wslservice.exe	14876	Windows Subsystem for Linux Service	Running	12	0	0.00
+WebManagement.exe	14888	Web Management Service	Running	4	0	0.00
+WMIRegistrationService.exe	14884	Intel(R) Management Engine WMI Provider Registration	Running	2	0	0.00
+svchost.exe (WSAIFabricSvcGroup -p)	14908	Host Process for Windows Services	Running	2	0	0.00
+svchost.exe (LocalService -p)	15280	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	14148	Host Process for Windows Services	Running	4	0	0.00
+NgcIso.exe	10784	Windows Hello Security Process	Running	1	0	0.00
+AcerDeviceInfoAgentService.exe	8916	Acer DeviceInfo Agent Service	Running	6	0	0.00
+ADESv2BW.exe	9372	ADES V2 BW	Running	1	0	0.00
+NVDisplay.Container.exe	15628	NVIDIA Container	Running	30	0	0.00
+svchost.exe (LocalServiceNetworkRestricted)	15664	Host Process for Windows Services	Running	8	0	0.00
+vncagent.exe	15980	vncagent	Running	3	0	0.00
+conhost.exe	15992	Console Window Host	Running	2	0	0.00
+svchost.exe (netsvcs -p)	16212	Host Process for Windows Services	Running	9	0	0.00
+Dell.TechHub.Analytics.SubAgent.exe	5416	Dell Analytics	Running	19	0	0.00
+Dell.TechHub.DataManager.SubAgent.exe	6464	Dell Data Manager	Running	15	0	0.00
+Dell.UCA.Manager.exe	6596	MyDell Notification Manager	Running	16	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	11024		Running	10	0	0.00
+SecurityHealthService.exe	16420		Running	14	0	0.00
+svchost.exe (LocalService -p)	17316	Host Process for Windows Services	Running	12	0	0.00
+svchost.exe (InvSvcGroup -p)	17084	Host Process for Windows Services	Running	5	0	0.00
+svchost.exe (netsvcsRedirectionGuard -p)	13636	Host Process for Windows Services	Running	4	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	14476	Host Process for Windows Services	Running	5	0	0.00
+mc-fw-host.exe	16296		Running	48	0	0.00
+svchost.exe (BthAppGroup -p)	10932	Host Process for Windows Services	Running	1	0	0.00
+svchost.exe (UnistackSvcGroup)	8836	Host Process for Windows Services	Running	10	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	17020	Host Process for Windows Services	Running	2	0	0.00
+ShellHost.exe	13904	ShellHost	Running	10	0	0.00
+svchost.exe (netsvcs -p)	4048	Host Process for Windows Services	Running	2	0	0.00
+vncserverui.exe	11528	VNC® Server	Running	3	0	0.00
+CrossDeviceResume.exe	17796	CrossDeviceResume.exe	Running	6	0	0.00
+ACCUserPS.exe	16916	ACCUserPS	Running	3	0	0.00
+unsecapp.exe	18556	Sink to receive asynchronous callbacks for WMI client application	Running	3	0	0.00
+SearchHost.exe	18316	SearchHost.exe	Running	24	0	0.00
+StartMenuExperienceHost.exe	19360	Windows Start Experience Host	Running	16	0	0.00
+svchost.exe (UdkSvcGroup)	19304	Host Process for Windows Services	Running	2	0	0.00
+UserOOBEBroker.exe	16120	User OOBE Broker	Running	1	0	0.00
+WidgetService.exe	19532	WidgetService.exe	Running	5	0	0.00
+msedgewebview2.exe	19752	Microsoft Edge WebView2	Running	8	0	0.00
+msedgewebview2.exe	20024	Microsoft Edge WebView2	Running	23	0	0.00
+msedgewebview2.exe	20036	Microsoft Edge WebView2	Running	19	0	0.00
+msedgewebview2.exe	20116	Microsoft Edge WebView2	Running	10	0	0.00
+msedgewebview2.exe	20204	Microsoft Edge WebView2	Running	26	0	0.00
+dllhost.exe	21468	COM Surrogate	Running	4	0	0.00
+SamsungPortableSSDMon_1.0.exe	23116	Samsung Portable SSD Monitor 1.0	Running	1	0	0.00
+SecurityHealthSystray.exe	8876	Windows Security notification icon	Running	1	0	0.00
+RtkAudUService64.exe	21412	Realtek HD Audio Universal Service	Running	12	0	0.00
+OneDrive.exe	3024	Microsoft OneDrive	Running	37	0	0.00
+OneDrive.Sync.Service.exe	13348	Microsoft OneDrive Sync Service	Running	16	0	0.00
+Discord.exe	3844	Discord	Running	7	0	0.00
+Discord.exe	12096	Discord	Running	26	0	0.00
+svchost.exe (Camera)	20844	Host Process for Windows Services	Running	5	0	0.00
+RuntimeBroker.exe	3364	Runtime Broker	Running	3	0	0.00
+svchost.exe (UnistackSvcGroup)	22596	Host Process for Windows Services	Running	5	0	0.00
+OpenConsole.exe	22900	Console Window and PTY Host (Open Source)	Running	4	0	0.00
+powershell.exe	21816	Windows PowerShell	Running	10	0	0.00
+RuntimeBroker.exe	18132	Runtime Broker	Running	2	0	0.00
+svchost.exe (LocalService -p)	19892	Host Process for Windows Services	Running	1	0	0.00
+svchost.exe (netsvcs)	3868	Host Process for Windows Services	Running	13	0	0.00
+StorPSCTL.exe	25744	StorPSCTL	Running	6	0	0.00
+CrossDeviceService.exe	22848	Microsoft Cross Device Service	Running	12	0	0.00
+RuntimeBroker.exe	17844	Runtime Broker	Running	2	0	0.00
+RuntimeBroker.exe	24456	Runtime Broker	Running	2	0	0.00
+msedgewebview2.exe	22184	Microsoft Edge WebView2	Running	8	0	0.00
+msedgewebview2.exe	356	Microsoft Edge WebView2	Running	20	0	0.00
+msedgewebview2.exe	13664	Microsoft Edge WebView2	Running	19	0	0.00
+msedgewebview2.exe	17924	Microsoft Edge WebView2	Running	9	0	0.00
+msedgewebview2.exe	18572	Microsoft Edge WebView2	Running	25	0	0.00
+msedgewebview2.exe	26132	Microsoft Edge WebView2	Running	8	0	0.00
+msedgewebview2.exe	15052	Microsoft Edge WebView2	Running	21	0	0.00
+ollama app.exe	27076	ollama app.exe	Running	13	0	0.00
+ollama.exe	27156	ollama.exe	Running	11	0	0.00
+conhost.exe	27168	Console Window Host	Running	3	0	0.00
+ONENOTEM.EXE	21112	Send to OneNote Tool	Running	2	0	0.00
+RuntimeBroker.exe	27384	Runtime Broker	Running	5	0	0.00
+UBTService.exe	13788	UEIPSvc	Running	11	0	0.00
+CamUsage.exe	15440	CamUsage	Running	7	0	0.00
+AppActions.exe	18208	AppActions.exe	Running	8	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	28368	Host Process for Windows Services	Running	6	0	0.00
+crashhelper.exe	4916	crashhelper.exe	Running	2	0	0.00
+firefox.exe	20664	Firefox	Running	27	0	0.00
+firefox.exe	10324	Firefox	Running	7	0	0.00
+firefox.exe	23340	Firefox	Running	27	0	0.00
+firefox.exe	19684	Firefox	Running	5	0	0.00
+crashhelper.exe	9096	crashhelper.exe	Running	3	0	0.00
+firefox.exe	18356	Firefox	Running	5	0	0.00
+firefox.exe	23124	Firefox	Running	7	0	0.00
+firefox.exe	20652	Firefox	Running	5	0	0.00
+FileCoAuth.exe	5868	Microsoft OneDriveFile Co-Authoring Executable	Running	5	0	0.00
+ApplicationFrameHost.exe	22140	Application Frame Host	Running	8	0	0.00
+svchost.exe (DevicesFlow)	27636	Host Process for Windows Services	Running	3	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	30108	Host Process for Windows Services	Running	3	0	0.00
+backgroundTaskHost.exe	29472	Background Task Host	Running	9	0	0.00
+RuntimeBroker.exe	29124	Runtime Broker	Running	3	0	0.00
+dllhost.exe	28660	COM Surrogate	Running	4	0	0.00
+dllhost.exe	12292	COM Surrogate	Running	3	0	0.00
+dllhost.exe	8108	COM Surrogate	Running	3	0	0.00
+dllhost.exe	30760	COM Surrogate	Running	4	0	0.00
+dllhost.exe	30800	COM Surrogate	Running	3	0	0.00
+dllhost.exe	30840	COM Surrogate	Running	3	0	0.00
+firefox.exe	32172	Firefox	Running	5	0	0.00
+svchost.exe (LocalServiceNetworkRestricted -p)	36108	Host Process for Windows Services	Running	3	0	0.00
+RuntimeBroker.exe	5580	Runtime Broker	Running	3	0	0.00
+kleopatra.exe	31236	Kleopatra - GnuPG User Interface	Running	10	0	0.00
+gpg-agent.exe	36372	GnuPG’s private key daemon	Running	2	0	0.00
+scdaemon.exe	14616	GnuPG’s smartcard daemon	Running	2	0	0.00
+powershell.exe	14428	Windows PowerShell	Running	10	0	0.00
+Obsidian.exe	25420	Obsidian	Running	21	0	0.00
+conhost.exe	8644	Console Window Host	Running	2	0	0.00
+conhost.exe	33244	Console Window Host	Running	2	0	0.00
+OpenConsole.exe	3808	OpenConsole.exe	Running	4	0	0.00
+dasHost.exe	40164	Device Association Framework Provider Host	Running	1	0	0.00
+svchost.exe (PrintWorkflow)	27832	Host Process for Windows Services	Running	2	0	0.00
+dllhost.exe	36320	COM Surrogate	Running	4	0	0.00
+gitkraken.exe	40500	GitKraken	Running	7	0	0.00
+gitkraken.exe	37976	GitKraken	Running	41	0	0.00
+conhost.exe	37984	Console Window Host	Running	2	0	0.00
+node-spawn-server.exe	40332	node-spawn-server.exe	Running	2	0	0.00
+conhost.exe	5544	Console Window Host	Running	2	0	0.00
+svchost.exe (LocalService -p)	26804	Host Process for Windows Services	Running	4	0	0.00
+svchost.exe (LocalServiceAndNoImpersonation -p)	38008	Host Process for Windows Services	Running	7	0	0.00
+taskhostw.exe	41024	Host Process for Windows Tasks	Running	5	0	0.00
+powershell.exe	42132	Windows PowerShell	Running	9	0	0.00
+gitkraken.exe	40524	GitKraken	Running	21	0	0.00
+gitkraken.exe	37844	GitKraken	Running	7	0	0.00
+gitkraken.exe	29360	GitKraken	Running	16	0	0.00
+gitkraken.exe	32256	GitKraken	Running	41	0	0.00
+node-spawn-server.exe	42248	node-spawn-server.exe	Running	2	0	0.00
+conhost.exe	33208	Console Window Host	Running	2	0	0.00
+gitkraken.exe	36160	GitKraken	Running	8	0	0.00
+Fleet.exe	42104	Fleet	Running	2	0	0.00
+conhost.exe	14800	Console Window Host	Running	2	0	0.00
+msedge.exe	44796	Microsoft Edge	Running	7	0	0.00
+msedge.exe	33364	Microsoft Edge	Running	30	0	0.00
+msedge.exe	412	Microsoft Edge	Running	11	0	0.00
+msedge.exe	25168	Microsoft Edge	Running	28	0	0.00
+msedge.exe	25308	Microsoft Edge	Running	23	0	0.00
+svchost.exe (LocalSystemNetworkRestricted -p)	25292	Host Process for Windows Services	Running	3	0	0.00
+cmd.exe	13024	Windows Command Processor	Running	1	0	0.00
+conhost.exe	30288	Console Window Host	Running	5	0	0.00
+powershell.exe	42268	Windows PowerShell	Running	9	0	0.00
+powershell.exe	26840	Windows PowerShell	Running	9	0	0.00
+powershell.exe	42200	Windows PowerShell	Running	9	0	0.00
+msedge.exe	41908	Microsoft Edge	Running	24	0	0.00
+msedge.exe	47192	Microsoft Edge	Running	24	0	0.00
+msedge.exe	47284	Microsoft Edge	Running	26	0	0.00
+msedge.exe	47924	Microsoft Edge	Running	24	0	0.00
+msedge.exe	47156	Microsoft Edge	Running	21	0	0.00
+msedge.exe	47432	Microsoft Edge	Running	10	0	0.00
+conhost.exe	25140	Console Window Host	Running	2	0	0.00
+conhost.exe	39156	Console Window Host	Running	2	0	0.00
+conhost.exe	48760	Console Window Host	Running	2	0	0.00
+JetBrains.Dpa.Collector.exe	50164	JetBrains DPA Collector	Running	4	0	0.00
+msedge.exe	41472	Microsoft Edge	Running	24	0	0.00
+msedgewebview2.exe	48848	Microsoft Edge WebView2	Running	7	0	0.00
+msedgewebview2.exe	38168	Microsoft Edge WebView2	Running	5	0	0.00
+msedgewebview2.exe	46680	Microsoft Edge WebView2	Running	10	0	0.00
+git-bash.exe	23512	Git for Windows	Running	1	0	0.00
+cmd.exe	52940	Windows Command Processor	Running	1	0	0.00
+conhost.exe	19632	Console Window Host	Running	5	0	0.00
+wsl.exe	54984	Windows Subsystem for Linux	Running	1	0	0.00
+wsl.exe	53332	Windows Subsystem for Linux	Running	4	0	0.00
+dllhost.exe	35024	COM Surrogate	Running	2	0	0.00
+dllhost.exe	33840	COM Surrogate	Running	18	0	0.00
+wslrelay.exe	57432	Windows Subsystem for Linux	Running	1	0	0.00
+wslhost.exe	57464	Windows Subsystem for Linux	Running	4	0	0.00
+conhost.exe	57484	Console Window Host	Running	3	0	0.00
+wslhost.exe	57516	Windows Subsystem for Linux	Running	1	0	0.00
+wslhost.exe	57564	Windows Subsystem for Linux	Running	1	0	0.00
+conhost.exe	57572	Console Window Host	Running	3	0	0.00
+conhost.exe	57628	Console Window Host	Running	3	0	0.00
+svchost.exe (GPSvcGroup)	58532	Host Process for Windows Services	Running	6	0	0.00
+msedge.exe	37876	Microsoft Edge	Running	11	0	0.00
+msedge.exe	47200	Microsoft Edge	Running	27	0	0.00
+msedge.exe	59888	Microsoft Edge	Running	27	0	0.00
+msedge.exe	60264	Microsoft Edge	Running	24	0	0.00
+conhost.exe	50432	Console Window Host	Running	2	0	0.00
+conhost.exe	62300	Console Window Host	Running	2	0	0.00
+OpenConsole.exe	57020	OpenConsole.exe	Running	4	0	0.00
+OpenConsole.exe	59740	OpenConsole.exe	Running	4	0	0.00
+powershell.exe	54376	Windows PowerShell	Running	10	0	0.00
+git.exe	47024	Git for Windows	Running	1	0	0.00
+git.exe	60116	Git for Windows	Running	2	0	0.00
+OpenConsole.exe	46560	OpenConsole.exe	Running	4	0	0.00
+OpenConsole.exe	61084	OpenConsole.exe	Running	4	0	0.00
+powershell.exe	56388	Windows PowerShell	Running	9	0	0.00
+OpenConsole.exe	59760	OpenConsole.exe	Running	4	0	0.00
+powershell.exe	57764	Windows PowerShell	Running	9	0	0.00
+wsl.exe	56572	Windows Subsystem for Linux	Running	1	0	0.00
+wsl.exe	61060	Windows Subsystem for Linux	Running	4	0	0.00
+wslhost.exe	62492	Windows Subsystem for Linux	Running	1	0	0.00
+conhost.exe	60820	Console Window Host	Running	3	0	0.00
+firefox.exe	44372	Firefox	Running	27	0	0.00
+msedge.exe	62008	Microsoft Edge	Running	16	0	0.00
+powershell.exe	57324	Windows PowerShell	Running	9	0	0.00
+powershell.exe	61848	Windows PowerShell	Running	9	0	0.00
+firefox.exe	54304	Firefox	Running	5	0	0.00
+RuntimeBroker.exe	68648	Runtime Broker	Running	38	0	0.00
+explorer.exe	54880	Windows Explorer	Running	20	0	0.00
+wsl.exe	61664	Windows Subsystem for Linux	Running	1	0	0.00
+wsl.exe	69732	Windows Subsystem for Linux	Running	4	0	0.00
+dllhost.exe	10880	COM Surrogate	Running	2	0	0.00
+wslhost.exe	18632	Windows Subsystem for Linux	Running	1	0	0.00
+conhost.exe	70344	Console Window Host	Running	3	0	0.00
+Obsidian.exe	65196	Obsidian	Running	7	0	0.00
+conhost.exe	67956	Console Window Host	Running	2	0	0.00
+conhost.exe	36376	Console Window Host	Running	2	0	0.00
+cef_server.exe	61992	Server with Chromium Embedded Framework	Running	10	0	0.00
+OpenConsole.exe	64204	OpenConsole.exe	Running	4	0	0.00
+firefox.exe	48700	Firefox	Running	29	0	0.00
+conhost.exe	66080	Console Window Host	Running	2	0	0.00
+claude.exe	54584	Claude	Running	7	0	0.00
+claude.exe	71860	Claude	Running	20	0	0.00
+claude.exe	49208	Claude	Running	16	0	0.00
+firefox.exe	65260	Firefox	Running	26	0	0.00
+firefox.exe	39848	Firefox	Running	26	0	0.00
+firefox.exe	4320	Firefox	Running	5	0	0.00
+conhost.exe	63664	Console Window Host	Running	2	0	0.00
+firefox.exe	69672	Firefox	Running	26	0	0.00
+msedgewebview2.exe	12428	Microsoft Edge WebView2	Running	25	0	0.00
+crashhelper.exe	68976	crashhelper.exe	Running	2	0	0.00
+firefox.exe	31956	Firefox	Running	26	0	0.00
+firefox.exe	24088	Firefox	Running	5	0	0.00
+firefox.exe	75684	Firefox	Running	7	0	0.00
+firefox.exe	71568	Firefox	Running	27	0	0.00
+firefox.exe	46676	Firefox	Running	5	0	0.00
+firefox.exe	68008	Firefox	Running	26	0	0.00
+firefox.exe	4292	Firefox	Running	26	0	0.00
+RuntimeBroker.exe	73492	Runtime Broker	Running	5	0	0.00
+firefox.exe	55660	Firefox	Running	26	0	0.00
+aimgr.exe	66216	Local AI Manager for Microsoft® 365 and Platform x64.	Running	4	0	0.00
+firefox.exe	25936	Firefox	Running	29	0	0.00
+firefox.exe	44076	Firefox	Terminated	32	0	0.00
+firefox.exe	63452	Firefox	Terminated	33	0	0.00
