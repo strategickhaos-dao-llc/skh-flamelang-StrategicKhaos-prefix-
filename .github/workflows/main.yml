@@ -1,0 +1,82 @@
+**Click "Skip this and set up a workflow yourself"** at the top.
+
+Then paste this complete FlameLang CI workflow:
+
+```yaml
+name: 🔥 FlameLang CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+  FLAMELANG_VERSION: "2.0.0"
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+
+    - name: 🦀 Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: 📦 Cache Cargo
+      uses: Swatinem/rust-cache@v2
+
+    - name: 🔍 Format Check
+      run: cargo fmt --all -- --check
+
+    - name: 🧹 Clippy Lint
+      run: cargo clippy --all-targets --all-features -- -D warnings
+
+    - name: 🔨 Build
+      run: cargo build --verbose
+
+    - name: 🧪 Test
+      run: cargo test --verbose
+
+  # Future: Add these jobs as we build out
+  # layer-tests:
+  #   name: 5-Layer Pipeline Tests
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - Layer 1: Linguistic (English → Hebrew)
+  #     - Layer 2: Numeric (Unicode → Decimal)
+  #     - Layer 3: Wave (c=2πr → Hz)
+  #     - Layer 4: DNA (Freq → Codon)
+  #     - Layer 5: LLVM IR generation
+```
+
+---
+
+**File path will be:** `.github/workflows/flamelang-ci.yml`
+
+**Commit message:** `🔥 Add FlameLang CI workflow`
+
+---
+
+After commit, go back to the Codespace and run the Phase 1 scaffold commands:
+
+```bash
+mkdir -p src/{lexer,parser,transform/{layer1_linguistic,layer2_numeric,layer3_wave,layer4_dna,layer5_llvm},codegen,stdlib/{dna,physics,glyph,quantum,swarm,collections,io,math}}
+mkdir -p tests/{unit,integration,benchmarks}
+mkdir -p docs/{spec,api,tutorials}
+mkdir -p examples/{hello_world,dna_encoding,physics_validation,quantum_circuits}
+mkdir -p tools/{flamec,flamefmt,flamelsp}
+mkdir -p training/modules/mod1-bar-charts/{corpus,vectors}
+
+tree -L 3
+```
+
+Paste the tree output and we continue.
