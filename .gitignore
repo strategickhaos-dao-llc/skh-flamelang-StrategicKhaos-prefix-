@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+# Rust
+/target/
+Cargo.lock
+
+# AetherViz generated outputs
+repo-brain.svg
+repo-brain.md
+repo-brain-audio.txt
+repo-brain-payload.json
