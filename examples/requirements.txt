@@ -1,0 +1,8 @@
+# Python dependencies for FlameLang examples
+# Install with: pip install -r requirements.txt
+
+# Core scientific computing
+numpy>=1.24.0
+
+# MIDI file generation (optional but recommended)
+mido>=1.3.0
