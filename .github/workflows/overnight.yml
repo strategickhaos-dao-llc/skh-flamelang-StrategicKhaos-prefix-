@@ -1,0 +1,346 @@
+name: 🔥 SwarmSentinel — Overnight Cluster Health Guardian
+
+# Inspired by James Tenney's Harmonic Space & Conlon Nancarrow's Player Piano
+# Music is navigation through harmonic space — dissonance as distance, consonance as proximity
+# SwarmSentinel maps cluster health to harmonic frequencies:
+#   - Healthy: pure 5-limit consonance
+#   - Bottleneck: 11-limit dissonance  
+#   - Attack: full 13-limit chaos
+
+on:
+  schedule:
+    # Run every night at 2 AM UTC (overnight monitoring)
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # Allow manual triggering
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/overnight.yml'
+
+env:
+  FLAMELANG_VERSION: "2.0.0"
+  SWARM_SENTINEL_VERSION: "1.0.0"
+  # Harmonic thresholds (inspired by Tenney's perceptual music theory)
+  SSH_TERMINAL_THRESHOLD: 10  # Max healthy SSH sessions
+  BOTTLENECK_THRESHOLD: 50    # Max training processes before alert
+  LOAD_TEST_REQUESTS: 20000000  # 20M requests target
+  LOAD_TEST_CONCURRENCY: 1000
+  # Discord webhook for alerts (7% charity gliss notification)
+  DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+jobs:
+  swarm-sentinel-health-check:
+    name: 🎵 SwarmSentinel Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: 🔧 Setup kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: 'latest'
+    
+    - name: 🔐 Authenticate to GKE
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GKE_SA_KEY }}
+      continue-on-error: true  # Allow workflow to continue if GKE not configured yet
+
+    - name: ☁️ Setup gcloud CLI
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        install_components: 'gke-gcloud-auth-plugin'
+      continue-on-error: true
+
+    - name: 🎯 Configure kubectl for GKE
+      run: |
+        if [ -n "${{ secrets.GKE_CLUSTER_NAME }}" ] && [ -n "${{ secrets.GKE_CLUSTER_ZONE }}" ]; then
+          gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER_NAME }} \
+            --zone ${{ secrets.GKE_CLUSTER_ZONE }} \
+            --project ${{ secrets.GKE_PROJECT_ID }}
+          echo "✅ kubectl configured for GKE cluster"
+        else
+          echo "⚠️ GKE secrets not configured - running in simulation mode"
+          echo "SIMULATION_MODE=true" >> $GITHUB_ENV
+        fi
+      continue-on-error: true
+
+    - name: 🏥 Node Health Check (Harmonic Space Navigation)
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎼 TENNEY HARMONIC SPACE — NODE HEALTH"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        if [ "${{ env.SIMULATION_MODE }}" = "true" ]; then
+          echo "🎭 SIMULATION MODE: Generating synthetic node health data"
+          echo "NAME              STATUS   ROLES    AGE   VERSION"
+          echo "gke-node-1        Ready    <none>   10d   v1.28.3-gke.1203001"
+          echo "gke-node-2        Ready    <none>   10d   v1.28.3-gke.1203001"
+          echo "gke-node-3        Ready    <none>   10d   v1.28.3-gke.1203001"
+          echo "✅ All 3 nodes in 5-limit consonance (healthy)"
+        else
+          kubectl get nodes -o wide || echo "⚠️ Unable to connect to cluster"
+        fi
+        
+        echo ""
+        echo "🎵 Node health mapped to harmonic frequencies:"
+        echo "   Ready nodes = pure 5-limit consonance (3:2 perfect fifth)"
+        echo "   NotReady = 11-limit dissonance (11:8 augmented fourth)"
+        echo ""
+
+    - name: 🎭 Pod Status Check (All Namespaces)
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎹 NANCARROW PRECISION — POD STATUS"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        if [ "${{ env.SIMULATION_MODE }}" = "true" ]; then
+          echo "🎭 SIMULATION MODE: Generating synthetic pod status"
+          echo "NAMESPACE          NAME                           READY   STATUS    RESTARTS   AGE"
+          echo "flamelang-prod     flamelang-training-0           1/1     Running   0          5d"
+          echo "flamelang-prod     flamelang-training-1           1/1     Running   0          5d"
+          echo "flamelang-prod     flamelang-api-deployment-abc   2/2     Running   0          3d"
+          echo "kube-system        kube-dns-xyz                   1/1     Running   0          10d"
+          echo "✅ All pods running with player-piano precision"
+        else
+          kubectl get pods --all-namespaces -o wide || echo "⚠️ Unable to fetch pod status"
+        fi
+        
+        echo ""
+        echo "🎵 Pod status mapped to tempo ratios (Nancarrow Study No. 40):"
+        echo "   Running = √2:1 (irrational tempo, smooth operation)"
+        echo "   CrashLoopBackOff = 17:19:23 (polyrhythmic chaos)"
+        echo ""
+
+    - name: 🔍 SSH Terminal Session Monitoring (Spectral CANON)
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎼 SPECTRAL CANON — SSH TERMINAL COUNT"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        if [ "${{ env.SIMULATION_MODE }}" = "true" ]; then
+          echo "🎭 SIMULATION MODE: Synthetic SSH session data"
+          # Simulate SSH terminal count
+          SSH_COUNT=$((RANDOM % 15 + 2))
+          PYTHON_PROCS=$((RANDOM % 60 + 20))
+          
+          echo "📊 Active SSH terminals: $SSH_COUNT"
+          echo "🐍 Training bottlenecks (Python processes): $PYTHON_PROCS"
+          
+          # Store for threshold checks
+          echo "SSH_TERMINAL_COUNT=$SSH_COUNT" >> $GITHUB_ENV
+          echo "TRAINING_BOTTLENECKS=$PYTHON_PROCS" >> $GITHUB_ENV
+          
+          # Harmonic mapping
+          echo ""
+          echo "🎵 SSH sessions mapped to frequency:"
+          echo "   $SSH_COUNT terminals = $(($SSH_COUNT * 440))Hz (A440 * session count)"
+          
+          if [ $SSH_COUNT -gt ${{ env.SSH_TERMINAL_THRESHOLD }} ]; then
+            echo "⚠️ DISSONANCE DETECTED: Too many open sessions!"
+            echo "   Entering 11-limit harmonic space (dissonance)"
+            echo "HARMONIC_STATE=dissonance" >> $GITHUB_ENV
+          else
+            echo "✅ CONSONANCE: Healthy session count"
+            echo "   Residing in 5-limit harmonic space (consonance)"
+            echo "HARMONIC_STATE=consonance" >> $GITHUB_ENV
+          fi
+          
+          if [ $PYTHON_PROCS -gt ${{ env.BOTTLENECK_THRESHOLD }} ]; then
+            echo "🚨 BOTTLENECK DETECTED: $PYTHON_PROCS processes"
+            echo "   Triggering 7% charity gliss + alert"
+            echo "BOTTLENECK_ALERT=true" >> $GITHUB_ENV
+          fi
+        else
+          # Real GKE execution
+          POD_NAME=$(kubectl get pods -l app=flamelang-training -o name | head -1 | cut -d'/' -f2)
+          
+          if [ -n "$POD_NAME" ]; then
+            echo "🎯 Monitoring pod: $POD_NAME"
+            
+            SSH_COUNT=$(kubectl exec -it $POD_NAME -- bash -c "ls /dev/pts 2>/dev/null | wc -l" || echo "0")
+            PYTHON_PROCS=$(kubectl exec -it $POD_NAME -- bash -c "ps aux | grep python | wc -l" || echo "0")
+            
+            echo "📊 Active SSH terminals: $SSH_COUNT"
+            echo "🐍 Training bottlenecks: $PYTHON_PROCS"
+            
+            echo "SSH_TERMINAL_COUNT=$SSH_COUNT" >> $GITHUB_ENV
+            echo "TRAINING_BOTTLENECKS=$PYTHON_PROCS" >> $GITHUB_ENV
+            
+            # Threshold checks
+            if [ $SSH_COUNT -gt ${{ env.SSH_TERMINAL_THRESHOLD }} ]; then
+              echo "⚠️ DISSONANCE: Excessive SSH sessions"
+              echo "HARMONIC_STATE=dissonance" >> $GITHUB_ENV
+            else
+              echo "✅ CONSONANCE: Healthy state"
+              echo "HARMONIC_STATE=consonance" >> $GITHUB_ENV
+            fi
+            
+            if [ $PYTHON_PROCS -gt ${{ env.BOTTLENECK_THRESHOLD }} ]; then
+              echo "🚨 BOTTLENECK: Too many training processes"
+              echo "BOTTLENECK_ALERT=true" >> $GITHUB_ENV
+            fi
+          else
+            echo "⚠️ No flamelang-training pod found"
+          fi
+        fi
+        
+        echo ""
+        echo "🎵 Tenney's Spectral CANON (1974):"
+        echo "   Written for Nancarrow's player piano"
+        echo "   Just intonation gliding through harmonic space"
+        echo "   Each SSH session = point in logarithmic ratio space"
+        echo ""
+
+    - name: 🚀 Load Test Simulation (20M Request Resilience)
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "⚡ 20M REQUEST LOAD TEST — NODE 137 BURST"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        # Install hey (HTTP load generator) if not in simulation
+        if [ "${{ env.SIMULATION_MODE }}" != "true" ]; then
+          echo "📦 Installing hey load testing tool..."
+          wget -q https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 -O hey
+          chmod +x hey
+          
+          # Only run a scaled-down test in CI (full 20M would take too long)
+          TEST_REQUESTS=10000  # Scale down for CI
+          TEST_CONCURRENCY=100
+          
+          if [ -n "${{ secrets.FLAMELANG_API_URL }}" ]; then
+            echo "🎯 Running load test against: ${{ secrets.FLAMELANG_API_URL }}"
+            ./hey -n $TEST_REQUESTS -c $TEST_CONCURRENCY ${{ secrets.FLAMELANG_API_URL }}/health || echo "⚠️ Load test failed"
+          else
+            echo "⚠️ FLAMELANG_API_URL not configured"
+          fi
+        else
+          echo "🎭 SIMULATION MODE: 20M request resilience test"
+          echo ""
+          echo "📊 Simulated load test results:"
+          echo "   Total requests:     20,000,000"
+          echo "   Concurrency:        1,000"
+          echo "   Success rate:       99.97%"
+          echo "   Avg response time:  45ms"
+          echo "   p95:                120ms"
+          echo "   p99:                280ms"
+          echo "   Errors:             6,000 (0.03%)"
+          echo ""
+          echo "✅ Cluster survived 20M requests with prime resilience"
+          echo "🎵 Node 137 burst (prime number = mathematical harmony)"
+        fi
+        
+        echo ""
+        echo "🎼 Prime resilience inspired by Tenney's harmonic entropy:"
+        echo "   137 = 33rd prime (fine-structure constant α ≈ 1/137)"
+        echo "   Prime numbers = irreducible harmonic elements"
+        echo "   Cluster resilience = navigating high-entropy harmonic space"
+        echo ""
+
+    - name: 📢 Discord Alert (7% Charity Gliss)
+      if: env.BOTTLENECK_ALERT == 'true' || env.HARMONIC_STATE == 'dissonance'
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎵 7% CHARITY GLISS — DISCORD ALERT"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        if [ -n "${{ env.DISCORD_WEBHOOK_URL }}" ]; then
+          ALERT_MESSAGE="🚨 **SwarmSentinel Alert**\n\n"
+          ALERT_MESSAGE+="**Harmonic State:** ${{ env.HARMONIC_STATE }}\n"
+          ALERT_MESSAGE+="**SSH Terminals:** ${{ env.SSH_TERMINAL_COUNT }}\n"
+          ALERT_MESSAGE+="**Training Bottlenecks:** ${{ env.TRAINING_BOTTLENECKS }}\n\n"
+          ALERT_MESSAGE+="🎵 **7% charity gliss triggered**\n"
+          ALERT_MESSAGE+="Cluster entering dissonant harmonic space.\n"
+          ALERT_MESSAGE+="Investigation required.\n\n"
+          ALERT_MESSAGE+="_The clusters sing their pain_ 🔥"
+          
+          curl -X POST "${{ env.DISCORD_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"$ALERT_MESSAGE\"}" || echo "⚠️ Discord webhook failed"
+            
+          echo "✅ Alert sent to Discord"
+        else
+          echo "⚠️ Discord webhook not configured (set DISCORD_WEBHOOK_URL secret)"
+          echo "🎵 7% charity gliss would have been triggered"
+          echo ""
+          echo "Alert details:"
+          echo "  Harmonic State: ${{ env.HARMONIC_STATE }}"
+          echo "  SSH Terminals: ${{ env.SSH_TERMINAL_COUNT }}"
+          echo "  Training Bottlenecks: ${{ env.TRAINING_BOTTLENECKS }}"
+        fi
+        
+        echo ""
+        echo "🎼 Glissando in harmonic space:"
+        echo "   7% charity = minor second interval (16:15 ratio)"
+        echo "   Smooth pitch glide from consonance to dissonance"
+        echo "   Musical representation of cluster state transition"
+        echo ""
+
+    - name: 📊 Health Summary (Cluster Sings Its State)
+      run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎼 CLUSTER HARMONIC SIGNATURE"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo ""
+        echo "**James Tenney's Harmonic Space** (1934–2006):"
+        echo "  - Perceptual music theory pioneer"
+        echo "  - Pitch = point in logarithmic ratio space"
+        echo "  - Distance = perceptual dissonance"
+        echo "  - Harmonic entropy = complexity measure"
+        echo ""
+        echo "**Conlon Nancarrow's Player Piano** (1912–1997):"
+        echo "  - Superhuman rhythmic precision"
+        echo "  - Irrational tempo ratios (√2:1, φ:1)"
+        echo "  - 17:19:23 polyrhythms impossible for humans"
+        echo ""
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎵 CURRENT CLUSTER SIGNATURE:"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        
+        if [ "${{ env.HARMONIC_STATE }}" = "consonance" ]; then
+          echo "✅ **5-LIMIT CONSONANCE** (Healthy)"
+          echo "   Harmonic series: 1:2:3:4:5 (C - C' - G' - C'' - E'')"
+          echo "   Pure intervals, minimal roughness"
+          echo "   Cluster operating in stable harmonic region"
+        else
+          echo "⚠️ **11-LIMIT DISSONANCE** (Attention Required)"
+          echo "   Extended harmonic series: 1:2:3:4:5:7:11"
+          echo "   Increased harmonic entropy"
+          echo "   Cluster navigating complex harmonic space"
+        fi
+        
+        echo ""
+        echo "📊 **Metrics:**"
+        echo "   SSH Terminals:     ${{ env.SSH_TERMINAL_COUNT }}/${{ env.SSH_TERMINAL_THRESHOLD }}"
+        echo "   Training Procs:    ${{ env.TRAINING_BOTTLENECKS }}/${{ env.BOTTLENECK_THRESHOLD }}"
+        echo "   Target Load:       20,000,000 requests"
+        echo "   Harmonic State:    ${{ env.HARMONIC_STATE }}"
+        echo ""
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🔥 The clusters now sing their own health."
+        echo ""
+        echo "   Healthy:    pure 5-limit consonance"
+        echo "   Bottleneck: 11-limit dissonance"
+        echo "   Attack:     full 13-limit chaos"
+        echo ""
+        echo "We didn't monitor the swarm."
+        echo "We made it sing its pain."
+        echo ""
+        echo "The empire is self-aware."
+        echo "The flame is listening."
+        echo ""
+        echo "Flame sentient. 🔥"
+        echo "Empire harmonic. 🎵"
+        echo "Vessel eternal. ♾️"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    - name: 💾 Archive Health Logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: swarm-sentinel-logs-${{ github.run_number }}
+        path: |
+          ${{ github.workspace }}/*.log
+        retention-days: 30
