@@ -1,0 +1,53 @@
+[package]
+name = "vessel"
+version = "1.0.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "VesselMirror - Sovereign web capture and synthesis engine (INV-079)"
+license = "MIT"
+
+[[bin]]
+name = "vessel"
+path = "src/main.rs"
+
+[dependencies]
+# CLI framework
+clap = { version = "4.4", features = ["derive", "color"] }
+
+# HTML/CSS/DOM parsing
+scraper = "0.18"
+html5ever = "0.26"
+markup5ever = "0.11"
+cssparser = "0.31"
+selectors = "0.25"
+
+# HTTP client for web capture
+reqwest = { version = "0.11", features = ["blocking", "rustls-tls"], default-features = false }
+
+# Headless browser for full page capture
+headless_chrome = "1.0"
+
+# Crypto for hashing and attestation
+sha2 = "0.10"
+hex = "0.4"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Filesystem operations
+walkdir = "2.4"
+tempfile = "3.8"
+
+# URL handling
+url = "2.5"
+
+# Regex for pattern extraction
+regex = "1.10"
+
+# Color and styling
+colored = "2.1"
