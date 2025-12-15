@@ -1,0 +1,47 @@
+{
+  "name": "skh-flamelang-StrategicKhaos-prefix--main",
+  "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix--main",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "skh-flamelang-StrategicKhaos-prefix--main",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix--main"
+    },
+    {
+      "id": 1,
+      "label": "skh-flamelang-StrategicKhaos-prefix--main",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix--main/skh-flamelang-StrategicKhaos-prefix--main"
+    },
+    {
+      "id": 2,
+      "label": "LICENSE",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix--main/skh-flamelang-StrategicKhaos-prefix--main/LICENSE"
+    },
+    {
+      "id": 3,
+      "label": "README.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix--main/skh-flamelang-StrategicKhaos-prefix--main/README.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "type": "contains"
+    }
+  ]
+}

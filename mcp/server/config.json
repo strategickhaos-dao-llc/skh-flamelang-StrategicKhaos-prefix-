@@ -1,0 +1,121 @@
+{
+  "name": "flamelang-mcp-server",
+  "version": "2.0.0",
+  "description": "MCP Server for FlameLang - Biological-Quantum-Physics Programming Language",
+  "tools": [
+    {
+      "name": "analyze_repository",
+      "description": "Analyzes the FlameLang repository structure and generates graph view metadata",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Root path to analyze"
+          },
+          "depth": {
+            "type": "integer",
+            "description": "Maximum depth to traverse",
+            "default": -1
+          }
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "name": "generate_graphview",
+      "description": "Generates Obsidian-compatible graph view brain for a directory",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "directory": {
+            "type": "string",
+            "description": "Directory to generate graph view for"
+          },
+          "output_path": {
+            "type": "string",
+            "description": "Path to save the graph view metadata"
+          }
+        },
+        "required": ["directory", "output_path"]
+      }
+    },
+    {
+      "name": "flamelang_compile_with_ollama",
+      "description": "Compiles FlameLang code with Ollama LLM inline assistance",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "source_file": {
+            "type": "string",
+            "description": "FlameLang source file to compile"
+          },
+          "llm_model": {
+            "type": "string",
+            "description": "Ollama model to use for assistance",
+            "default": "codellama"
+          },
+          "optimization_level": {
+            "type": "integer",
+            "description": "Optimization level (0-3)",
+            "default": 2
+          }
+        },
+        "required": ["source_file"]
+      }
+    },
+    {
+      "name": "generate_tutorial_video_script",
+      "description": "Generates AI video script from FlameLang code for teaching purposes",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "code_snippet": {
+            "type": "string",
+            "description": "FlameLang code to explain"
+          },
+          "topic": {
+            "type": "string",
+            "description": "Tutorial topic/title"
+          },
+          "target_duration": {
+            "type": "integer",
+            "description": "Target video duration in seconds",
+            "default": 300
+          }
+        },
+        "required": ["code_snippet", "topic"]
+      }
+    },
+    {
+      "name": "create_graphview_brain",
+      "description": "Creates an ONSIT methodology graphview brain for repository navigation",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "root_directory": {
+            "type": "string",
+            "description": "Root directory of the repository"
+          },
+          "brain_name": {
+            "type": "string",
+            "description": "Name for the graphview brain"
+          }
+        },
+        "required": ["root_directory", "brain_name"]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "flamelang_docs",
+      "uri": "file:///docs",
+      "description": "FlameLang documentation and specifications"
+    },
+    {
+      "name": "repository_structure",
+      "uri": "file:///",
+      "description": "Complete repository source tree"
+    }
+  ]
+}

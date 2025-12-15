@@ -1,0 +1,489 @@
+{
+  "name": "src",
+  "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "src",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src"
+    },
+    {
+      "id": 1,
+      "label": "codegen",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/codegen"
+    },
+    {
+      "id": 2,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/codegen/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 3,
+      "label": "lexer",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lexer"
+    },
+    {
+      "id": 4,
+      "label": "Dockerfile",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lexer/Dockerfile"
+    },
+    {
+      "id": 5,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lexer/mod.rs",
+      "metadata": {
+        "lines": 209,
+        "has_quantum": true,
+        "has_dna": true,
+        "has_wave": true,
+        "imports": [
+          "// Export for use in parser phase",
+          "use super::*;"
+        ],
+        "exports": [
+          "pub struct Lexer {",
+          "pub fn new(input: &str) -> Self {",
+          "pub fn next_token(&mut self) -> Token {"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "label": "scanner.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lexer/scanner.rs",
+      "metadata": {
+        "lines": 19,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [
+          "use super::Token;"
+        ],
+        "exports": [
+          "pub struct Lexer<'a> {",
+          "pub fn new(source: &'a str) -> Self {",
+          "pub fn tokenize(&mut self) -> Vec<Token> {"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "label": "tokens.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lexer/tokens.rs",
+      "metadata": {
+        "lines": 29,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 8,
+      "label": "lib.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/lib.rs",
+      "metadata": {
+        "lines": 30,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [
+          "pub use lexer::{Lexer, Token};",
+          "pub use parser::{Parser, AstNode};"
+        ],
+        "exports": []
+      }
+    },
+    {
+      "id": 9,
+      "label": "main.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/main.rs",
+      "metadata": {
+        "lines": 20,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [
+          "use flamelang::FlameResult;"
+        ],
+        "exports": []
+      }
+    },
+    {
+      "id": 10,
+      "label": "parser",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/parser"
+    },
+    {
+      "id": 11,
+      "label": "Dockerfile",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/parser/Dockerfile"
+    },
+    {
+      "id": 12,
+      "label": "ast.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/parser/ast.rs",
+      "metadata": {
+        "lines": 30,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 13,
+      "label": "grammar.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/parser/grammar.rs",
+      "metadata": {
+        "lines": 21,
+        "has_quantum": true,
+        "has_dna": false,
+        "has_wave": true,
+        "imports": [
+          "use crate::lexer::Token;",
+          "use super::ast::*;"
+        ],
+        "exports": [
+          "pub struct Parser {",
+          "pub fn new(tokens: Vec<Token>) -> Self {",
+          "pub fn parse(&mut self) -> Result<Vec<Expr>, String> {"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/parser/mod.rs",
+      "metadata": {
+        "lines": 209,
+        "has_quantum": true,
+        "has_dna": true,
+        "has_wave": true,
+        "imports": [
+          "use crate::lexer::{Lexer, Token};",
+          "// Export for use in transform phases",
+          "use super::*;"
+        ],
+        "exports": [
+          "pub struct Parser {",
+          "pub fn new(input: &str) -> Self {",
+          "pub fn parse_program(&mut self) -> AstNode {"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "label": "stdlib",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/stdlib"
+    },
+    {
+      "id": 16,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/stdlib/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 17,
+      "label": "transform",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform"
+    },
+    {
+      "id": 18,
+      "label": "layer1_linguistic",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer1_linguistic"
+    },
+    {
+      "id": 19,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer1_linguistic/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 20,
+      "label": "layer2_numeric",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer2_numeric"
+    },
+    {
+      "id": 21,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer2_numeric/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 22,
+      "label": "layer3_wave",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer3_wave"
+    },
+    {
+      "id": 23,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer3_wave/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 24,
+      "label": "layer4_dna",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer4_dna"
+    },
+    {
+      "id": 25,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer4_dna/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 26,
+      "label": "layer5_llvm",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer5_llvm"
+    },
+    {
+      "id": 27,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/layer5_llvm/mod.rs",
+      "metadata": {
+        "lines": 1,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": false,
+        "imports": [],
+        "exports": []
+      }
+    },
+    {
+      "id": 28,
+      "label": "mod.rs",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/src/transform/mod.rs",
+      "metadata": {
+        "lines": 22,
+        "has_quantum": false,
+        "has_dna": false,
+        "has_wave": true,
+        "imports": [],
+        "exports": [
+          "pub struct LinguisticOutput;",
+          "pub struct NumericOutput;",
+          "pub struct WaveOutput;",
+          "pub struct DnaOutput;",
+          "pub struct LlvmOutput;"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 8,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 9,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 10,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 13,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 14,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 15,
+      "type": "contains"
+    },
+    {
+      "from": 15,
+      "to": 16,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 17,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "type": "contains"
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 20,
+      "type": "contains"
+    },
+    {
+      "from": 20,
+      "to": 21,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 22,
+      "type": "contains"
+    },
+    {
+      "from": 22,
+      "to": 23,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 24,
+      "type": "contains"
+    },
+    {
+      "from": 24,
+      "to": 25,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 26,
+      "type": "contains"
+    },
+    {
+      "from": 26,
+      "to": 27,
+      "type": "contains"
+    },
+    {
+      "from": 17,
+      "to": 28,
+      "type": "contains"
+    }
+  ]
+}

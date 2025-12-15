@@ -7,12 +7,12 @@ description = "FlameLang: 5-layer biological-quantum-physics programming languag
 license = "MIT"
 repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang"
 
-[workspace]
-members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
-]
+# [workspace]
+# members = [
+#     "tools/flamec",
+#     "tools/flamefmt", 
+#     "tools/flamelsp",
+# ]
 
 [dependencies]
 thiserror = "1.0"

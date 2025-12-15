@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "title": "FlameLang Tutorial: Getting Started with FlameLang",
+    "topic": "Getting Started with FlameLang",
+    "difficulty": "beginner",
+    "duration_seconds": 300,
+    "learning_objectives": [
+      "Understand getting started with flamelang",
+      "Write FlameLang code",
+      "Explore the 5-layer pipeline"
+    ],
+    "created_at": "2025-12-15T03:45:15.120260",
+    "version": "2.0.0"
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Introduction",
+      "timestamp": "00:00",
+      "duration": 30,
+      "visual": {
+        "type": "animated_intro",
+        "elements": [
+          "FlameLang logo animation",
+          "Title card: Getting Started with FlameLang",
+          "Particle effects (DNA strands, quantum waves)"
+        ]
+      },
+      "narration": "Welcome to FlameLang! I'm excited to teach you about Getting Started with FlameLang.\n                \nFlameLang is a revolutionary programming language that combines quantum computing, \nbiological systems, and wave physics into a unified computational framework.\n\nIn this tutorial, you'll learn: Understand getting started with flamelang, Write FlameLang code, Explore the 5-layer pipeline.\n\nLet's dive in!",
+      "background_music": "upbeat_tech_intro.mp3",
+      "text_overlays": [
+        {
+          "time": 0,
+          "text": "FlameLang Tutorial: Getting Started with FlameLang",
+          "style": "title"
+        },
+        {
+          "time": 15,
+          "text": "Subscribe for more!",
+          "style": "subtitle"
+        }
+      ]
+    },
+    {
+      "scene_number": 2,
+      "title": "Concept Overview",
+      "timestamp": "00:30",
+      "duration": 45,
+      "visual": {
+        "type": "concept_diagram",
+        "elements": [
+          "Topic breakdown diagram",
+          "Key concepts highlighted",
+          "Visual metaphors"
+        ]
+      },
+      "narration": "Before we look at code, let's understand what Getting Started with FlameLang means in FlameLang.\n\nWe'll start with the basics and build from there.\n\nRemember, FlameLang operates through five transformation layers: \nLinguistic, Numeric, Wave, DNA, and LLVM. Each layer adds a dimension of computation.\n\nNow let's see how this works in practice.",
+      "animations": [
+        "Concept diagram fade-in",
+        "Layer pipeline visualization"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "title": "Example 1",
+      "timestamp": "01:15",
+      "duration": 60,
+      "visual": {
+        "type": "code_editor",
+        "style": "vs_code_dark",
+        "elements": [
+          "Syntax highlighted code",
+          "Line-by-line reveal animation",
+          "Zoom on key sections",
+          "Inline annotations"
+        ]
+      },
+      "code": "\n// Hello FlameLang\nlet message = \"Hello, Quantum World!\";\nprint(message);\n",
+      "narration": "Let me walk you through this code. This code demonstrates core FlameLang syntax and patterns. Each line is processed through the 5-layer transformation pipeline to produce efficient machine code.",
+      "animations": [
+        "Type-writer effect for code",
+        "Highlight key constructs",
+        "Visual indicators for quantum/DNA/wave operations"
+      ],
+      "annotations": []
+    },
+    {
+      "scene_number": 4,
+      "title": "5-Layer Transformation Pipeline",
+      "timestamp": "02:15",
+      "duration": 25,
+      "visual": {
+        "type": "3d_animation",
+        "elements": [
+          "5-layer pipeline 3D model",
+          "Data flow visualization",
+          "Each layer highlighted in sequence",
+          "Transformation examples"
+        ]
+      },
+      "narration": "Now watch as your FlameLang code transforms through all five layers.\n\nFirst, Layer 1: Linguistic transformation maps English concepts to Hebrew semantics.\n\nLayer 2: Numeric conversion translates Unicode to decimal representations.\n\nLayer 3: Wave analysis applies frequency domain transformations.\n\nLayer 4: DNA encoding maps computational states to biological codons.\n\nFinally, Layer 5: LLVM IR generation produces executable machine code.\n\nThis multi-dimensional transformation is what makes FlameLang unique!",
+      "animations": [
+        "Pipeline 3D rotation",
+        "Data flowing through layers",
+        "Color-coded transformations"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "title": "Try It Yourself",
+      "timestamp": "02:40",
+      "duration": 30,
+      "visual": {
+        "type": "split_screen",
+        "elements": [
+          "Challenge prompt on left",
+          "Blank code editor on right",
+          "Timer countdown"
+        ]
+      },
+      "narration": "Now it's your turn! Pause the video and try implementing Getting Started with FlameLang yourself.\n\nHere's a challenge: modify the code we just saw to add your own twist.\n\nWhen you're ready, unpause to see a solution and compare your approach.\n\nRemember, there's often more than one way to solve a problem in FlameLang!",
+      "interactive_elements": [
+        "Pause prompt",
+        "Code challenge text"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "title": "Conclusion",
+      "timestamp": "03:10",
+      "duration": 20,
+      "visual": {
+        "type": "recap_and_cta",
+        "elements": [
+          "Key points summary",
+          "Subscribe button animation",
+          "Links overlay",
+          "Next tutorial teaser"
+        ]
+      },
+      "narration": "Congratulations! You've learned about Getting Started with FlameLang in FlameLang.\n\nYou can now: Understand getting started with flamelang, Write FlameLang code.\n\nIf you found this helpful, hit that subscribe button and check out the FlameLang \ndocumentation linked below.\n\nIn the next video, we'll explore more advanced features of the quantum subsystem.\n\nKeep coding, and remember: with FlameLang, you're not just writing code, \nyou're programming reality itself. See you next time!",
+      "text_overlays": [
+        {
+          "time": 5,
+          "text": "Subscribe!",
+          "style": "cta_button"
+        },
+        {
+          "time": 10,
+          "text": "github.com/strategickhaos/flamelang",
+          "style": "link"
+        },
+        {
+          "time": 15,
+          "text": "Next: Advanced Quantum Features",
+          "style": "teaser"
+        }
+      ],
+      "end_screen": {
+        "duration": 5,
+        "elements": [
+          "channel_logo",
+          "subscribe_button",
+          "video_thumbnails"
+        ]
+      }
+    }
+  ],
+  "narration_script": [
+    {
+      "timestamp": "00:00",
+      "scene": "Introduction",
+      "text": "Welcome to FlameLang! I'm excited to teach you about Getting Started with FlameLang.\n                \nFlameLang is a revolutionary programming language that combines quantum computing, \nbiological systems, and wave physics into a unified computational framework.\n\nIn this tutorial, you'll learn: Understand getting started with flamelang, Write FlameLang code, Explore the 5-layer pipeline.\n\nLet's dive in!"
+    },
+    {
+      "timestamp": "00:30",
+      "scene": "Concept Overview",
+      "text": "Before we look at code, let's understand what Getting Started with FlameLang means in FlameLang.\n\nWe'll start with the basics and build from there.\n\nRemember, FlameLang operates through five transformation layers: \nLinguistic, Numeric, Wave, DNA, and LLVM. Each layer adds a dimension of computation.\n\nNow let's see how this works in practice."
+    },
+    {
+      "timestamp": "01:15",
+      "scene": "Example 1",
+      "text": "Let me walk you through this code. This code demonstrates core FlameLang syntax and patterns. Each line is processed through the 5-layer transformation pipeline to produce efficient machine code."
+    },
+    {
+      "timestamp": "02:15",
+      "scene": "5-Layer Transformation Pipeline",
+      "text": "Now watch as your FlameLang code transforms through all five layers.\n\nFirst, Layer 1: Linguistic transformation maps English concepts to Hebrew semantics.\n\nLayer 2: Numeric conversion translates Unicode to decimal representations.\n\nLayer 3: Wave analysis applies frequency domain transformations.\n\nLayer 4: DNA encoding maps computational states to biological codons.\n\nFinally, Layer 5: LLVM IR generation produces executable machine code.\n\nThis multi-dimensional transformation is what makes FlameLang unique!"
+    },
+    {
+      "timestamp": "02:40",
+      "scene": "Try It Yourself",
+      "text": "Now it's your turn! Pause the video and try implementing Getting Started with FlameLang yourself.\n\nHere's a challenge: modify the code we just saw to add your own twist.\n\nWhen you're ready, unpause to see a solution and compare your approach.\n\nRemember, there's often more than one way to solve a problem in FlameLang!"
+    },
+    {
+      "timestamp": "03:10",
+      "scene": "Conclusion",
+      "text": "Congratulations! You've learned about Getting Started with FlameLang in FlameLang.\n\nYou can now: Understand getting started with flamelang, Write FlameLang code.\n\nIf you found this helpful, hit that subscribe button and check out the FlameLang \ndocumentation linked below.\n\nIn the next video, we'll explore more advanced features of the quantum subsystem.\n\nKeep coding, and remember: with FlameLang, you're not just writing code, \nyou're programming reality itself. See you next time!"
+    }
+  ],
+  "visual_assets_needed": [
+    "3d_animation_template",
+    "5-layer pipeline 3D model",
+    "Blank code editor on right",
+    "Challenge prompt on left",
+    "Data flow visualization",
+    "Each layer highlighted in sequence",
+    "FlameLang logo animation",
+    "Inline annotations",
+    "Key concepts highlighted",
+    "Key points summary",
+    "Line-by-line reveal animation",
+    "Links overlay",
+    "Next tutorial teaser",
+    "Particle effects (DNA strands, quantum waves)",
+    "Subscribe button animation",
+    "Syntax highlighted code",
+    "Timer countdown",
+    "Title card: Getting Started with FlameLang",
+    "Topic breakdown diagram",
+    "Transformation examples",
+    "Visual metaphors",
+    "Zoom on key sections",
+    "animated_intro_template",
+    "code_editor_template",
+    "concept_diagram_template",
+    "recap_and_cta_template",
+    "split_screen_template"
+  ],
+  "code_assets": [
+    "\n// Hello FlameLang\nlet message = \"Hello, Quantum World!\";\nprint(message);\n"
+  ]
+}

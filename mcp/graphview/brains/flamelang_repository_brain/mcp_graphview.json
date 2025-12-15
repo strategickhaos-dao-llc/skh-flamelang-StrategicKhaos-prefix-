@@ -1,0 +1,168 @@
+{
+  "name": "mcp",
+  "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "mcp",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp"
+    },
+    {
+      "id": 1,
+      "label": "README.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/README.md"
+    },
+    {
+      "id": 2,
+      "label": "graphview",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview"
+    },
+    {
+      "id": 3,
+      "label": "brains",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains"
+    },
+    {
+      "id": 4,
+      "label": "flamelang_repository_brain",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain"
+    },
+    {
+      "id": 5,
+      "label": "ollama",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/ollama"
+    },
+    {
+      "id": 6,
+      "label": "flamelang_ollama_client.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/ollama/flamelang_ollama_client.py"
+    },
+    {
+      "id": 7,
+      "label": "server",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server"
+    },
+    {
+      "id": 8,
+      "label": "config.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server/config.json"
+    },
+    {
+      "id": 9,
+      "label": "mcp_server.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server/mcp_server.py"
+    },
+    {
+      "id": 10,
+      "label": "tools",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools"
+    },
+    {
+      "id": 11,
+      "label": "__init__.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools/__init__.py"
+    },
+    {
+      "id": 12,
+      "label": "flamelang_mcp_tools.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools/flamelang_mcp_tools.py"
+    },
+    {
+      "id": 13,
+      "label": "video",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/video"
+    },
+    {
+      "id": 14,
+      "label": "video_generator.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/video/video_generator.py"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 5,
+      "type": "contains"
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 7,
+      "type": "contains"
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "type": "contains"
+    },
+    {
+      "from": 7,
+      "to": 9,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 10,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "type": "contains"
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 13,
+      "type": "contains"
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "type": "contains"
+    }
+  ]
+}

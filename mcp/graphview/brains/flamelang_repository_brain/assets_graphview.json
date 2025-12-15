@@ -1,0 +1,58 @@
+{
+  "name": "assets",
+  "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "assets",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets"
+    },
+    {
+      "id": 1,
+      "label": "README.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets/README.md"
+    },
+    {
+      "id": 2,
+      "label": "convert-logo.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets/convert-logo.py"
+    },
+    {
+      "id": 3,
+      "label": "logo-export.html",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets/logo-export.html"
+    },
+    {
+      "id": 4,
+      "label": "strategickhaos-logo.svg",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/assets/strategickhaos-logo.svg"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 4,
+      "type": "contains"
+    }
+  ]
+}
