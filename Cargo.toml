@@ -34,7 +34,7 @@ dirs = "5.0"
 base64 = "0.21"
 
 # System info (for machine binding)
-whoami = "1.4"
+whoami = "1.5"
 machine-uid = "0.3"
 
 [[bin]]
