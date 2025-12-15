@@ -3,7 +3,7 @@
 # Git Authentication Fix Script for StrategicKhaos FlameLang Repository
 # This script automates the resolution of Git authentication and permission issues
 
-set -e
+# Don't use 'set -e' as some commands are expected to fail (e.g., rebase --abort when no rebase is active)
 
 # Color codes
 RED='\033[0;31m'
@@ -120,7 +120,8 @@ if [ "$SKIP_CREDENTIAL_CLEAR" = false ]; then
     read -p "    Continue? (y/n): " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        if echo -e "protocol=https\nhost=github.com\n" | git credential reject 2>/dev/null; then
+        # Use printf for better portability across systems
+        if printf "protocol=https\nhost=github.com\n\n" | git credential reject 2>/dev/null; then
             print_success "Cached credentials cleared"
         else
             print_warning "Could not clear credentials automatically"

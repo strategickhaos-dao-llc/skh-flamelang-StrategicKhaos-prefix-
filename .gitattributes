@@ -6,8 +6,8 @@
 # Bash scripts should always use LF
 *.sh text eol=lf
 
-# PowerShell scripts should use CRLF on Windows, LF elsewhere
-*.ps1 text eol=crlf
+# PowerShell scripts - let Git handle based on platform (supports PowerShell Core on Unix)
+*.ps1 text=auto
 
 # Markdown files
 *.md text eol=lf
