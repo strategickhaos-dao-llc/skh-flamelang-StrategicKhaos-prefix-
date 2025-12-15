@@ -55,7 +55,11 @@ def render(carrier):
     return sig * adsr(t, DURATION)
 
 def write_wav(stereo):
-    stereo = np.int16(stereo / np.max(np.abs(stereo)) * 32767)
+    max_val = np.max(np.abs(stereo))
+    if max_val > 0:
+        stereo = np.int16(stereo / max_val * 32767)
+    else:
+        stereo = np.int16(stereo)
     with wave.open("aether_invocation.wav", 'w') as wf:
         wf.setnchannels(2)
         wf.setframerate(SAMPLE_RATE)
@@ -70,7 +74,8 @@ def write_midi():
     for notes in LINE_MIDI:
         for note in notes:
             track.append(Message('note_on', note=BASE_MIDI + note, velocity=100, time=0))
-        track.append(Message('note_off', note=BASE_MIDI + notes[-1], velocity=0, time=int(4 * 480)))
+        for note in notes:
+            track.append(Message('note_off', note=BASE_MIDI + note, velocity=0, time=int(4 * 480) if note == notes[-1] else 0))
     mid.save("aether_invocation.mid")
 
 # Render mix
