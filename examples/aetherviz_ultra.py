@@ -18,7 +18,6 @@ Ratio Ex Nihilo | Strategickhaos DAO LLC © 2025
 import numpy as np
 import wave
 import hashlib
-import struct
 from pathlib import Path
 
 try:
@@ -260,22 +259,25 @@ def generate_midi(output_path="aetherviz_output.mid"):
     ticks_per_beat = 480
     beat_duration = ticks_per_beat
     
-    for note_group in NOTES:
+    for i, note_group in enumerate(NOTES):
         # Note on messages
-        for offset in note_group:
+        for j, offset in enumerate(note_group):
             note = MIDI_BASE + offset
-            track.append(Message('note_on', note=note, velocity=80, time=0))
+            # First note in group has timing, others are simultaneous
+            time = 0 if j > 0 else (beat_duration if i > 0 else 0)
+            track.append(Message('note_on', note=note, velocity=80, time=time))
         
-        # Hold for one beat
-        track.append(Message('note_on', note=0, velocity=0, time=beat_duration))
-        
-        # Note off messages
-        for offset in note_group:
+        # Note off messages after holding for one beat
+        for j, offset in enumerate(note_group):
             note = MIDI_BASE + offset
-            track.append(Message('note_off', note=note, velocity=0, time=0))
+            # First note off has timing for the hold duration
+            time = beat_duration if j == 0 else 0
+            track.append(Message('note_off', note=note, velocity=0, time=time))
         
-        # Gap before next chord
-        track.append(Message('note_on', note=0, velocity=0, time=beat_duration // 2))
+        # Gap before next chord (except after the last one)
+        if i < len(NOTES) - 1:
+            # Use the first note's note_off with additional time for the gap
+            pass  # Gap is handled by the timing in the next note_on
     
     # Save MIDI file
     mid.save(output_path)
