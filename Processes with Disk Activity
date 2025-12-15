@@ -1,0 +1,20 @@
+Image	PID	Read (B/sec)	Write (B/sec)	Total (B/sec)
+System	4	15,889	330,347	346,236
+msedgewebview2.exe	22088	0	46,080	46,080
+DuckDuckGo.exe	24192	0	26,112	26,112
+svchost.exe (utcsvc -p)	6392	0	14,336	14,336
+msrdc.exe	61396	350	6,178	6,528
+firefox.exe	8080	800	5,457	6,257
+ProtonDrive.exe	26612	0	5,052	5,052
+msedgewebview2.exe	21684	0	5,049	5,049
+svchost.exe (LocalServiceNoNetwork -p)	6440	0	4,621	4,621
+msedgewebview2.exe	51620	0	3,964	3,964
+claude.exe	63172	0	1,361	1,361
+msedgewebview2.exe	3220	0	956	956
+MsMpEng.exe	14900	813	0	813
+firefox.exe	25028	0	731	731
+firefox.exe	39668	0	719	719
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	0	630	630
+NitroSense.exe	18328	0	525	525
+msedge.exe	44300	0	82	82
+System	0	0	80	80
