@@ -118,7 +118,7 @@ fn inline_assets(
     let mut replacements: HashMap<String, String> = HashMap::new();
 
     // Process images
-    let img_selector = Selector::parse("img").unwrap();
+    let img_selector = Selector::parse("img").expect("Failed to parse img selector");
     for element in document.select(&img_selector) {
         if let Some(src) = element.value().attr("src") {
             if let Ok(asset_url) = base_url.join(src) {
@@ -130,8 +130,9 @@ fn inline_assets(
         }
     }
 
-    // Process CSS links
-    let link_selector = Selector::parse("link[rel=\"stylesheet\"]").unwrap();
+    // Process CSS links - note: inlining CSS as data URLs in link tags
+    // For production use, consider converting to inline <style> tags instead
+    let link_selector = Selector::parse("link[rel=\"stylesheet\"]").expect("Failed to parse link selector");
     for element in document.select(&link_selector) {
         if let Some(href) = element.value().attr("href") {
             if let Ok(asset_url) = base_url.join(href) {
