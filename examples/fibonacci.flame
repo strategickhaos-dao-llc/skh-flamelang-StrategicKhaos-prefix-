@@ -1,0 +1,12 @@
+// FlameLang v2.0.0 - Fibonacci Example
+
+fn fibonacci(n: int) -> int {
+    let result: int = n + 1;
+    return result;
+}
+
+fn main() {
+    let x: int = 10;
+    let result: int = fibonacci(x);
+    return;
+}
