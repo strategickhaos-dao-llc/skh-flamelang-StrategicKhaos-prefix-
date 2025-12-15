@@ -10,9 +10,11 @@ pub mod parser;
 pub mod transform;
 pub mod codegen;
 pub mod stdlib;
+pub mod viz;
 
 pub use lexer::{Lexer, Token};
 pub use parser::{Parser, AstNode};
+pub use viz::{FlameViz, CategoricalData, DataEntry, Visualization};
 
 /// FlameLang error type
 #[derive(Debug, thiserror::Error)]
