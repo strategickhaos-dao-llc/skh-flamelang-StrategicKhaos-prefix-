@@ -1,27 +1,46 @@
 [package]
-name = "flamelang"
-version = "2.0.0"
+name = "flamevault"
+version = "0.1.0"
 edition = "2021"
 authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
-description = "FlameLang: 5-layer biological-quantum-physics programming language"
+description = "Honeypot + Encrypted Secrets Engine - INV-080"
 license = "MIT"
-repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang"
-
-[workspace]
-members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
-]
+repository = "https://github.com/strategickhaos-dao-llc/flamevault"
 
 [dependencies]
-thiserror = "1.0"
-unicode-segmentation = "1.10"
-logos = "0.13"
+# CLI
+clap = { version = "4.4", features = ["derive"] }
 
-[dev-dependencies]
-criterion = "0.5"
+# Encryption
+aes-gcm = "0.10"
+argon2 = "0.5"
+rand = "0.8"
+
+# Hashing
+sha2 = "0.10"
+hex = "0.4"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# File system
+dirs = "5.0"
+
+# Base64
+base64 = "0.21"
+
+# System info (for machine binding)
+whoami = "1.4"
+machine-uid = "0.3"
 
 [[bin]]
-name = "flamec"
+name = "flamevault"
 path = "src/main.rs"
+
+[lib]
+name = "flamevault"
+path = "src/lib.rs"
