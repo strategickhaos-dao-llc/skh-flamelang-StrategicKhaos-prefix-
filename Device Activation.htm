@@ -249,26 +249,42 @@
             if (!keyPattern.test(activationKey)) {
                 statusMessage.className = 'status-message error';
                 statusMessage.style.display = 'block';
-                statusMessage.innerHTML = '<strong>Error:</strong> Invalid activation key format. Please use the format XXXX-XXXX-XXXX-XXXX';
+                // Create error message safely
+                statusMessage.innerHTML = '';
+                const errorStrong = document.createElement('strong');
+                errorStrong.textContent = 'Error:';
+                statusMessage.appendChild(errorStrong);
+                statusMessage.appendChild(document.createTextNode(' Invalid activation key format. Please use the format XXXX-XXXX-XXXX-XXXX'));
                 return;
             }
             
             // Simulate activation process
             statusMessage.className = 'status-message';
             statusMessage.style.display = 'block';
-            statusMessage.innerHTML = '<strong>Processing...</strong> Activating your device...';
+            // Create processing message safely
+            statusMessage.innerHTML = '';
+            const processingStrong = document.createElement('strong');
+            processingStrong.textContent = 'Processing...';
+            statusMessage.appendChild(processingStrong);
+            statusMessage.appendChild(document.createTextNode(' Activating your device...'));
             
             setTimeout(function() {
                 statusMessage.className = 'status-message success';
-                // Use textContent for user input to prevent XSS, then add safe HTML
-                const successMsg = document.createElement('div');
-                successMsg.innerHTML = '<strong>Success!</strong> FlameLang has been activated for device "';
-                const deviceSpan = document.createElement('span');
-                deviceSpan.textContent = deviceName;
-                successMsg.appendChild(deviceSpan);
-                successMsg.innerHTML += '".<br><br>You can now use the FlameLang compiler toolchain. Run <code>flamec --version</code> to verify your installation.';
+                // Create success message safely using DOM manipulation
                 statusMessage.innerHTML = '';
-                statusMessage.appendChild(successMsg);
+                const successStrong = document.createElement('strong');
+                successStrong.textContent = 'Success!';
+                statusMessage.appendChild(successStrong);
+                statusMessage.appendChild(document.createTextNode(' FlameLang has been activated for device "'));
+                statusMessage.appendChild(document.createTextNode(deviceName));
+                statusMessage.appendChild(document.createTextNode('".'));
+                statusMessage.appendChild(document.createElement('br'));
+                statusMessage.appendChild(document.createElement('br'));
+                statusMessage.appendChild(document.createTextNode('You can now use the FlameLang compiler toolchain. Run '));
+                const code = document.createElement('code');
+                code.textContent = 'flamec --version';
+                statusMessage.appendChild(code);
+                statusMessage.appendChild(document.createTextNode(' to verify your installation.'));
                 
                 // Store activation locally (for demo purposes)
                 localStorage.setItem('flamelang_activated', 'true');
@@ -283,15 +299,14 @@
                 const statusMessage = document.getElementById('statusMessage');
                 statusMessage.className = 'status-message success';
                 statusMessage.style.display = 'block';
-                // Use textContent for stored data to prevent XSS
-                const activatedMsg = document.createElement('div');
-                activatedMsg.innerHTML = '<strong>Already Activated!</strong> This device "';
-                const deviceSpan = document.createElement('span');
-                deviceSpan.textContent = deviceName;
-                activatedMsg.appendChild(deviceSpan);
-                activatedMsg.innerHTML += '" is already activated for FlameLang.';
+                // Create already activated message safely using DOM manipulation
                 statusMessage.innerHTML = '';
-                statusMessage.appendChild(activatedMsg);
+                const activatedStrong = document.createElement('strong');
+                activatedStrong.textContent = 'Already Activated!';
+                statusMessage.appendChild(activatedStrong);
+                statusMessage.appendChild(document.createTextNode(' This device "'));
+                statusMessage.appendChild(document.createTextNode(deviceName));
+                statusMessage.appendChild(document.createTextNode('" is already activated for FlameLang.'));
             }
         });
     </script>
