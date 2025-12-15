@@ -1,0 +1,66 @@
+name: 🔥 FlameLang CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+  FLAMELANG_VERSION: "2.0.0"
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+
+    - name: 🦀 Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: 📦 Cache Cargo
+      uses: Swatinem/rust-cache@v2
+
+    - name: 🔨 Build
+      run: |
+        if [ -f "Cargo.toml" ]; then
+          cargo build --verbose
+        else
+          echo "📋 Cargo.toml not yet created - scaffold phase"
+        fi
+
+    - name: 🧪 Test
+      run: |
+        if [ -f "Cargo.toml" ]; then
+          cargo test --verbose
+        else
+          echo "📋 Tests pending scaffold completion"
+        fi
+
+  qodana:
+    name: Qodana Code Quality
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
+    
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 🔍 Qodana Scan
+      uses: JetBrains/qodana-action@v2024.1
+      env:
+        QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+      with:
+        pr-mode: false
