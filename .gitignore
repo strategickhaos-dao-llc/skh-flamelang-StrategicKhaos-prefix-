@@ -39,3 +39,17 @@
 
 # debug information files
 *.dwo
+
+# Rust build artifacts
+target/
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Generated example outputs
+examples/output/
