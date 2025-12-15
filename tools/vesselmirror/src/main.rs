@@ -88,8 +88,15 @@ fn capture_page(url: &str, output: &str) -> Result<()> {
     println!("📸 Capturing: {}", url);
     println!("   Output: {}", output);
     
-    // Fetch the page content
-    let response = reqwest::blocking::get(url)
+    // Fetch the page content with timeout and user-agent
+    let client = reqwest::blocking::Client::builder()
+        .timeout(std::time::Duration::from_secs(30))
+        .user_agent("VesselMirror/0.1.0 (Sovereign Page Synthesis)")
+        .build()
+        .context("Failed to build HTTP client")?;
+    
+    let response = client.get(url)
+        .send()
         .context("Failed to fetch URL")?;
     
     let status = response.status();
@@ -127,12 +134,18 @@ fn dissect_page(file: &str) -> Result<()> {
     // Parse HTML
     let document = scraper::Html::parse_document(&content);
     
-    // Analyze structure
-    let scripts = document.select(&scraper::Selector::parse("script").unwrap()).count();
-    let styles = document.select(&scraper::Selector::parse("style").unwrap()).count();
-    let links = document.select(&scraper::Selector::parse("link").unwrap()).count();
-    let images = document.select(&scraper::Selector::parse("img").unwrap()).count();
-    let forms = document.select(&scraper::Selector::parse("form").unwrap()).count();
+    // Analyze structure with safe selector parsing
+    let script_sel = scraper::Selector::parse("script").expect("Valid CSS selector");
+    let style_sel = scraper::Selector::parse("style").expect("Valid CSS selector");
+    let link_sel = scraper::Selector::parse("link").expect("Valid CSS selector");
+    let img_sel = scraper::Selector::parse("img").expect("Valid CSS selector");
+    let form_sel = scraper::Selector::parse("form").expect("Valid CSS selector");
+    
+    let scripts = document.select(&script_sel).count();
+    let styles = document.select(&style_sel).count();
+    let links = document.select(&link_sel).count();
+    let images = document.select(&img_sel).count();
+    let forms = document.select(&form_sel).count();
     
     println!();
     println!("📊 Structure Analysis:");
@@ -258,20 +271,23 @@ fn purify_page(file: &str, output: &str) -> Result<()> {
     let content = fs::read_to_string(file)
         .context("Failed to read file")?;
     
-    // Simple purification: remove common tracking patterns
+    // Note: Future versions will use structured HTML manipulation for more precise purification
     let mut purified = content.clone();
     
-    // Remove common tracking domains (simple string replacement for demonstration)
+    // Remove tracking scripts by URL pattern matching in script src attributes
+    // Note: This is a basic implementation. A production version would use HTML manipulation
+    // to preserve structure while removing only script tags with tracking sources.
     let tracking_patterns = [
-        "google-analytics.com",
-        "googletagmanager.com",
-        "facebook.com/tr",
-        "doubleclick.net",
-        "analytics.js",
+        ("https://www.google-analytics.com", "https://purified.local"),
+        ("https://www.googletagmanager.com", "https://purified.local"),
+        ("https://connect.facebook.com/tr", "https://purified.local"),
+        ("https://www.facebook.com/tr", "https://purified.local"),
+        ("//www.googletagmanager.com", "//purified.local"),
+        ("//google-analytics.com", "//purified.local"),
     ];
     
-    for pattern in &tracking_patterns {
-        purified = purified.replace(pattern, "purified.local");
+    for (pattern, replacement) in &tracking_patterns {
+        purified = purified.replace(pattern, replacement);
     }
     
     fs::write(output, &purified)
