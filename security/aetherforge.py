@@ -381,13 +381,15 @@ class AetherForge:
     
     def verify_sovereignty(self, session_id: str) -> bool:
         """Verify session sovereignty"""
+        SECONDS_PER_HOUR = 3600
+        
         if session_id not in self.active_sessions:
             self._log_threat("Unknown session access attempt", {"session_id": session_id})
             return False
         
         context = self.active_sessions[session_id]
         age_seconds = time.time() - context.timestamp
-        max_age = self.config["neutralization"]["token_lifetime_hours"] * 3600
+        max_age = self.config["neutralization"]["token_lifetime_hours"] * SECONDS_PER_HOUR
         
         if age_seconds > max_age:
             self._log_threat("Expired session access attempt", {"session_id": session_id})

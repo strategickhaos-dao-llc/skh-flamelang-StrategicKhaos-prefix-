@@ -57,11 +57,13 @@ class Argon2idEncryption:
         
         # Simulate Argon2id (in production, use actual argon2-cffi library)
         # This is a secure fallback using PBKDF2 with SHA256
+        # Multiplier to approximate Argon2id's time cost in PBKDF2 iterations
+        PBKDF2_ITERATION_MULTIPLIER = 100000
         key = hashlib.pbkdf2_hmac(
             'sha256',
             combined,
             salt,
-            iterations=self.config.time_cost * 100000,  # Adjusted for security
+            iterations=self.config.time_cost * PBKDF2_ITERATION_MULTIPLIER,
             dklen=self.config.hash_length
         )
         
@@ -86,8 +88,10 @@ class Argon2idEncryption:
         """
         key, salt = self.derive_key(passphrase, biometric_hash)
         
-        # Simple XOR encryption for demonstration
-        # In production, use AES-256-GCM or ChaCha20-Poly1305
+        # ⚠️ WARNING: XOR encryption used ONLY for demonstration purposes
+        # NEVER use this in production - it is cryptographically WEAK
+        # Production MUST use: AES-256-GCM or ChaCha20-Poly1305
+        # This simplified implementation is for educational/prototype purposes only
         secret_bytes = secret.encode('utf-8')
         encrypted = bytes(
             secret_bytes[i] ^ key[i % len(key)]
@@ -120,7 +124,7 @@ class Argon2idEncryption:
         """
         key, _ = self.derive_key(passphrase, biometric_hash, salt)
         
-        # Decrypt using XOR
+        # ⚠️ WARNING: XOR decryption - demonstration only, NOT production-ready
         decrypted = bytes(
             encrypted[i] ^ key[i % len(key)]
             for i in range(len(encrypted))

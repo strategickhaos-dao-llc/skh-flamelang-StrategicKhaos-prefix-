@@ -40,8 +40,11 @@ class ShamirSecretSharing:
         
         self.threshold = threshold
         self.total_shares = total_shares
-        # Use a very large prime for security (2^521 - 1, Mersenne prime)
-        self.prime = prime or 6864797660130609714981900799081393217269435300143305409394463459185543183397656052122559640661454554977296311391480858037121987999716643812574028291115057151
+        # Use a very large prime for security
+        # This is 2^521 - 1 (Mersenne prime M521), which provides excellent security
+        # for cryptographic operations while being computationally efficient
+        MERSENNE_PRIME_521 = 6864797660130609714981900799081393217269435300143305409394463459185543183397656052122559640661454554977296311391480858037121987999716643812574028291115057151
+        self.prime = prime or MERSENNE_PRIME_521
     
     def _generate_polynomial(self, secret: int) -> List[int]:
         """
@@ -194,8 +197,10 @@ if __name__ == "__main__":
     # Split secret
     shares = shamir.split_secret(secret, nodes)
     print(f"\n✂️  Split into {len(shares)} shares:")
+    # Display truncation modulus for readability
+    DISPLAY_TRUNCATION_MODULUS = 10000
     for share in shares:
-        print(f"  {share.node_id}: Share #{share.share_id} = {share.share_value % 10000}...")
+        print(f"  {share.node_id}: Share #{share.share_id} = {share.share_value % DISPLAY_TRUNCATION_MODULUS}...")
     
     # Reconstruct with 2 shares (threshold)
     print(f"\n🔄 Reconstructing with {shamir.threshold} shares...")

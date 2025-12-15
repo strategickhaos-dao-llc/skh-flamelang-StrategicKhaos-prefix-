@@ -54,11 +54,12 @@ class EphemeralKeyManager:
         Returns:
             EphemeralKey object
         """
+        SECONDS_PER_HOUR = 3600
         key_id = f"{session_id}:{secrets.token_hex(16)}"
         key_material = secrets.token_bytes(self.key_length)
         
         now = time.time()
-        expires_at = now + (self.rotation_hours * 3600)
+        expires_at = now + (self.rotation_hours * SECONDS_PER_HOUR)
         
         ephemeral_key = EphemeralKey(
             key_id=key_id,
@@ -140,7 +141,11 @@ class EphemeralKeyManager:
         
         key = self.active_keys[key_id]
         
-        # Overwrite key material with zeros
+        # Attempt to overwrite key material with zeros
+        # NOTE: Python's memory management doesn't guarantee secure zeroization
+        # due to immutable bytes objects and potential compiler optimizations.
+        # For production, consider using ctypes.memset or secure memory libraries.
+        # This is a best-effort approach for the demonstration.
         if not key.zeroized:
             # Create a bytearray to allow modification
             key_array = bytearray(key.key_material)
