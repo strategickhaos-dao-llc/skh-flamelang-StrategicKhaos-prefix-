@@ -416,4 +416,102 @@ mod tests {
         let vault = FlameVault::new();
         assert!(vault.is_ok());
     }
+    
+    #[test]
+    fn test_machine_key_derivation() {
+        let key1 = FlameVault::derive_machine_key("device1", "north", "US").unwrap();
+        let key2 = FlameVault::derive_machine_key("device1", "north", "US").unwrap();
+        let key3 = FlameVault::derive_machine_key("device2", "north", "US").unwrap();
+        
+        // Same device should produce same key
+        assert_eq!(key1, key2);
+        // Different device should produce different key
+        assert_ne!(key1, key3);
+    }
+    
+    #[test]
+    fn test_honeypot_deployment() {
+        let mut vault = FlameVault::new().unwrap();
+        let result = vault.set_honeypot("TEST_HONEYPOT", "fake-api-key-12345");
+        assert!(result.is_ok());
+        
+        // Verify honeypot is stored
+        assert!(vault.honeypots.contains_key("TEST_HONEYPOT"));
+    }
+    
+    #[test]
+    fn test_secret_storage_and_retrieval() {
+        let mut vault = FlameVault::new().unwrap();
+        let secret_name = "test_secret";
+        let secret_value = "my-super-secret-value";
+        
+        // Store secret
+        let store_result = vault.set_secret(secret_name, secret_value);
+        assert!(store_result.is_ok());
+        
+        // Retrieve secret
+        match vault.get_secret(secret_name) {
+            SecretResult::Real(value) => {
+                assert_eq!(value, secret_value);
+            }
+            _ => panic!("Expected Real secret result"),
+        }
+        
+        // Clean up test file
+        let secret_file = vault.vault_path.join(format!("{}.enc.json", secret_name));
+        let _ = std::fs::remove_file(secret_file);
+    }
+    
+    #[test]
+    fn test_honeypot_triggers_alert() {
+        let mut vault = FlameVault::new().unwrap();
+        let honeypot_name = "TRAP_KEY";
+        let honeypot_value = "bait-value";
+        
+        // Deploy honeypot
+        vault.set_honeypot(honeypot_name, honeypot_value).unwrap();
+        
+        // Access honeypot
+        match vault.get_secret(honeypot_name) {
+            SecretResult::Honeypot(value) => {
+                assert_eq!(value, honeypot_value);
+            }
+            _ => panic!("Expected Honeypot result"),
+        }
+        
+        // Verify access count incremented
+        let honeypot = vault.honeypots.get(honeypot_name).unwrap();
+        assert_eq!(honeypot.access_count, 1);
+        
+        // Clean up
+        let honeypot_file = vault.vault_path.join("honeypots.json");
+        let _ = std::fs::remove_file(honeypot_file);
+    }
+    
+    #[test]
+    fn test_nonexistent_secret() {
+        let mut vault = FlameVault::new().unwrap();
+        
+        match vault.get_secret("nonexistent_secret") {
+            SecretResult::NotFound => {
+                // Expected
+            }
+            _ => panic!("Expected NotFound result"),
+        }
+    }
+    
+    #[test]
+    fn test_list_secrets() {
+        let vault = FlameVault::new().unwrap();
+        let secrets = vault.list_secrets();
+        assert!(secrets.is_ok());
+    }
+    
+    #[test]
+    fn test_vault_status() {
+        let vault = FlameVault::new().unwrap();
+        let status = vault.status();
+        assert!(status.contains("FLAMEVAULT STATUS"));
+        assert!(status.contains("Device ID:"));
+    }
 }

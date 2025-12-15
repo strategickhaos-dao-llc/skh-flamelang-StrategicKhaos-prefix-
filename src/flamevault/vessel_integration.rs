@@ -84,4 +84,70 @@ mod tests {
         let integration = VesselIntegration::new();
         assert!(integration.is_ok());
     }
+    
+    #[test]
+    fn test_store_and_load_secret() {
+        let mut integration = VesselIntegration::new().unwrap();
+        let secret_name = "test_vessel_secret";
+        let secret_value = "vessel-secret-value";
+        
+        // Store secret
+        let store_result = integration.store_secret(secret_name, secret_value);
+        assert!(store_result.is_ok());
+        
+        // Load secret
+        let load_result = integration.load_secret(secret_name);
+        assert!(load_result.is_ok());
+        assert_eq!(load_result.unwrap(), secret_value);
+        
+        // Clean up
+        let vault = FlameVault::new().unwrap();
+        let secret_file = vault.vault_path.join(format!("{}.enc.json", secret_name));
+        let _ = std::fs::remove_file(secret_file);
+    }
+    
+    #[test]
+    fn test_secret_caching() {
+        let mut integration = VesselIntegration::new().unwrap();
+        let secret_name = "cached_secret";
+        let secret_value = "cached-value";
+        
+        // Store secret
+        integration.store_secret(secret_name, secret_value).unwrap();
+        
+        // Load secret twice - second should come from cache
+        let first_load = integration.load_secret(secret_name);
+        let second_load = integration.load_secret(secret_name);
+        
+        assert!(first_load.is_ok());
+        assert!(second_load.is_ok());
+        assert_eq!(first_load.unwrap(), second_load.unwrap());
+        
+        // Clear cache
+        integration.clear_cache();
+        
+        // Clean up
+        let vault = FlameVault::new().unwrap();
+        let secret_file = vault.vault_path.join(format!("{}.enc.json", secret_name));
+        let _ = std::fs::remove_file(secret_file);
+    }
+    
+    #[test]
+    fn test_deploy_honeypot() {
+        let mut integration = VesselIntegration::new().unwrap();
+        let result = integration.deploy_honeypot("TEST_TRAP", "trap-value");
+        assert!(result.is_ok());
+        
+        // Clean up
+        let vault = FlameVault::new().unwrap();
+        let honeypot_file = vault.vault_path.join("honeypots.json");
+        let _ = std::fs::remove_file(honeypot_file);
+    }
+    
+    #[test]
+    fn test_status() {
+        let integration = VesselIntegration::new().unwrap();
+        let status = integration.status();
+        assert!(status.contains("FLAMEVAULT STATUS"));
+    }
 }
