@@ -71,30 +71,29 @@ fn calculate_sha256(data: &[u8]) -> String {
 fn attest_on_chain(hash: &str, chain: &str, _verbose: bool) -> Result<ChainAttestation> {
     println!("  {} Attesting to {} blockchain...", "→".bright_blue(), chain);
     
-    // Note: This is a placeholder. Actual blockchain integration would require:
-    // - Web3 provider connection
-    // - Wallet/signing capability
-    // - Smart contract interaction
+    // Note: Blockchain attestation is not yet implemented
+    // This is a placeholder that returns mock data for demonstration
+    println!("     {} NOTICE: Blockchain attestation not implemented", "⚠".bright_yellow().bold());
+    println!("     {} This is MOCK data for demonstration only", "⚠".bright_yellow().bold());
+    println!("     {} Real attestation requires Web3 integration", "ℹ".bright_cyan());
     
     match chain {
         "swarmgate" => {
-            println!("     {} SwarmGate attestation (placeholder)", "⚠".bright_yellow());
             Ok(ChainAttestation {
-                chain: "swarmgate".to_string(),
-                transaction_hash: format!("0x{}", &hash[..40]),
+                chain: "swarmgate [MOCK]".to_string(),
+                transaction_hash: format!("0x{} [MOCK]", &hash[..40]),
                 block_number: 1234567,
             })
         }
         "ethereum" => {
-            println!("     {} Ethereum attestation (placeholder)", "⚠".bright_yellow());
             Ok(ChainAttestation {
-                chain: "ethereum".to_string(),
-                transaction_hash: format!("0x{}", &hash[..40]),
+                chain: "ethereum [MOCK]".to_string(),
+                transaction_hash: format!("0x{} [MOCK]", &hash[..40]),
                 block_number: 19000000,
             })
         }
         _ => {
-            anyhow::bail!("Unsupported blockchain: {}", chain)
+            anyhow::bail!("Unsupported blockchain: {}. Use 'swarmgate', 'ethereum', or 'none'", chain)
         }
     }
 }

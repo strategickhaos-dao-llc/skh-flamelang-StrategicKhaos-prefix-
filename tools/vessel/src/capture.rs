@@ -34,9 +34,11 @@ pub fn capture_page(url: &str, output: Option<PathBuf>, use_js: bool) -> Result<
 /// Capture using headless browser (full JS execution)
 fn capture_with_browser(url: &str) -> Result<CapturedPage> {
     println!("  {} Launching headless browser...", "→".bright_blue());
+    println!("  {} NOTICE: Headless browser not yet fully implemented", "⚠".bright_yellow().bold());
+    println!("  {} Falling back to HTTP capture mode", "ℹ".bright_cyan());
     
-    // Note: headless_chrome may not be available in all environments
-    // Falling back to HTTP capture for now
+    // Note: Full headless_chrome integration requires additional setup
+    // For now, we fall back to HTTP capture which is more reliable
     capture_with_http(url)
 }
 

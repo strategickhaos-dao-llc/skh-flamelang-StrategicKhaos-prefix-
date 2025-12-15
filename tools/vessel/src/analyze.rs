@@ -142,6 +142,9 @@ fn extract_fonts_from_style(style: &str, fonts: &mut HashSet<String>) {
     }
 }
 
+/// Minimum number of occurrences for a pattern to be considered significant
+const PATTERN_THRESHOLD: usize = 3;
+
 fn find_patterns(document: &Html) -> Vec<Pattern> {
     let mut patterns = Vec::new();
     
@@ -156,9 +159,9 @@ fn find_patterns(document: &Html) -> Vec<Pattern> {
         }
     }
     
-    // Convert to patterns (only include classes used 3+ times)
+    // Convert to patterns (only include classes used PATTERN_THRESHOLD+ times)
     for (class, count) in class_counts {
-        if count >= 3 {
+        if count >= PATTERN_THRESHOLD {
             patterns.push(Pattern {
                 name: format!("class pattern: {}", class),
                 occurrences: count,

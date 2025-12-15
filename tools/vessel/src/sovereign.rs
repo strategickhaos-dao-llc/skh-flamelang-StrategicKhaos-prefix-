@@ -124,14 +124,20 @@ fn remove_tracking_scripts(html: &str) -> String {
         }
     }
     
-    // Remove inline tracking scripts (note: simplified to avoid complex regex)
+    // Remove inline tracking scripts
+    // Note: We scan for patterns but don't modify inline scripts to avoid breaking valid code
+    // Users should manually review inline scripts after purification
+    let mut tracking_found = false;
     for pattern in INLINE_TRACKING_PATTERNS.iter() {
         if pattern.is_match(&result) {
-            // Mark for potential removal
-            result = result.replace(
-                &format!("'{}'", pattern.as_str()),
-                "'/* tracked */'",
-            );
+            tracking_found = true;
+        }
+    }
+    
+    if tracking_found {
+        // Add comment warning about inline tracking
+        if let Some(pos) = result.find("<script") {
+            result.insert_str(pos, "<!-- Warning: Inline tracking scripts detected. Review manually. -->\n");
         }
     }
     

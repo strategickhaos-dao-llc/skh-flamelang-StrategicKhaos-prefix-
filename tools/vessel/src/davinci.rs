@@ -3,6 +3,9 @@
 use scraper::Html;
 
 /// Golden ratio constant (φ)
+/// The golden ratio, also known as phi (φ), is an irrational number approximately equal to 1.618.
+/// It appears throughout nature and is used for creating harmonious proportions.
+/// Calculated as (1 + √5) / 2 with 15 decimal places of precision.
 pub const PHI: f64 = 1.618033988749895;
 
 /// Fibonacci sequence up to 21
