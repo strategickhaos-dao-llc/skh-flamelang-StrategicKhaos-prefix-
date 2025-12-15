@@ -93,7 +93,8 @@ with wave.open("7limit_invocation.wav", 'w') as wf:
     wf.setframerate(48000)
     wf.setsampwidth(2)
     # Normalize to prevent clipping
-    normalized = mix / np.max(np.abs(mix)) * 32767
+    max_val = np.max(np.abs(mix))
+    normalized = (mix / max_val * 32767) if max_val > 0 else mix
     wf.writeframes(normalized.astype(np.int16).T.tobytes())
 
 # MIDI generation (7-limit approximated in 12TET)
