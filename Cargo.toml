@@ -27,3 +27,7 @@ criterion = "0.5"
 [[bin]]
 name = "flamec"
 path = "src/main.rs"
+
+[[example]]
+name = "flamevault_demo"
+path = "examples/flamevault_demo.rs"
