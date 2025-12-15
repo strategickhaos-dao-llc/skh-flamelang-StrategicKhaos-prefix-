@@ -15,7 +15,7 @@ pub fn merge_pages(
     println!("{}", "  Stage 4: SYNTHESIZE".bright_yellow().bold());
     
     if sources.len() < 2 {
-        anyhow::bail!("Need at least 2 sources to merge");
+        anyhow::bail!("Merge requires at least 2 source files, but only {} provided. Please specify 2 or more HTML files to merge.", sources.len());
     }
     
     // Read all source files

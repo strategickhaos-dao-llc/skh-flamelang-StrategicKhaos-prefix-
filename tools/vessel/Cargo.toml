@@ -48,6 +48,7 @@ url = "2.5"
 
 # Regex for pattern extraction
 regex = "1.10"
+once_cell = "1.19"
 
 # Color and styling
 colored = "2.1"

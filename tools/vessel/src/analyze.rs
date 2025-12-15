@@ -3,10 +3,16 @@
 use crate::types::{AnalysisResult, Pattern, StructureAnalysis, StyleAnalysis};
 use anyhow::{Context, Result};
 use colored::*;
+use once_cell::sync::Lazy;
 use regex::Regex;
 use scraper::{Html, Selector};
 use std::collections::{HashMap, HashSet};
 use std::path::PathBuf;
+
+// Pre-compiled regex patterns for efficiency
+static HEX_COLOR_RE: Lazy<Regex> = Lazy::new(|| Regex::new(r"#[0-9a-fA-F]{3,6}").unwrap());
+static RGB_COLOR_RE: Lazy<Regex> = Lazy::new(|| Regex::new(r"rgba?\([^)]+\)").unwrap());
+static FONT_FAMILY_RE: Lazy<Regex> = Lazy::new(|| Regex::new(r"font-family:\s*([^;]+)").unwrap());
 
 /// Analyze page structure and patterns
 pub fn analyze_page(file: &PathBuf, verbose: bool) -> Result<()> {
@@ -118,21 +124,18 @@ fn analyze_styles(document: &Html) -> StyleAnalysis {
 
 fn extract_colors_from_style(style: &str, colors: &mut HashSet<String>) {
     // Match hex colors
-    let hex_re = Regex::new(r"#[0-9a-fA-F]{3,6}").unwrap();
-    for cap in hex_re.find_iter(style) {
+    for cap in HEX_COLOR_RE.find_iter(style) {
         colors.insert(cap.as_str().to_string());
     }
     
     // Match rgb/rgba colors
-    let rgb_re = Regex::new(r"rgba?\([^)]+\)").unwrap();
-    for cap in rgb_re.find_iter(style) {
+    for cap in RGB_COLOR_RE.find_iter(style) {
         colors.insert(cap.as_str().to_string());
     }
 }
 
 fn extract_fonts_from_style(style: &str, fonts: &mut HashSet<String>) {
-    let font_re = Regex::new(r"font-family:\s*([^;]+)").unwrap();
-    for cap in font_re.captures_iter(style) {
+    for cap in FONT_FAMILY_RE.captures_iter(style) {
         if let Some(font) = cap.get(1) {
             fonts.insert(font.as_str().trim().to_string());
         }
