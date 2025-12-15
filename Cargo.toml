@@ -21,7 +21,3 @@ logos = "0.13"
 
 [dev-dependencies]
 criterion = "0.5"
-
-[[bin]]
-name = "flamec"
-path = "src/main.rs"

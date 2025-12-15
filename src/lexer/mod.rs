@@ -8,18 +8,28 @@ pub enum Token {
     Keyword(String),
     Integer(i64),
     Float(f64),
-    Complex(f64, f64), // e.g., 3+4i for quantum states
+    Complex(f64, f64),   // e.g., 3+4i for quantum states
     DnaSequence(String), // e.g., [ATGC]
-    WaveOp(String), // e.g., sin~, cos~ for trig-formula wave cores
-    QuantumEntangle, // ~>
-    QuantumMeasure, // |->
-    NeuralTick, // @tick for neural tick clocks
-    LParen, RParen, LBracket, RBracket, LBrace, RBrace,
-    Plus, Minus, Mul, Div, Assign, Semicolon,
-    SwarmBot(String), // Stub for Strategickhaos swarm bots integration
-    QubitDecl, // qubit
-    Superpos(String), // e.g., |psi> for superposition states
-    GateOp(String), // e.g., H, X, CNOT for quantum gates
+    WaveOp(String),      // e.g., sin~, cos~ for trig-formula wave cores
+    QuantumEntangle,     // ~>
+    QuantumMeasure,      // |->
+    NeuralTick,          // @tick for neural tick clocks
+    LParen,
+    RParen,
+    LBracket,
+    RBracket,
+    LBrace,
+    RBrace,
+    Plus,
+    Minus,
+    Mul,
+    Div,
+    Assign,
+    Semicolon,
+    SwarmBot(String),  // Stub for Strategickhaos swarm bots integration
+    QubitDecl,         // qubit
+    Superpos(String),  // e.g., |psi> for superposition states
+    GateOp(String),    // e.g., H, X, CNOT for quantum gates
     BellState(String), // e.g., bell_phi+ for Bell states
     Eof,
     // AI Agent Scaffolding: Placeholder for GPT reasoning hooks
@@ -56,20 +66,48 @@ impl Lexer {
             '{' => Token::LBrace,
             '}' => Token::RBrace,
             '+' => Token::Plus,
-            '-' => if self.peek() == '>' { self.pos += 1; Token::QuantumMeasure } else { Token::Minus },
+            '-' => {
+                if self.peek() == '>' {
+                    self.pos += 1;
+                    Token::QuantumMeasure
+                } else {
+                    Token::Minus
+                }
+            }
             '*' => Token::Mul,
             '/' => Token::Div,
             '=' => Token::Assign,
             ';' => Token::Semicolon,
-            '~' => if self.peek() == '>' { self.pos += 1; Token::QuantumEntangle } else { Token::WaveOp("~".to_string()) },
-            '@' => if self.match_str("tick") { Token::NeuralTick } else { Token::Identifier("@".to_string()) },
-            '#' => if self.match_str("reason") { self.parse_reason_stub() } else { Token::Identifier("#".to_string()) },
-            '|' => if self.peek() == '-' && self.peek_ahead(1) == '>' { 
-                self.pos += 2; 
-                Token::QuantumMeasure 
-            } else { 
-                self.parse_superpos(ch) 
-            },
+            '~' => {
+                if self.peek() == '>' {
+                    self.pos += 1;
+                    Token::QuantumEntangle
+                } else {
+                    Token::WaveOp("~".to_string())
+                }
+            }
+            '@' => {
+                if self.match_str("tick") {
+                    Token::NeuralTick
+                } else {
+                    Token::Identifier("@".to_string())
+                }
+            }
+            '#' => {
+                if self.match_str("reason") {
+                    self.parse_reason_stub()
+                } else {
+                    Token::Identifier("#".to_string())
+                }
+            }
+            '|' => {
+                if self.peek() == '-' && self.peek_ahead(1) == '>' {
+                    self.pos += 2;
+                    Token::QuantumMeasure
+                } else {
+                    self.parse_superpos(ch)
+                }
+            }
             'a'..='z' | 'A'..='Z' => self.parse_identifier(ch),
             '0'..='9' => self.parse_number(ch),
             _ => Token::Identifier(ch.to_string()), // Fallback
@@ -83,11 +121,19 @@ impl Lexer {
     }
 
     fn peek(&self) -> char {
-        if self.pos < self.input.len() { self.input[self.pos] } else { '\0' }
+        if self.pos < self.input.len() {
+            self.input[self.pos]
+        } else {
+            '\0'
+        }
     }
 
     fn peek_ahead(&self, n: usize) -> char {
-        if self.pos + n < self.input.len() { self.input[self.pos + n] } else { '\0' }
+        if self.pos + n < self.input.len() {
+            self.input[self.pos + n]
+        } else {
+            '\0'
+        }
     }
 
     fn match_str(&mut self, s: &str) -> bool {
@@ -104,7 +150,13 @@ impl Lexer {
 
     fn parse_identifier(&mut self, first: char) -> Token {
         let mut id = first.to_string();
-        while self.pos < self.input.len() && (self.input[self.pos].is_alphanumeric() || self.input[self.pos] == '_' || self.input[self.pos] == '~' || self.input[self.pos] == '+' || self.input[self.pos] == '-') {
+        while self.pos < self.input.len()
+            && (self.input[self.pos].is_alphanumeric()
+                || self.input[self.pos] == '_'
+                || self.input[self.pos] == '~'
+                || self.input[self.pos] == '+'
+                || self.input[self.pos] == '-')
+        {
             id.push(self.input[self.pos]);
             self.pos += 1;
         }
@@ -114,7 +166,16 @@ impl Lexer {
             "entangle" | "wavecore" | "swarmbot" => Token::Keyword(id),
             "sin~" | "cos~" | "tan~" => Token::WaveOp(id), // Trig-formula wave cores
             _ if id.starts_with("bell_phi") || id.starts_with("bell_psi") => Token::BellState(id),
-            _ if id.starts_with("[") && id.ends_with("]") && id.chars().skip(1).take(id.len()-2).all(|c| "ATGC".contains(c)) => Token::DnaSequence(id),
+            _ if id.starts_with("[")
+                && id.ends_with("]")
+                && id
+                    .chars()
+                    .skip(1)
+                    .take(id.len() - 2)
+                    .all(|c| "ATGC".contains(c)) =>
+            {
+                Token::DnaSequence(id)
+            }
             _ if id.starts_with("swarm:") => Token::SwarmBot(id), // Strategickhaos integration stub
             _ => Token::Identifier(id),
         }
@@ -135,7 +196,9 @@ impl Lexer {
 
     fn parse_number(&mut self, first: char) -> Token {
         let mut num = first.to_string();
-        while self.pos < self.input.len() && (self.input[self.pos].is_digit(10) || self.input[self.pos] == '.') {
+        while self.pos < self.input.len()
+            && (self.input[self.pos].is_digit(10) || self.input[self.pos] == '.')
+        {
             num.push(self.input[self.pos]);
             self.pos += 1;
         }
@@ -164,14 +227,18 @@ impl Lexer {
 
     fn parse_reason_stub(&mut self) -> Token {
         // AI agent scaffolding: Parse #reason{query} for GPT contribution hooks
-        if self.peek() != '{' { return Token::Keyword("#reason".to_string()); }
+        if self.peek() != '{' {
+            return Token::Keyword("#reason".to_string());
+        }
         self.pos += 1;
         let mut query = String::new();
         while self.pos < self.input.len() && self.input[self.pos] != '}' {
             query.push(self.input[self.pos]);
             self.pos += 1;
         }
-        if self.pos < self.input.len() { self.pos += 1; }
+        if self.pos < self.input.len() {
+            self.pos += 1;
+        }
         Token::ReasonStub(query)
     }
 }
@@ -202,7 +269,10 @@ mod tests {
         assert_eq!(lexer.next_token(), Token::GateOp("H".to_string()));
         assert_eq!(lexer.next_token(), Token::QuantumEntangle);
         assert_eq!(lexer.next_token(), Token::Superpos("|psi>".to_string()));
-        assert_eq!(lexer.next_token(), Token::BellState("bell_phi+".to_string()));
+        assert_eq!(
+            lexer.next_token(),
+            Token::BellState("bell_phi+".to_string())
+        );
         assert_eq!(lexer.next_token(), Token::GateOp("X".to_string()));
         assert_eq!(lexer.next_token(), Token::Eof);
     }

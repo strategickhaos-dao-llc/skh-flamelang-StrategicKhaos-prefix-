@@ -7,19 +7,19 @@ use crate::lexer::{Lexer, Token};
 #[derive(Debug, Clone)]
 pub enum AstNode {
     Identifier(String),
-    Literal(Token), // Wraps numeric/DNA literals
+    Literal(Token),                              // Wraps numeric/DNA literals
     BinaryOp(Box<AstNode>, Token, Box<AstNode>), // e.g., x + y
     QuantumEntangle(Box<AstNode>, Box<AstNode>), // x ~> y
-    QuantumMeasure(Box<AstNode>), // x |->
-    WaveCore(String, Box<AstNode>), // sin~ expr
+    QuantumMeasure(Box<AstNode>),                // x |->
+    WaveCore(String, Box<AstNode>),              // sin~ expr
     DnaSeq(String),
-    SwarmInvoke(String, Vec<AstNode>), // swarmbot:func(args)
-    NeuralTick(Box<AstNode>), // @tick { expr }
-    QubitDecl(String), // qubit x;
-    GateApply(String, Box<AstNode>), // H x
-    SuperposState(String), // |psi>
+    SwarmInvoke(String, Vec<AstNode>),  // swarmbot:func(args)
+    NeuralTick(Box<AstNode>),           // @tick { expr }
+    QubitDecl(String),                  // qubit x;
+    GateApply(String, Box<AstNode>),    // H x
+    SuperposState(String),              // |psi>
     BellEntangle(String, Vec<AstNode>), // bell_phi+ x y
-    ReasonHook(String), // #reason{query}
+    ReasonHook(String),                 // #reason{query}
     Block(Vec<AstNode>),
     Eof,
 }
@@ -35,7 +35,11 @@ impl Parser {
         let mut lexer = Lexer::new(input);
         let current = lexer.next_token();
         let peek = lexer.next_token();
-        Parser { lexer, current, peek }
+        Parser {
+            lexer,
+            current,
+            peek,
+        }
     }
 
     pub fn parse_program(&mut self) -> AstNode {
@@ -94,7 +98,8 @@ impl Parser {
     fn parse_bell_entangle(&mut self, bell: String) -> AstNode {
         self.advance();
         let mut args = Vec::new();
-        while !matches!(self.current, Token::Eof | Token::Semicolon) { // Simple arg parsing
+        while !matches!(self.current, Token::Eof | Token::Semicolon) {
+            // Simple arg parsing
             args.push(self.parse_expr());
             if matches!(self.current, Token::Semicolon | Token::Eof) {
                 break;
@@ -155,7 +160,10 @@ impl Parser {
         };
 
         // Handle binary ops (priority stub)
-        if matches!(self.peek, Token::Plus | Token::Minus | Token::Mul | Token::Div) {
+        if matches!(
+            self.peek,
+            Token::Plus | Token::Minus | Token::Mul | Token::Div
+        ) {
             self.advance();
             let op = self.current.clone();
             self.advance();
@@ -176,10 +184,14 @@ mod tests {
         let mut parser = Parser::new("qubit x; entangle x ~> y; H |psi>; bell_phi+ a b; @tick { sin~ 3+4i }; #reason{phase3}");
         let ast = parser.parse_program();
         if let AstNode::Block(stmts) = ast {
-            assert!(stmts.len() >= 5, "Expected at least 5 statements, got {}", stmts.len());
+            assert!(
+                stmts.len() >= 5,
+                "Expected at least 5 statements, got {}",
+                stmts.len()
+            );
             // Check first: qubit x;
-            if let AstNode::QubitDecl(id) = &stmts[0] { 
-                assert_eq!(id, "x"); 
+            if let AstNode::QubitDecl(id) = &stmts[0] {
+                assert_eq!(id, "x");
             } else {
                 panic!("Expected QubitDecl, got {:?}", stmts[0]);
             }
@@ -195,11 +207,11 @@ mod tests {
         if let AstNode::Block(stmts) = ast {
             assert_eq!(stmts.len(), 1);
             if let AstNode::QuantumEntangle(left, right) = &stmts[0] {
-                if let AstNode::Identifier(l) = &**left { 
-                    assert_eq!(l, "x"); 
+                if let AstNode::Identifier(l) = &**left {
+                    assert_eq!(l, "x");
                 }
-                if let AstNode::Identifier(r) = &**right { 
-                    assert_eq!(r, "y"); 
+                if let AstNode::Identifier(r) = &**right {
+                    assert_eq!(r, "y");
                 }
             } else {
                 panic!("Expected QuantumEntangle");
