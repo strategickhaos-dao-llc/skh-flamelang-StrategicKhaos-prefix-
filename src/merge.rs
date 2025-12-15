@@ -58,6 +58,7 @@ pub fn run(
     }
     
     // Extract components based on mode
+    // Clamp indices to valid range
     let structure_doc = &documents[structure_from.min(documents.len() - 1)];
     let style_doc = &documents[style_from.min(documents.len() - 1)];
     
@@ -242,9 +243,16 @@ fn synthesize_fibonacci(documents: &[Html]) -> String {
 /// Golden synthesis: Pure φ ratio everywhere
 fn synthesize_golden(documents: &[Html]) -> String {
     // Similar to DaVinci but more aggressive golden ratio application
-    synthesize_davinci(documents)
-        .replace("davinci", "golden")
-        .replace("Da Vinci", "Golden Ratio")
+    let davinci_result = synthesize_davinci(documents);
+    
+    // Replace specific CSS class names and title only
+    davinci_result
+        .replace("class=\"davinci-grid\"", "class=\"golden-grid\"")
+        .replace("class=\"davinci-section\"", "class=\"golden-section\"")
+        .replace("<title>VesselMirror Synthesis (Da Vinci)</title>", "<title>VesselMirror Synthesis (Golden Ratio)</title>")
+        .replace("/* === DA VINCI GOLDEN RATIO LAYOUT === */", "/* === GOLDEN RATIO LAYOUT === */")
+        .replace(".davinci-grid {", ".golden-grid {")
+        .replace(".davinci-section {", ".golden-section {")
 }
 
 #[cfg(test)]
