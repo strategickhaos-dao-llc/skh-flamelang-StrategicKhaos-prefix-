@@ -1,0 +1,338 @@
+Name	PID	Description	Status	Group	CPU	Average CPU
+StateRepository	4564	State Repository Service	Running	appmodel	0	0.68
+Winmgmt	5444	Windows Management Instrumentation	Running	netsvcs	1	0.48
+WinDefend	14900	Microsoft Defender Antivirus Service	Running		0	0.15
+camsvc	12588	Capability Access Manager Service	Running	osprivacy	0	0.14
+Dnscache	3940	DNS Client	Running	NetworkService	0	0.10
+wscsvc	11024	Security Center	Running	LocalServiceNetworkRestricted	0	0.03
+wlidsvc	61188	Microsoft Account Sign-in Assistant	Running	netsvcs	0	0.02
+DPS	6440	Diagnostic Policy Service	Running	LocalServiceNoNetwork	0	0.02
+DellClientManagementService	16748	Dell Client Management Service	Running		0	0.02
+BrokerInfrastructure	2512	Background Tasks Infrastructure Service	Running	DcomLaunch	0	0.02
+logi_lamparray_service	7120	Logitech LampArray Service	Running		0	0.01
+DiagTrack	6392	Connected User Experiences and Telemetry	Running	utcsvc	0	0.01
+WSearch	4948	Windows Search	Running		0	0.01
+RpcEptMapper	2644	RPC Endpoint Mapper	Running	RPCSS	0	0.01
+TokenBroker	3840	Web Account Manager	Running	netsvcs	0	0.01
+mpssvc	5700	Windows Defender Firewall	Running	LocalServiceNoNetworkFirewall	0	0.01
+GamingServices	12916	Gaming Services	Running		0	0.01
+AASSvc	5248	Acer Agent Service	Running		0	0.01
+QuantumService	7296	QuantumService	Running		0	0.00
+FrameServer	20844	Windows Camera Frame Server	Running	Camera	0	0.00
+Dhcp	4432	DHCP Client	Running	LocalServiceNetworkRestricted	0	0.00
+LSM	2696	Local Session Manager	Running	DcomLaunch	0	0.00
+Schedule	4528	Task Scheduler	Running	netsvcs	0	0.00
+SysMain	4144	SysMain	Running	LocalSystemNetworkRestricted	0	0.00
+Audiosrv	4872	Windows Audio	Running	LocalServiceNetworkRestricted	0	0.00
+cbdhsvc_1ea0157	18360	Clipboard User Service_1ea0157	Running	ClipboardSvcGroup	0	0.00
+UserManager	3244	User Manager	Running	netsvcs	0	0.00
+WlanSvc	5396	WLAN AutoConfig	Running	LocalSystemNetworkRestricted	0	0.00
+SystemEventsBroker	2512	System Events Broker	Running	DcomLaunch	0	0.00
+MDCoreSvc	7324	Microsoft Defender Core Service	Running		0	0.00
+JetBrainsEtwHost.16	6876	JetBrains ETW Host Service v16.43.0 (x64)	Running		0	0.00
+netprofm	3560	Network List Service	Running	netprofm	0	0.00
+Wcmsvc	5192	Windows Connection Manager	Running	LocalServiceNetworkRestricted	0	0.00
+Okta Auto Update Service	7260	Okta Auto Update Service	Running		0	0.00
+mc-fw-host	6996	McAfee Framework Host	Running		0	0.00
+whesvc	14996	Windows Health and Optimized Experiences	Running	whesvc	0	0.00
+WpnUserService_1ea0157	9464	Windows Push Notifications User Service_1ea0157	Running	UnistackSvcGroup	0	0.00
+webthreatdefusersvc_1ea0157	17020	Web Threat Defense User Service_1ea0157	Running	LocalSystemNetworkRestricted	0	0.00
+UserDataSvc_1ea0157	22596	User Data Access_1ea0157	Running	UnistackSvcGroup	0	0.00
+UnistoreSvc_1ea0157	22596	User Data Storage_1ea0157	Running	UnistackSvcGroup	0	0.00
+UdkUserSvc_1ea0157	19304	Udk User Service_1ea0157	Running	UdkSvcGroup	0	0.00
+PrintWorkflowUserSvc_1ea0157	27832	PrintWorkflow_1ea0157	Running	PrintWorkflow	0	0.00
+PimIndexMaintenanceSvc_1ea0157	22596	Contact Data_1ea0157	Running	UnistackSvcGroup	0	0.00
+OneSyncSvc_1ea0157	22596	Sync Host_1ea0157	Running	UnistackSvcGroup	0	0.00
+NPSMSvc_1ea0157	33720	Now Playing Session Manager Service_1ea0157	Running	LocalService	0	0.00
+DevicesFlowUserSvc_1ea0157	27636	DevicesFlow_1ea0157	Running	DevicesFlow	0	0.00
+CDPUserSvc_1ea0157	8836	Connected Devices Platform User Service_1ea0157	Running	UnistackSvcGroup	0	0.00
+BluetoothUserService_1ea0157	10932	Bluetooth User Support Service_1ea0157	Running	BthAppGroup	0	0.00
+WSLService	14876	WSL Service	Running		0	0.00
+WSAIFabricSvc	14908	WSAIFabricSvc	Running	WSAIFabricSvcGroup	0	0.00
+WpnService	14860	Windows Push Notifications System Service	Running	netsvcs	0	0.00
+WMIRegistrationService	14884	Intel(R) Management Engine WMI Provider Registration	Running		0	0.00
+WinRM	12764	Windows Remote Management (WS-Management)	Running	NetworkService	0	0.00
+WinHttpAutoProxySvc	4736	WinHTTP Web Proxy Auto-Discovery Service	Running	LocalServiceHttp	0	0.00
+WebManagement	14888	Web Management	Running		0	0.00
+WdNisSvc	15204	Microsoft Defender Antivirus Network Inspection Service	Running		0	0.00
+WdiSystemHost	25292	Diagnostic System Host	Running	LocalSystemNetworkRestricted	0	0.00
+wcncsvc	38008	Windows Connect Now - Config Registrar	Running	LocalServiceAndNoImpersonation	0	0.00
+W32Time	17088	Windows Time	Running	LocalService	0	0.00
+vncserver	14868	RealVNC Server	Running		0	0.00
+vmcompute	37720	Hyper-V Host Compute Service	Running		0	0.00
+VaultSvc	2380	Credential Manager	Running		0	0.00
+UsoSvc	16212	Update Orchestrator Service	Running	netsvcs	0	0.00
+UEIPSvc	13788	User Experience Improvement Program	Running		0	0.00
+TrkWks	7640	Distributed Link Tracking Client	Running	LocalSystemNetworkRestricted	0	0.00
+TimeBrokerSvc	3080	Time Broker	Running	LocalServiceNetworkRestricted	0	0.00
+Themes	4136	Themes	Running	netsvcs	0	0.00
+TextInputManagementService	4964	Text Input Management Service	Running	LocalSystemNetworkRestricted	0	0.00
+TapiSrv	20756	Telephony	Running	NetworkService	0	0.00
+StorSvc	11244	Storage Service	Running	LocalSystemNetworkRestricted	0	0.00
+StiSvc	7472	Windows Image Acquisition (WIA)	Running	imgsvc	0	0.00
+SstpSvc	19892	Secure Socket Tunneling Protocol Service	Running	LocalService	0	0.00
+SshdBroker	9568	SshdBroker	Running	SshBrokerGroup	0	0.00
+ssh-agent	7428	OpenSSH Authentication Agent	Running		0	0.00
+SSDPSRV	12128	SSDP Discovery	Running	LocalServiceAndNoImpersonation	0	0.00
+SQLWriter	7452	SQL Server VSS Writer	Running		0	0.00
+Spooler	5620	Print Spooler	Running		0	0.00
+ShellHWDetection	5460	Shell Hardware Detection	Running	netsvcs	0	0.00
+SharedAccess	9148	Internet Connection Sharing (ICS)	Running	netsvcs	0	0.00
+SensorService	28368	Sensor Service	Running	LocalSystemNetworkRestricted	0	0.00
+SENS	4476	System Event Notification Service	Running	netsvcsRedirectionGuard	0	0.00
+SecurityHealthService	16420	Windows Security Service	Running		0	0.00
+SamsungQuickShareService	12944	Quick Share	Running		0	0.00
+SamsungAccountService	12776	Samsung Account	Running		0	0.00
+SamSs	2380	Security Accounts Manager	Running		0	0.00
+RunSwUSB	7396	RunSwUSB	Running		0	0.00
+RTUsbSwSrvc	7784	RTUsbSwSrvc	Running		0	0.00
+RtkAudioUniversalService	7368	Realtek Audio Universal Service	Running		0	0.00
+RstMwService	7360	Intel(R) Storage Middleware Service	Running		0	0.00
+RpcSs	2644	Remote Procedure Call (RPC)	Running	rpcss	0	0.00
+RmSvc	15664	Radio Management Service	Running	LocalServiceNetworkRestricted	0	0.00
+RealtekWlanU	7348	RealtekWlanU	Running		0	0.00
+RasMan	3868	Remote Access Connection Manager	Running	netsvcs	0	0.00
+ProfSvc	3088	User Profile Service	Running	UserProfileService	0	0.00
+Power	2512	Power	Running	DcomLaunch	0	0.00
+PolicyAgent	13608	IPsec Policy Agent	Running	NetworkServiceNetworkRestricted	0	0.00
+PlugPlay	2512	Plug and Play	Running	DcomLaunch	0	0.00
+PIEServiceNew	10992	Intel® PROSet/Wireless Service	Running		0	0.00
+PhoneSvc	3832	Phone Service	Running	LocalService	0	0.00
+PcaSvc	2360	Program Compatibility Assistant Service	Running	LocalSystemNetworkRestricted	0	0.00
+NVDisplay.ContainerLocalSystem	3960	NVIDIA Display Container LS	Running		0	0.00
+nvagent	7844	Network Virtualization Service	Running	NetSvcs	0	0.00
+nsi	3396	Network Store Interface Service	Running	LocalService	0	0.00
+NgcSvc	3368	Microsoft Passport	Running	LocalSystemNetworkRestricted	0	0.00
+NgcCtnrSvc	14148	Microsoft Passport Container	Running	LocalServiceNetworkRestricted	0	0.00
+Netman	30108	Network Connections	Running	LocalSystemNetworkRestricted	0	0.00
+NcbService	2528	Network Connection Broker	Running	LocalSystemNetworkRestricted	0	0.00
+McAfee WebAdvisor	7068	McAfee WebAdvisor	Running		0	0.00
+lmhosts	36108	TCP/IP NetBIOS Helper	Running	LocalServiceNetworkRestricted	0	0.00
+LicenseManager	15280	Windows License Manager Service	Running	LocalService	0	0.00
+lfsvc	13636	Geolocation Service	Running	netsvcsRedirectionGuard	0	0.00
+LanmanWorkstation	5816	Workstation	Running	NetworkService	0	0.00
+LanmanServer	7956	Server	Running	netsvcs	0	0.00
+KeyIso	2380	CNG Key Isolation	Running		0	0.00
+jhi_service	6952	Intel(R) Dynamic Application Loader Host Interface Service	Running		0	0.00
+iphlpsvc	6868	IP Helper	Running	NetSvcs	0	0.00
+ipfsvc	6860	Intel(R) Innovation Platform Framework Service	Running		0	0.00
+InventorySvc	17084	Inventory and Compatibility Appraisal service	Running	InvSvcGroup	0	0.00
+IntelGraphicsSoftwareService	12924	Intel® Graphics Software	Running		0	0.00
+IntelAudioService	6788	Intel(R) Audio Service	Running		0	0.00
+InstallService	13500	Microsoft Store Install Service	Running	netsvcs	0	0.00
+IKEEXT	6668	IKE and AuthIP IPsec Keying Modules	Running	netsvcs	0	0.00
+igccservice	6768	Intel(R) Graphics Command Center Service	Running		0	0.00
+HvHost	2904	HV Host Service	Running	LocalSystemNetworkRestricted	0	0.00
+hns	4656	Host Network Service	Running	NetSvcs	0	0.00
+hidserv	3296	Human Interface Device Service	Running	LocalSystemNetworkRestricted	0	0.00
+gpsvc	58532	Group Policy Client	Running	GPSvcGroup	0	0.00
+GamingServicesNet	12936	Gaming Services	Running		0	0.00
+FontCache	4596	Windows Font Cache Service	Running	LocalService	0	0.00
+FileSyncHelper	25812	FileSyncHelper	Running		0	0.00
+fdPHost	26804	Function Discovery Provider Host	Running	LocalService	0	0.00
+EventSystem	4160	COM+ Event System	Running	LocalService	0	0.00
+EventLog	3624	Windows Event Log	Running	LocalServiceNetworkRestricted	0	0.00
+DusmSvc	5184	Data Usage	Running	LocalServiceNetworkRestricted	0	0.00
+DtsApo4Service	6484	DtsApo4Service	Running		0	0.00
+DsSvc	14476	Data Sharing Service	Running	LocalSystemNetworkRestricted	0	0.00
+dptftcs	6544	Intel(R) Dynamic Tuning Technology Telemetry Service	Running		0	0.00
+DoSvc	16976	Delivery Optimization	Running	NetworkService	0	0.00
+DisplayEnhancementService	3252	Display Enhancement Service	Running	LocalSystemNetworkRestricted	0	0.00
+DispBrokerDesktopSvc	4896	Display Policy Service	Running	LocalService	0	0.00
+DevQueryBroker	3724	DevQuery Background Discovery Broker	Running	LocalSystemNetworkRestricted	0	0.00
+DeviceInstall	13680	Device Install Service	Running	DcomLaunch	0	0.00
+DeviceAssociationService	3968	Device Association Service	Running	LocalSystemNetworkRestricted	0	0.00
+DellTechHub	6428	Dell TechHub	Running		0	0.00
+debugregsvc	6384	debugregsvc	Running	DevToolsGroup	0	0.00
+DcomLaunch	2512	DCOM Server Process Launcher	Running	DcomLaunch	0	0.00
+CryptSvc	6360	Cryptographic Services	Running	NetworkService	0	0.00
+cplspcon	3232	Intel(R) Content Protection HDCP Service	Running		0	0.00
+CoreMessagingRegistrar	3408	CoreMessaging	Running	LocalServiceNoNetwork	0	0.00
+ClickToRunSvc	6404	Microsoft Office Click-to-Run Service	Running		0	0.00
+CDPSvc	17316	Connected Devices Platform Service	Running	LocalService	0	0.00
+bthserv	2996	Bluetooth Support Service	Running	LocalService	0	0.00
+BthAvctpSvc	2980	AVCTP service	Running	LocalService	0	0.00
+BTAGService	2952	Bluetooth Audio Gateway Service	Running	LocalServiceNetworkRestricted	0	0.00
+Bonjour Service	6496	Bonjour Service	Running		0	0.00
+BFE	5700	Base Filtering Engine	Running	LocalServiceNoNetworkFirewall	0	0.00
+Barrier	6572	Barrier	Running		0	0.00
+AudioEndpointBuilder	4584	Windows Audio Endpoint Builder	Running	LocalSystemNetworkRestricted	0	0.00
+ASMSvc	6412	Acer System Monitor Service	Running		0	0.00
+AppXSvc	39012	AppX Deployment Service (AppXSVC)	Running	wsappx	0	0.00
+Appinfo	4048	Application Information	Running	netsvcs	0	0.00
+AcerServiceSvc	6140	Acer Service Component Service	Running		0	0.00
+AcerQAAgentSvis	6192	Acer Quick Access	Running		0	0.00
+AcerPixyService	6120	AcerPixyService	Running		0	0.00
+AcerLightingService	6112	Acer Lighting Service	Running		0	0.00
+AcerGAICameraService	6104	AcerGAICameraService	Running		0	0.00
+AcerEZSvc	6132	Acer Experience Zone Component Service	Running		0	0.00
+AcerDIAgentSvis	6084	Acer Device Info	Running		0	0.00
+AcerDeviceInfoAgentService	8916	AcerDeviceInfoAgentService	Running		0	0.00
+AcerDeviceEnablingServiceV2	5808	Acer Device Enabling Sevice V2	Running		0	0.00
+AcerCCAgentSvis	6092	Acer Care Center	Running		0	0.00
+AcerARTAIMMXService	5180	AcerARTAIMMXService	Running		0	0.00
+AcerARTAIMMXDriverService	6148	AcerARTAIMMXDriverService	Running		0	0.00
+ACCSvc	6160	ACC Service	Running		0	0.00
+WebManagementUser_1ea0157	-	WebManagementUser_1ea0157	Stopped	WebManagementUser	0	0.00
+PenService_1ea0157	-	PenService_1ea0157	Stopped	PenService	0	0.00
+P9RdrService_1ea0157	-	P9RdrService_1ea0157	Stopped	P9RdrService	0	0.00
+MessagingService_1ea0157	-	MessagingService_1ea0157	Stopped	UnistackSvcGroup	0	0.00
+DevicePickerUserSvc_1ea0157	-	DevicePicker_1ea0157	Stopped	DevicesFlow	0	0.00
+DeviceAssociationBrokerSvc_1ea0157	-	DeviceAssociationBroker_1ea0157	Stopped	DevicesFlow	0	0.00
+CredentialEnrollmentManagerUserSvc_1ea0157	-	CredentialEnrollmentManagerUserSvc_1ea0157	Stopped		0	0.00
+ConsentUxUserSvc_1ea0157	-	ConsentUX User Service_1ea0157	Stopped	DevicesFlow	0	0.00
+CloudBackupRestoreSvc_1ea0157	-	Cloud Backup and Restore Service_1ea0157	Stopped	UnistackSvcGroup	0	0.00
+CaptureService_1ea0157	-	CaptureService_1ea0157	Stopped	LocalService	0	0.00
+BcastDVRUserService_1ea0157	-	GameDVR and Broadcast User Service_1ea0157	Stopped	BcastDVRUserService	0	0.00
+AarSvc_1ea0157	-	Agent Activation Runtime_1ea0157	Stopped	AarSvcGroup	0	0.00
+XboxNetApiSvc	-	Xbox Live Networking Service	Stopped	netsvcs	0	0.00
+XboxGipSvc	-	Xbox Accessory Management Service	Stopped	netsvcs	0	0.00
+XblGameSave	-	Xbox Live Game Save	Stopped	netsvcs	0	0.00
+XblAuthManager	-	Xbox Live Auth Manager	Stopped	netsvcs	0	0.00
+WwanSvc	-	WWAN AutoConfig	Stopped	LocalSystemNetworkRestricted	0	0.00
+wuqisvc	-	Microsoft Usage and Quality Insights	Stopped	LocalServiceAndNoImpersonation	0	0.00
+wuauserv	-	Windows Update	Stopped	netsvcs	0	0.00
+WslInstaller	-	Windows Subsystem for Linux	Stopped		0	0.00
+WPDBusEnum	-	Portable Device Enumerator Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+WpcMonSvc	-	Parental Controls	Stopped	LocalService	0	0.00
+workfolderssvc	-	Work Folders	Stopped	LocalService	0	0.00
+WMPNetworkSvc	-	Windows Media Player Network Sharing Service	Stopped		0	0.00
+wmiApSrv	-	WMI Performance Adapter	Stopped		0	0.00
+WManSvc	-	Windows Management Service	Stopped	netsvcs	0	0.00
+wlpasvc	-	Local Profile Assistant Service	Stopped	LocalServiceNetworkRestricted	0	0.00
+wisvc	-	Windows Insider Service	Stopped	netsvcs	0	0.00
+WiaRpc	-	Still Image Acquisition Events	Stopped	LocalSystemNetworkRestricted	0	0.00
+WFDSConMgrSvc	-	Wi-Fi Direct Services Connection Manager Service	Stopped	LocalServiceNetworkRestricted	0	0.00
+WerSvc	-	Windows Error Reporting Service	Stopped	WerSvcGroup	0	0.00
+wercplsupport	-	Problem Reports Control Panel Support	Stopped	netsvcs	0	0.00
+WEPHOSTSVC	-	Windows Encryption Provider Host Service	Stopped	WepHostSvcGroup	0	0.00
+Wecsvc	-	Windows Event Collector	Stopped	NetworkService	0	0.00
+webthreatdefsvc	-	Web Threat Defense Service	Stopped	WebThreatDefense	0	0.00
+WebClient	-	WebClient	Stopped	LocalService	0	0.00
+WdiServiceHost	-	Diagnostic Service Host	Stopped	LocalService	0	0.00
+WbioSrvc	-	Windows Biometric Service	Stopped	WbioSvcGroup	0	0.00
+wbengine	-	Block Level Backup Engine Service	Stopped		0	0.00
+WarpJITSvc	-	Warp JIT Service	Stopped	LocalServiceNetworkRestricted	0	0.00
+WalletService	-	WalletService	Stopped	appmodel	0	0.00
+WaaSMedicSvc	-	WaaSMedicSvc	Stopped	wusvcs	0	0.00
+VSS	-	Volume Shadow Copy	Stopped		0	0.00
+VSInstallerElevationService	-	Visual Studio Installer Elevation Service	Stopped		0	0.00
+vmicvss	-	Hyper-V Volume Shadow Copy Requestor	Stopped	LocalSystemNetworkRestricted	0	0.00
+vmicvmsession	-	Hyper-V PowerShell Direct Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+vmictimesync	-	Hyper-V Time Synchronization Service	Stopped	LocalServiceNetworkRestricted	0	0.00
+vmicshutdown	-	Hyper-V Guest Shutdown Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+vmicrdv	-	Hyper-V Remote Desktop Virtualization Service	Stopped	ICService	0	0.00
+vmickvpexchange	-	Hyper-V Data Exchange Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+vmicheartbeat	-	Hyper-V Heartbeat Service	Stopped	ICService	0	0.00
+vmicguestinterface	-	Hyper-V Guest Service Interface	Stopped	LocalSystemNetworkRestricted	0	0.00
+vds	-	Virtual Disk	Stopped		0	0.00
+VBoxSDS	-	VirtualBox system service	Stopped		0	0.00
+upnphost	-	UPnP Device Host	Stopped	LocalServiceAndNoImpersonation	0	0.00
+UmRdpService	-	Remote Desktop Services UserMode Port Redirector	Stopped	LocalSystemNetworkRestricted	0	0.00
+tzautoupdate	-	Auto Time Zone Updater	Stopped	LocalService	0	0.00
+TrustedInstaller	-	Windows Modules Installer	Stopped		0	0.00
+TroubleshootingSvc	-	Recommended Troubleshooting Service	Stopped	netsvcs	0	0.00
+TieringEngineService	-	Storage Tiers Management	Stopped		0	0.00
+TermService	-	Remote Desktop Services	Stopped	NetworkService	0	0.00
+swprv	-	Microsoft Software Shadow Copy Provider	Stopped	swprv	0	0.00
+svsvc	-	Spot Verifier	Stopped	LocalSystemNetworkRestricted	0	0.00
+sshd	-	OpenSSH SSH Server	Stopped		0	0.00
+sppsvc	-	Software Protection	Stopped		0	0.00
+SNMPTrap	-	SNMP Trap	Stopped		0	0.00
+SmsRouter	-	Microsoft Windows SMS Router Service.	Stopped	LocalServiceNetworkRestricted	0	0.00
+smphost	-	Microsoft Storage Spaces SMP	Stopped	smphost	0	0.00
+shpamsvc	-	Shared PC Account Manager	Stopped	netsvcsRedirectionGuard	0	0.00
+SessionEnv	-	Remote Desktop Configuration	Stopped	netsvcs	0	0.00
+SensrSvc	-	Sensor Monitoring Service	Stopped	LocalServiceAndNoImpersonation	0	0.00
+SensorDataService	-	Sensor Data Service	Stopped		0	0.00
+SEMgrSvc	-	Payments and NFC/SE Manager	Stopped	LocalService	0	0.00
+seclogon	-	Secondary Logon	Stopped	netsvcs	0	0.00
+SDRSVC	-	Windows Backup	Stopped	SDRSVC	0	0.00
+SCPolicySvc	-	Smart Card Removal Policy	Stopped	netsvcs	0	0.00
+ScDeviceEnum	-	Smart Card Device Enumeration Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+SCardSvr	-	Smart Card	Stopped	LocalServiceAndNoImpersonation	0	0.00
+RTLDHCPService	-	Realtek DHCP Service	Stopped		0	0.00
+RpcLocator	-	Remote Procedure Call (RPC) Locator	Stopped		0	0.00
+RetailDemo	-	Retail Demo Service	Stopped	rdxgroup	0	0.00
+RemoteRegistry	-	Remote Registry	Stopped	localService	0	0.00
+RemoteAccess	-	Routing and Remote Access	Stopped	netsvcs	0	0.00
+refsdedupsvc	-	ReFS Dedup Service	Stopped		0	0.00
+RasAuto	-	Remote Access Auto Connection Manager	Stopped	netsvcs	0	0.00
+QWAVE	-	Quality Windows Audio Video Experience	Stopped	LocalServiceAndNoImpersonation	0	0.00
+PushToInstall	-	Windows PushToInstall Service	Stopped	netsvcs	0	0.00
+ProtonVPN WireGuard	-	ProtonVPN WireGuard	Stopped		0	0.00
+ProtonVPN Service	-	ProtonVPN Service	Stopped		0	0.00
+PrintScanBrokerService	-	PrintScanBrokerService	Stopped	PrintScanBrokerService	0	0.00
+PrintNotify	-	Printer Extensions and Notifications	Stopped	print	0	0.00
+PrintDeviceConfigurationService	-	Print Device Configuration Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+pla	-	Performance Logs & Alerts	Stopped	LocalServiceNoNetwork	0	0.00
+PerfHost	-	Performance Counter DLL Host	Stopped		0	0.00
+perceptionsimulation	-	Windows Perception Simulation Service	Stopped		0	0.00
+OneDrive Updater Service	-	OneDrive Updater Service	Stopped		0	0.00
+NvContainerLocalSystem	-	NVIDIA LocalSystem Container	Stopped		0	0.00
+NlaSvc	-	Network Location Awareness	Stopped	netprofm	0	0.00
+NetTcpPortSharing	-	Net.Tcp Port Sharing Service	Stopped		0	0.00
+NetSetupSvc	-	Network Setup Service	Stopped	netsvcs	0	0.00
+Netlogon	-	Netlogon	Stopped		0	0.00
+NcdAutoSetup	-	Network Connected Devices Auto-Setup	Stopped	LocalServiceNoNetwork	0	0.00
+NcaSvc	-	Network Connectivity Assistant	Stopped	NetSvcs	0	0.00
+NaturalAuthentication	-	Natural Authentication	Stopped	netsvcs	0	0.00
+msiserver	-	Windows Installer	Stopped		0	0.00
+MSiSCSI	-	Microsoft iSCSI Initiator Service	Stopped	netsvcs	0	0.00
+MSDTC	-	Distributed Transaction Coordinator	Stopped		0	0.00
+MozillaMaintenance	-	Mozilla Maintenance Service	Stopped		0	0.00
+MouseWithoutBordersSvc	-	Mouse without Borders Service	Stopped		0	0.00
+midisrv	-	Windows MIDI Service	Stopped		0	0.00
+MicrosoftEdgeElevationService	-	Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)	Stopped		0	0.00
+McpManagementService	-	McpManagementService	Stopped	McpManagementServiceGroup	0	0.00
+McmSvc	-	Mobile Connectivity Management Service	Stopped	McmSvc	0	0.00
+mc-wps-update	-	McAfee Software Update	Stopped		0	0.00
+MapsBroker	-	Downloaded Maps Manager	Stopped	NetworkService	0	0.00
+LxpSvc	-	Language Experience Service	Stopped	netsvcs	0	0.00
+LocalKdc	-	Kerberos Local Key Distribution Center	Stopped		0	0.00
+lltdsvc	-	Link-Layer Topology Discovery Mapper	Stopped	LocalService	0	0.00
+KtmRm	-	KtmRm for Distributed Transaction Coordinator	Stopped	NetworkServiceAndNoImpersonation	0	0.00
+IpxlatCfgSvc	-	IP Translation Configuration Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+Intel(R) Platform License Manager Service	-	Intel(R) Platform License Manager Service	Stopped		0	0.00
+icssvc	-	Windows Mobile Hotspot Service	Stopped	LocalServiceNetworkRestricted	0	0.00
+hpatchmon	-	Hotpatch Monitoring Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+GraphicsPerfSvc	-	GraphicsPerfSvc	Stopped	GraphicsPerfSvcGroup	0	0.00
+GoogleUpdaterService144.0.7547.0	-	Google Updater Service (GoogleUpdaterService144.0.7547.0)	Stopped		0	0.00
+GoogleUpdaterInternalService144.0.7547.0	-	Google Updater Internal Service (GoogleUpdaterInternalService144.0.7547.0)	Stopped		0	0.00
+GoogleChromeElevationService	-	Google Chrome Elevation Service (GoogleChromeElevationService)	Stopped		0	0.00
+GameInputSvc	-	GameInput Service	Stopped		0	0.00
+GameInputRedistService	-	GameInput Redist Service	Stopped		0	0.00
+FvSvc	-	NVIDIA FrameView SDK service	Stopped		0	0.00
+FrameServerMonitor	-	Windows Camera Frame Server Monitor	Stopped	CameraMonitor	0	0.00
+FontCache3.0.0.0	-	Windows Presentation Foundation Font Cache 3.0.0.0	Stopped		0	0.00
+fhsvc	-	File History Service	Stopped	LocalSystemNetworkRestricted	0	0.00
+FDResPub	-	Function Discovery Resource Publication	Stopped	LocalServiceAndNoImpersonation	0	0.00
+EntAppSvc	-	Enterprise App Management Service	Stopped	appmodelRedirectionGuard	0	0.00
+embeddedmode	-	Embedded Mode	Stopped	LocalSystemNetworkRestricted	0	0.00
+EFS	-	Encrypting File System (EFS)	Stopped		0	0.00
+edgeupdatem	-	Microsoft Edge Update Service (edgeupdatem)	Stopped		0	0.00
+edgeupdate	-	Microsoft Edge Update Service (edgeupdate)	Stopped		0	0.00
+EapHost	-	Extensible Authentication Protocol	Stopped	netsvcs	0	0.00
+DsmSvc	-	Device Setup Manager	Stopped	netsvcs	0	0.00
+dot3svc	-	Wired AutoConfig	Stopped	LocalSystemNetworkRestricted	0	0.00
+dmwappushservice	-	Device Management Wireless Application Protocol (WAP) Push message Routing Service	Stopped	netsvcs	0	0.00
+DmEnrollmentSvc	-	Device Management Enrollment Service	Stopped	netsvcs	0	0.00
+DiscordSystemHelper	-	Discord System Helper	Stopped		0	0.00
+diagsvc	-	Diagnostic Execution Service	Stopped	diagnostics	0	0.00
+DeveloperToolsService	-	Developer Tools Service	Stopped		0	0.00
+defragsvc	-	Optimize drives	Stopped	defragsvc	0	0.00
+dcsvc	-	Declared Configuration(DC) service	Stopped	netsvcs	0	0.00
+COMSysApp	-	COM+ System Application	Stopped		0	0.00
+com.docker.service	-	Docker Desktop Service	Stopped		0	0.00
+ClipSVC	-	Client License Service (ClipSVC)	Stopped	wsappx	0	0.00
+CertPropSvc	-	Certificate Propagation	Stopped	netsvcs	0	0.00
+BITS	-	Background Intelligent Transfer Service	Stopped	netsvcs	0	0.00
+BDESVC	-	BitLocker Drive Encryption Service	Stopped	netsvcs	0	0.00
+AxInstSV	-	ActiveX Installer (AxInstSV)	Stopped	AxInstSVGroup	0	0.00
+autotimesvc	-	Cellular Time	Stopped	autoTimeSvc	0	0.00
+aspnet_state	-	ASP.NET State Service	Stopped		0	0.00
+ApxSvc	-	Windows Virtual Audio Device Proxy Service	Stopped	LocalService	0	0.00
+AppReadiness	-	App Readiness	Stopped	AppReadiness	0	0.00
+AppIDSvc	-	Application Identity	Stopped	LocalServiceNetworkRestricted	0	0.00
+ALG	-	Application Layer Gateway Service	Stopped		0	0.00
+ADPSvc	-	Aggregated Data Platform Service	Stopped	LocalServiceAndNoImpersonation	0	0.00
