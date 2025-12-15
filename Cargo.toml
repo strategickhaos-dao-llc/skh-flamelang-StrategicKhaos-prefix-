@@ -7,17 +7,19 @@ description = "FlameLang: 5-layer biological-quantum-physics programming languag
 license = "MIT"
 repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang"
 
-[workspace]
-members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
-]
-
 [dependencies]
 thiserror = "1.0"
 unicode-segmentation = "1.10"
 logos = "0.13"
+# Quantum-resistant cryptography (NIST PQC)
+pqcrypto-kyber = "0.8"
+pqcrypto-dilithium = "0.5"
+pqcrypto-sphincsplus = "0.7"
+pqcrypto-traits = "0.3"
+# Cryptographic hashing
+sha3 = "0.10"
+# Random number generation
+rand = "0.8"
 
 [dev-dependencies]
 criterion = "0.5"
@@ -25,3 +27,7 @@ criterion = "0.5"
 [[bin]]
 name = "flamec"
 path = "src/main.rs"
+
+[[example]]
+name = "flamevault_demo"
+path = "examples/flamevault_demo.rs"

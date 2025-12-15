@@ -10,9 +10,11 @@ pub mod parser;
 pub mod transform;
 pub mod codegen;
 pub mod stdlib;
+pub mod crypto;
 
 pub use lexer::{Lexer, Token};
 pub use parser::{Parser, AstNode};
+pub use crypto::{FlameVault, FlameVaultBlock, EncryptionResult};
 
 /// FlameLang error type
 #[derive(Debug, thiserror::Error)]
@@ -25,6 +27,12 @@ pub enum FlameError {
     Transform { layer: u8, message: String },
     #[error("Codegen error: {0}")]
     Codegen(String),
+    #[error("Crypto error: {0}")]
+    Crypto(String),
+    #[error("Key exchange error: {0}")]
+    KeyExchange(String),
+    #[error("Signature error: {0}")]
+    Signature(String),
 }
 
 pub type FlameResult<T> = Result<T, FlameError>;
