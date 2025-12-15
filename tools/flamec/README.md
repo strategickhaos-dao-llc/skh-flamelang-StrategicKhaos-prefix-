@@ -1,0 +1,1 @@
+# FlameLang Compiler (flamec)
