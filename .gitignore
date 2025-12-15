@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+# AetherLingua generated audio files
+*.wav
+*.mid
+aether_invocation.*
