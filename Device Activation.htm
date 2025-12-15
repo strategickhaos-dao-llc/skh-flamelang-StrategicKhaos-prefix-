@@ -239,9 +239,21 @@
         document.getElementById('activationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const deviceName = document.getElementById('deviceName').value;
-            const activationKey = document.getElementById('activationKey').value;
+            const deviceName = document.getElementById('deviceName').value.trim();
+            const activationKey = document.getElementById('activationKey').value.trim();
             const statusMessage = document.getElementById('statusMessage');
+            
+            // Validation: device name should not be empty
+            if (!deviceName || deviceName.length < 1) {
+                statusMessage.className = 'status-message error';
+                statusMessage.style.display = 'block';
+                statusMessage.innerHTML = '';
+                const errorStrong = document.createElement('strong');
+                errorStrong.textContent = 'Error:';
+                statusMessage.appendChild(errorStrong);
+                statusMessage.appendChild(document.createTextNode(' Please enter a device name.'));
+                return;
+            }
             
             // Simple validation pattern for activation key
             const keyPattern = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
