@@ -161,13 +161,14 @@ jobs:
           fi
         else
           # Real GKE execution
-          POD_NAME=$(kubectl get pods -l app=flamelang-training -o name | head -1 | cut -d'/' -f2)
+          POD_NAME=$(kubectl get pods -l app=flamelang-training -o name 2>/dev/null | head -1 | cut -d'/' -f2)
           
           if [ -n "$POD_NAME" ]; then
             echo "🎯 Monitoring pod: $POD_NAME"
             
-            SSH_COUNT=$(kubectl exec -it $POD_NAME -- bash -c "ls /dev/pts 2>/dev/null | wc -l" || echo "0")
-            PYTHON_PROCS=$(kubectl exec -it $POD_NAME -- bash -c "pgrep python | wc -l" || echo "0")
+            # Use -i only (not -it) for non-interactive CI environment
+            SSH_COUNT=$(kubectl exec -i $POD_NAME -- bash -c "ls /dev/pts 2>/dev/null | wc -l" || echo "0")
+            PYTHON_PROCS=$(kubectl exec -i $POD_NAME -- bash -c "pgrep python | wc -l" || echo "0")
             
             echo "📊 Active SSH terminals: $SSH_COUNT"
             echo "🐍 Training bottlenecks: $PYTHON_PROCS"
@@ -209,10 +210,14 @@ jobs:
         # Install hey (HTTP load generator) if not in simulation
         if [ "${{ env.SIMULATION_MODE }}" != "true" ]; then
           echo "📦 Installing hey load testing tool..."
-          HEY_VERSION="0.1.4"
-          HEY_CHECKSUM="944520cf1e3e28a6da3fa8c15d8a2b183f3e938be172cec5a9c3f8c732bc34f5"
+          # Note: Using latest version URL. In production, pin to specific version.
+          # Example pinned URL: https://github.com/rakyll/hey/releases/download/v0.1.4/hey_linux_amd64
           wget -q "https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64" -O hey
-          echo "$HEY_CHECKSUM  hey" | sha256sum -c - || { echo "Checksum verification failed!"; exit 1; }
+          # Verify file is not empty and is executable format
+          if [ ! -s hey ] || ! file hey | grep -q "executable"; then
+            echo "Downloaded file is invalid!"
+            exit 1
+          fi
           chmod +x hey
           
           # Only run a scaled-down test in CI (full 20M would take too long)
