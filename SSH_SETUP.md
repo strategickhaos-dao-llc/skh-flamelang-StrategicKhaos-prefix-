@@ -24,9 +24,11 @@ git@github.com:strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix.git  â
 
 ```powershell
 # Generate a new ED25519 SSH key
-ssh-keygen -t ed25519 -C "security@strategickhaos.ai" -f "$env:USERPROFILE\.ssh\id_ed25519_flamelang"
+# Replace "your-email@example.com" with your actual email address
+ssh-keygen -t ed25519 -C "your-email@example.com" -f "$env:USERPROFILE\.ssh\id_ed25519_flamelang"
 
-# Press Enter for no passphrase (or enter a secure passphrase)
+# Enter a secure passphrase (recommended) or press Enter for no passphrase (less secure)
+# Using a passphrase adds an extra layer of security
 ```
 
 ### 2. Start SSH Agent and Add Key
@@ -99,9 +101,11 @@ git push origin main
 
 ```bash
 # Generate a new ED25519 SSH key
-ssh-keygen -t ed25519 -C "security@strategickhaos.ai" -f ~/.ssh/id_ed25519_flamelang
+# Replace "your-email@example.com" with your actual email address
+ssh-keygen -t ed25519 -C "your-email@example.com" -f ~/.ssh/id_ed25519_flamelang
 
-# Press Enter for no passphrase (or enter a secure passphrase)
+# Enter a secure passphrase (recommended) or press Enter for no passphrase (less secure)
+# Using a passphrase adds an extra layer of security
 ```
 
 ### 2. Start SSH Agent and Add Key
