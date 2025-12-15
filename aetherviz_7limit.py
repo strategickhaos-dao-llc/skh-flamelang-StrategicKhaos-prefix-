@@ -118,9 +118,11 @@ progression = [
 for notes in progression:
     # Note on for all notes in chord
     for n in notes:
-        track.append(Message('note_on', note=MIDI_BASE+n, velocity=90))
-    # Note off for last note (with time delta for next event)
-    track.append(Message('note_off', note=MIDI_BASE+notes[-1], time=480*4))
+        track.append(Message('note_on', note=MIDI_BASE+n, velocity=90, time=0))
+    # Note off for all notes after duration
+    for i, n in enumerate(notes):
+        # Add time delta only to the last note_off
+        track.append(Message('note_off', note=MIDI_BASE+n, velocity=64, time=480*4 if i == len(notes)-1 else 0))
 
 mid.save("7limit.mid")
 
