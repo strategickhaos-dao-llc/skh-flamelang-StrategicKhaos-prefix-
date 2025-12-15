@@ -3,7 +3,7 @@ ide: QDRUST
 profile:
   name: qodana.recommended
 
-linter:
+linters:
   - cargo-clippy
 
 include:

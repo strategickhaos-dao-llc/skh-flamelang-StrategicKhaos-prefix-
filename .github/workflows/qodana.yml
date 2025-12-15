@@ -25,7 +25,5 @@ jobs:
       
       - name: 🔍 Qodana Scan
         uses: JetBrains/qodana-action@v2024.1
-        with:
-          args: --ide QDRUST
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
