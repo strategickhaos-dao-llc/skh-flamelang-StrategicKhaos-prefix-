@@ -10,6 +10,7 @@ pub mod parser;
 pub mod transform;
 pub mod codegen;
 pub mod stdlib;
+pub mod vault;
 
 pub use lexer::{Lexer, Token};
 pub use parser::{Parser, AstNode};
@@ -25,6 +26,12 @@ pub enum FlameError {
     Transform { layer: u8, message: String },
     #[error("Codegen error: {0}")]
     Codegen(String),
+    #[error("Vault error: {0}")]
+    Vault(String),
+    #[error("IO error: {0}")]
+    Io(#[from] std::io::Error),
+    #[error("JSON error: {0}")]
+    Json(#[from] serde_json::Error),
 }
 
 pub type FlameResult<T> = Result<T, FlameError>;

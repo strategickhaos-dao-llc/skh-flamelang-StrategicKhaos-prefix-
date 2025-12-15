@@ -39,3 +39,11 @@
 
 # debug information files
 *.dwo
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# FlameVault
+.flamevault/
