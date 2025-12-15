@@ -1,18 +1,19 @@
 //! # FlameLang v2.0.0
-//! 
+//!
 //! 5-Layer Transformation Pipeline:
 //! English → Hebrew → Unicode → Wave → DNA → LLVM IR
 //!
 //! © 2025 Strategickhaos DAO LLC
 
+pub mod ai;
+pub mod codegen;
 pub mod lexer;
 pub mod parser;
-pub mod transform;
-pub mod codegen;
 pub mod stdlib;
+pub mod transform;
 
 pub use lexer::{Lexer, Token};
-pub use parser::{Parser, AstNode};
+pub use parser::{AstNode, Parser};
 
 /// FlameLang error type
 #[derive(Debug, thiserror::Error)]
