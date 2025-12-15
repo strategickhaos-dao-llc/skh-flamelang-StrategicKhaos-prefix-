@@ -35,7 +35,12 @@ impl ChartGenerator {
         
         let bar_spacing = 20;
         let num_bars = data.entries.len();
-        let bar_width = (chart_width - (bar_spacing * (num_bars as u32 - 1))) / num_bars as u32;
+        let spacing_total = if num_bars > 1 {
+            bar_spacing * (num_bars as u32 - 1)
+        } else {
+            0
+        };
+        let bar_width = (chart_width - spacing_total) / num_bars as u32;
 
         let mut svg = String::new();
         

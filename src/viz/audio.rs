@@ -64,8 +64,9 @@ impl AudioGenerator {
     }
 
     /// Map data value to frequency (Layer 3-4 integration)
-    #[allow(dead_code)]
-    fn value_to_frequency(&self, value: f64, min_val: f64, max_val: f64) -> f64 {
+    /// 
+    /// Used by tests and future WAV generation implementation
+    pub fn value_to_frequency(&self, value: f64, min_val: f64, max_val: f64) -> f64 {
         // Map value to frequency range (440 Hz to 880 Hz)
         let min_freq = 440.0;
         let max_freq = 880.0;
@@ -79,8 +80,9 @@ impl AudioGenerator {
     }
 
     /// Generate sine wave samples for a given frequency
-    #[allow(dead_code)]
-    fn generate_sine_wave(&self, frequency: f64, duration_ms: u32) -> Vec<f32> {
+    /// 
+    /// Used by tests and future WAV generation implementation
+    pub fn generate_sine_wave(&self, frequency: f64, duration_ms: u32) -> Vec<f32> {
         let num_samples = (self.sample_rate * duration_ms / 1000) as usize;
         let mut samples = Vec::with_capacity(num_samples);
         
@@ -94,8 +96,10 @@ impl AudioGenerator {
     }
 
     /// Apply ADSR envelope to samples
+    /// 
+    /// Used for future WAV generation implementation
     #[allow(dead_code)]
-    fn apply_envelope(&self, samples: &mut [f32]) {
+    pub fn apply_envelope(&self, samples: &mut [f32]) {
         let len = samples.len();
         if len == 0 {
             return;

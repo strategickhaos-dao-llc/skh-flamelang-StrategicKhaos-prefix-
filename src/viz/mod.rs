@@ -111,9 +111,13 @@ impl FlameViz {
             })?;
 
         // Compute SHA-256 hash for provenance
+        // Note: For complete integrity, we hash the SVG and audio signature
+        // In production, this would hash the actual audio bytes
         let mut hasher = Sha256::new();
         hasher.update(svg.as_bytes());
         if let Some(ref path) = audio_path {
+            // Hash the path as a proxy for audio content
+            // TODO: Hash actual audio bytes when real WAV generation is implemented
             hasher.update(path.as_bytes());
         }
         let hash_bytes = hasher.finalize();
@@ -182,10 +186,15 @@ impl FlameViz {
         payload.insert("timestamp", Utc::now().to_rfc3339());
         payload.insert("data_entries", data.entries.len().to_string());
         
-        // Add trigger detection (e.g., "7%" charity gliss)
-        let text_repr = format!("{:?}", data);
-        if text_repr.contains("7%") {
-            payload.insert("triggers", "charity_gliss".to_string());
+        // Add trigger detection based on data patterns
+        // Check for 7% threshold (charity gliss trigger)
+        let total: f64 = data.entries.iter().map(|e| e.value).sum();
+        for entry in &data.entries {
+            let percentage = (entry.value / total) * 100.0;
+            if (percentage - 7.0).abs() < 0.5 {
+                payload.insert("triggers", "charity_gliss".to_string());
+                break;
+            }
         }
 
         serde_json::to_string_pretty(&payload)
