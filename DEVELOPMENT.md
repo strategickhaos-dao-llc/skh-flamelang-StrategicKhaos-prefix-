@@ -74,19 +74,23 @@ The Claude CLI provides AI-powered code assistance directly from your terminal.
 
 ### Rider IDE Installation
 
-Open Rider's integrated terminal (`Alt+F12`) and run:
+**Note:** The Claude CLI installation method varies based on the actual tool you're using. The commands below are examples based on the problem statement. Please refer to the official Claude AI documentation for accurate installation instructions.
+
+Open Rider's integrated terminal (`Alt+F12`) and run the appropriate command:
 
 **PowerShell (Windows):**
 ```powershell
+# Example command - verify actual command from official documentation
 irm https://claude.ai/install.ps1 | iex
 ```
 
 **Bash/Zsh (macOS/Linux):**
 ```bash
+# Example command - verify actual command from official documentation
 curl -fsSL https://claude.ai/install.sh | sh
 ```
 
-**Note:** The installation script URL is illustrative. Visit [claude.ai](https://claude.ai) for the official installation command.
+Visit the official Claude AI website for the most up-to-date installation instructions.
 
 ### Usage Examples
 
@@ -112,7 +116,7 @@ For hotkey access, add Claude as an External Tool:
 
 1. **Settings** → **Tools** → **External Tools** → **Add**
 2. **Name**: Claude Commit
-3. **Program**: `claude` (or full path: `C:\Users\YourName\.claude\bin\claude.exe`)
+3. **Program**: `claude` (or use the full path from `which claude` on Unix or `where claude` on Windows)
 4. **Arguments**: `commit`
 5. **Working Directory**: `$ProjectFileDir$`
 6. Assign a hotkey (e.g., `Ctrl+Shift+C`)
@@ -432,17 +436,30 @@ cargo build
 
 ### Issue: Claude CLI Not Found
 
-**Solution:** Ensure the Claude CLI binary is in your PATH:
+**Solution:** First, verify the actual installation location of the Claude CLI binary. Then ensure it's in your PATH:
 
-**Windows:**
-```powershell
-$env:PATH += ";C:\Users\YourName\.claude\bin"
+**Find the Claude binary location:**
+```bash
+# On macOS/Linux
+which claude
+
+# On Windows (PowerShell)
+where.exe claude
 ```
 
-**macOS/Linux:**
+**Add to PATH (if needed):**
+
+**Windows (PowerShell):**
+```powershell
+# Replace <install-path> with the actual directory containing claude.exe
+$env:PATH += ";<install-path>"
+```
+
+**macOS/Linux (Bash):**
 ```bash
-export PATH="$HOME/.claude/bin:$PATH"
-echo 'export PATH="$HOME/.claude/bin:$PATH"' >> ~/.bashrc
+# Replace <install-path> with the actual directory containing the claude binary
+export PATH="<install-path>:$PATH"
+echo 'export PATH="<install-path>:$PATH"' >> ~/.bashrc
 ```
 
 ---
