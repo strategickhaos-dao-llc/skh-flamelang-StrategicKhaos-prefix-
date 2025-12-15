@@ -39,3 +39,12 @@
 
 # debug information files
 *.dwo
+
+# Generated audio files (examples)
+examples/aetherviz_output.wav
+examples/aetherviz_output.mid
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
