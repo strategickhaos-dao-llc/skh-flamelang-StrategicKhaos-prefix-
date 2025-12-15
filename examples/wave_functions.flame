@@ -1,0 +1,25 @@
+// FlameLang Example: Wave Functions
+// Demonstrates wave-based computation using trigonometric operators
+
+// Define wave functions using FlameLang's wave operators
+let wave1 = sin~(2 * PI * frequency);
+let wave2 = cos~(2 * PI * frequency);
+
+// Combine waves (interference)
+let combined = wave1 + wave2;
+
+// Calculate amplitude and phase
+let amplitude = measure(combined);
+let phase = angle(combined);
+
+// Wave operators work in frequency domain
+// Layer 3 of FlameLang: Wave analysis (c=2πr → Hz)
+
+// Apply wave transformation to quantum state
+qubit q;
+let wave_state = sin~(q);
+
+// Entangle wave with quantum bit
+entangle wave_state ~> q;
+
+// This creates quantum-wave hybrid computation

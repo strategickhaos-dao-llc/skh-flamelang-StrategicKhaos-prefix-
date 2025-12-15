@@ -1,0 +1,23 @@
+// FlameLang Example: Quantum Entanglement
+// Demonstrates quantum bit manipulation and entanglement
+
+// Declare quantum bits
+qubit q1;
+qubit q2;
+
+// Create entanglement between qubits
+entangle q1 ~> q2;
+
+// Apply Hadamard gate to put q1 in superposition
+H q1;
+
+// Create Bell state (maximally entangled state)
+bell_phi+ q1 q2;
+
+// Measure quantum state
+let result1 = |-> q1;
+let result2 = |-> q2;
+
+// Results are correlated due to entanglement
+// If q1 measures 0, q2 will measure 0
+// If q1 measures 1, q2 will measure 1

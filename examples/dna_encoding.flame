@@ -1,0 +1,21 @@
+// FlameLang Example: DNA Encoding
+// Demonstrates biological data encoding using DNA sequences
+
+// Define DNA sequence using biological base pairs
+let dna_sequence = [ATGCATGC];
+
+// DNA sequences map to computational states
+// A = 00, T = 11, G = 01, C = 10 (binary encoding)
+
+// Transcribe DNA to RNA (replace T with U)
+let rna_sequence = transcribe(dna_sequence);
+
+// Encode data as DNA
+let data = "Hello";
+let encoded = encode_dna(data);
+
+// Decode DNA back to data
+let decoded = decode_dna(encoded);
+
+// DNA allows biological-level computation
+// Layer 4 of FlameLang pipeline: Freq → Codon

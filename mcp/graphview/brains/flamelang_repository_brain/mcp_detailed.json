@@ -1,0 +1,289 @@
+{
+  "name": "mcp",
+  "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "mcp",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp"
+    },
+    {
+      "id": 1,
+      "label": "README.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/README.md"
+    },
+    {
+      "id": 2,
+      "label": "graphview",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview"
+    },
+    {
+      "id": 3,
+      "label": "brains",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains"
+    },
+    {
+      "id": 4,
+      "label": "flamelang_repository_brain",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain"
+    },
+    {
+      "id": 5,
+      "label": "assets_graphview.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/assets_graphview.json"
+    },
+    {
+      "id": 6,
+      "label": "assets_graphview.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/assets_graphview.md"
+    },
+    {
+      "id": 7,
+      "label": "index.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/index.md"
+    },
+    {
+      "id": 8,
+      "label": "mcp_graphview.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/mcp_graphview.json"
+    },
+    {
+      "id": 9,
+      "label": "mcp_graphview.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/mcp_graphview.md"
+    },
+    {
+      "id": 10,
+      "label": "skh-flamelang-StrategicKhaos-prefix--main_graphview.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/skh-flamelang-StrategicKhaos-prefix--main_graphview.json"
+    },
+    {
+      "id": 11,
+      "label": "skh-flamelang-StrategicKhaos-prefix--main_graphview.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/skh-flamelang-StrategicKhaos-prefix--main_graphview.md"
+    },
+    {
+      "id": 12,
+      "label": "src_detailed.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/src_detailed.json"
+    },
+    {
+      "id": 13,
+      "label": "src_detailed.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/src_detailed.md"
+    },
+    {
+      "id": 14,
+      "label": "src_graphview.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/src_graphview.json"
+    },
+    {
+      "id": 15,
+      "label": "src_graphview.md",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/graphview/brains/flamelang_repository_brain/src_graphview.md"
+    },
+    {
+      "id": 16,
+      "label": "ollama",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/ollama"
+    },
+    {
+      "id": 17,
+      "label": "flamelang_ollama_client.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/ollama/flamelang_ollama_client.py"
+    },
+    {
+      "id": 18,
+      "label": "server",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server"
+    },
+    {
+      "id": 19,
+      "label": "config.json",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server/config.json"
+    },
+    {
+      "id": 20,
+      "label": "mcp_server.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/server/mcp_server.py"
+    },
+    {
+      "id": 21,
+      "label": "tools",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools"
+    },
+    {
+      "id": 22,
+      "label": "__init__.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools/__init__.py"
+    },
+    {
+      "id": 23,
+      "label": "flamelang_mcp_tools.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/tools/flamelang_mcp_tools.py"
+    },
+    {
+      "id": 24,
+      "label": "video",
+      "type": "directory",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/video"
+    },
+    {
+      "id": 25,
+      "label": "video_generator.py",
+      "type": "file",
+      "path": "/home/runner/work/skh-flamelang-StrategicKhaos-prefix-/skh-flamelang-StrategicKhaos-prefix-/mcp/video/video_generator.py"
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 1,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "type": "contains"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "type": "contains"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 8,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 9,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 10,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 11,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 12,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 13,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 14,
+      "type": "contains"
+    },
+    {
+      "from": 4,
+      "to": 15,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 16,
+      "type": "contains"
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 18,
+      "type": "contains"
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "type": "contains"
+    },
+    {
+      "from": 18,
+      "to": 20,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 21,
+      "type": "contains"
+    },
+    {
+      "from": 21,
+      "to": 22,
+      "type": "contains"
+    },
+    {
+      "from": 21,
+      "to": 23,
+      "type": "contains"
+    },
+    {
+      "from": 0,
+      "to": 24,
+      "type": "contains"
+    },
+    {
+      "from": 24,
+      "to": 25,
+      "type": "contains"
+    }
+  ]
+}
