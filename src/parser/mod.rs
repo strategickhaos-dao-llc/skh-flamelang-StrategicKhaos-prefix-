@@ -7,19 +7,19 @@ use crate::lexer::{Lexer, Token};
 #[derive(Debug, Clone)]
 pub enum AstNode {
     Identifier(String),
-    Literal(Token), // Wraps numeric/DNA literals
+    Literal(Token),                              // Wraps numeric/DNA literals
     BinaryOp(Box<AstNode>, Token, Box<AstNode>), // e.g., x + y
     QuantumEntangle(Box<AstNode>, Box<AstNode>), // x ~> y
-    QuantumMeasure(Box<AstNode>), // x |->
-    WaveCore(String, Box<AstNode>), // sin~ expr
+    QuantumMeasure(Box<AstNode>),                // x |->
+    WaveCore(String, Box<AstNode>),              // sin~ expr
     DnaSeq(String),
-    SwarmInvoke(String, Vec<AstNode>), // swarmbot:func(args)
-    NeuralTick(Box<AstNode>), // @tick { expr }
-    QubitDecl(String), // qubit x;
-    GateApply(String, Box<AstNode>), // H x
-    SuperposState(String), // |psi>
+    SwarmInvoke(String, Vec<AstNode>),  // swarmbot:func(args)
+    NeuralTick(Box<AstNode>),           // @tick { expr }
+    QubitDecl(String),                  // qubit x;
+    GateApply(String, Box<AstNode>),    // H x
+    SuperposState(String),              // |psi>
     BellEntangle(String, Vec<AstNode>), // bell_phi+ x y
-    ReasonHook(String), // #reason{query}
+    ReasonHook(String),                 // #reason{query}
     Block(Vec<AstNode>),
     Eof,
 }
@@ -35,14 +35,21 @@ impl Parser {
         let mut lexer = Lexer::new(input);
         let current = lexer.next_token();
         let peek = lexer.next_token();
-        Parser { lexer, current, peek }
+        Parser {
+            lexer,
+            current,
+            peek,
+        }
     }
 
     pub fn parse_program(&mut self) -> AstNode {
         let mut statements = Vec::new();
         while !matches!(self.current, Token::Eof) {
             statements.push(self.parse_statement());
-            self.advance();
+            // Skip optional semicolons between statements
+            if matches!(self.current, Token::Semicolon) {
+                self.advance();
+            }
         }
         AstNode::Block(statements)
     }
@@ -59,7 +66,11 @@ impl Parser {
             Token::BellState(b) => self.parse_bell_entangle(b.clone()),
             Token::Identifier(_) => self.parse_expr(),
             Token::NeuralTick => self.parse_neural_tick(),
-            Token::ReasonStub(q) => AstNode::ReasonHook(q.clone()),
+            Token::ReasonStub(q) => {
+                let node = AstNode::ReasonHook(q.clone());
+                self.advance();
+                node
+            }
             _ => self.parse_expr(),
         }
     }
@@ -94,12 +105,10 @@ impl Parser {
     fn parse_bell_entangle(&mut self, bell: String) -> AstNode {
         self.advance();
         let mut args = Vec::new();
-        while !matches!(self.current, Token::Eof | Token::Semicolon) { // Simple arg parsing
+        // Bell states typically take 2 qubits, but allow up to 10 for flexibility
+        while !matches!(self.current, Token::Eof | Token::Semicolon) && args.len() < 10 {
+            // Simple arg parsing - parse_expr will advance current token
             args.push(self.parse_expr());
-            if matches!(self.current, Token::Semicolon | Token::Eof) {
-                break;
-            }
-            self.advance();
         }
         AstNode::BellEntangle(bell, args)
     }
@@ -121,12 +130,36 @@ impl Parser {
     fn parse_expr(&mut self) -> AstNode {
         // Simplified: Handle identifiers, literals, binary ops, etc.
         let mut left = match &self.current {
-            Token::Identifier(id) => AstNode::Identifier(id.clone()),
-            Token::Integer(i) => AstNode::Literal(Token::Integer(*i)),
-            Token::Float(f) => AstNode::Literal(Token::Float(*f)),
-            Token::Complex(r, i) => AstNode::Literal(Token::Complex(*r, *i)),
-            Token::DnaSequence(d) => AstNode::DnaSeq(d.clone()),
-            Token::Superpos(s) => AstNode::SuperposState(s.clone()),
+            Token::Identifier(id) => {
+                let node = AstNode::Identifier(id.clone());
+                self.advance();
+                node
+            }
+            Token::Integer(i) => {
+                let node = AstNode::Literal(Token::Integer(*i));
+                self.advance();
+                node
+            }
+            Token::Float(f) => {
+                let node = AstNode::Literal(Token::Float(*f));
+                self.advance();
+                node
+            }
+            Token::Complex(r, i) => {
+                let node = AstNode::Literal(Token::Complex(*r, *i));
+                self.advance();
+                node
+            }
+            Token::DnaSequence(d) => {
+                let node = AstNode::DnaSeq(d.clone());
+                self.advance();
+                node
+            }
+            Token::Superpos(s) => {
+                let node = AstNode::SuperposState(s.clone());
+                self.advance();
+                node
+            }
             Token::WaveOp(w) => {
                 let wave_op = w.clone();
                 self.advance();
@@ -137,12 +170,9 @@ impl Parser {
                 let bot = s.clone();
                 self.advance();
                 let mut args = Vec::new();
-                while !matches!(self.current, Token::Eof | Token::Semicolon) {
+                // Limit swarm bot arguments to prevent infinite loops
+                while !matches!(self.current, Token::Eof | Token::Semicolon) && args.len() < 20 {
                     args.push(self.parse_expr());
-                    if matches!(self.current, Token::Semicolon | Token::Eof) {
-                        break;
-                    }
-                    self.advance();
                 }
                 return AstNode::SwarmInvoke(bot, args);
             }
@@ -154,9 +184,12 @@ impl Parser {
             _ => AstNode::Eof,
         };
 
-        // Handle binary ops (priority stub)
-        if matches!(self.peek, Token::Plus | Token::Minus | Token::Mul | Token::Div) {
-            self.advance();
+        // Handle binary ops (simplified left-to-right parsing for Phase 1)
+        // TODO Phase 2: Implement proper operator precedence with Pratt parsing
+        if matches!(
+            self.current,
+            Token::Plus | Token::Minus | Token::Mul | Token::Div
+        ) {
             let op = self.current.clone();
             self.advance();
             let right = self.parse_expr();
@@ -176,10 +209,14 @@ mod tests {
         let mut parser = Parser::new("qubit x; entangle x ~> y; H |psi>; bell_phi+ a b; @tick { sin~ 3+4i }; #reason{phase3}");
         let ast = parser.parse_program();
         if let AstNode::Block(stmts) = ast {
-            assert!(stmts.len() >= 5, "Expected at least 5 statements, got {}", stmts.len());
+            assert!(
+                stmts.len() >= 5,
+                "Expected at least 5 statements, got {}",
+                stmts.len()
+            );
             // Check first: qubit x;
-            if let AstNode::QubitDecl(id) = &stmts[0] { 
-                assert_eq!(id, "x"); 
+            if let AstNode::QubitDecl(id) = &stmts[0] {
+                assert_eq!(id, "x");
             } else {
                 panic!("Expected QubitDecl, got {:?}", stmts[0]);
             }
@@ -195,11 +232,11 @@ mod tests {
         if let AstNode::Block(stmts) = ast {
             assert_eq!(stmts.len(), 1);
             if let AstNode::QuantumEntangle(left, right) = &stmts[0] {
-                if let AstNode::Identifier(l) = &**left { 
-                    assert_eq!(l, "x"); 
+                if let AstNode::Identifier(l) = &**left {
+                    assert_eq!(l, "x");
                 }
-                if let AstNode::Identifier(r) = &**right { 
-                    assert_eq!(r, "y"); 
+                if let AstNode::Identifier(r) = &**right {
+                    assert_eq!(r, "y");
                 }
             } else {
                 panic!("Expected QuantumEntangle");

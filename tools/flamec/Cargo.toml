@@ -1,0 +1,10 @@
+[package]
+name = "flamec"
+version = "2.0.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "FlameLang compiler frontend"
+license = "MIT"
+
+[dependencies]
+flamelang = { path = "../.." }

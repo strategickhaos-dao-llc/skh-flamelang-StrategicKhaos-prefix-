@@ -1,0 +1,10 @@
+[package]
+name = "flamelsp"
+version = "2.0.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "FlameLang language server protocol implementation"
+license = "MIT"
+
+[dependencies]
+flamelang = { path = "../.." }
