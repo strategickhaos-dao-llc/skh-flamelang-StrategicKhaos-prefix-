@@ -1,0 +1,24 @@
+[package]
+name = "flamelang"
+version = "2.0.0"
+edition = "2021"
+authors = ["StrategicKhaos DAO LLC"]
+description = "FlameLang v2.0.0 sovereign compiler toolchain. 5-layer transformation pipeline (English→Hebrew→Unicode→Wave→DNA→LLVM)."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-"
+
+[dependencies]
+
+[dev-dependencies]
+
+[[bin]]
+name = "flamec"
+path = "tools/flamec/main.rs"
+
+[[bin]]
+name = "flamefmt"
+path = "tools/flamefmt/main.rs"
+
+[[bin]]
+name = "flamelsp"
+path = "tools/flamelsp/main.rs"
