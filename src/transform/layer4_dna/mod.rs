@@ -5,7 +5,10 @@ pub fn transform(frequencies: &[f64]) -> Vec<[u8; 3]> {
     frequencies.iter().map(|f| to_codon(*f)).collect()
 }
 
+const FREQ_SCALE: f64 = 100.0; // Scaling factor for frequency to codon conversion
+const CODON_COUNT: u64 = 64; // Total number of codons in genetic code
+
 fn to_codon(freq: f64) -> [u8; 3] {
-    let index = ((freq * 100.0) as u64 % 64) as u8;
+    let index = ((freq * FREQ_SCALE) as u64 % CODON_COUNT) as u8;
     [(index >> 4) & 0b11, (index >> 2) & 0b11, index & 0b11]
 }
