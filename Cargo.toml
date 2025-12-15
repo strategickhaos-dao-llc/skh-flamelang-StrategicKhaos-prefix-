@@ -1,0 +1,14 @@
+[package]
+name = "flamelang"
+version = "2.0.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "FlameLang: 5-layer biological-quantum-physics compiler"
+license = "MIT"
+
+[dependencies]
+thiserror = "1.0"
+
+[[bin]]
+name = "flamec"
+path = "src/main.rs"
