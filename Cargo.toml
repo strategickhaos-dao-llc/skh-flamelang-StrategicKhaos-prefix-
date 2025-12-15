@@ -5,14 +5,7 @@ edition = "2021"
 authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
 description = "FlameLang: 5-layer biological-quantum-physics programming language"
 license = "MIT"
-repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang"
-
-[workspace]
-members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
-]
+repository = "https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-"
 
 [dependencies]
 thiserror = "1.0"
