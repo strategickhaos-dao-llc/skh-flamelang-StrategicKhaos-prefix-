@@ -45,7 +45,7 @@ impl AetherLingua {
         self.describe_node_sonification(&tree.root, &mut description);
 
         // Special patterns
-        if tree.contains_type("toml") && tree.file_types.get("toml").unwrap_or(&0) > &0 {
+        if tree.contains_type("toml") {
             description.push_str("\n### 🎼 7% Charity Motif Detected\n");
             description.push_str("Treasury configuration files trigger the sovereignty harmonic.\n");
         }

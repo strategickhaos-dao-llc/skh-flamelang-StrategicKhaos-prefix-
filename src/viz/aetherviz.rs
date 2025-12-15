@@ -242,6 +242,13 @@ impl AetherViz {
             }
         };
 
+        let escaped_name = node.name
+            .replace('&', "&amp;")
+            .replace('<', "&lt;")
+            .replace('>', "&gt;")
+            .replace('"', "&quot;")
+            .replace('\'', "&apos;");
+
         svg.push_str(&format!(
             r#"  <circle cx="{}" cy="{}" r="8" class="node {}" />
   <text x="{}" y="{}" class="text">{}</text>
@@ -251,7 +258,7 @@ impl AetherViz {
             color_class,
             x + 15,
             y + 5,
-            node.name
+            escaped_name
         ));
 
         if node.is_dir {
@@ -326,7 +333,7 @@ impl AetherViz {
     pub fn prepare_payload(&self, hash: &str, tree: &RepoTree) -> String {
         let timestamp = std::time::SystemTime::now()
             .duration_since(std::time::UNIX_EPOCH)
-            .unwrap()
+            .unwrap_or_else(|_| std::time::Duration::from_secs(0))
             .as_secs();
 
         let mut triggers = Vec::new();
