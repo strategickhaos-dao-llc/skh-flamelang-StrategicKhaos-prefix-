@@ -34,13 +34,22 @@ function Initialize-FlameVault {
     $combined = "$deviceId|$hemisphere|$region|STRATEGICKHAOS-FLAMEVAULT-7%"
     
     $sha256 = [System.Security.Cryptography.SHA256]::Create()
-    $keyBytes = $sha256.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($combined))
-    $script:MachineKey = $keyBytes
+    try {
+        $keyBytes = $sha256.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($combined))
+        $script:MachineKey = $keyBytes
+    }
+    finally {
+        $sha256.Dispose()
+    }
     
     # Load honeypots
     $honeypotFile = Join-Path $script:VaultPath "honeypots.json"
     if (Test-Path $honeypotFile) {
-        $script:Honeypots = Get-Content $honeypotFile | ConvertFrom-Json -AsHashtable
+        $jsonContent = Get-Content $honeypotFile | ConvertFrom-Json
+        $script:Honeypots = @{}
+        $jsonContent.PSObject.Properties | ForEach-Object {
+            $script:Honeypots[$_.Name] = $_.Value
+        }
     }
     
     Write-Host @"
@@ -130,13 +139,14 @@ function Get-FlameSecret {
         $honeypot = $script:Honeypots[$Name]
         
         # Log alert
+        $deviceId = if ($env:STRAT_DEVICE_ID) { $env:STRAT_DEVICE_ID } else { $env:COMPUTERNAME }
         $alert = @{
             Timestamp = (Get-Date).ToString("o")
             AlertType = "HONEYPOT_ACCESS"
             KeyName = $Name
             ProcessName = (Get-Process -Id $PID).ProcessName
             Username = $env:USERNAME
-            DeviceId = $env:STRAT_DEVICE_ID
+            DeviceId = $deviceId
         } | ConvertTo-Json -Compress
         
         Add-Content -Path (Join-Path $script:VaultPath "alerts.log") -Value $alert
@@ -311,7 +321,7 @@ function Export-FlameEnv {
     Write-Host "`n# Real secrets (use Get-FlameSecret):" -ForegroundColor Gray
     
     Get-ChildItem (Join-Path $script:VaultPath "*.enc.json") | ForEach-Object {
-        $name = $_.BaseName -replace "\.enc$", ""
+        $name = ($_.Name -split '\.')[0]
         Write-Host "# `$env:$($name.ToUpper()) = `$(Get-FlameSecret -Name '$name' -Raw)"
     }
 }
