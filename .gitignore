@@ -39,3 +39,16 @@
 
 # debug information files
 *.dwo
+
+# Environment files (secrets)
+.env
+!.env.example
+
+# Rust/Cargo
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Build artifacts
+/build/
+/dist/

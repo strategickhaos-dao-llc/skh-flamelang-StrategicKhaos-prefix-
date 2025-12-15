@@ -1,0 +1,1 @@
+# FlameLang Language Server (flamelsp)
