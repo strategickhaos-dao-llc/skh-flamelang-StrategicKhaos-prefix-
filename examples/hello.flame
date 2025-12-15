@@ -1,0 +1,32 @@
+// FlameLang v2.0.0 - Hello World Example
+// Demonstrates basic syntax and quantum primitives
+
+fn main() {
+    let message = "Hello, FlameLang v2.0.0!";
+    return 0;
+}
+
+// Example with quantum primitives
+fn quantum_example() {
+    let q = quantum superpose(0, 1);
+    let measured = measure q;
+    return measured;
+}
+
+// Example with wave primitives
+fn wave_example() {
+    let w = wave {
+        frequency: 440.0,
+        amplitude: 1.0,
+        phase: 0.0
+    };
+    return w;
+}
+
+// Example with DNA primitives
+fn dna_example() {
+    let data = "ATCG";
+    let seq = encode(data);
+    let decoded = decode(seq);
+    return decoded;
+}

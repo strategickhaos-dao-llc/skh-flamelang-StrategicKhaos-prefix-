@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # Main compiler service
+  compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: strategickhaos/flamelang-compiler:2.0.0
+    volumes:
+      - ./examples:/workspace/examples
+      - ./output:/workspace/output
+    working_dir: /workspace
+    command: info
+
+  # Development environment
+  dev:
+    image: rust:1.75
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: cargo build --release
+    environment:
+      - RUST_LOG=debug
+
+  # Preprocessor service (Unicode normalization)
+  preprocessor:
+    image: strategickhaos/flamelang-compiler:2.0.0
+    volumes:
+      - ./examples:/workspace/examples
+      - ./output:/workspace/output
+    working_dir: /workspace
+    command: transform --input examples/hello.flame --stage unicode
+
+  # Testing service
+  test:
+    image: rust:1.75
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: cargo test --all
+    environment:
+      - RUST_LOG=info
+      - RUST_BACKTRACE=1
+
+networks:
+  default:
+    name: flamelang-network
+
+volumes:
+  cargo-cache:
+  target-cache:

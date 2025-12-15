@@ -1,0 +1,31 @@
+// FlameLang v2.0.0 - Quantum Computing Example
+// Demonstrates quantum primitives and entanglement
+
+fn quantum_teleportation() {
+    // Create superposition
+    let alice = quantum superpose(0, 1);
+    let bob = quantum superpose(0, 1);
+    
+    // Entangle qubits
+    let entangled = entangle(alice, bob);
+    
+    // Measure Alice's qubit
+    let measurement = measure alice;
+    
+    return measurement;
+}
+
+fn quantum_algorithm() {
+    // Quantum search algorithm concept
+    let states = quantum superpose(0, 1, 2, 3, 4, 5, 6, 7);
+    
+    // Apply quantum operations (placeholder)
+    let result = measure states;
+    
+    return result;
+}
+
+fn main() {
+    let result = quantum_teleportation();
+    return result;
+}
