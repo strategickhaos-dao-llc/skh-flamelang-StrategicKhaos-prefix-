@@ -39,3 +39,23 @@
 
 # debug information files
 *.dwo
+
+# Rust build artifacts
+/target/
+Cargo.lock
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# AetherViz generated files
+tools/aetherviz/*.png
+tools/aetherviz/*.wav
+
+# Virtual environments
+venv/
+env/
+ENV/
