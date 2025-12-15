@@ -105,8 +105,9 @@ impl Parser {
     fn parse_bell_entangle(&mut self, bell: String) -> AstNode {
         self.advance();
         let mut args = Vec::new();
-        while !matches!(self.current, Token::Eof | Token::Semicolon) {
-            // Simple arg parsing
+        // Bell states typically take 2 qubits, but allow up to 10 for flexibility
+        while !matches!(self.current, Token::Eof | Token::Semicolon) && args.len() < 10 {
+            // Simple arg parsing - parse_expr will advance current token
             args.push(self.parse_expr());
         }
         AstNode::BellEntangle(bell, args)
@@ -169,7 +170,8 @@ impl Parser {
                 let bot = s.clone();
                 self.advance();
                 let mut args = Vec::new();
-                while !matches!(self.current, Token::Eof | Token::Semicolon) {
+                // Limit swarm bot arguments to prevent infinite loops
+                while !matches!(self.current, Token::Eof | Token::Semicolon) && args.len() < 20 {
                     args.push(self.parse_expr());
                 }
                 return AstNode::SwarmInvoke(bot, args);
@@ -182,7 +184,8 @@ impl Parser {
             _ => AstNode::Eof,
         };
 
-        // Handle binary ops (priority stub)
+        // Handle binary ops (simplified left-to-right parsing for Phase 1)
+        // TODO Phase 2: Implement proper operator precedence with Pratt parsing
         if matches!(
             self.current,
             Token::Plus | Token::Minus | Token::Mul | Token::Div
