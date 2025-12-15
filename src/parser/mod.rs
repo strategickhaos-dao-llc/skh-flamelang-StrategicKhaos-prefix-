@@ -46,7 +46,10 @@ impl Parser {
         let mut statements = Vec::new();
         while !matches!(self.current, Token::Eof) {
             statements.push(self.parse_statement());
-            self.advance();
+            // Skip optional semicolons between statements
+            if matches!(self.current, Token::Semicolon) {
+                self.advance();
+            }
         }
         AstNode::Block(statements)
     }
@@ -63,7 +66,11 @@ impl Parser {
             Token::BellState(b) => self.parse_bell_entangle(b.clone()),
             Token::Identifier(_) => self.parse_expr(),
             Token::NeuralTick => self.parse_neural_tick(),
-            Token::ReasonStub(q) => AstNode::ReasonHook(q.clone()),
+            Token::ReasonStub(q) => {
+                let node = AstNode::ReasonHook(q.clone());
+                self.advance();
+                node
+            }
             _ => self.parse_expr(),
         }
     }
@@ -101,10 +108,6 @@ impl Parser {
         while !matches!(self.current, Token::Eof | Token::Semicolon) {
             // Simple arg parsing
             args.push(self.parse_expr());
-            if matches!(self.current, Token::Semicolon | Token::Eof) {
-                break;
-            }
-            self.advance();
         }
         AstNode::BellEntangle(bell, args)
     }
@@ -126,12 +129,36 @@ impl Parser {
     fn parse_expr(&mut self) -> AstNode {
         // Simplified: Handle identifiers, literals, binary ops, etc.
         let mut left = match &self.current {
-            Token::Identifier(id) => AstNode::Identifier(id.clone()),
-            Token::Integer(i) => AstNode::Literal(Token::Integer(*i)),
-            Token::Float(f) => AstNode::Literal(Token::Float(*f)),
-            Token::Complex(r, i) => AstNode::Literal(Token::Complex(*r, *i)),
-            Token::DnaSequence(d) => AstNode::DnaSeq(d.clone()),
-            Token::Superpos(s) => AstNode::SuperposState(s.clone()),
+            Token::Identifier(id) => {
+                let node = AstNode::Identifier(id.clone());
+                self.advance();
+                node
+            }
+            Token::Integer(i) => {
+                let node = AstNode::Literal(Token::Integer(*i));
+                self.advance();
+                node
+            }
+            Token::Float(f) => {
+                let node = AstNode::Literal(Token::Float(*f));
+                self.advance();
+                node
+            }
+            Token::Complex(r, i) => {
+                let node = AstNode::Literal(Token::Complex(*r, *i));
+                self.advance();
+                node
+            }
+            Token::DnaSequence(d) => {
+                let node = AstNode::DnaSeq(d.clone());
+                self.advance();
+                node
+            }
+            Token::Superpos(s) => {
+                let node = AstNode::SuperposState(s.clone());
+                self.advance();
+                node
+            }
             Token::WaveOp(w) => {
                 let wave_op = w.clone();
                 self.advance();
@@ -144,10 +171,6 @@ impl Parser {
                 let mut args = Vec::new();
                 while !matches!(self.current, Token::Eof | Token::Semicolon) {
                     args.push(self.parse_expr());
-                    if matches!(self.current, Token::Semicolon | Token::Eof) {
-                        break;
-                    }
-                    self.advance();
                 }
                 return AstNode::SwarmInvoke(bot, args);
             }
@@ -161,10 +184,9 @@ impl Parser {
 
         // Handle binary ops (priority stub)
         if matches!(
-            self.peek,
+            self.current,
             Token::Plus | Token::Minus | Token::Mul | Token::Div
         ) {
-            self.advance();
             let op = self.current.clone();
             self.advance();
             let right = self.parse_expr();
