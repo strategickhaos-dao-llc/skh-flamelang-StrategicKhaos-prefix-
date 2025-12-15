@@ -39,3 +39,11 @@
 
 # debug information files
 *.dwo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# AetherViz generated audio files
+*.wav
