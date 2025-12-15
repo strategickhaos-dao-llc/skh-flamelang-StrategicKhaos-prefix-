@@ -1,0 +1,44 @@
+{
+  "name": "FlameLang v2.0.0 Development",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-bullseye",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb",
+        "serayuzgur.crates",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "tamasfe.even-better-toml",
+        "usernamehw.errorlens",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "rust-analyzer.checkOnSave.command": "clippy",
+        "editor.formatOnSave": true,
+        "files.trimTrailingWhitespace": true
+      }
+    }
+  },
+  
+  "postCreateCommand": "rustup component add clippy rustfmt && pip install pandas seaborn matplotlib jupyter",
+  
+  "remoteUser": "vscode",
+  
+  "containerEnv": {
+    "FLAMELANG_VERSION": "2.0.0",
+    "RUST_BACKTRACE": "1"
+  }
+}
