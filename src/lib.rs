@@ -10,6 +10,7 @@ pub mod parser;
 pub mod transform;
 pub mod codegen;
 pub mod stdlib;
+pub mod ai;
 
 pub use lexer::{Lexer, Token};
 pub use parser::{Parser, AstNode};

@@ -7,17 +7,16 @@ description = "FlameLang: 5-layer biological-quantum-physics programming languag
 license = "MIT"
 repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang"
 
-[workspace]
-members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
-]
+
 
 [dependencies]
 thiserror = "1.0"
 unicode-segmentation = "1.10"
 logos = "0.13"
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.13.1", features = ["full"] }
 
 [dev-dependencies]
 criterion = "0.5"
