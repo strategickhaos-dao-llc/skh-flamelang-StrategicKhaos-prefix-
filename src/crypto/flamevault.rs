@@ -124,9 +124,11 @@ impl FlameVault {
     }
 
     /// Determine layer ordering from master key
-    /// Uses Fisher-Yates shuffle seeded by master key
+    /// Uses Fisher-Yates shuffle seeded by master key with CSPRNG
     fn compute_layer_ordering(&self) -> Vec<Layer> {
         use sha3::Digest;
+        use rand::{SeedableRng, Rng};
+        use rand::rngs::StdRng;
         
         let mut layers = vec![
             Layer::Linguistic,
@@ -136,14 +138,21 @@ impl FlameVault {
             Layer::Llvm,
         ];
 
-        // Generate deterministic permutation from master key
+        // Generate deterministic seed from master key
         let mut hasher = Sha3_256::new();
         hasher.update(&self.master_key);
-        let seed = hasher.finalize();
+        let seed_hash = hasher.finalize();
+        
+        // Convert to proper seed array for CSPRNG
+        let mut seed = [0u8; 32];
+        seed.copy_from_slice(&seed_hash);
 
-        // Fisher-Yates shuffle with deterministic seed
+        // Use proper CSPRNG with deterministic seed
+        let mut rng = StdRng::from_seed(seed);
+        
+        // Fisher-Yates shuffle with cryptographically secure randomness
         for i in (1..layers.len()).rev() {
-            let j = (seed[i % 32] as usize) % (i + 1);
+            let j = rng.gen_range(0..=i);
             layers.swap(i, j);
         }
 
@@ -272,25 +281,24 @@ impl FlameVault {
     }
 
     /// Decrypt ciphertext (requires knowing layer ordering from master key)
+    /// 
+    /// NOTE: This is a placeholder for the full decryption implementation.
+    /// Currently returns an error as each transformation layer needs a proper
+    /// inverse function. This is left as future work to keep the initial
+    /// implementation minimal and focused on the encryption proof-of-concept.
     pub fn decrypt(&self, _ciphertext: &[u8]) -> Result<Vec<u8>, FlameError> {
-        // For full decryption, we'd need to reverse each layer transformation
-        // This is a simplified version demonstrating the concept
-        // In production, each layer would need a proper inverse function
-        
-        Err(FlameError::Transform {
-            layer: 0,
-            message: "Full decryption requires inverse layer transformations (not implemented in minimal version)".to_string(),
-        })
+        Err(FlameError::Crypto(
+            "Decryption not yet implemented - requires inverse layer transformations".to_string(),
+        ))
     }
 
     /// Verify block signature
     pub fn verify_block(&self, block: &FlameVaultBlock) -> Result<bool, FlameError> {
         // Parse signed message
         let signed_message = SigSignedMessage::from_bytes(&block.dilithium_sig)
-            .map_err(|_| FlameError::Transform {
-                layer: 0,
-                message: "Invalid signature format".to_string(),
-            })?;
+            .map_err(|_| FlameError::Signature(
+                "Invalid signature format".to_string(),
+            ))?;
 
         // Verify with public key
         SignatureScheme::verify(&signed_message, &self.keypair.sig_public)?;

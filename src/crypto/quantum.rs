@@ -92,10 +92,9 @@ impl SignatureScheme {
         signed_message: &dilithium5::SignedMessage,
         public_key: &dilithium5::PublicKey,
     ) -> Result<Vec<u8>, FlameError> {
-        dilithium5::open(signed_message, public_key).map_err(|_| FlameError::Transform {
-            layer: 0,
-            message: "Signature verification failed".to_string(),
-        })
+        dilithium5::open(signed_message, public_key).map_err(|_| FlameError::Signature(
+            "Signature verification failed".to_string(),
+        ))
     }
 
     /// Create detached signature
@@ -125,10 +124,9 @@ pub mod sphincs {
         signed_message: &sphincs::SignedMessage,
         public_key: &sphincs::PublicKey,
     ) -> Result<Vec<u8>, crate::FlameError> {
-        sphincs::open(signed_message, public_key).map_err(|_| crate::FlameError::Transform {
-            layer: 0,
-            message: "SPHINCS+ signature verification failed".to_string(),
-        })
+        sphincs::open(signed_message, public_key).map_err(|_| crate::FlameError::Signature(
+            "SPHINCS+ signature verification failed".to_string(),
+        ))
     }
 }
 
