@@ -2,9 +2,9 @@ name: 🔥 FlameLang CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, copilot/update-qodana-integration ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop, copilot/update-qodana-integration ]
   workflow_dispatch:
 
 env:
