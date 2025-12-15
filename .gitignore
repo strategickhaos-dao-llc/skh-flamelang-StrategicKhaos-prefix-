@@ -39,3 +39,7 @@
 
 # debug information files
 *.dwo
+
+# Generated audio/MIDI files from aetherviz
+7limit_invocation.wav
+7limit.mid
