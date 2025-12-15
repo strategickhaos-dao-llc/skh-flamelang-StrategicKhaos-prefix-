@@ -1,0 +1,13 @@
+version: "1.0"
+ide: QDRUST
+profile:
+  name: qodana.recommended
+
+linter:
+  - cargo-clippy
+
+include:
+  - src/**/*.rs
+
+exclude:
+  - target/
