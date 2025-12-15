@@ -1,0 +1,569 @@
+Image	PID	Hard Faults/sec	Commit (KB)	Working Set (KB)	Shareable (KB)	Private (KB)
+Memory Compression	4368	0	10,048	4,541,692	0	4,541,692
+webstorm64.exe	38604	0	2,731,544	2,684,868	499,732	2,185,136
+rider64.exe	46880	0	1,947,980	2,202,024	565,548	1,636,476
+idea64.exe	60384	0	1,826,968	1,963,508	583,976	1,379,532
+firefox.exe	43528	0	924,232	926,596	76,344	850,252
+Fleet.exe	33900	0	1,018,312	1,725,956	1,076,428	649,528
+msedgewebview2.exe	45464	0	934,808	649,132	80,176	568,956
+firefox.exe	8080	0	1,241,132	768,060	214,524	553,536
+DuckDuckGo.exe	24192	0	880,556	843,564	389,508	454,056
+jetbrains-toolbox.exe	24220	0	447,128	436,080	62,916	373,164
+firefox.exe	39668	0	394,096	541,460	188,072	353,388
+vmmemWSL	44140	0	1,184,208	307,576	0	307,576
+firefox.exe	31956	0	344,480	367,704	66,592	301,112
+msedgewebview2.exe	35232	0	455,064	349,184	79,556	269,628
+msedgewebview2.exe	31080	0	315,980	335,364	73,932	261,432
+explorer.exe	14116	0	721,628	513,564	262,356	251,208
+firefox.exe	22120	0	2,101,816	339,400	104,720	234,680
+gitkraken.exe	40264	0	497,356	337,936	104,632	233,304
+Secure System	188	0	172	201,316	0	201,316
+MsMpEng.exe	14900	0	398,820	301,332	102,880	198,452
+msedgewebview2.exe	69736	0	220,904	275,132	79,568	195,564
+Obsidian.exe	32324	0	417,540	285,324	100,044	185,280
+firefox.exe	56792	0	281,412	255,744	81,292	174,452
+msedgewebview2.exe	23788	0	358,588	256,032	84,404	171,628
+firefox.exe	42648	0	187,188	225,232	71,376	153,856
+ONENOTE.EXE	72856	0	210,860	341,676	190,604	151,072
+ProtonDrive.exe	26612	0	1,035,180	360,080	216,252	143,828
+perfmon.exe	31440	0	190,636	161,348	34,944	126,404
+claude.exe	46280	0	241,640	219,336	98,448	120,888
+msedgewebview2.exe	3220	0	264,260	282,492	164,748	117,744
+dwm.exe	2988	0	532,804	194,484	80,064	114,420
+Taskmgr.exe	34412	0	182,640	299,440	185,048	114,392
+explorer.exe	34636	0	137,428	239,468	126,672	112,796
+Obsidian.exe	31412	0	248,968	194,972	85,084	109,888
+firefox.exe	25028	0	341,320	266,284	159,012	107,272
+msedgewebview2.exe	75172	0	158,288	175,812	74,380	101,432
+firefox.exe	28032	0	217,540	155,152	57,392	97,760
+Dell.TechHub.Instrumentation.SubAgent.exe	6692	0	154,192	250,620	165,996	84,624
+firefox.exe	27672	0	80,256	128,812	57,452	71,360
+firefox.exe	71584	0	674,664	152,896	82,404	70,492
+msedge.exe	44300	0	154,492	258,800	198,576	60,224
+NitroSense.exe	19416	0	97,824	121,524	61,948	59,576
+mc-fw-host.exe	6996	0	142,508	117,892	59,848	58,044
+explorer.exe	54880	0	144,612	197,048	140,132	56,916
+gitkraken.exe	28892	0	252,716	179,848	124,924	54,924
+perfmon.exe	73912	0	55,108	82,228	28,956	53,272
+firefox.exe	28976	0	255,212	129,984	81,176	48,808
+msedgewebview2.exe	37372	0	56,348	91,224	44,920	46,304
+Rider.Backend.exe	43300	0	192,508	423,364	378,480	44,884
+OneDrive.exe	3024	0	217,144	180,424	135,640	44,784
+svchost.exe (LocalServiceNoNetwork -p)	6440	0	66,508	66,248	21,936	44,312
+msedgewebview2.exe	74860	0	324,552	111,268	69,888	41,380
+gitkraken.exe	39784	0	249,084	155,580	115,512	40,068
+firefox.exe	7244	0	61,944	86,152	50,684	35,468
+Discord.exe	21784	0	233,024	157,504	122,184	35,320
+svchost.exe (netsvcs -p)	5444	0	39,808	51,496	17,576	33,920
+firefox.exe	60392	0	181,372	97,860	64,548	33,312
+firefox.exe	59524	0	147,672	102,232	69,040	33,192
+explorer.exe	49852	0	160,476	176,128	142,996	33,132
+Obsidian.exe	31648	0	110,860	166,608	134,188	32,420
+AWCC.SCSubAgent.exe	6252	0	77,404	139,480	107,396	32,084
+svchost.exe (appmodel -p)	4564	0	157,892	45,676	13,632	32,044
+OktaVerify.exe	3432	0	155,840	84,060	52,148	31,912
+WmiPrvSE.exe	7580	0	39,424	57,844	26,728	31,116
+explorer.exe	60948	0	153,916	164,668	133,716	30,952
+msedgewebview2.exe	51620	0	56,820	139,396	108,496	30,900
+firefox.exe	24016	0	107,040	83,708	55,140	28,568
+msedgewebview2.exe	72204	0	229,480	88,340	60,100	28,240
+firefox.exe	24760	0	177,604	93,836	65,996	27,840
+explorer.exe	42136	0	132,192	150,668	123,320	27,348
+firefox.exe	48268	0	148,136	90,380	64,672	25,708
+Dell.TechHub.DataManager.SubAgent.exe	6464	0	55,928	120,324	95,064	25,260
+claude.exe	68472	0	347,052	142,368	117,248	25,120
+msedgewebview2.exe	23876	0	49,160	81,684	57,200	24,484
+claude.exe	58464	0	42,896	115,916	91,804	24,112
+firefox.exe	71568	0	34,908	64,088	40,472	23,616
+6f1b83ee0-dotTrace64.2025.3.0.1.exe	33660	0	393,440	171,624	148,816	22,808
+StartMenuExperienceHost.exe	19360	0	110,352	148,832	126,284	22,548
+msedge.exe	59888	0	287,196	31,252	9,412	21,840
+6f1b83ee0-dotTrace64.2025.3.0.1.exe	67880	0	324,348	161,940	140,440	21,500
+claude.exe	13052	0	114,316	149,372	128,188	21,184
+SearchIndexer.exe	4948	0	55,288	50,024	29,044	20,980
+NitroSense.exe	19372	0	98,244	114,000	93,092	20,908
+msedgewebview2.exe	56880	0	29,472	64,060	43,540	20,520
+gitkraken.exe	30824	0	309,740	114,320	95,344	18,976
+Discord.exe	16912	0	106,968	109,952	91,464	18,488
+ServiceShell.exe	16748	0	73,988	80,768	62,900	17,868
+msedge.exe	47200	0	216,256	26,696	8,868	17,828
+PhoneExperienceHost.exe	23412	0	85,288	172,104	154,512	17,592
+gitkraken.exe	32256	0	142,444	94,984	77,496	17,488
+msedge.exe	25168	0	101,896	31,692	14,484	17,208
+svchost.exe (RPCSS -p)	2644	0	19,404	30,132	12,964	17,168
+Dell.CoreServices.Client.exe	6172	0	55,596	138,568	122,608	15,960
+firefox.exe	33188	0	108,564	56,240	40,316	15,924
+msedge.exe	33364	0	227,564	93,432	77,516	15,916
+MicrosoftSecurityApp.exe	18816	0	173,796	134,224	118,712	15,512
+firefox.exe	45884	0	154,500	78,816	63,492	15,324
+SearchHost.exe	18316	0	96,388	151,476	136,264	15,212
+fsdaemon-1.48.261.exe	43040	0	35,292	51,708	36,696	15,012
+svchost.exe (utcsvc -p)	6392	0	37,716	54,652	39,660	14,992
+svchost.exe (whesvc -p)	14996	0	31,732	33,240	18,588	14,652
+msedge.exe	41908	0	104,096	26,080	11,544	14,536
+WindowsTerminal.exe	21792	0	79,812	103,444	89,076	14,368
+firefox.exe	44540	0	142,536	65,888	51,576	14,312
+msedgewebview2.exe	21684	0	24,596	58,632	44,548	14,084
+MouseWithoutBorders.exe	13100	0	55,220	61,180	47,176	14,004
+firefox.exe	63452	0	21,608	48,196	34,568	13,628
+svchost.exe (wsappx -p)	39012	0	43,184	31,992	19,120	12,872
+lsass.exe	2380	0	21,896	40,392	27,672	12,720
+firefox.exe	60448	0	136,276	78,044	65,432	12,612
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	0	20,800	21,748	9,276	12,472
+AWCC.UCSubAgent.exe	24300	0	53,208	105,988	93,592	12,396
+svchost.exe (DcomLaunch -p)	2512	0	17,372	46,452	34,508	11,944
+msedge.exe	39124	0	26,236	50,676	38,796	11,880
+msedgewebview2.exe	65292	0	129,292	77,512	65,740	11,772
+powershell.exe	55620	0	69,380	69,776	58,228	11,548
+servicehost.exe	7068	0	26,000	44,176	32,640	11,536
+ctfmon.exe	23016	0	73,060	48,972	37,508	11,464
+firefox.exe	59768	0	87,328	74,012	62,552	11,460
+JetBrains.DPA.Protocol.Backend.exe	48572	0	115,452	129,460	118,348	11,112
+TextInputHost.exe	15644	0	126,444	128,764	117,704	11,060
+RuntimeBroker.exe	14840	0	114,648	35,304	24,712	10,592
+OfficeClickToRun.exe	6404	0	41,848	55,620	45,260	10,360
+backgroundTaskHost.exe	29472	0	31,812	71,196	60,916	10,280
+msedgewebview2.exe	50660	0	100,576	58,048	48,616	9,432
+Registry	232	0	21,460	55,240	45,816	9,424
+firefox.exe	55156	0	15,920	35,536	26,196	9,340
+firefox.exe	68008	0	15,296	35,700	26,452	9,248
+firefox.exe	25936	0	14,996	35,572	26,408	9,164
+firefox.exe	44076	0	15,008	35,588	26,448	9,140
+NVDisplay.Container.exe	3960	0	47,316	43,764	34,632	9,132
+cef_server.exe	52016	0	29,036	84,152	75,180	8,972
+Dell.Update.SubAgent.exe	2828	0	52,292	61,748	52,800	8,948
+firefox.exe	55660	0	14,820	34,576	25,772	8,804
+firefox.exe	4292	0	14,836	34,964	26,288	8,676
+Dell.TechHub.Instrumentation.UserProcess.exe	23148	0	39,628	97,296	88,640	8,656
+firefox.exe	75684	0	42,484	38,092	29,456	8,636
+Dell.TechHub.Analytics.SubAgent.exe	5416	0	103,388	115,188	106,552	8,636
+svchost.exe (LocalSystemNetworkRestricted -p)	2360	0	12,116	35,580	26,988	8,592
+kleopatra.exe	31236	0	59,492	49,368	40,864	8,504
+Widgets.exe	5308	0	12,960	61,232	52,788	8,444
+svchost.exe (NetworkService -p)	16976	0	22,460	32,148	23,800	8,348
+AlienFXSubAgent.exe	12076	0	82,560	189,008	180,780	8,228
+powershell.exe	45136	0	115,284	82,504	74,296	8,208
+backgroundTaskHost.exe	49284	0	19,368	50,868	43,032	7,836
+firefox.exe	24620	0	43,996	65,952	58,280	7,672
+M365Copilot.exe	22912	0	82,608	107,308	99,656	7,652
+svchost.exe (LocalService -p)	3396	0	12,436	13,924	6,500	7,424
+kubectl.exe	50888	0	25,508	28,172	21,232	6,940
+claude.exe	63172	0	17,712	74,396	67,544	6,852
+svchost.exe (UnistackSvcGroup)	8836	0	18,976	35,840	29,036	6,804
+firefox.exe	28600	0	60,056	72,056	65,288	6,768
+uihost.exe	4392	0	15,636	32,924	26,180	6,744
+FileCoAuth.exe	5868	0	32,396	34,972	28,372	6,600
+firefox.exe	56492	0	46,956	64,132	57,540	6,592
+svchost.exe (NetworkService -p)	6360	0	16,084	46,892	40,420	6,472
+OneDrive.Sync.Service.exe	13348	0	39,992	50,732	44,296	6,436
+firefox.exe	23216	0	92,656	60,760	54,328	6,432
+svchost.exe (osprivacy -p)	12588	0	9,588	33,756	27,536	6,220
+gitkraken.exe	37976	0	144,940	72,360	66,148	6,212
+audiodg.exe	48172	0	64,112	24,400	18,392	6,008
+Discord.exe	12096	0	233,792	90,288	84,316	5,972
+svchost.exe (LocalServiceNoNetworkFirewall -p)	5700	0	19,380	24,744	18,796	5,948
+svchost.exe (netsvcs -p)	13500	0	27,328	42,408	36,488	5,920
+svchost.exe (UnistackSvcGroup)	9464	0	9,400	41,476	35,884	5,592
+Obsidian.exe	30976	0	18,200	58,744	53,164	5,580
+svchost.exe (NetworkService -p)	3940	0	7,732	15,924	10,440	5,484
+ollama.exe	27156	0	21,500	20,292	14,852	5,440
+ollama app.exe	27076	0	19,552	24,860	19,440	5,420
+svchost.exe (netprofm -p)	3560	0	9,232	24,080	18,700	5,380
+Obsidian.exe	31524	0	157,636	79,968	74,600	5,368
+AcerEZService.exe	6132	0	21,212	19,664	14,388	5,276
+aimgr.exe	66216	0	7,044	30,752	25,572	5,180
+sihost.exe	13692	0	11,076	55,572	50,404	5,168
+svchost.exe (netsvcs -p)	4528	0	7,360	18,036	12,888	5,148
+svchost.exe (netsvcs -p)	3840	0	7,124	30,528	25,384	5,144
+claude.exe	63292	0	141,148	94,944	89,924	5,020
+msedgewebview2.exe	19704	0	45,356	13,756	8,816	4,940
+Dell.UCA.Manager.exe	6596	0	29,704	84,484	79,676	4,808
+msedge.exe	47192	0	47,416	62,456	57,676	4,780
+firefox.exe	20664	0	470,992	68,144	63,468	4,676
+Okta.Coordinator.Service.exe	7260	0	22,788	33,572	28,996	4,576
+svchost.exe (ClipboardSvcGroup -p)	18360	0	10,632	48,216	43,664	4,552
+MpDefenderCoreService.exe	7324	0	14,512	26,276	21,792	4,484
+Discord.exe	26028	0	15,244	54,972	50,496	4,476
+gamingservices.exe	12916	0	19,332	45,344	40,928	4,416
+msedgewebview2.exe	9980	0	41,952	12,724	8,392	4,332
+taskhostw.exe	41024	0	9,476	31,488	27,252	4,236
+OneApp.IGCC.WinService.exe	6768	0	34,400	38,244	34,020	4,224
+JetBrains.ProcessEnumerator.Worker.exe	64660	0	39,124	58,436	54,368	4,068
+msedge.exe	47284	0	55,324	64,280	60,244	4,036
+services.exe	2352	0	8,172	19,260	15,244	4,016
+vmwp.exe	54680	0	17,976	21,532	17,520	4,012
+MouseWithoutBordersHelper.exe	71464	0	28,868	38,864	34,892	3,972
+gitkraken.exe	40524	0	123,420	88,376	84,432	3,944
+ACCStd.exe	26384	0	105,100	9,400	5,472	3,928
+gitkraken.exe	29360	0	15,084	62,136	58,264	3,872
+msedge.exe	60264	0	52,296	9,600	5,732	3,868
+gitkraken.exe	27036	0	122,732	75,244	71,380	3,864
+spoolsv.exe	5620	0	12,132	28,368	24,556	3,812
+firefox.exe	69236	0	30,576	53,436	49,708	3,728
+mc-fw-host.exe	16296	0	11,132	28,712	25,044	3,668
+msedge.exe	41472	0	49,320	57,012	53,356	3,656
+msedge.exe	47924	0	38,980	9,808	6,240	3,568
+cef_server.exe	64924	0	79,504	46,212	42,688	3,524
+gitkraken.exe	34072	0	14,456	55,052	51,536	3,516
+taskhostw.exe	11620	0	9,648	25,276	21,808	3,468
+svchost.exe (LocalSystemNetworkRestricted -p)	5396	0	8,100	24,624	21,164	3,460
+firefox.exe	24088	0	6,408	18,576	15,144	3,432
+IntelGraphicsSoftware.Service.exe	12924	0	11,004	37,044	33,632	3,412
+firefox.exe	46676	0	23,144	17,948	14,600	3,348
+RuntimeBroker.exe	68648	0	12,740	48,872	45,548	3,324
+NitroSense.exe	18328	0	14,324	47,712	44,440	3,272
+msedgewebview2.exe	40404	0	11,716	32,656	29,388	3,268
+AggregatorHost.exe	13328	0	5,000	16,532	13,368	3,164
+wslservice.exe	14876	0	9,096	33,188	30,052	3,136
+firefox.exe	44372	0	23,940	45,004	41,928	3,076
+NVDisplay.Container.exe	15628	0	35,672	42,960	39,944	3,016
+msedge.exe	25308	0	21,904	9,260	6,256	3,004
+svchost.exe (LocalService -p)	2996	0	5,136	19,516	16,524	2,992
+WmiPrvSE.exe	6844	0	8,068	18,728	15,780	2,948
+msrdc.exe	61396	0	59,040	49,964	47,016	2,948
+Obsidian.exe	25420	0	29,964	98,824	95,900	2,924
+msedgewebview2.exe	45804	0	25,508	44,032	41,112	2,920
+svchost.exe (LocalService -p)	17316	0	7,076	29,748	26,852	2,896
+msedgewebview2.exe	70780	0	24,808	44,464	41,592	2,872
+CrossDeviceService.exe	22848	0	29,236	83,844	81,012	2,832
+FileSyncHelper.exe	25812	0	6,436	28,612	25,788	2,824
+msedgewebview2.exe	356	0	94,064	5,740	2,916	2,824
+NitroSense.exe	22980	0	310,704	62,992	60,240	2,752
+msedge.exe	47156	0	20,180	8,576	5,852	2,724
+SecurityHealthService.exe	16420	0	8,872	23,764	21,108	2,656
+cef_server.exe	25512	0	9,648	28,876	26,292	2,584
+AppActions.exe	18208	0	13,964	53,964	51,464	2,500
+svchost.exe (LocalServiceNetworkRestricted -p)	4872	0	5,004	24,468	22,028	2,440
+svchost.exe (netsvcsRedirectionGuard -p)	13636	0	4,192	21,988	19,596	2,392
+embeddings-server.exe	34404	0	24,256	16,584	14,264	2,320
+backgroundTaskHost.exe	34520	0	3,516	21,940	19,620	2,320
+powershell.exe	30496	0	84,096	55,940	53,648	2,292
+fontdrvhost.exe	2820	0	5,432	10,852	8,600	2,252
+msedgewebview2.exe	22088	0	14,352	20,984	18,744	2,240
+msedgewebview2.exe	20024	0	81,784	4,968	2,740	2,228
+JetBrains.ProcessEnumerator.Worker32.exe	58860	0	46,608	42,136	40,004	2,132
+NisSrv.exe	15204	0	5,232	14,724	12,644	2,080
+ShellHost.exe	13904	0	38,760	48,992	46,932	2,060
+QuantumService.exe	7296	0	13,044	19,048	17,028	2,020
+firefox.exe	48700	0	116,532	65,992	63,984	2,008
+svchost.exe (netsvcs -p)	3244	0	4,132	22,268	20,276	1,992
+msedge.exe	62008	0	20,304	26,904	24,940	1,964
+svchost.exe (netsvcs -p)	14860	0	4,988	25,328	23,404	1,924
+powershell.exe	48644	0	75,132	58,176	56,260	1,916
+powershell.exe	57208	0	67,520	68,584	66,672	1,912
+powershell.exe	62652	0	85,252	57,248	55,344	1,904
+WUDFHost.exe	2580	0	19,208	23,412	21,532	1,880
+powershell.exe	62180	0	85,212	58,320	56,440	1,880
+RuntimeBroker.exe	3364	0	8,332	31,144	29,280	1,864
+RuntimeBroker.exe	29124	0	4,528	29,516	27,684	1,832
+RuntimeBroker.exe	73492	0	2,860	17,964	16,164	1,800
+dllhost.exe	52460	0	3,324	16,840	15,052	1,788
+FxDisplayService.exe	26120	0	16,976	53,844	52,088	1,756
+dllhost.exe	28660	0	3,844	27,608	25,896	1,712
+svchost.exe (InvSvcGroup -p)	17084	0	18,232	15,044	13,372	1,672
+svchost.exe (LocalSystemNetworkRestricted -p)	4144	0	3,164	19,208	17,544	1,664
+svchost.exe (DcomLaunch -p)	2696	0	3,900	10,612	8,956	1,656
+svchost.exe (netsvcs -p)	16212	0	3,444	15,424	13,796	1,628
+firefox.exe	23124	0	42,644	30,732	29,108	1,624
+msedge.exe	412	0	10,488	19,740	18,132	1,608
+StorPSCTL.exe	25744	0	18,544	6,736	5,144	1,592
+mDNSResponder.exe	6496	0	2,788	9,880	8,288	1,592
+msedgewebview2.exe	20036	0	14,548	4,920	3,344	1,576
+AQAUserPS.exe	17956	0	7,312	35,700	34,128	1,572
+msedgewebview2.exe	13664	0	13,668	5,064	3,500	1,564
+UBTService.exe	13788	0	43,676	47,952	46,388	1,564
+firefox.exe	10324	0	42,556	30,684	29,120	1,564
+MouseWithoutBorders.exe	13108	0	42,504	39,136	37,588	1,548
+csrss.exe	2276	0	3,300	8,816	7,272	1,544
+msedgewebview2.exe	12428	0	145,624	65,756	64,236	1,520
+backgroundTaskHost.exe	57700	0	7,400	21,104	19,596	1,508
+ApplicationFrameHost.exe	22140	0	61,428	48,996	47,488	1,508
+AcerQAAgent.exe	6192	0	13,772	33,232	31,732	1,500
+crashhelper.exe	68976	0	2,200	11,048	9,564	1,484
+AcerService.exe	8484	0	32,776	36,600	35,120	1,480
+firefox.exe	54304	0	7,996	22,848	21,380	1,468
+svchost.exe (LocalServiceNetworkRestricted -p)	4432	0	3,032	10,684	9,252	1,432
+svchost.exe (Camera)	20844	0	74,456	28,924	27,524	1,400
+svchost.exe (LocalServiceNetworkRestricted -p)	3080	0	2,720	15,776	14,400	1,376
+RtkAudUService64.exe	21412	0	27,116	18,852	17,476	1,376
+svchost.exe (netsvcs -p)	4048	0	3,100	16,620	15,244	1,376
+CrossDeviceResume.exe	17796	0	39,792	51,208	49,840	1,368
+svchost.exe (NetworkService -p)	12764	0	3,108	15,200	13,836	1,364
+JetBrains.Dpa.Collector.exe	50164	0	9,444	10,660	9,296	1,364
+svchost.exe (LocalServiceNetworkRestricted -p)	14148	0	2,936	14,860	13,512	1,348
+dllhost.exe	30840	0	2,816	21,008	19,660	1,348
+svchost.exe (LocalSystemNetworkRestricted -p)	11244	0	3,292	15,672	14,324	1,348
+firefox.exe	23340	0	34,904	36,940	35,636	1,304
+svchost.exe (LocalServiceNetworkRestricted -p)	11024	0	4,224	15,692	14,400	1,292
+msedgewebview2.exe	46680	0	9,284	18,864	17,576	1,288
+dllhost.exe	30760	0	3,064	22,996	21,724	1,272
+MicUsage.exe	20452	0	31,764	28,800	27,528	1,272
+CamUsage.exe	15440	0	31,476	28,248	26,996	1,252
+svchost.exe (LocalServiceNetworkRestricted -p -s Wcmsvc)	5192	0	3,300	13,088	11,864	1,224
+WebManagement.exe	14888	0	36,964	22,464	21,248	1,216
+dllhost.exe	30800	0	2,504	21,452	20,252	1,200
+msedgewebview2.exe	15052	0	19,648	36,896	35,720	1,176
+AcerCentralService.exe	5248	0	2,280	7,560	6,408	1,152
+AcerCCAgent.exe	6092	0	7,856	20,940	19,792	1,148
+msedge.exe	37876	0	9,588	20,416	19,276	1,140
+svchost.exe (LocalServiceHttp -p)	4736	0	2,156	10,332	9,200	1,132
+msedge.exe	47432	0	10,300	28,372	27,240	1,132
+RtWLan.exe	8368	0	8,620	19,532	18,400	1,132
+powershell.exe	42132	0	83,040	57,964	56,836	1,128
+vmcompute.exe	37720	0	3,872	16,212	15,092	1,120
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	0	2,964	10,396	9,280	1,116
+svchost.exe (LocalSystemNetworkRestricted -p)	3368	0	2,680	15,540	14,460	1,080
+powershell.exe	42268	0	79,224	55,256	54,176	1,080
+svchost.exe (LocalService -p)	4160	0	2,156	10,444	9,368	1,076
+powershell.exe	21816	0	78,720	56,112	55,040	1,072
+powershell.exe	14428	0	83,272	60,792	59,724	1,068
+Dell.TechHub.exe	6428	0	33,760	75,788	74,724	1,064
+svchost.exe (LocalServiceNoNetwork -p)	3408	0	2,264	8,212	7,152	1,060
+svchost.exe (NetSvcs -p)	4656	0	4,556	16,000	14,944	1,056
+powershell.exe	56388	0	91,472	57,660	56,608	1,052
+powershell.exe	57764	0	90,628	56,972	55,924	1,048
+powershell.exe	61848	0	79,724	56,300	55,252	1,048
+svchost.exe (LocalSystemNetworkRestricted -p)	2528	0	3,576	13,368	12,320	1,048
+wlanext.exe	12960	0	3,180	13,596	12,552	1,044
+powershell.exe	57324	0	78,840	56,888	55,848	1,040
+svchost.exe (UserProfileService -p)	3088	0	2,580	13,368	12,328	1,040
+powershell.exe	42200	0	79,408	56,732	55,716	1,016
+svchost.exe (LocalService -p)	4596	0	2,560	19,696	18,684	1,012
+powershell.exe	54376	0	86,112	55,956	54,952	1,004
+powershell.exe	26840	0	78,636	55,188	54,192	996
+svchost.exe (LocalService -p)	15280	0	3,956	19,404	18,424	980
+AcerHardwareService.exe	5384	0	5,860	16,988	16,016	972
+svchost.exe (netsvcs -p)	7956	0	2,556	11,772	10,808	964
+WidgetService.exe	19532	0	5,232	23,500	22,536	964
+dllhost.exe	12292	0	2,164	17,384	16,432	952
+firefox.exe	65260	0	14,752	26,212	25,268	944
+firefox.exe	39848	0	14,680	26,248	25,308	940
+dllhost.exe	8108	0	2,284	16,944	16,004	940
+unsecapp.exe	14740	0	2,268	11,124	10,188	936
+svchost.exe (LocalServiceNetworkRestricted -p -s DusmSvc)	5184	0	2,556	12,424	11,488	936
+firefox.exe	69672	0	14,604	26,208	25,276	932
+SwUSB.exe	8388	0	2,496	11,956	11,024	932
+csrss.exe	2120	0	2,576	6,848	5,916	932
+claude.exe	49208	0	25,808	74,380	73,456	924
+svchost.exe (UdkSvcGroup)	19304	0	4,328	25,572	24,648	924
+gitkraken.exe	15620	0	102,156	77,540	76,648	892
+svchost.exe (netsvcs -p)	6668	0	2,980	10,280	9,392	888
+svchost.exe (LocalService -p)	2980	0	3,724	19,260	18,384	876
+gitkraken.exe	36160	0	102,036	82,616	81,748	868
+firefox.exe	20652	0	24,260	16,496	15,636	860
+svchost.exe (LocalService -p)	33720	0	2,772	19,224	18,364	860
+cef_server.exe	61992	0	7,960	17,720	16,864	856
+SecurityHealthSystray.exe	8876	0	2,208	14,212	13,384	828
+svchost.exe (LocalServiceNetworkRestricted)	15664	0	2,672	11,292	10,472	820
+unsecapp.exe	18556	0	2,264	12,948	12,128	820
+keyboxd.exe	29160	0	2,124	10,772	9,956	816
+svchost.exe (LocalService)	17088	0	2,180	11,044	10,236	808
+svchost.exe (PrintWorkflow)	27832	0	2,048	14,332	13,524	808
+svchost.exe (GPSvcGroup)	58532	0	2,132	9,496	8,700	796
+firefox.exe	15256	0	6,748	15,688	14,900	788
+svchost.exe (netsvcs)	3868	0	4,136	16,888	16,104	784
+svchost.exe (NetworkService -p)	5816	0	2,036	10,196	9,432	764
+svchost.exe (LocalSystemNetworkRestricted -p)	25292	0	2,308	9,136	8,372	764
+RuntimeBroker.exe	27384	0	3,248	20,540	19,808	732
+svchost.exe (UnistackSvcGroup)	22596	0	5,348	21,856	21,124	732
+claude.exe	71860	0	31,472	75,768	75,044	724
+Obsidian.exe	65196	0	12,392	104,096	103,372	724
+msedge.exe	44796	0	2,356	9,300	8,592	708
+JetBrains.Etw.Collector.Host.exe	6876	0	6,184	12,280	11,576	704
+firefox.exe	32172	0	6,864	17,580	16,880	700
+keyboxd.exe	41576	0	6,364	9,260	8,560	700
+firefox.exe	19684	0	23,552	15,312	14,624	688
+RuntimeBroker.exe	5580	0	3,396	25,700	25,012	688
+firefox.exe	4320	0	6,640	17,280	16,604	676
+gpg-agent.exe	36372	0	2,348	10,828	10,156	672
+svchost.exe (LocalSystemNetworkRestricted -p)	30108	0	4,080	12,204	11,532	672
+dllhost.exe	36320	0	2,824	17,796	17,128	668
+conhost.exe	30288	0	7,448	23,212	22,548	664
+svchost.exe (NetworkService -p)	20756	0	3,044	9,812	9,148	664
+WUDFHost.exe	11312	0	2,456	10,704	10,048	656
+Discord.exe	20548	0	11,788	83,876	83,240	636
+svchost.exe (LocalService -p)	4896	0	1,800	8,912	8,280	632
+svchost.exe (LocalServiceNetworkRestricted)	2952	0	2,192	10,900	10,276	624
+dllhost.exe	21468	0	1,720	8,392	7,776	616
+svchost.exe (LocalService -p)	26804	0	5,028	16,836	16,220	616
+conhost.exe	19632	0	2,692	17,572	16,964	608
+svchost.exe (NetSvcs -p)	6868	0	3,184	14,004	13,404	600
+WUDFHost.exe	11704	0	9,696	16,936	16,340	596
+svchost.exe (LocalServiceAndNoImpersonation -p)	38008	0	3,276	13,296	12,724	572
+HostAppServiceUpdater.exe	22052	0	5,508	3,352	2,796	556
+msedgewebview2.exe	48848	0	2,512	10,560	10,008	552
+RuntimeBroker.exe	17844	0	2,408	13,428	12,876	552
+crashhelper.exe	9096	0	2,232	9,464	8,916	548
+RuntimeBroker.exe	24456	0	2,472	13,424	12,880	544
+RuntimeBroker.exe	18132	0	2,460	13,428	12,884	544
+firefox.exe	18356	0	6,724	16,016	15,480	536
+AcerDIAgent.exe	6084	0	9,244	22,276	21,740	536
+embeddings-server.exe	57776	0	24,188	14,156	13,624	532
+svchost.exe (LocalSystemNetworkRestricted -p)	4584	0	2,852	10,824	10,296	528
+svchost.exe (netsvcs -p)	5460	0	3,232	15,936	15,408	528
+OpenConsole.exe	22900	0	2,460	10,912	10,396	516
+msedgewebview2.exe	26132	0	2,352	8,616	8,108	508
+OpenConsole.exe	64204	0	2,968	11,504	11,004	500
+svchost.exe (imgsvc)	7472	0	2,172	10,600	10,120	480
+ipf_helper.exe	5532	0	2,120	13,696	13,220	476
+svchost.exe (netsvcs -p)	4136	0	1,524	7,376	6,900	476
+svchost.exe (LocalSystemNetworkRestricted -p)	3724	0	2,156	10,420	9,948	472
+svchost.exe (LocalService -p)	3832	0	2,140	11,360	10,892	468
+gamingservicesnet.exe	12936	0	12,108	9,780	9,320	460
+PresentMonService.exe	13320	0	6,728	11,564	11,116	448
+svchost.exe (BthAppGroup -p)	10932	0	2,316	10,456	10,012	444
+msedgewebview2.exe	22184	0	2,332	8,752	8,308	444
+svchost.exe (LocalSystemNetworkRestricted -p)	3968	0	2,792	10,660	10,216	444
+svchost.exe (WSAIFabricSvcGroup -p)	14908	0	1,860	9,264	8,820	444
+svchost.exe (LocalSystemNetworkRestricted -p)	14476	0	7,180	12,008	11,564	444
+svchost.exe (LocalSystemNetworkRestricted -p)	4964	0	1,972	10,564	10,128	436
+svchost.exe (NetworkServiceNetworkRestricted -p)	13608	0	1,948	9,632	9,196	436
+msedgewebview2.exe	19752	0	2,304	8,528	8,096	432
+svchost.exe (LocalSystemNetworkRestricted -p)	3252	0	3,020	10,596	10,172	424
+AcerSystemCentralService.exe	6412	0	1,184	6,644	6,228	416
+svchost.exe (DevicesFlow)	27636	0	1,884	13,840	13,424	416
+svchost.exe (LocalSystemNetworkRestricted -p)	2904	0	1,428	6,664	6,252	412
+svchost.exe (LocalSystemNetworkRestricted -p)	28368	0	2,072	10,052	9,640	412
+vncserverui.exe	11528	0	6,080	24,072	23,668	404
+Intel_PIE_Service.exe	10992	0	2,460	11,280	10,880	400
+svchost.exe (NetSvcs)	7844	0	1,664	8,932	8,532	400
+svchost.exe (LocalService -p)	19892	0	1,832	8,924	8,544	380
+svchost.exe (LocalSystemNetworkRestricted -p)	3296	0	1,600	7,072	6,704	368
+msedgewebview2.exe	18572	0	186,488	764	404	360
+msedgewebview2.exe	20204	0	82,700	676	316	360
+gitkraken.exe	37844	0	11,344	43,392	43,036	356
+svchost.exe (LocalSystemNetworkRestricted -p)	17020	0	1,356	7,228	6,876	352
+svchost.exe (LocalServiceNetworkRestricted -p)	36108	0	1,456	7,272	6,932	340
+claude.exe	54584	0	11,108	58,100	57,764	336
+Discord.exe	3844	0	10,708	32,296	31,964	332
+svchost.exe (netsvcsRedirectionGuard -p)	4476	0	2,168	10,696	10,376	320
+svchost.exe (DevToolsGroup)	6384	0	1,352	7,008	6,692	316
+gitkraken.exe	40500	0	11,232	37,772	37,456	316
+RtkAudUService64.exe	7368	0	28,576	15,844	15,532	312
+svchost.exe (DcomLaunch -p)	13680	0	1,144	5,372	5,064	308
+svchost.exe (netsvcs -p)	9148	0	1,784	8,932	8,636	296
+ONENOTEM.EXE	21112	0	3,356	684	392	292
+svchost.exe (SshBrokerGroup)	9568	0	1,012	5,500	5,216	284
+RtlService.exe	7348	0	1,848	7,844	7,560	284
+conhost.exe	14800	0	1,208	7,132	6,888	244
+LockApp.exe	33236	0	47,988	82,728	82,484	244
+QuickShareService.exe	12944	0	17,032	16,932	16,696	236
+AcerDeviceInfoAgentService.exe	8916	0	4,864	23,148	22,920	228
+conhost.exe	6224	0	1,736	10,348	10,120	228
+svchost.exe (LocalSystemNetworkRestricted -p)	7640	0	1,384	6,860	6,632	228
+conhost.exe	6552	0	1,720	10,304	10,080	224
+conhost.exe	6648	0	1,712	10,336	10,116	220
+conhost.exe	6244	0	1,752	10,308	10,092	216
+conhost.exe	5628	0	1,736	10,336	10,120	216
+dllhost.exe	33840	0	3,444	10,456	10,252	204
+conhost.exe	50008	0	1,720	10,436	10,236	200
+SystemSettings.exe	49012	0	141,288	3,144	2,944	200
+msedgewebview2.exe	38168	0	2,156	8,716	8,524	192
+conhost.exe	8540	0	1,732	9,944	9,752	192
+barrierd.exe	6572	0	1,824	8,904	8,720	184
+vncserver.exe	14868	0	12,868	19,108	18,924	184
+AcerSysHardwareService.exe	17768	0	5,196	14,984	14,804	180
+RtkAudUService64.exe	12440	0	26,856	16,476	16,300	176
+OpenConsole.exe	3808	0	2,356	10,516	10,356	160
+OpenConsole.exe	48324	0	2,372	10,544	10,384	160
+AcerSysMonitorService.exe	13084	0	6,940	12,160	12,000	160
+OpenConsole.exe	57020	0	2,424	10,536	10,380	156
+OpenConsole.exe	59740	0	2,376	10,568	10,412	156
+OpenConsole.exe	46560	0	2,376	10,556	10,400	156
+OpenConsole.exe	61084	0	2,936	10,576	10,420	156
+OpenConsole.exe	59760	0	2,376	10,564	10,408	156
+AcerAgentService.exe	6832	0	6,600	12,352	12,200	152
+dllhost.exe	35024	0	3,404	9,456	9,308	148
+dllhost.exe	10880	0	2,596	9,436	9,292	144
+ShellExperienceHost.exe	29856	0	48,172	85,080	84,940	140
+msedgewebview2.exe	17924	0	10,808	208	72	136
+logi_lamparray_service.exe	7120	0	3,332	10,964	10,828	136
+conhost.exe	27168	0	1,796	9,280	9,152	128
+conhost.exe	57484	0	1,652	9,444	9,316	128
+conhost.exe	57572	0	1,644	9,440	9,312	128
+conhost.exe	57628	0	1,828	9,456	9,328	128
+conhost.exe	60820	0	1,788	9,456	9,328	128
+fontdrvhost.exe	2544	0	1,876	4,288	4,164	124
+IntelAudioService.exe	6788	0	43,652	28,380	28,256	124
+fsnotifier.exe	13572	0	540	3,268	3,148	120
+AcerPixyService.exe	6120	0	4,840	12,056	11,936	120
+scdaemon.exe	14616	0	1,860	9,576	9,460	116
+fsnotifier.exe	37096	0	536	3,372	3,256	116
+fsnotifier.exe	40868	0	592	3,612	3,496	116
+WUDFHost.exe	11780	0	5,040	12,228	12,112	116
+ipfsvc.exe	6544	0	2,668	6,580	6,480	100
+WUDFHost.exe	5420	0	2,808	10,728	10,632	96
+dasHost.exe	11624	0	11,204	20,720	20,624	96
+RstMwService.exe	7360	0	2,532	9,876	9,784	92
+WUDFHost.exe	11856	0	5,724	9,612	9,520	92
+AcerServiceWrapper.exe	6140	0	18,880	18,916	18,828	88
+DtsApo4Service.exe	6484	0	139,212	13,472	13,384	88
+conhost.exe	37984	0	1,232	6,972	6,888	84
+conhost.exe	25140	0	1,252	7,100	7,016	84
+conhost.exe	48760	0	1,248	7,096	7,012	84
+bash.exe	40784	0	8,892	9,612	9,528	84
+conhost.exe	36376	0	1,292	7,540	7,456	84
+conhost.exe	66080	0	1,220	7,640	7,556	84
+conhost.exe	63664	0	1,924	8,572	8,488	84
+RTUWPSrvcMain.exe	7784	0	2,268	8,484	8,400	84
+ACCUserPS.exe	16916	0	2,420	13,512	13,432	80
+less.exe	62184	0	6,180	7,788	7,708	80
+AcerLightingService.exe	6112	0	2,776	10,680	10,600	80
+ADESv2BW.exe	9372	0	1,588	9,328	9,252	76
+vncagent.exe	15980	0	2,100	11,352	11,276	76
+ADESv2Svc.exe	5808	0	1,960	7,416	7,340	76
+msedgewebview2.exe	20116	0	10,212	72	4	68
+ARTAimmxService.exe	5180	0	1,512	6,640	6,572	68
+ipf_uf.exe	6860	0	2,040	7,292	7,224	68
+sqlwriter.exe	7452	0	2,116	9,372	9,304	68
+winlogon.exe	2772	0	2,704	15,748	15,680	68
+IntelCpHDCPSvc.exe	3232	0	1,492	6,972	6,908	64
+ACCSvc.exe	6160	0	3,180	7,248	7,184	64
+AcerGAICameraService.exe	6104	0	1,556	6,956	6,896	60
+AAADSvc.exe	6148	0	1,368	5,732	5,672	60
+jhi_service.exe	6952	0	1,508	7,640	7,580	60
+ssh-agent.exe	7428	0	1,600	6,364	6,308	56
+bash.exe	7904	0	7,648	6,908	6,856	52
+conhost.exe	15992	0	1,204	6,764	6,716	48
+SAService.exe	12776	0	7,780	11,528	11,480	48
+wsl.exe	53332	0	2,444	11,612	11,568	44
+conhost.exe	13336	0	1,176	5,840	5,796	44
+WMIRegistrationService.exe	14884	0	3,304	15,024	14,980	44
+wslhost.exe	57464	0	2,376	11,312	11,272	40
+wsl.exe	61060	0	2,328	11,456	11,416	40
+wsl.exe	69732	0	2,340	11,452	11,412	40
+runSW.exe	7396	0	1,428	7,576	7,536	40
+SamsungPortableSSDMon_1.0.exe	23116	0	1,328	3,872	3,836	36
+crashhelper.exe	4916	0	2,216	8,896	8,860	36
+node-spawn-server.exe	40332	0	844	5,472	5,440	32
+node-spawn-server.exe	42248	0	888	5,644	5,612	32
+Fleet.exe	42104	0	1,304	7,116	7,084	32
+wsl.exe	54984	0	1,348	6,924	6,892	32
+wslhost.exe	57564	0	2,136	10,832	10,800	32
+git.exe	60116	0	34,592	7,620	7,588	32
+UserOOBEBroker.exe	16120	0	2,144	10,552	10,524	28
+dasHost.exe	40164	0	1,316	7,160	7,132	28
+cmd.exe	13024	0	2,464	5,700	5,672	28
+git-bash.exe	23512	0	1,548	6,256	6,228	28
+cmd.exe	52940	0	2,508	5,880	5,852	28
+wslrelay.exe	57432	0	1,888	9,432	9,404	28
+wslhost.exe	57516	0	2,148	10,932	10,904	28
+git.exe	47024	0	1,556	6,152	6,124	28
+wsl.exe	56572	0	1,508	7,692	7,664	28
+wslhost.exe	62492	0	2,076	11,056	11,028	28
+wsl.exe	61664	0	1,312	6,916	6,888	28
+wslhost.exe	18632	0	2,080	11,056	11,028	28
+conhost.exe	70344	0	1,788	9,352	9,324	28
+conhost.exe	8644	0	1,208	7,076	7,052	24
+conhost.exe	33244	0	1,216	7,184	7,160	24
+conhost.exe	5544	0	1,212	6,912	6,888	24
+conhost.exe	33208	0	1,236	6,912	6,888	24
+conhost.exe	39156	0	1,216	6,904	6,880	24
+conhost.exe	50432	0	1,208	6,908	6,884	24
+conhost.exe	62300	0	1,200	6,908	6,884	24
+conhost.exe	67956	0	1,236	6,908	6,884	24
+System	4	0	56	5,068	5,056	12
+NgcIso.exe	10784	0	1,392	3,760	3,760	0
+smss.exe	716	0	1,196	1,324	1,324	0
+wininit.exe	2268	0	1,560	7,620	7,620	0
+LsaIso.exe	2372	0	1,500	3,580	3,580	0
