@@ -1,0 +1,46 @@
+[package]
+name = "vesselmirror"
+version = "0.1.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "Sovereign Page Cloning & Synthesis Engine - INV-079"
+license = "MIT"
+repository = "https://github.com/strategickhaos-dao-llc/vesselmirror"
+
+[dependencies]
+# CLI framework
+clap = { version = "4.4", features = ["derive"] }
+
+# Web scraping & DOM parsing
+scraper = "0.18"
+reqwest = { version = "0.11", features = ["blocking", "cookies"] }
+url = "2.5"
+
+# HTML processing
+html5ever = "0.26"
+markup5ever_rcdom = "0.2"
+cssparser = "0.31"
+
+# File I/O
+tokio = { version = "1.35", features = ["full"] }
+walkdir = "2.4"
+base64 = "0.21"
+
+# Cryptographic proof
+sha2 = "0.10"
+hex = "0.4"
+
+# JSON for on-chain payloads
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Asset inlining
+data-url = "0.3"
+mime_guess = "2.0"
+
+# Timestamp
+chrono = "0.4"
+
+[[bin]]
+name = "vessel"
+path = "src/main.rs"
