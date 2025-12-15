@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlameLang Device Activation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .logo .version {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .activation-section {
+            margin-top: 30px;
+        }
+        
+        .activation-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-list {
+            margin: 20px 0;
+        }
+        
+        .feature-list li {
+            color: #555;
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "🔥";
+            position: absolute;
+            left: 0;
+        }
+        
+        .activation-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn-activate {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn-activate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-activate:active {
+            transform: translateY(0);
+        }
+        
+        .status-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 0.85em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🔥 FlameLang</h1>
+            <p class="version">Version 2.0.0 - Device Activation</p>
+        </div>
+        
+        <div class="activation-section">
+            <h2>Welcome to FlameLang</h2>
+            
+            <div class="info-box">
+                <p><strong>FlameLang</strong> is a sovereign compiler toolchain featuring a 5-layer transformation pipeline:</p>
+                <ul class="feature-list">
+                    <li>Layer 1: Linguistic (English → Hebrew)</li>
+                    <li>Layer 2: Numeric (Unicode → Decimal)</li>
+                    <li>Layer 3: Wave (c=2πr → Hz)</li>
+                    <li>Layer 4: DNA (Freq → Codon)</li>
+                    <li>Layer 5: LLVM IR generation</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <p><strong>Features:</strong></p>
+                <ul class="feature-list">
+                    <li>Biological compilation</li>
+                    <li>Physics-validated dimensional analysis</li>
+                    <li>Native quantum primitives</li>
+                    <li>StrategicKhaos Swarm Intelligence integration</li>
+                </ul>
+            </div>
+            
+            <form class="activation-form" id="activationForm">
+                <div class="form-group">
+                    <label for="deviceName">Device Name</label>
+                    <input type="text" id="deviceName" name="deviceName" placeholder="Enter your device name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activationKey">Activation Key</label>
+                    <input type="text" id="activationKey" name="activationKey" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                </div>
+                
+                <button type="submit" class="btn-activate">Activate FlameLang</button>
+            </form>
+            
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+        
+        <div class="footer">
+            <p>Part of <a href="https://github.com/strategickhaos-dao-llc" target="_blank">StrategicKhaos DAO LLC</a></p>
+            <p>© 2025 FlameLang Project. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('activationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const deviceName = document.getElementById('deviceName').value;
+            const activationKey = document.getElementById('activationKey').value;
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Simple validation pattern for activation key
+            const keyPattern = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
+            
+            if (!keyPattern.test(activationKey)) {
+                statusMessage.className = 'status-message error';
+                statusMessage.style.display = 'block';
+                statusMessage.innerHTML = '<strong>Error:</strong> Invalid activation key format. Please use the format XXXX-XXXX-XXXX-XXXX';
+                return;
+            }
+            
+            // Simulate activation process
+            statusMessage.className = 'status-message';
+            statusMessage.style.display = 'block';
+            statusMessage.innerHTML = '<strong>Processing...</strong> Activating your device...';
+            
+            setTimeout(function() {
+                statusMessage.className = 'status-message success';
+                statusMessage.innerHTML = '<strong>Success!</strong> FlameLang has been activated for device "' + deviceName + '".<br><br>You can now use the FlameLang compiler toolchain. Run <code>flamec --version</code> to verify your installation.';
+                
+                // Store activation locally (for demo purposes)
+                localStorage.setItem('flamelang_activated', 'true');
+                localStorage.setItem('flamelang_device', deviceName);
+            }, 2000);
+        });
+        
+        // Check if already activated
+        window.addEventListener('load', function() {
+            if (localStorage.getItem('flamelang_activated') === 'true') {
+                const deviceName = localStorage.getItem('flamelang_device');
+                const statusMessage = document.getElementById('statusMessage');
+                statusMessage.className = 'status-message success';
+                statusMessage.style.display = 'block';
+                statusMessage.innerHTML = '<strong>Already Activated!</strong> This device "' + deviceName + '" is already activated for FlameLang.';
+            }
+        });
+    </script>
+</body>
+</html>
