@@ -10,9 +10,11 @@ pub mod parser;
 pub mod transform;
 pub mod codegen;
 pub mod stdlib;
+pub mod flamevault;
 
 pub use lexer::{Lexer, Token};
 pub use parser::{Parser, AstNode};
+pub use flamevault::FlameVault;
 
 /// FlameLang error type
 #[derive(Debug, thiserror::Error)]
