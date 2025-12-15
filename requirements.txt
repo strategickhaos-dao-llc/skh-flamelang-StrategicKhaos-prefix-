@@ -1,0 +1,2 @@
+# AetherViz v2 Python Dependencies
+numpy>=1.24.0
