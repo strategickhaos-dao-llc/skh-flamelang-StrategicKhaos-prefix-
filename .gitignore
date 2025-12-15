@@ -39,3 +39,10 @@
 
 # debug information files
 *.dwo
+
+# FlameVault - Do not commit vault data or secrets
+.flamevault/
+*/.flamevault/
+*.enc.json
+honeypots.json
+alerts.log
