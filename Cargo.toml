@@ -9,9 +9,7 @@ repository = "https://github.com/Strategickhaos-Swarm-Intelligence/skh-flamelang
 
 [workspace]
 members = [
-    "tools/flamec",
-    "tools/flamefmt", 
-    "tools/flamelsp",
+    "tools/vesselmirror",
 ]
 
 [dependencies]
