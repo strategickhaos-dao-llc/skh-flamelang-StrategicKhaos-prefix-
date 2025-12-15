@@ -32,12 +32,9 @@ Line #  | Python                          | FlameLang (Mojo) Conversion         
 8       | hashlib.sha256                  | hashlib.sha256 → on-chain commitment  | Proof of sound
 """
 
-import os
 import wave
-import struct
 import hashlib
 import numpy as np
-from pathlib import Path
 
 SAMPLE_RATE = 48000
 DURATION = 8.0
@@ -61,17 +58,28 @@ def adsr(t, dur):
     """
     ADSR envelope - Attack, Decay, Sustain, Release
     DNA-inspired deterministic envelope for organic sound shaping
+    Vectorized for efficient numpy array processing
     """
     a, d, s, r = 0.5, 0.7, 0.75, 1.0
-    if t < a: 
-        return t / a  # Attack
-    if t < a + d: 
-        return 1 - (1 - s) * ((t - a) / d)  # Decay
-    if t < dur - r: 
-        return s  # Sustain
-    if t < dur: 
-        return s * (1 - ((t - (dur - r)) / r))  # Release
-    return 0
+    env = np.zeros_like(t)
+    
+    # Attack phase
+    attack_mask = t < a
+    env[attack_mask] = t[attack_mask] / a
+    
+    # Decay phase
+    decay_mask = (t >= a) & (t < a + d)
+    env[decay_mask] = 1 - (1 - s) * ((t[decay_mask] - a) / d)
+    
+    # Sustain phase
+    sustain_mask = (t >= a + d) & (t < dur - r)
+    env[sustain_mask] = s
+    
+    # Release phase
+    release_mask = (t >= dur - r) & (t < dur)
+    env[release_mask] = s * (1 - ((t[release_mask] - (dur - r)) / r))
+    
+    return env
 
 def charity_gliss(t):
     """
@@ -128,7 +136,7 @@ def render_line(text, carrier):
     sig += harmonics(carrier, t)
     
     # Apply ADSR envelope
-    env = np.array([adsr(tt, DURATION) for tt in t])
+    env = adsr(t, DURATION)
     sig *= env
 
     # Stereo panning by line (creates spatial depth)
@@ -145,8 +153,12 @@ def write_wav(filename, stereo):
     Write stereo audio to WAV file
     Normalizes to prevent clipping, converts to 16-bit PCM
     """
-    # Normalize and convert to int16
-    stereo = np.int16(stereo / np.max(np.abs(stereo)) * 32767)
+    # Normalize and convert to int16 (prevent division by zero)
+    max_val = np.max(np.abs(stereo))
+    if max_val > 0:
+        stereo = np.int16(stereo / max_val * 32767)
+    else:
+        stereo = np.int16(stereo)
     
     with wave.open(filename, 'w') as wf:
         wf.setnchannels(2)        # Stereo
