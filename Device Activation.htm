@@ -230,7 +230,7 @@
         </div>
         
         <div class="footer">
-            <p>Part of <a href="https://github.com/strategickhaos-dao-llc" target="_blank">StrategicKhaos DAO LLC</a></p>
+            <p>Part of <a href="https://github.com/strategickhaos-dao-llc" target="_blank" rel="noopener noreferrer">StrategicKhaos DAO LLC</a></p>
             <p>© 2025 FlameLang Project. All rights reserved.</p>
         </div>
     </div>
@@ -260,7 +260,15 @@
             
             setTimeout(function() {
                 statusMessage.className = 'status-message success';
-                statusMessage.innerHTML = '<strong>Success!</strong> FlameLang has been activated for device "' + deviceName + '".<br><br>You can now use the FlameLang compiler toolchain. Run <code>flamec --version</code> to verify your installation.';
+                // Use textContent for user input to prevent XSS, then add safe HTML
+                const successMsg = document.createElement('div');
+                successMsg.innerHTML = '<strong>Success!</strong> FlameLang has been activated for device "';
+                const deviceSpan = document.createElement('span');
+                deviceSpan.textContent = deviceName;
+                successMsg.appendChild(deviceSpan);
+                successMsg.innerHTML += '".<br><br>You can now use the FlameLang compiler toolchain. Run <code>flamec --version</code> to verify your installation.';
+                statusMessage.innerHTML = '';
+                statusMessage.appendChild(successMsg);
                 
                 // Store activation locally (for demo purposes)
                 localStorage.setItem('flamelang_activated', 'true');
@@ -275,7 +283,15 @@
                 const statusMessage = document.getElementById('statusMessage');
                 statusMessage.className = 'status-message success';
                 statusMessage.style.display = 'block';
-                statusMessage.innerHTML = '<strong>Already Activated!</strong> This device "' + deviceName + '" is already activated for FlameLang.';
+                // Use textContent for stored data to prevent XSS
+                const activatedMsg = document.createElement('div');
+                activatedMsg.innerHTML = '<strong>Already Activated!</strong> This device "';
+                const deviceSpan = document.createElement('span');
+                deviceSpan.textContent = deviceName;
+                activatedMsg.appendChild(deviceSpan);
+                activatedMsg.innerHTML += '" is already activated for FlameLang.';
+                statusMessage.innerHTML = '';
+                statusMessage.appendChild(activatedMsg);
             }
         });
     </script>
