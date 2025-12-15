@@ -33,6 +33,11 @@ jobs:
     name: 🎵 SwarmSentinel Health Check
     runs-on: ubuntu-latest
     
+    # Explicit permissions for security (principle of least privilege)
+    permissions:
+      contents: read        # Read repository contents
+      actions: read         # Read workflow artifacts
+    
     steps:
     - name: 📥 Checkout Repository
       uses: actions/checkout@v4
