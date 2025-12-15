@@ -12,6 +12,7 @@ members = [
     "tools/flamec",
     "tools/flamefmt", 
     "tools/flamelsp",
+    "tools/vessel",
 ]
 
 [dependencies]
