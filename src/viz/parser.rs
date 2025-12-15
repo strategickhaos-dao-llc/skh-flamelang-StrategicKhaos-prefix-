@@ -93,8 +93,16 @@ fn parse_numeric_value(s: &str) -> Option<f64> {
         (s, 1.0)
     };
 
-    // Parse the base number
-    num_str.parse::<f64>().ok().map(|n| n * suffix_multiplier * multiplier)
+    // Parse the base number and check for overflow/infinity
+    num_str.parse::<f64>().ok().and_then(|n| {
+        let result = n * suffix_multiplier * multiplier;
+        // Check if result is finite (not infinity or NaN)
+        if result.is_finite() {
+            Some(result)
+        } else {
+            None
+        }
+    })
 }
 
 #[cfg(test)]

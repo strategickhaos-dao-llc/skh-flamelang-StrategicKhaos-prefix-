@@ -9,6 +9,12 @@ const HEIGHT: usize = 600;
 const MARGIN: usize = 80;
 const BAR_PADDING: usize = 10;
 
+/// Color scheme constants
+const COLOR_BACKGROUND: &str = "#ffffff";
+const COLOR_BAR_FILL: &str = "#4a90e2";
+const COLOR_BAR_STROKE: &str = "#2c5aa0";
+const COLOR_AXIS: &str = "#000";
+
 /// Render categorical data as SVG bar chart
 pub fn render_svg(data: &CategoricalData, mode: VisualizationMode) -> FlameResult<String> {
     match mode {
@@ -39,8 +45,8 @@ fn render_vertical(data: &CategoricalData) -> FlameResult<String> {
 
     // Background
     svg.push_str(&format!(
-        r##"  <rect width="{}" height="{}" fill="#ffffff"/>"##,
-        WIDTH, HEIGHT
+        r##"  <rect width="{}" height="{}" fill="{}"/>"##,
+        WIDTH, HEIGHT, COLOR_BACKGROUND
     ));
     svg.push('\n');
 
@@ -67,16 +73,18 @@ fn render_vertical(data: &CategoricalData) -> FlameResult<String> {
 
     // Draw axes
     svg.push_str(&format!(
-        r##"  <line x1="{}" y1="{}" x2="{}" y2="{}" stroke="#000" stroke-width="2"/>"##,
+        r##"  <line x1="{}" y1="{}" x2="{}" y2="{}" stroke="{}" stroke-width="2"/>"##,
         MARGIN, HEIGHT - MARGIN,
-        WIDTH - MARGIN, HEIGHT - MARGIN
+        WIDTH - MARGIN, HEIGHT - MARGIN,
+        COLOR_AXIS
     ));
     svg.push('\n');
     
     svg.push_str(&format!(
-        r##"  <line x1="{}" y1="{}" x2="{}" y2="{}" stroke="#000" stroke-width="2"/>"##,
+        r##"  <line x1="{}" y1="{}" x2="{}" y2="{}" stroke="{}" stroke-width="2"/>"##,
         MARGIN, MARGIN,
-        MARGIN, HEIGHT - MARGIN
+        MARGIN, HEIGHT - MARGIN,
+        COLOR_AXIS
     ));
     svg.push('\n');
 
@@ -88,8 +96,8 @@ fn render_vertical(data: &CategoricalData) -> FlameResult<String> {
 
         // Bar
         svg.push_str(&format!(
-            r##"  <rect x="{}" y="{}" width="{}" height="{}" fill="#4a90e2" stroke="#2c5aa0" stroke-width="1"/>"##,
-            x, y, bar_width, bar_height
+            r##"  <rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="{}" stroke-width="1"/>"##,
+            x, y, bar_width, bar_height, COLOR_BAR_FILL, COLOR_BAR_STROKE
         ));
         svg.push('\n');
 
@@ -161,8 +169,8 @@ fn render_horizontal(data: &CategoricalData) -> FlameResult<String> {
     svg.push('\n');
 
     svg.push_str(&format!(
-        r##"  <rect width="{}" height="{}" fill="#ffffff"/>"##,
-        WIDTH, HEIGHT
+        r##"  <rect width="{}" height="{}" fill="{}"/>"##,
+        WIDTH, HEIGHT, COLOR_BACKGROUND
     ));
     svg.push('\n');
 
@@ -193,8 +201,8 @@ fn render_horizontal(data: &CategoricalData) -> FlameResult<String> {
 
         // Bar
         svg.push_str(&format!(
-            r##"  <rect x="{}" y="{}" width="{}" height="{}" fill="#4a90e2" stroke="#2c5aa0" stroke-width="1"/>"##,
-            x, y, bar_width, bar_height
+            r##"  <rect x="{}" y="{}" width="{}" height="{}" fill="{}" stroke="{}" stroke-width="1"/>"##,
+            x, y, bar_width, bar_height, COLOR_BAR_FILL, COLOR_BAR_STROKE
         ));
         svg.push('\n');
 

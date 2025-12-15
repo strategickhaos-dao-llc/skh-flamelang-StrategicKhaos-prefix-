@@ -1,10 +1,15 @@
-//! SHA-256 Hash computation for tamper-evident visualizations
+//! Hash computation for tamper-evident visualizations
+//! 
+//! NOTE: This is a placeholder implementation using DefaultHasher.
+//! For production use, integrate a proper cryptographic hash like SHA-256 from the sha2 crate.
 
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 
-/// Compute SHA-256-style hash of data
-/// (Using simple hash for now, would use sha2 crate in production)
+/// Compute hash of data (placeholder implementation)
+/// 
+/// WARNING: This is NOT cryptographically secure. Uses DefaultHasher as a placeholder.
+/// For production tamper-evident proofs, replace with SHA-256 or similar.
 pub fn compute_hash(data: &str) -> String {
     let mut hasher = DefaultHasher::new();
     data.hash(&mut hasher);
@@ -18,7 +23,9 @@ pub fn compute_hash(data: &str) -> String {
             !hash_value)
 }
 
-/// Compute hash from bytes
+/// Compute hash from bytes (placeholder implementation)
+/// 
+/// WARNING: This is NOT cryptographically secure. For production use, replace with SHA-256.
 pub fn compute_hash_bytes(data: &[u8]) -> Vec<u8> {
     let mut hasher = DefaultHasher::new();
     data.hash(&mut hasher);

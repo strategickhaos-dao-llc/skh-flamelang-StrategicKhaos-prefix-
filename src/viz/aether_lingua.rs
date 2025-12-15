@@ -93,10 +93,13 @@ fn generate_wav(frequencies: &[f64]) -> FlameResult<Vec<u8>> {
     Ok(wav_data)
 }
 
-/// Compute hash of sonic data (simple checksum for now)
+/// Compute hash of sonic data (placeholder implementation)
+/// 
+/// WARNING: This simple sum provides no collision resistance and is NOT suitable
+/// for tamper-evident proofs. For production use, replace with SHA-256.
 fn compute_sonic_hash(wav_data: &[u8]) -> Vec<u8> {
-    // Simple hash: take SHA-256 equivalent (we'll use a simple sum for now)
-    // In production, this should use actual SHA-256
+    // Placeholder: simple sum (not cryptographically secure)
+    // TODO: Replace with proper SHA-256 implementation for production
     let sum: u64 = wav_data.iter().map(|&b| b as u64).sum();
     sum.to_le_bytes().to_vec()
 }
