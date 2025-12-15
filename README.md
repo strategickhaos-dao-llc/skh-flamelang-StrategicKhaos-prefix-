@@ -14,5 +14,5 @@ git clone git@github.com:strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-pre
 
 **HTTPS:**
 ```bash
-git clone https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-
+git clone https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git
 ```

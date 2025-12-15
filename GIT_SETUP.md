@@ -15,7 +15,7 @@ git@github.com:strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git
 
 ### HTTPS
 ```bash
-https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-
+https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git
 ```
 
 ## Verifying Your Setup
@@ -78,7 +78,7 @@ If you prefer HTTPS over SSH:
 
 ```bash
 # Switch from SSH to HTTPS
-git remote set-url origin https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-
+git remote set-url origin https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git
 ```
 
 ## Clone Command
@@ -92,7 +92,7 @@ git clone git@github.com:strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-pre
 
 ### HTTPS
 ```bash
-git clone https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-
+git clone https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git
 ```
 
 ## Quick Reference
@@ -102,7 +102,7 @@ git clone https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos
 | Organization | `strategickhaos-dao-llc` |
 | Repository | `skh-flamelang-StrategicKhaos-prefix-` ⚠️ (note trailing hyphen) |
 | SSH URL | `git@github.com:strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git` |
-| HTTPS URL | `https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-` |
+| HTTPS URL | `https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-.git` |
 
 ---
 
