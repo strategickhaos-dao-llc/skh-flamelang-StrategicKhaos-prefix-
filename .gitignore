@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+
+# Rust specific
+/target/
+**/*.rs.bk
+Cargo.lock

@@ -1,0 +1,19 @@
+[package]
+name = "flamelang"
+version = "2.0.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC"]
+description = "FlameLang v2.0.0 - 5-Layer Transformation Pipeline: English -> Hebrew -> Unicode -> Wave -> DNA -> LLVM IR"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/strategickhaos-dao-llc/skh-flamelang-StrategicKhaos-prefix-"
+
+[[bin]]
+name = "flamec"
+path = "src/main.rs"
+
+[dependencies]
+thiserror = "2.0"
+
+[lib]
+name = "flamelang"
+path = "src/lib.rs"
