@@ -1,0 +1,18 @@
+[package]
+name = "vesselmirror"
+version = "0.1.0"
+edition = "2021"
+authors = ["Strategickhaos DAO LLC <security@strategickhaos.ai>"]
+description = "VesselMirror (INV-079): Sovereign page cloning & synthesis engine"
+license = "MIT"
+
+[[bin]]
+name = "vesselmirror"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+sha2 = "0.10"
+reqwest = { version = "0.12", features = ["blocking"] }
+scraper = "0.20"
+anyhow = "1.0"
