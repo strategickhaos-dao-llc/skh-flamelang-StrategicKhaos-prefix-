@@ -21,6 +21,7 @@ pub enum Token {
     Superpos(String), // e.g., |psi> for superposition states
     GateOp(String), // e.g., H, X, CNOT for quantum gates
     BellState(String), // e.g., bell_phi+ for Bell states
+    PipefitGlyph, // 🛠️ pipefit glyph for cortex computation
     Eof,
     // AI Agent Scaffolding: Placeholder for GPT reasoning hooks
     ReasonStub(String), // e.g., #reason{query} for recursive evolution
@@ -72,6 +73,7 @@ impl Lexer {
             },
             'a'..='z' | 'A'..='Z' => self.parse_identifier(ch),
             '0'..='9' => self.parse_number(ch),
+            '🛠' => if self.peek() == '️' { self.pos += 1; Token::PipefitGlyph } else { Token::Identifier(ch.to_string()) },
             _ => Token::Identifier(ch.to_string()), // Fallback
         }
     }
