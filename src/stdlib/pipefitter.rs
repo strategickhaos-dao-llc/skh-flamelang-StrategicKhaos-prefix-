@@ -114,7 +114,9 @@ pub fn compute_travel_distance(angle1_rad: f64, angle2_rad: f64) -> f64 {
 
 /// Compute weight based on physics type and distance
 pub fn compute_weight(physics_type: &PhysicsType, distance: f64) -> f64 {
-    if distance == 0.0 {
+    // Guard against zero and near-zero distances to prevent division by zero
+    const EPSILON: f64 = 1e-10;
+    if distance.abs() < EPSILON {
         return 1.0; // Self-weight
     }
     
@@ -190,17 +192,18 @@ pub fn vector_to_dna_block(vector: (f64, f64)) -> String {
     dna
 }
 
+// Static periodic element table to avoid repeated allocations
+const PERIODIC_ELEMENTS: [(&str, u8, u8, u8, u8); 16] = [
+    ("H", 1, 1, 0, 1), ("He", 2, 2, 2, 2), ("Li", 3, 3, 4, 3), ("Be", 4, 4, 5, 4),
+    ("B", 5, 5, 6, 5), ("C", 6, 6, 6, 6), ("N", 7, 7, 7, 7), ("O", 8, 8, 8, 8),
+    ("F", 9, 9, 10, 9), ("Ne", 10, 10, 10, 10), ("Na", 11, 11, 12, 11), ("Mg", 12, 12, 12, 12),
+    ("Al", 13, 13, 14, 13), ("Si", 14, 14, 14, 14), ("P", 15, 15, 16, 15), ("S", 16, 16, 16, 16),
+];
+
 /// Map algorithm ID to periodic element
 pub fn id_to_periodic_element(id_num: u32) -> PeriodicElement {
-    let elements = vec![
-        ("H", 1, 1, 0, 1), ("He", 2, 2, 2, 2), ("Li", 3, 3, 4, 3), ("Be", 4, 4, 5, 4),
-        ("B", 5, 5, 6, 5), ("C", 6, 6, 6, 6), ("N", 7, 7, 7, 7), ("O", 8, 8, 8, 8),
-        ("F", 9, 9, 10, 9), ("Ne", 10, 10, 10, 10), ("Na", 11, 11, 12, 11), ("Mg", 12, 12, 12, 12),
-        ("Al", 13, 13, 14, 13), ("Si", 14, 14, 14, 14), ("P", 15, 15, 16, 15), ("S", 16, 16, 16, 16),
-    ];
-    
     let idx = ((id_num - 1) % 16) as usize;
-    let (sym, an, p, n, e) = elements[idx];
+    let (sym, an, p, n, e) = PERIODIC_ELEMENTS[idx];
     PeriodicElement {
         symbol: sym.to_string(),
         atomic_number: an,
@@ -282,7 +285,7 @@ pub fn export_synapse_matrix_csv() -> String {
         for to_alg in &algorithms {
             let conn = connections.iter()
                 .find(|c| c.from == from_alg.id && c.to == to_alg.id)
-                .unwrap();
+                .expect("Connection should exist in matrix");
             csv.push_str(&format!(",\"{:.8} / {:.4}\"", conn.travel_distance, conn.weight));
         }
         csv.push('\n');

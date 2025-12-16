@@ -133,11 +133,12 @@ impl Parser {
         if matches!(self.current, Token::LParen) {
             self.advance();
             
-            // Parse alg_id (string)
+            // Parse alg_id (string) - use placeholder if parsing fails
             let alg_id = if let Token::Identifier(id) = &self.current {
                 id.clone()
             } else {
-                String::new()
+                // Return error node if identifier not found
+                return AstNode::Eof;
             };
             self.advance();
             
