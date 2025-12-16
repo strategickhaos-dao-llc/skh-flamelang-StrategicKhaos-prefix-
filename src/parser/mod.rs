@@ -20,6 +20,7 @@ pub enum AstNode {
     SuperposState(String), // |psi>
     BellEntangle(String, Vec<AstNode>), // bell_phi+ x y
     ReasonHook(String), // #reason{query}
+    PipefitCall(String, Option<String>), // 🛠️ pipefit("ALG-001", target: "ALG-016")
     Block(Vec<AstNode>),
     Eof,
 }
@@ -57,6 +58,7 @@ impl Parser {
             Token::QubitDecl => self.parse_qubit_decl(),
             Token::GateOp(g) => self.parse_gate_apply(g.clone()),
             Token::BellState(b) => self.parse_bell_entangle(b.clone()),
+            Token::PipefitGlyph => self.parse_pipefit(),
             Token::Identifier(_) => self.parse_expr(),
             Token::NeuralTick => self.parse_neural_tick(),
             Token::ReasonStub(q) => AstNode::ReasonHook(q.clone()),
@@ -115,6 +117,49 @@ impl Parser {
             AstNode::NeuralTick(Box::new(expr))
         } else {
             AstNode::NeuralTick(Box::new(AstNode::Eof))
+        }
+    }
+
+    fn parse_pipefit(&mut self) -> AstNode {
+        self.advance(); // consume '🛠️'
+        
+        // Expect: pipefit("ALG-001") or pipefit("ALG-001", target: "ALG-016")
+        if let Token::Keyword(k) = &self.current {
+            if k == "pipefit" {
+                self.advance();
+            }
+        }
+        
+        if matches!(self.current, Token::LParen) {
+            self.advance();
+            
+            // Parse alg_id (string) - use placeholder if parsing fails
+            let alg_id = if let Token::Identifier(id) = &self.current {
+                id.clone()
+            } else {
+                // Return error node if identifier not found
+                return AstNode::Eof;
+            };
+            self.advance();
+            
+            // Check for optional target parameter
+            let mut target = None;
+            if matches!(self.current, Token::Identifier(_)) {
+                // Skip "target:" if present
+                self.advance();
+                if let Token::Identifier(t) = &self.current {
+                    target = Some(t.clone());
+                    self.advance();
+                }
+            }
+            
+            if matches!(self.current, Token::RParen) {
+                self.advance();
+            }
+            
+            AstNode::PipefitCall(alg_id, target)
+        } else {
+            AstNode::Eof
         }
     }
 

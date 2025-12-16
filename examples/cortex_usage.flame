@@ -1,0 +1,69 @@
+// FlameLang Pipefitter's Cortex Usage Example
+// Demonstrates the 🛠️ pipefit glyph with multidimensional neural synapse system
+
+// Example 1: Create a cortex node for algorithm ALG-001
+let node_001 = 🛠️ pipefit("ALG-001");
+
+// Properties available at compile-time:
+// - node_001.position: (cos, sin) vector
+// - node_001.angle_degrees: decimal degrees
+// - node_001.chess_square: a1-h8
+// - node_001.chess_layer: 0-9
+// - node_001.rubik_pll: PLL algorithm
+// - node_001.rubik_oll: OLL algorithm
+// - node_001.base64_hash: SHA256 hash
+// - node_001.dna_block: ACGT sequence
+// - node_001.periodic_element: H, He, Li, ...
+// - node_001.docker_container: xai/cortex:alg-001
+// - node_001.collapse_prob: quantum probability
+
+// Example 2: Compute connection weight between two nodes
+let connection = 🛠️ pipefit("ALG-001", target: "ALG-016");
+
+// Connection properties:
+// - connection.travel_distance: Law of Cosines distance
+// - connection.weight: Physics-based weight (Thermo → e^(-d))
+
+// Example 3: Use with neural tick for runtime updates
+@tick {
+    let cortex_state = 🛠️ pipefit("ALG-008");
+    spike("cortex.wire", what: cortex_state.weight);
+}
+
+// Example 4: Quantum entanglement between cortex nodes
+qubit q1;
+qubit q2;
+
+entangle q1 ~> 🛠️ pipefit("ALG-009");  // Multiverse Optimizer (Quantum)
+entangle q2 ~> 🛠️ pipefit("ALG-010");  // Optics Inspired (Wave)
+
+// Example 5: Swarm integration with cortex routing
+swarmbot:deploy(
+    node: 🛠️ pipefit("ALG-007"),  // Black Hole Algorithm (Relativistic)
+    cluster: "docker://nova-compute"
+);
+
+// Example 6: Wave core computation on cortex position
+let wave_result = sin~(🛠️ pipefit("ALG-010").position);
+
+// Example 7: Bell state entanglement across cortex
+bell_phi+ 🛠️ pipefit("ALG-002") 🛠️ pipefit("ALG-003");  // Both Gravity types
+
+// Example 8: Reasoning hook for GPT-based evolution
+#reason{
+    Analyze synapse weights for ALG-001 to ALG-016 connections.
+    Suggest optimal Docker placement based on chess layer clustering.
+}
+
+// The cortex is now fully wired across all dimensions:
+// - 16 algorithms mapped to unit circle
+// - Physics weights computed via Law of Cosines
+// - Chess projections for spatial reasoning
+// - Rubik's algorithms for permutation/orientation
+// - DNA encoding for biological patterns
+// - Base64 hashing for compact storage
+// - Periodic table for elemental properties
+// - Docker containers for runtime orchestration
+// - Quantum collapse for probabilistic allocation
+
+// Scalable to 21,600 slots (360° × 60' minutes) for full sovereignty
