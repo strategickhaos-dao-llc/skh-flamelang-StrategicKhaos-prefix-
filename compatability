@@ -1,0 +1,62 @@
+-webkit-tap-highlight-color
+        Firefox146
+        Firefox for Android146
+        Safari26.1
+    scrollbar-color
+        Safari26.1
+        Safari on iOS26.1
+    font-smooth
+        Firefox for Android146
+        -webkit-font-smoothing
+        -moz-osx-font-smoothing
+    text-size-adjust
+    (experimental, prefix needed)
+        Chrome143
+        Chrome Android143
+        Edge143
+        Firefox146
+        Safari26.1
+        -webkit-text-size-adjust
+
+    -webkit-tap-highlight-color
+        Firefox146
+        Firefox for Android146
+        Safari26.1
+    1 occurrence
+        html.h-screen.antialiased.scroll-smooth.__variable_8d1da5.__variable_2d8cf6.__variable_e4ce97.__variable_e4195f
+    scrollbar-color
+        Safari26.1
+        Safari on iOS26.1
+    398 occurrences
+    font-smooth
+        Firefox for Android146
+        -webkit-font-smoothing
+        -moz-osx-font-smoothing
+    1 occurrence
+        html.h-screen.antialiased.scroll-smooth.__variable_8d1da5.__variable_2d8cf6.__variable_e4ce97.__variable_e4195f
+    text-size-adjust
+    (experimental, prefix needed)
+        Chrome143
+        Chrome Android143
+        Edge143
+        Firefox146
+        Safari26.1
+        -webkit-text-size-adjust
+    1 occurrence
+        html.h-screen.antialiased.scroll-smooth.__variable_8d1da5.__variable_2d8cf6.__variable_e4ce97.__variable_e4195f
+    d
+        Safari26.1
+        Safari on iOS26.1
+    19 occurrences
+    field-sizing
+    (experimental)
+        Firefox146
+        Firefox for Android146
+        Safari on iOS26.1
+    1 occurrence
+        textarea.block.[outline:none!important].resize-none.w-full.bg-transparent.text-text-100.placeholder:text-text-400.[field-sizing:content]
+    resize
+        Firefox for Android146
+        Safari on iOS26.1
+    1 occurrence
+        textarea.block.[outline:none!important].resize-none.w-full.bg-transparent.text-text-100.placeholder:text-text-400.[field-sizing:content]
