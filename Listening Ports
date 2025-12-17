@@ -1,0 +1,176 @@
+Image	PID	Address	Port	Protocol	Firewall Status
+svchost.exe (netsvcs -p)	9148	IPv4 unspecified	53	UDP	Allowed, not restricted
+svchost.exe (LocalServiceNetworkRestricted -p)	4432	IPv4 unspecified	68	UDP	Allowed, not restricted
+svchost.exe (LocalService)	17088	IPv6 unspecified	123	UDP	Allowed, not restricted
+svchost.exe (LocalService)	17088	IPv4 unspecified	123	UDP	Allowed, not restricted
+svchost.exe (RPCSS -p)	2644	IPv6 unspecified	135	TCP	Allowed, not restricted
+svchost.exe (RPCSS -p)	2644	IPv4 unspecified	135	TCP	Allowed, not restricted
+System	4	192.168.1.175	137	UDP	Allowed, not restricted
+System	4	172.18.0.1	137	UDP	Allowed, not restricted
+System	4	169.254.178.75	137	UDP	Allowed, not restricted
+System	4	169.254.93.71	137	UDP	Allowed, not restricted
+System	4	192.168.1.175	138	UDP	Allowed, not restricted
+System	4	172.18.0.1	138	UDP	Allowed, not restricted
+System	4	169.254.178.75	138	UDP	Allowed, not restricted
+System	4	169.254.93.71	138	UDP	Allowed, not restricted
+System	4	192.168.1.175	139	TCP	Allowed, not restricted
+System	4	172.18.0.1	139	TCP	Allowed, not restricted
+System	4	169.254.178.75	139	TCP	Allowed, not restricted
+System	4	169.254.93.71	139	TCP	Allowed, not restricted
+System	4	IPv6 unspecified	445	TCP	Allowed, not restricted
+System	4	IPv4 unspecified	445	TCP	Allowed, not restricted
+svchost.exe (netsvcs -p)	6668	IPv6 unspecified	500	UDP	Allowed, not restricted
+svchost.exe (netsvcs -p)	6668	IPv4 unspecified	500	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	fe80::e1c5:be77:90e7:697d	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	fe80::1192:66dc:263f:f5ca	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	IPv6 loopback	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	192.168.1.175	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	172.18.0.1	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	169.254.178.75	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	169.254.93.71	1900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	IPv4 loopback	1900	UDP	Allowed, not restricted
+svchost.exe (LocalService -p)	26804	IPv6 unspecified	3702	UDP	Allowed, not restricted
+svchost.exe (LocalService -p)	26804	IPv4 unspecified	3702	UDP	Allowed, not restricted
+AcerCCAgent.exe	6092	IPv6 unspecified	4343	TCP	Allowed, not restricted
+AcerCCAgent.exe	6092	IPv4 unspecified	4343	TCP	Allowed, not restricted
+AcerDIAgent.exe	6084	IPv6 unspecified	4449	TCP	Allowed, not restricted
+AcerDIAgent.exe	6084	IPv4 unspecified	4449	TCP	Allowed, not restricted
+svchost.exe (netsvcs -p)	6668	IPv6 unspecified	4500	UDP	Allowed, not restricted
+svchost.exe (netsvcs -p)	6668	IPv4 unspecified	4500	UDP	Allowed, not restricted
+svchost.exe (LocalService -p)	17316	IPv4 unspecified	5040	TCP	Allowed, not restricted
+svchost.exe (LocalService -p)	17316	IPv4 unspecified	5050	UDP	Allowed, not restricted
+AcerQAAgent.exe	6192	IPv6 unspecified	5141	TCP	Allowed, not restricted
+AcerQAAgent.exe	6192	IPv4 unspecified	5141	TCP	Allowed, not restricted
+mDNSResponder.exe	6496	fe80::e1c5:be77:90e7:697d	5353	UDP	Allowed, not restricted
+msedge.exe	44300	IPv6 unspecified	5353	UDP	Allowed, not restricted
+mDNSResponder.exe	6496	192.168.1.175	5353	UDP	Allowed, not restricted
+mDNSResponder.exe	6496	172.18.0.1	5353	UDP	Allowed, not restricted
+mDNSResponder.exe	6496	169.254.93.71	5353	UDP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	5353	UDP	Allowed, not restricted
+mDNSResponder.exe	6496	IPv4 loopback	5354	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	5355	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	5355	UDP	Allowed, not restricted
+System	4	IPv6 unspecified	5985	TCP	Allowed, not restricted
+System	4	IPv4 unspecified	5985	TCP	Allowed, not restricted
+cef_server.exe	52016	IPv4 loopback	6188	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	6189	TCP	Allowed, not restricted
+Discord.exe	21784	IPv4 loopback	6463	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	16976	IPv6 unspecified	7680	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	16976	IPv4 unspecified	7680	TCP	Allowed, not restricted
+System	4	IPv4 loopback	8769	TCP	Allowed, not restricted
+embeddings-server.exe	57776	IPv4 loopback	9648	TCP	Allowed, not restricted
+NitroSense.exe	19372	IPv4 loopback	9993	TCP	Allowed, not restricted
+ollama.exe	27156	IPv4 loopback	11434	TCP	Allowed, not restricted
+MouseWithoutBorders.exe	13100	IPv6 unspecified	15100	TCP	Allowed, not restricted
+MouseWithoutBorders.exe	13100	IPv4 unspecified	15100	TCP	Allowed, not restricted
+MouseWithoutBorders.exe	13100	IPv6 unspecified	15101	TCP	Allowed, not restricted
+MouseWithoutBorders.exe	13100	IPv4 unspecified	15101	TCP	Allowed, not restricted
+NitroSense.exe	19372	IPv6 loopback	15150	TCP	Allowed, not restricted
+AcerService.exe	8484	IPv4 loopback	15152	TCP	Allowed, not restricted
+AcerEZService.exe	6132	IPv4 loopback	19443	TCP	Allowed, not restricted
+kubectl.exe	50888	IPv4 loopback	24086	TCP	Allowed, not restricted
+barrierd.exe	6572	IPv4 loopback	24801	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	26222	TCP	Allowed, not restricted
+jetbrains-toolbox.exe	24220	IPv4 loopback	26476	TCP	Allowed, not restricted
+embeddings-server.exe	34404	IPv4 loopback	27192	TCP	Allowed, not restricted
+ollama app.exe	27076	IPv4 loopback	29465	TCP	Allowed, not restricted
+kleopatra.exe	31236	IPv4 loopback	40373	TCP	Allowed, not restricted
+gpg-agent.exe	36372	IPv4 loopback	40385	TCP	Allowed, not restricted
+gpg-agent.exe	36372	IPv4 loopback	40386	TCP	Allowed, not restricted
+gpg-agent.exe	36372	IPv4 loopback	40388	TCP	Allowed, not restricted
+gpg-agent.exe	36372	IPv4 loopback	40389	TCP	Allowed, not restricted
+keyboxd.exe	29160	IPv4 loopback	40390	TCP	Allowed, not restricted
+scdaemon.exe	14616	IPv4 loopback	40394	TCP	Allowed, not restricted
+OneDrive.Sync.Service.exe	13348	IPv6 loopback	42050	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	42925	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	42926	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	44724	TCP	Allowed, not restricted
+AcerSysMonitorService.exe	13084	IPv4 loopback	46753	TCP	Allowed, not restricted
+AcerSysMonitorService.exe	13084	IPv6 unspecified	46760	TCP	Allowed, not restricted
+AcerSysMonitorService.exe	13084	IPv4 unspecified	46760	TCP	Allowed, not restricted
+AcerAgentService.exe	6832	IPv4 loopback	46933	TCP	Allowed, not restricted
+System	4	IPv6 unspecified	47001	TCP	Allowed, not restricted
+System	4	IPv4 unspecified	47001	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	49489	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	49489	UDP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	49579	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	49627	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	49627	UDP	Allowed, not restricted
+lsass.exe	2380	IPv6 unspecified	49664	TCP	Allowed, not restricted
+lsass.exe	2380	IPv4 unspecified	49664	TCP	Allowed, not restricted
+wininit.exe	2268	IPv6 unspecified	49665	TCP	Allowed, not restricted
+wininit.exe	2268	IPv4 unspecified	49665	TCP	Allowed, not restricted
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	IPv6 unspecified	49666	TCP	Allowed, not restricted
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	IPv4 unspecified	49666	TCP	Allowed, not restricted
+svchost.exe (netsvcs -p)	4528	IPv6 unspecified	49667	TCP	Allowed, not restricted
+svchost.exe (netsvcs -p)	4528	IPv4 unspecified	49667	TCP	Allowed, not restricted
+spoolsv.exe	5620	IPv6 unspecified	49668	TCP	Allowed, not restricted
+spoolsv.exe	5620	IPv4 unspecified	49668	TCP	Allowed, not restricted
+jhi_service.exe	6952	IPv6 loopback	49671	TCP	Allowed, not restricted
+services.exe	2352	IPv6 unspecified	49702	TCP	Allowed, not restricted
+services.exe	2352	IPv4 unspecified	49702	TCP	Allowed, not restricted
+System	4	IPv6 unspecified	50080	TCP	Allowed, not restricted
+System	4	IPv4 unspecified	50080	TCP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	50253	UDP	Allowed, not restricted
+System	4	IPv6 unspecified	50443	TCP	Allowed, not restricted
+System	4	IPv4 unspecified	50443	TCP	Allowed, not restricted
+mDNSResponder.exe	6496	IPv4 unspecified	51598	UDP	Allowed, not restricted
+mDNSResponder.exe	6496	IPv6 unspecified	51599	UDP	Allowed, not restricted
+ADESv2Svc.exe	5808	IPv4 loopback	51779	TCP	Allowed, not restricted
+ADESv2Svc.exe	5808	IPv4 loopback	51780	TCP	Allowed, not restricted
+ADESv2Svc.exe	5808	IPv4 loopback	51781	TCP	Allowed, not restricted
+ADESv2Svc.exe	5808	IPv4 loopback	51782	TCP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	52433	UDP	Allowed, not restricted
+jetbrains-toolbox.exe	24220	IPv4 loopback	52829	TCP	Allowed, not restricted
+gitkraken.exe	40264	IPv4 loopback	53858	TCP	Allowed, not restricted
+Fleet.exe	33900	IPv4 loopback	53871	TCP	Allowed, not restricted
+Fleet.exe	33900	IPv4 loopback	53872	TCP	Allowed, not restricted
+Fleet.exe	33900	IPv4 loopback	53875	TCP	Allowed, not restricted
+System	4	IPv4 loopback	54433	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	54897	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	54897	UDP	Allowed, not restricted
+Rider.Backend.exe	43300	IPv4 loopback	54965	TCP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	55280	UDP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	55673	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	56551	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	56551	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	57227	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	57227	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	57310	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	57310	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	57352	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	57352	UDP	Allowed, not restricted
+gitkraken.exe	30824	IPv4 loopback	58291	TCP	Allowed, not restricted
+AcerPixyService.exe	6120	IPv6 unspecified	58995	TCP	Allowed, not restricted
+AcerPixyService.exe	6120	IPv4 unspecified	58995	TCP	Allowed, not restricted
+msedgewebview2.exe	21684	IPv4 unspecified	59719	UDP	Allowed, not restricted
+NitroSense.exe	18328	IPv4 unspecified	59771	UDP	Allowed, not restricted
+JetBrains.ProcessEnumerator.Worker.exe	64660	IPv4 loopback	61161	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	61617	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	61617	UDP	Allowed, not restricted
+svchost.exe (netsvcs -p)	9148	IPv4 unspecified	61717	UDP	Allowed, not restricted
+svchost.exe (netsvcs -p)	9148	IPv4 unspecified	61718	UDP	Allowed, not restricted
+svchost.exe (netsvcs -p)	9148	IPv6 unspecified	61719	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	62807	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	62807	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	63314	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	63314	UDP	Allowed, not restricted
+claude.exe	63172	IPv4 unspecified	63334	UDP	Allowed, not restricted
+webstorm64.exe	38604	IPv4 loopback	63342	TCP	Allowed, not restricted
+rider64.exe	46880	IPv4 loopback	63345	TCP	Allowed, not restricted
+idea64.exe	60384	IPv4 loopback	63346	TCP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	64653	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	64653	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	fe80::e1c5:be77:90e7:697d	64898	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	IPv6 loopback	64899	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	fe80::1192:66dc:263f:f5ca	64900	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	169.254.93.71	64901	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	169.254.178.75	64902	UDP	Allowed, not restricted
+svchost.exe (NetSvcs -p)	6868	IPv4 loopback	64903	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	192.168.1.175	64904	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	IPv4 loopback	64905	UDP	Allowed, not restricted
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	172.18.0.1	64906	UDP	Allowed, not restricted
+svchost.exe (LocalService -p)	26804	IPv4 unspecified	64907	UDP	Allowed, not restricted
+svchost.exe (LocalService -p)	26804	IPv6 unspecified	64908	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv6 unspecified	65036	UDP	Allowed, not restricted
+svchost.exe (NetworkService -p)	3940	IPv4 unspecified	65036	UDP	Allowed, not restricted
