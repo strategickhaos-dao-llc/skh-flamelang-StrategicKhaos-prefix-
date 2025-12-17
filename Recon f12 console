@@ -1,0 +1,181 @@
+Content-Security-Policy warnings 24
+@honeycombio/opentelemetry-web: 🔨 Default deterministic sampler has been overridden. Honeycomb requires a resource attribute called SampleRate to properly show weighted values. Non-deterministic sampleRate could lead to missing spans in Honeycomb. See our docs for more details. https://docs.honeycomb.io/getting-data-in/opentelemetry/node-distro/#sampling-without-the-honeycomb-sdk 92351-3e8718211f0f22a4.js:13:207
+[SERVICE_WORKER] Found 1 service worker(s), which are no longer used. Unregistering. 92351-3e8718211f0f22a4.js:13:207
+[IsolatedSegment] Sending iframe_ready message isolated-segment.html:56:19
+Object { xkKZ4: "g" }
+main.js:1:7279
+Content-Security-Policy: The page’s settings blocked a script (script-src-elem) at https://a.claude.ai/cdn-cgi/challenge-platform/h/g/scripts/jsd/5eaf848a0845/main.js? from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline' https://cdn.segment.com https://a-cdn.anthropic.com https://*.google.com https://*.facebook.com https://*.facebook.net https://*.doubleclick.net” blank
+[IsolatedSegment] Message received from parent 
+Object { origin: "https://claude.ai", data: {…} }
+isolated-segment.html:56:19
+[IsolatedSegment] Processing message 
+Object { type: "init" }
+isolated-segment.html:56:19
+[IsolatedSegment] init called 
+Object { writeKey: "LKJN8LsLER...", segmentCdnHost: "a-cdn.anthropic.com", alreadyInitialized: false }
+isolated-segment.html:56:19
+[IsolatedSegment] Loading analytics via analytics.js isolated-segment.html:56:19
+[IsolatedSegment] Analytics loaded successfully 
+Object { hasAnalytics: true }
+isolated-segment.html:56:19
+[IsolatedSegment] sendMessage called 
+Object { data: {…} }
+isolated-segment.html:56:19
+[IsolatedSegment] Message sent to parent 
+Object { type: "segment_initialized" }
+isolated-segment.html:56:19
+[IsolatedSegment] Message received from parent 
+Object { origin: "https://a.claude.ai", data: "" }
+isolated-segment.html:56:19
+[IsolatedSegment] Message not for isolated-segment, ignoring 
+Object { target: undefined }
+isolated-segment.html:56:19
+[IsolatedSegment] Message received from parent 
+Object { origin: "https://claude.ai", data: {…} }
+isolated-segment.html:56:19
+[IsolatedSegment] Processing message 
+Object { type: "identify" }
+isolated-segment.html:56:19
+[IsolatedSegment] Handling identify message 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158" }
+isolated-segment.html:56:19
+[IsolatedSegment] identify called 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158", traits: {…}, initialized: true, hasAnalytics: true }
+isolated-segment.html:56:19
+[IsolatedSegment] Message received from parent 
+Object { origin: "https://claude.ai", data: {…} }
+isolated-segment.html:56:19
+[IsolatedSegment] Processing message 
+Object { type: "identify" }
+isolated-segment.html:56:19
+[IsolatedSegment] Handling identify message 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158" }
+isolated-segment.html:56:19
+[IsolatedSegment] identify called 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158", traits: {…}, initialized: true, hasAnalytics: true }
+isolated-segment.html:56:19
+[IsolatedSegment] Identify completed 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158" }
+isolated-segment.html:56:19
+[IsolatedSegment] Identify completed 
+Object { userId: "05b0daa4-fb14-4ef4-b7d2-da9fe730e158" }
+isolated-segment.html:56:19
+WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER. s.js:29:19914
+[Intercom] Launcher is disabled in settings or current page does not match display conditions frame.37df02ee.js:2:477024
+WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER. s.js:29:19914
+The resource at “https://claude.ai/_next/static/media/01d1396bd69a228a-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/56139cc7a3934d47-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/8d6f5db32d507c08-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/a0eafab536ffd221-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/a72997480c14a9d4-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/b8c97ebabd0473a4-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/b96accb76593e50d-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/d4ad98ce6ee578c0-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+The resource at “https://claude.ai/_next/static/media/fe66948be403232d-s.p.woff2” preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly. 13c703ac-0029-44b5-b433-991f18cb9193
+[LOCAL_SESSION] Sidebar navigation to conversation 
+Object { conversation_uuid: "ac80db8d-2ef2-48e7-80da-361880c643fc", session_id: null, enabled_yukon_gold: undefined, isAgentConversation: false, targetRoute: "/chat/ac80db8d-2ef2-48e7-80da-361880c643fc" }
+92351-3e8718211f0f22a4.js:13:207
+WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER. s.js:29:19914
+Error sending segment performance metrics TypeError: NetworkError when attempting to fetch resource.
+    o https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    c https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    send https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    c https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    u https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    flush https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+    l https://a-cdn.anthropic.com/analytics.js/v1/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/analytics.min.js:1
+analytics.min.js:1:20614
+Content-Security-Policy: The page’s settings blocked the loading of a resource (connect-src) at https://a-api.anthropic.com/v1/m because it violates the following directive: “connect-src 'self' https://api.segment.io https://*.segment.io https://*.segment.com https://a-cdn.anthropic.com https://*.google.com https://*.facebook.com https://*.facebook.net https://*.doubleclick.net” analytics.min.js:1:23763
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+This site appears to use a scroll-linked positioning effect. This may not work well with asynchronous panning; see https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html for further details and to join the discussion on related tools and features! ac80db8d-2ef2-48e7-80da-361880c643fc
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 40 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 40 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 43 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 55 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+undefined 2 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 26 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 24 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 25 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 20 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+undefined 2 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 37 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 16 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 14 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+undefined 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 34 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 28 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 17 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 43 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 16 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 32 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 24 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+undefined 15 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Completion request succeeded on attempt 1 92351-3e8718211f0f22a4.js:13:207
+[COMPLETION] Starting completion request (1/10) 92351-3e8718211f0f22a4.js:13:207
+Source map error: URL constructor: webpack://[name]Integration/webpack/bootstrap is not a valid URL.
+Resource URL: https://a-cdn.anthropic.com/next-integrations/integrations/doubleclick-floodlight/1.5.4/doubleclick-floodlight.dynamic.js.gz
+Source Map URL: doubleclick-floodlight.js.map
+Source map error: URL constructor: webpack://[name]Integration/webpack/bootstrap is not a valid URL.
+Resource URL: https://a-cdn.anthropic.com/next-integrations/integrations/facebook-pixel/2.11.5/facebook-pixel.dynamic.js.gz
+Source Map URL: facebook-pixel.js.map
+Source map error: URL constructor: webpack://[name]Integration//var/lib/buildkite-agent/builds/buildkite-ci-00ae6c977516a649a/segment/analytics-dot-js-integrations/node_modules/@segment/to-iso-string/lib/index.js is not a valid URL.
+Resource URL: https://a-cdn.anthropic.com/next-integrations/integrations/vendor/commons.59560acdd69ed701c941.js.gz
+Source Map URL: commons.59560acdd69ed701c941.js.map
