@@ -1,0 +1,20 @@
+# Requirements for Section 1.5: Bar Charts in Python
+# Install with: pip install -r requirements.txt
+
+# Core data manipulation and analysis
+pandas>=1.3.0
+
+# Numerical computing
+numpy>=1.21.0
+
+# Plotting libraries
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+notebook>=6.4.0
+ipykernel>=6.0.0
+
+# Optional: For better display in notebooks
+ipywidgets>=7.6.0
