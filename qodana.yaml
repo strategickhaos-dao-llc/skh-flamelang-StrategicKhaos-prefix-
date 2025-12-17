@@ -1,0 +1,25 @@
+#-------------------------------------------------------------------------------#
+#               Qodana analysis is configured by qodana.yaml file               #
+#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
+#-------------------------------------------------------------------------------#
+version: "1.0"
+
+# Specify inspection profile for code analysis
+profile:
+  name: qodana.recommended
+
+# Exclude paths from analysis
+exclude:
+  - name: All
+    paths:
+      - target/
+      - .git/
+      - assets/
+      - skh-flamelang-StrategicKhaos-prefix--main/
+      - "*.log"
+      - "*.fxsnapshot"
+      - "*.htm"
+      - "*.csv"
+
+# Specify Qodana linter for analysis (Applied in CI/CD pipeline)
+linter: jetbrains/qodana-community:latest
