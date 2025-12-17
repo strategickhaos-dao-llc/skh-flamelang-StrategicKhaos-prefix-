@@ -1,0 +1,19 @@
+# Git attributes for consistent line endings
+
+# Auto detect text files and normalize to LF
+* text=auto
+
+# Bash scripts should always use LF
+*.sh text eol=lf
+
+# PowerShell scripts - let Git handle based on platform (supports PowerShell Core on Unix)
+*.ps1 text=auto
+
+# Markdown files
+*.md text eol=lf
+
+# Source code
+*.rs text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
