@@ -1,0 +1,175 @@
+--accent-brand: 15 63.1% 59.6%;
+  --accent-main-000: 15 54.2% 51.2%;
+  --accent-main-100: 15 63.1% 59.6%;
+  --accent-main-200: 15 63.1% 59.6%;
+  --accent-main-900: 0 0% 0%;
+  --accent-pro-000: 251 84.6% 74.5%;
+  --accent-pro-100: 251 40.2% 54.1%;
+  --accent-pro-200: 251 40% 45.1%;
+  --accent-pro-900: 250 25.3% 19.4%;
+  --accent-secondary-000: 210 65.5% 67.1%;
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --accent-secondary-200: 210 70.9% 51.6%;
+  --accent-secondary-900: 210 55.9% 24.6%;
+  --bg-000: 60 2.1% 18.4%;
+  --bg-100: 60 2.7% 14.5%;
+  --bg-200: 30 3.3% 11.8%;
+  --bg-300: 60 2.6% 7.6%;
+  --bg-400: 0 0% 0%;
+  --bg-500: 0 0% 0%;
+  --border-100: 51 16.5% 84.5%;
+  --border-200: 51 16.5% 84.5%;
+  --border-300: 51 16.5% 84.5%;
+  --border-400: 51 16.5% 84.5%;
+  --danger-000: 0 98.4% 75.1%;
+  --danger-100: 0 67% 59.6%;
+  --danger-200: 0 67% 59.6%;
+  --danger-900: 0 46.5% 27.8%;
+  --oncolor-100: 0 0% 100%;
+  --oncolor-200: 60 6.7% 97.1%;
+  --oncolor-300: 60 6.7% 97.1%;
+  --pictogram-100: 48 3.4% 29.2%;
+  --pictogram-200: 60 2.5% 23.3%;
+  --pictogram-300: 60 2.1% 18.4%;
+  --pictogram-400: 60 2.7% 14.5%;
+  --success-000: 97 59.1% 46.1%;
+  --success-100: 97 75% 32.9%;
+  --success-200: 97 75% 32.9%;
+  --success-900: 127 100% 13.9%;
+  --text-000: 48 33.3% 97.1%;
+  --text-100: 48 33.3% 97.1%;
+  --text-200: 50 9% 73.7%;
+  --text-300: 50 9% 73.7%;
+  --text-400: 48 4.8% 59.2%;
+  --text-500: 48 4.8% 59.2%;
+  --warning-000: 40 71% 50%;
+  --warning-100: 39 93.4% 35.9%;
+  --warning-200: 39 93.4% 35.9%;
+  --warning-900: 45 94.8% 15.1%;
+}
+[data-mode="dark"] {
+  color-scheme: dark;
+}
+:root {
+  --dropdown-max-height: 480px;
+}
+.h-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-mono: var(--font-jetbrains);
+  --font-ui: var(--font-anthropic-sans);
+  --font-ui-serif: var(--font-anthropic-serif);
+  --font-claude-response: var(--font-anthropic-serif);
+  --font-user-message: var(--font-ui);
+  --font-sans-serif: var(--font-ui);
+  --font-serif: var(--font-ui-serif);
+  --font-system: system-ui,sans-serif;
+  --font-dyslexia: var(--font-open-dyslexic),"Comic Sans MS",ui-serif,Georgia,serif;
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="claude"] {
+    --accent-secondary-100: 210 70.9% 51.6%;
+    --border-100: 51 16.5% 84.5%;
+    --border-300: 51 16.5% 84.5%;
+  }
+}
+[data-theme="claude"], [data-theme="claude"][data-mode="light"] {
+  --accent-secondary-100: 210 70.9% 51.6%;
+  --border-100: 30 3.3% 11.8%;
+  --border-300: 30 3.3% 11.8%;
+}
+:root {
+  --always-white: 0 0% 100%;
+  --always-black: 0 0% 0%;
+}
+.__variable_e4195f {
+  --font-jetbrains: "jetbrains","jetbrains Fallback",ui-monospace,SFMono-Regular,Menlo,Monaco,monospace;
+}
+.__variable_e4ce97 {
+  --font-open-dyslexic: "openDyslexic","openDyslexic Fallback";
+}
+.__variable_2d8cf6 {
+  --font-anthropic-serif: "anthropicSerif","anthropicSerif Fallback",Georgia,Times New Roman,Times,serif;
+}
+.__variable_8d1da5 {
+  --font-anthropic-sans: "anthropicSans","anthropicSans Fallback",system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+:root {
+}
+body, html {
+  padding: 0;
+  margin: 0;
+}
+:host, html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--font-ui);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+body, html {
+  font-family: var(--font-ui);
+}
+* {
+  box-sizing: border-box;
+  outline-color: hsl(var(--accent-secondary-100));
+  scrollbar-width: thin;
+  scrollbar-color: hsla(var(--border-300)/35%) transparent;
+}
+*, ::after, ::before {
+  border-color: hsl(var(--border-100));
+}
+*, ::after, ::before {
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+  border: 0 solid;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+}
+element attributes style {
+  -x-lang: ;
+}
+:root {
+  color: CanvasText;
+  view-transition-name: root;
+}
+article, aside, details, div, dt, figcaption, footer, form, header, hgroup, html, main, nav, search, section, summary {
+  display: block;
+}
+address, article, aside, blockquote, body, caption, center, col, colgroup, dd, dir, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, legend, li, listing, main, marquee, menu, nav, noframes, ol, p, plaintext, pre, search, section, summary, table, tbody, td, tfoot, th, thead, tr, ul, xmp {
+  unicode-bidi: isolate;
+}
+margin
+border
+padding
+804×193.6
+804×193.6
+static
+    box-sizing
+    border-box
+    display
+    block
+    float
+    none
+    line-height
+    24px
+    position
+    static
+    z-index
+    auto
