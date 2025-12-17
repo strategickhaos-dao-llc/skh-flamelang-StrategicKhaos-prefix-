@@ -1,0 +1,37 @@
+Image	PID	Send (B/sec)	Receive (B/sec)	Total (B/sec)
+msedgewebview2.exe	21684	2,930	5,829	8,759
+rider64.exe	46880	2,002	1,286	3,288
+Rider.Backend.exe	43300	1,195	1,911	3,107
+firefox.exe	8080	330	489	820
+svchost.exe (NetworkService -p)	3940	337	463	800
+DuckDuckGo.exe	24192	76	475	552
+claude.exe	63172	436	84	521
+msedge.exe	44300	0	393	393
+mDNSResponder.exe	6496	0	231	231
+JetBrains.DPA.Protocol.Backend.exe	48572	70	70	140
+ProtonDrive.exe	26612	45	92	137
+NitroSense.exe	18328	68	57	125
+JetBrains.ProcessEnumerator.Worker.exe	64660	50	52	102
+svchost.exe (NetworkService -p)	6360	27	26	53
+msedge.exe	39124	26	26	53
+JetBrains.ProcessEnumerator.Worker32.exe	58860	23	22	45
+gpg-agent.exe	36372	9	11	20
+System	4	18	2	20
+firefox.exe	25028	6	5	11
+fsdaemon-1.48.261.exe	43040	3	4	7
+keyboxd.exe	29160	3	3	6
+Fleet.exe	33900	2	4	6
+gitkraken.exe	28892	2	2	5
+gitkraken.exe	39784	3	2	5
+firefox.exe	39668	1	4	5
+keyboxd.exe	41576	1	3	3
+MouseWithoutBorders.exe	13100	1	2	3
+NitroSense.exe	19372	1	1	3
+AcerQAAgent.exe	6192	1	1	2
+svchost.exe (LocalServiceAndNoImpersonation -p)	12128	0	2	2
+firefox.exe	15256	1	1	2
+AQAUserPS.exe	17956	1	1	2
+idea64.exe	60384	1	0	1
+AcerDIAgent.exe	6084	0	0	1
+jetbrains-toolbox.exe	24220	0	1	1
+webstorm64.exe	38604	0	0	0
