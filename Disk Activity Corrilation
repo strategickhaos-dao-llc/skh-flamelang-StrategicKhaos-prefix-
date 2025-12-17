@@ -1,0 +1,127 @@
+Image	PID	File	Read (B/sec)	Write (B/sec)	Total (B/sec)	I/O Priority	Response Time (ms)
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\IndexedDB\https_verbose-halibut-g4jrq96rw4pw39v9q.github.dev_0.indexeddb.leveldb\000006.log	0	1,309	1,309	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\Default\Cache\Cache_Data\data_1	0	80	80	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\Default\GPUCache\data_1	0	79	79	Normal	2
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\moz-extension+++c1d1aada-af14-4ab6-87b2-67f3eafd4a26\idb\1765270212MBCDP_.sqlite	0	194	194	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\GrShaderCache\data_1	0	80	80	Normal	2
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\jcef_cache\Default\Cache\Cache_Data\data_1	0	74	74	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\ULICTekInc.NitroSenseforNotebook_nt9dgb7efx6bt\LocalCache\Roaming\acernitrosense\Cache\Cache_Data\data_1	0	186	186	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\ShaderCache\data_1	0	79	79	Normal	2
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\07cPannn.Profile 1\cookies.sqlite-wal	0	17,585	17,585	Normal	2
+System	4	C:\Users\garza\AppData\Local\Mozilla\Firefox\Profiles\73qchrij.default-release\cache2\entries\51D94253C1574873F0AB446298EE4E40AB038577	0	195	195	Normal	2
+System	4	C:\Users\garza\AppData\Local\JetBrains\IntelliJIdea2025.2\log\indexing-diagnostic\storage-diagnostic-2025-12-14-02-48-35.334.json	273	4,844	5,117	Normal	2
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Cache\Cache_Data\data_0	0	889	889	Normal	1
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Cache\Cache_Data\data_1	0	477	477	Normal	1
+System	4	C:\Users\garza\AppData\Local\Temp\JetLogs\JetBrainsLog.JetBrains.2025-12-13T19-51-45.6f1b83ee0-dotTrace64_2025_3_0_1#33660.log	0	81	81	Normal	1
+System	4	C:\Windows\System32\LogFiles\WMI\Wifi.etl	0	2,732	2,732	Normal	1
+System	4	C:\Users\garza\AppData\Local\Temp\JetLogs\JetBrainsLog.JetBrains.2025-12-13T19-51-45.6f1b83ee0-dotTrace64_2025_3_0_1#33660.err.log	0	83	83	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Claude\Cache\Cache_Data\data_2	0	272	272	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\extension-store-menus\data.safe.bin	862	108	970	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\07cPannn.Profile 1\cookies.sqlite	0	15,825	15,825	Normal	1
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Cache\Cache_Data\data_3	0	313	313	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-WMI-Activity%4Operational.evtx	0	203	203	Normal	1
+msedgewebview2.exe	21684	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Network\Reporting and NEL-journal	0	409	409	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Claude\Cache\Cache_Data\data_1	0	546	546	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-PushNotification-Platform%4Operational.evtx	0	72	72	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-AppModel-Runtime%4Admin.evtx	0	72	72	Normal	1
+System	4	C:\Windows\System32\LogFiles\WMI\NetCore.etl	0	8,725	8,725	Normal	1
+System	4	C:\Windows\System32\config\SYSTEM.LOG1	0	894	894	Normal	1
+System	4	C:\ProgramData\NVIDIA Corporation\nvtopps\nct\nvlog.nvlgstg	356	96,768	97,124	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-Application-Experience%4Program-Telemetry.evtx	0	72	72	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Security.evtx	0	72	72	Normal	1
+System	4	C:\ProgramData\Dell\UpdateService\Log\Service.log	0	143	143	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Claude\Local Storage\leveldb\000014.log	0	93	93	Normal	1
+System	4	C:\Users\garza\AppData\Local\JetBrains\IntelliJIdea2025.2\log\open-telemetry-metrics.2025-12-14-11-52-36.csv	0	373	373	Normal	1
+System	4	C:\Users\garza\AppData\Local\Packages\Microsoft.6365217CE6EB4_8wekyb3d8bbwe\LocalCache\ECSCache\Ecs.dat	0	102	102	Normal	1
+System	4	C:\Windows\System32\config\SOFTWARE.LOG1	0	3,957	3,957	Normal	1
+System	4	C:\Users\garza\AppData\Local\JetBrains\IntelliJIdea2025.2\log\open-telemetry-meters.2025-12-14-20-36-35.json	0	1,771	1,771	Normal	1
+msedgewebview2.exe	21684	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Network\Cookies-journal	0	1,093	1,093	Normal	1
+System	4	C:\Windows\System32\config\SOFTWARE.LOG2	546	61,358	61,904	Normal	1
+System	4	C:\Users\garza\AppData\Roaming\Claude\Cache\Cache_Data\data_0	0	358	358	Normal	1
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-Hyper-V-VmSwitch-Operational.evtx	0	206	206	Normal	0
+System	4	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\RdClientAutoTrace-WppAutoTrace-20251214-122235-082.etl	0	69,910	69,910	Normal	0
+System	4	C:\Users\garza\AppData\Local\Proton\Proton Drive\Logs\App-20251214.log	0	94	94	Normal	0
+claude.exe	63172	C:\Users\garza\AppData\Roaming\Claude\Network\Cookies-journal	0	546	546	Normal	0
+System	4	C:\Users\garza\AppData\Local\Temp\JetLogs\JetBrainsLog.JetBrains.2025-12-14T15-35-45.6f1b83ee0-dotTrace64_2025_3_0_1#67880.log	0	47	47	Normal	0
+System	4	C:\Windows\System32\winevt\Logs\Microsoft-Windows-Diagnosis-DPS%4Operational.evtx	0	546	546	Normal	0
+System	4	C:\Users\garza\AppData\Local\Temp\JetLogs\JetBrainsLog.JetBrains.2025-12-14T15-35-45.6f1b83ee0-dotTrace64_2025_3_0_1#67880.err.log	0	64	64	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\cookies.sqlite-wal	0	18,154	18,154	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\cookies.sqlite	0	4,366	4,366	Normal	0
+msrdc.exe	61396	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_1.etl	457	292	750	Normal	0
+msedgewebview2.exe	21684	C:\$LogFile (NTFS Volume Log)	0	2,398	2,398	Normal	0
+System	4	C:\$LogFile (NTFS Volume Log)	0	20,980	20,980	Normal	0
+msrdc.exe	61396	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_0.etl	572	302	874	Normal	0
+System	4	C:\Users\garza\AppData\Local\Microsoft\OneDrive\logs\Personal\SyncEngine-2025-12-15.0223.3024.252.aodl	0	430	430	Normal	0
+msrdc.exe	61396	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_2.etl	819	318	1,137	Normal	0
+svchost.exe (LocalServiceNetworkRestricted -p)	3624	C:\$LogFile (NTFS Volume Log)	0	347	347	Normal	0
+msedgewebview2.exe	3220	C:\$LogFile (NTFS Volume Log)	0	309	309	Normal	0
+svchost.exe (LocalServiceNoNetwork -p)	6440	C:\$LogFile (NTFS Volume Log)	0	502	502	Normal	0
+MsMpEng.exe	14900	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_0.etl	275	0	275	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\WebStorm2025.2\log\indexing-diagnostic\storage-diagnostic-2025-12-13-12-53-09.781.json	853	4,587	5,440	Normal	0
+MsMpEng.exe	14900	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_2.etl	260	0	260	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\extension-store-menus\data.safe.bin	321	40	361	Normal	0
+MsMpEng.exe	14900	C:\Users\garza\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\MSRDCEventProcessor_1.etl	285	0	285	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\log\open-telemetry-metrics.2025-12-14-14-07-04.csv	546	315	861	Normal	0
+System	4	C:\$BitMap (NTFS Free Space Map)	0	1,776	1,776	Normal	0
+System	4	C:\$Mft (NTFS Master File Table)	0	4,968	4,968	Normal	0
+lsass.exe	2380	C:\$LogFile (NTFS Volume Log)	0	12,288	12,288	Normal	0
+ProtonDrive.exe	26612	C:\Users\garza\AppData\Local\Proton\Proton Drive\SyncEngine.sqlite-journal	10,923	6,827	17,749	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\WebStorm2025.2\log\open-telemetry-meters.2025-12-14-20-36-29.json	745	1,489	2,234	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\log\indexing-diagnostic\storage-diagnostic-2025-12-13-19-57-37.380.json	0	3,027	3,027	Normal	0
+System	4	C:\ProgramData\Microsoft\Windows\wfp\wfpdiag.etl	0	10,923	10,923	Normal	0
+System	4	C:\ProgramData\Microsoft\Windows Defender\Support\MpWppTracing-20251213-171431-00000003-fffffffeffffffff.bin	0	1,365	1,365	Normal	0
+System	4	C:\Windows\System32\LogFiles\CloudFiles\CldFlt3.etl	0	68	68	Normal	0
+ProtonDrive.exe	26612	C:\Users\garza\AppData\Local\Proton\Proton Drive\SyncEngine.sqlite-journal	5,461	8,192	13,653	Normal	0
+System	4	C:\Users\garza\AppData\Local\Packages\ULICTekInc.NitroSenseforNotebook_nt9dgb7efx6bt\LocalCache\Roaming\acernitrosense\Cache\Cache_Data\data_0	0	178	178	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\extension-store-menus\data.safe.bin	0	341	341	Normal	0
+System	4	C:\ProgramData\McAfee\wps\log\wps.etl	0	32,768	32,768	Normal	0
+System	4	C:\Windows\System32\sru\SRU.log	0	251	251	Normal	0
+lsass.exe	2380	C:\Windows\System32\Microsoft\Protect\S-1-5-18\User\Diagnostic.log	1,928	5,783	7,710	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\log\open-telemetry-meters.2025-12-14-20-37-03.json	0	6,605	6,605	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\log\JetBrains.DPA.Protocol.Backend\2025_12_14_01_58_57_9092.log	0	83	83	Normal	0
+System	4	C:\ProgramData\Dell.UserMode\AWCC.UCSubAgent\S-1-5-21-2230381457-2743536855-3789275050-1001\AWCC.UCSubAgent.03.log	0	60	60	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\discord\logs\renderer_js.log	0	108	108	Normal	0
+lsass.exe	2380	C:\System Volume Information\{d551b6ca-d8de-11f0-81d6-04e8b93ad0fd}{3808876b-c176-4e48-b7ae-04046e6cc752}	0	3,855	3,855	Normal	0
+msrdc.exe	61396	C:\$LogFile (NTFS Volume Log)	0	3,970	3,970	Normal	0
+msedgewebview2.exe	21684	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Network\Reporting and NEL	0	274	274	Normal	0
+Registry	232	C:\Windows\System32\config	0	73	73	Normal	0
+claude.exe	63172	C:\Users\garza\AppData\Roaming\Claude\Network\Cookies	0	256	256	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\WebStorm2025.2\log\open-telemetry-metrics.2025-12-14-15-52-29.csv	0	366	366	Normal	0
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\Default\DawnGraphiteCache\data_1	0	79	79	Normal	0
+msedgewebview2.exe	3220	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\WebStorage\QuotaManager-journal	0	50	50	Normal	0
+Registry	232	C:\$Mft (NTFS Master File Table)	0	73	73	Normal	0
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\GraphiteDawnCache\data_1	0	79	79	Normal	0
+claude.exe	63172	C:\$LogFile (NTFS Volume Log)	0	10,350	10,350	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\jcef_cache\ShaderCache\data_1	0	164	164	Normal	0
+System	4	C:\Windows\System32\sru\SRUDB.jfm	0	167	167	Normal	0
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\internalEnvironment\EBWebView\Default\DawnWebGPUCache\data_1	0	79	79	Normal	0
+System	4	C:\Windows\System32\config	0	223	223	Normal	0
+ProtonDrive.exe	26612	C:\$LogFile (NTFS Volume Log)	0	42,325	42,325	Normal	0
+firefox.exe	8080	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\https+++claude.ai\ls\data.sqlite-journal	496	372	869	Normal	0
+System	4	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\WebStorage\QuotaManager-journal	0	185	185	Normal	0
+msedgewebview2.exe	3220	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\WebStorage\QuotaManager	0	139	139	Normal	0
+msrdc.exe	61396	C:\System Volume Information\{d551b6ca-d8de-11f0-81d6-04e8b93ad0fd}{3808876b-c176-4e48-b7ae-04046e6cc752}	0	4,681	4,681	Normal	0
+ProtonDrive.exe	26612	C:\Users\garza\AppData\Local\Proton\Proton Drive\SyncEngine.sqlite	0	19,115	19,115	Normal	0
+System	4	C:\System Volume Information\{d551b6ca-d8de-11f0-81d6-04e8b93ad0fd}{3808876b-c176-4e48-b7ae-04046e6cc752}	0	7,638	7,638	Normal	0
+firefox.exe	8080	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\https+++claude.ai\ls\data.sqlite	0	336	336	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\jcef_cache\GrShaderCache\data_1	0	178	178	Normal	0
+System	4	C:\Users\garza\AppData\Local\Mozilla\Firefox\Profiles\73qchrij.default-release\cache2\entries\BFA915A7D32BA7E9AD9908CF5956DE947246417E	0	451	451	Normal	0
+ProtonDrive.exe	26612	C:\Users\garza\AppData\Local\Proton\Proton Drive\SyncEngine.sqlite-journal	0	6,827	6,827	Normal	0
+System	4	C:\Windows\System32\sru\SRUDB.dat	0	167	167	Normal	0
+msedgewebview2.exe	21684	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Network\Cookies	0	823	823	Normal	0
+System	4	C:\Users\garza\AppData\Local\JetBrains\Rider2025.3\jcef_cache\GraphiteDawnCache\data_1	0	164	164	Normal	0
+ProtonDrive.exe	26612	C:\System Volume Information\{d551b6ca-d8de-11f0-81d6-04e8b93ad0fd}{3808876b-c176-4e48-b7ae-04046e6cc752}	0	27,307	27,307	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\https+++x.com\cache\caches.sqlite-shm	0	697	697	Normal	0
+ProtonDrive.exe	26612	C:\Users\garza\AppData\Local\Proton\Proton Drive\SyncEngine.sqlite-journal	0	8,192	8,192	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\https+++vscode.dev\cache\caches.sqlite-shm	0	697	697	Normal	0
+firefox.exe	8080	C:\System Volume Information\{d551b6ca-d8de-11f0-81d6-04e8b93ad0fd}{3808876b-c176-4e48-b7ae-04046e6cc752}	0	1,986	1,986	Normal	0
+firefox.exe	8080	C:\$LogFile (NTFS Volume Log)	0	601	601	Normal	0
+System	4	C:\Windows\System32	0	205	205	Normal	0
+System	4	C:\Users\garza\AppData\Roaming\Mozilla\Firefox\Profiles\73qchrij.default-release\storage\default\https+++x.com\idb\1046228012scyn.sqlite-shm	0	87	87	Normal	0
+Registry	232	C:\Windows\System32\config\SYSTEM	0	731	731	Background	0
+System	4	C:\Windows\System32\config\DEFAULT	878	731	1,609	Background	0
+Registry	232	C:\Windows\appcompat\Programs\Amcache.hve	293	439	731	Background	0
+msedgewebview2.exe	21684	C:\Users\garza\AppData\Local\Packages\63909DuckDuckGoInc.DuckDuckGoPrivateBrowser_qzdjx70tn762j\LocalState\EBWebView\Default\Network\9a0764e4-73dd-41bf-97b4-d2ad8160c43a.tmp	0	3,413	3,413	Background	0
+Registry	232	C:\Users\garza\ntuser.dat	293	1,682	1,975	Background	0
+Registry	232	C:\Users\garza\AppData\Local\Microsoft\Windows\UsrClass.dat	0	219	219	Background	0
+System	4	C:\Windows\System32\config\SOFTWARE	0	2,853	2,853	Background	0
