@@ -1,0 +1,213 @@
+Image	PID	Local Address	Local Port	Remote Address	Remote Port	Packet Loss (%)	Latency (ms)
+firefox.exe	8080	192.168.1.175	4103	140.82.113.26	443	0	156
+ProtonDrive.exe	26612	192.168.1.175	20935	185.70.42.43	443	0	135
+ProtonDrive.exe	26612	192.168.1.175	5005	185.70.42.43	443	0	125
+msedgewebview2.exe	21684	192.168.1.175	60807	140.82.113.21	443	0	125
+msedgewebview2.exe	21684	192.168.1.175	31359	140.82.114.25	443	0	117
+msedgewebview2.exe	21684	192.168.1.175	25782	140.82.113.25	443	0	107
+msedgewebview2.exe	21684	192.168.1.175	6803	140.82.113.6	443	0	105
+msedgewebview2.exe	21684	192.168.1.175	32212	140.82.113.22	443	0	99
+backgroundTaskHost.exe	74992	192.168.1.175	39111	20.96.153.111	443	0	98
+msedgewebview2.exe	21684	192.168.1.175	42629	140.82.114.25	443	0	94
+backgroundTaskHost.exe	74992	192.168.1.175	39110	20.96.153.111	443	0	85
+msedgewebview2.exe	21684	192.168.1.175	41812	140.82.112.4	443	0	74
+firefox.exe	25028	192.168.1.175	7051	104.18.39.21	443	0	71
+gitkraken.exe	39784	192.168.1.175	51604	104.26.15.125	443	0	69
+claude.exe	63172	192.168.1.175	32532	3.214.218.133	443	0	67
+firefox.exe	8080	192.168.1.175	28113	172.64.41.4	443	0	65
+gitkraken.exe	39784	192.168.1.175	41989	104.26.15.40	443	0	62
+firefox.exe	25028	192.168.1.175	34247	172.64.41.4	443	0	62
+firefox.exe	8080	192.168.1.175	27317	140.82.113.26	443	0	59
+firefox.exe	39668	192.168.1.175	36473	140.82.112.26	443	0	59
+DuckDuckGo.exe	24192	192.168.1.175	41813	52.149.246.39	443	0	58
+svchost.exe (netsvcs -p)	14860	192.168.1.175	9501	104.208.203.88	443	0	58
+-	-	192.168.1.175	37243	18.160.71.23	443	0	57
+msedgewebview2.exe	21684	192.168.1.175	14149	20.85.77.48	443	0	57
+msedge.exe	39124	192.168.1.175	55292	135.234.174.40	443	0	57
+firefox.exe	8080	192.168.1.175	45017	18.97.36.52	443	0	56
+OneDrive.exe	3024	192.168.1.175	33149	104.208.203.88	443	0	56
+msedge.exe	39124	192.168.1.175	46725	140.82.113.25	443	0	56
+claude.exe	63172	192.168.1.175	28726	18.97.36.74	443	0	55
+msedgewebview2.exe	21684	192.168.1.175	55715	18.160.78.26	443	0	48
+firefox.exe	8080	192.168.1.175	7705	74.125.21.19	443	0	42
+gitkraken.exe	28892	192.168.1.175	41988	104.26.15.40	443	0	41
+DuckDuckGo.exe	24192	192.168.1.175	5615	40.89.244.232	443	0	40
+Obsidian.exe	30976	192.168.1.175	6326	104.26.0.147	443	0	34
+gitkraken.exe	28892	192.168.1.175	51606	104.26.15.125	443	0	30
+msedgewebview2.exe	21684	192.168.1.175	59810	35.201.97.85	443	0	30
+firefox.exe	8080	192.168.1.175	34763	34.107.243.93	443	0	29
+msedgewebview2.exe	21684	192.168.1.175	45875	35.190.39.113	443	0	29
+firefox.exe	39668	192.168.1.175	25297	34.107.243.93	443	0	28
+firefox.exe	25028	192.168.1.175	28013	34.107.243.93	443	0	28
+msedgewebview2.exe	21684	192.168.1.175	21512	35.190.39.113	443	0	27
+MouseWithoutBorders.exe	13100	192.168.1.175	7738	192.168.1.187	15101	0	6
+MouseWithoutBorders.exe	13100	192.168.1.175	47919	192.168.1.176	15101	0	6
+msedge.exe	39124	192.168.1.175	35830	192.168.1.183	8009	0	5
+Rider.Backend.exe	43300	IPv4 loopback	47052	IPv4 loopback	26222	0	0
+rider64.exe	46880	IPv4 loopback	26222	IPv4 loopback	47052	0	0
+idea64.exe	60384	IPv4 loopback	63346	IPv4 loopback	36307	0	0
+rider64.exe	46880	IPv4 loopback	63345	IPv4 loopback	32553	0	0
+webstorm64.exe	38604	IPv4 loopback	63342	IPv4 loopback	34338	0	0
+NitroSense.exe	18328	IPv6 loopback	51609	IPv6 loopback	15150	0	0
+NitroSense.exe	18328	IPv6 loopback	45296	IPv6 loopback	4449	0	0
+NitroSense.exe	18328	IPv6 loopback	45295	IPv6 loopback	5141	0	0
+NitroSense.exe	18328	IPv6 loopback	45293	IPv6 loopback	4343	0	0
+NitroSense.exe	19372	IPv6 loopback	27553	IPv6 loopback	15150	0	0
+NitroSense.exe	19372	IPv6 loopback	15150	IPv6 loopback	51609	0	0
+NitroSense.exe	19372	IPv6 loopback	15150	IPv6 loopback	27553	0	0
+AcerQAAgent.exe	6192	IPv6 loopback	5141	IPv6 loopback	45295	0	0
+AcerDIAgent.exe	6084	IPv6 loopback	4449	IPv6 loopback	45296	0	0
+AcerCCAgent.exe	6092	IPv6 loopback	4343	IPv6 loopback	45293	0	0
+JetBrains.ProcessEnumerator.Worker.exe	64660	IPv4 loopback	61161	IPv4 loopback	39325	0	0
+JetBrains.ProcessEnumerator.Worker.exe	64660	IPv4 loopback	61160	IPv4 loopback	44724	0	0
+Rider.Backend.exe	43300	IPv4 loopback	54965	IPv4 loopback	42420	0	0
+fsdaemon-1.48.261.exe	43040	IPv4 loopback	53876	IPv4 loopback	53875	0	0
+Fleet.exe	33900	IPv4 loopback	53875	IPv4 loopback	53876	0	0
+fsdaemon-1.48.261.exe	43040	IPv4 loopback	53873	IPv4 loopback	53872	0	0
+Fleet.exe	33900	IPv4 loopback	53872	IPv4 loopback	53873	0	0
+AQAUserPS.exe	17956	IPv4 loopback	50380	IPv4 loopback	5141	0	0
+rider64.exe	46880	IPv4 loopback	44724	IPv4 loopback	61160	0	0
+rider64.exe	46880	IPv4 loopback	42926	IPv4 loopback	42422	0	0
+rider64.exe	46880	IPv4 loopback	42925	IPv4 loopback	42421	0	0
+JetBrains.DPA.Protocol.Backend.exe	48572	IPv4 loopback	42422	IPv4 loopback	42926	0	0
+JetBrains.DPA.Protocol.Backend.exe	48572	IPv4 loopback	42421	IPv4 loopback	42925	0	0
+JetBrains.DPA.Protocol.Backend.exe	48572	IPv4 loopback	42420	IPv4 loopback	54965	0	0
+JetBrains.ProcessEnumerator.Worker32.exe	58860	IPv4 loopback	39325	IPv4 loopback	61161	0	0
+firefox.exe	8080	IPv4 loopback	27022	IPv4 loopback	27021	0	0
+firefox.exe	15256	IPv4 loopback	14669	IPv4 loopback	14668	0	0
+firefox.exe	25028	IPv4 loopback	14667	IPv4 loopback	14666	0	0
+firefox.exe	39668	IPv4 loopback	10157	IPv4 loopback	10156	0	0
+AcerQAAgent.exe	6192	IPv4 loopback	5141	IPv4 loopback	50380	0	0
+ProtonDrive.exe	26612	192.168.1.175	45756	185.70.42.43	443	-	-
+msedge.exe	44300	IPv4 loopback	45755	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	13542	IPv6 loopback	9229	-	-
+msedge.exe	44300	IPv4 loopback	63949	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	26094	IPv6 loopback	9229	-	-
+OneDrive.exe	3024	192.168.1.175	26095	13.107.137.11	443	-	-
+msedge.exe	44300	IPv4 loopback	11928	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	2892	IPv6 loopback	9229	-	-
+-	-	192.168.1.175	59130	18.165.116.107	443	-	-
+-	-	192.168.1.175	59129	18.165.116.107	443	-	-
+-	-	192.168.1.175	59128	18.165.116.107	443	-	-
+webstorm64.exe	38604	192.168.1.175	59127	18.160.71.23	443	-	-
+msedge.exe	44300	IPv4 loopback	12846	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	59126	IPv6 loopback	9229	-	-
+-	-	192.168.1.175	1729	108.156.152.81	443	-	-
+-	-	192.168.1.175	1728	108.156.152.81	443	-	-
+-	-	192.168.1.175	1727	108.156.152.81	443	-	-
+-	-	192.168.1.175	1726	108.156.152.81	443	-	-
+-	-	192.168.1.175	1725	108.156.152.81	443	-	-
+msedge.exe	44300	IPv4 loopback	1724	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	53769	IPv6 loopback	9229	-	-
+-	-	192.168.1.175	5614	18.165.116.107	443	-	-
+msedge.exe	44300	IPv4 loopback	5613	IPv4 loopback	9229	-	-
+-	-	192.168.1.175	38864	3.161.150.100	443	-	-
+msedge.exe	44300	IPv6 loopback	38861	IPv6 loopback	9229	-	-
+-	-	192.168.1.175	38863	3.161.150.100	443	-	-
+-	-	192.168.1.175	38862	3.161.150.100	443	-	-
+-	-	192.168.1.175	32816	3.161.150.100	443	-	-
+-	-	192.168.1.175	32815	3.161.150.100	443	-	-
+-	-	192.168.1.175	32814	3.161.150.100	443	-	-
+-	-	192.168.1.175	32813	3.161.150.100	443	-	-
+-	-	192.168.1.175	32812	3.161.150.100	443	-	-
+-	-	192.168.1.175	32811	3.161.150.100	443	-	-
+-	-	192.168.1.175	32810	3.161.150.100	443	-	-
+-	-	192.168.1.175	32809	3.161.150.100	443	-	-
+-	-	192.168.1.175	32808	3.161.150.100	443	-	-
+firefox.exe	25028	192.168.1.175	32807	151.101.65.91	443	-	-
+-	-	192.168.1.175	32806	3.161.150.100	443	-	-
+-	-	192.168.1.175	32805	3.161.150.100	443	-	-
+-	-	192.168.1.175	32804	3.161.150.100	443	-	-
+-	-	192.168.1.175	32803	3.161.150.100	443	-	-
+-	-	192.168.1.175	32802	3.161.150.100	443	-	-
+-	-	192.168.1.175	32801	3.161.150.100	443	-	-
+-	-	192.168.1.175	32800	3.161.150.100	443	-	-
+-	-	192.168.1.175	32799	3.161.150.100	443	-	-
+-	-	192.168.1.175	37248	3.161.150.100	443	-	-
+-	-	192.168.1.175	37247	3.161.150.100	443	-	-
+-	-	192.168.1.175	37246	18.160.71.23	443	-	-
+-	-	192.168.1.175	37245	18.165.116.107	443	-	-
+-	-	192.168.1.175	37244	18.165.116.107	443	-	-
+-	-	192.168.1.175	32798	3.161.150.100	443	-	-
+-	-	192.168.1.175	32797	3.161.150.100	443	-	-
+-	-	192.168.1.175	32796	108.156.152.81	443	-	-
+-	-	192.168.1.175	32795	108.156.152.81	443	-	-
+-	-	192.168.1.175	32794	108.156.152.81	443	-	-
+-	-	192.168.1.175	32793	108.156.152.81	443	-	-
+msedge.exe	44300	IPv4 loopback	32792	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	37242	IPv6 loopback	9229	-	-
+msedge.exe	44300	IPv4 loopback	39851	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	37278	IPv6 loopback	9229	-	-
+msedge.exe	44300	IPv4 loopback	5004	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	33506	IPv6 loopback	9229	-	-
+msedge.exe	44300	IPv4 loopback	13688	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	6325	IPv6 loopback	9229	-	-
+Widgets.exe	5308	192.168.1.175	40384	23.212.97.146	443	0	-
+-	-	192.168.1.175	40383	18.165.116.107	443	-	-
+msedge.exe	44300	IPv4 loopback	40382	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	39109	IPv6 loopback	9229	-	-
+svchost.exe (netsvcs -p)	67932	192.168.1.175	2106	40.126.29.7	443	-	-
+svchost.exe (netsvcs -p)	67932	192.168.1.175	2105	40.126.29.7	443	-	-
+backgroundTaskHost.exe	57700	192.168.1.175	2104	20.1.248.118	443	-	-
+backgroundTaskHost.exe	57700	192.168.1.175	2103	20.1.248.118	443	-	-
+msedge.exe	44300	IPv4 loopback	2102	IPv4 loopback	9229	-	-
+msedge.exe	44300	IPv6 loopback	50995	IPv6 loopback	9229	-	-
+msedge.exe	44300	IPv4 loopback	25542	IPv4 loopback	9229	-	-
+DuckDuckGo.exe	24192	192.168.1.175	46278	52.149.246.39	443	-	-
+firefox.exe	8080	192.168.1.175	4102	140.82.112.4	443	-	-
+svchost.exe (NetworkService -p)	6360	192.168.1.175	15760	23.220.251.199	80	-	-
+ProtonDrive.exe	26612	192.168.1.175	29583	185.70.42.43	443	-	-
+msedgewebview2.exe	21684	192.168.1.175	24182	185.199.110.133	443	-	-
+-	-	192.168.1.175	61028	20.189.173.7	443	-	-
+-	-	192.168.1.175	62179	104.208.16.89	443	-	-
+-	-	192.168.1.175	32213	52.179.73.52	443	-	-
+msedge.exe	39124	192.168.1.175	62788	185.70.42.36	443	-	-
+jetbrains-toolbox.exe	24220	IPv4 loopback	36307	IPv4 loopback	63346	0	-
+jetbrains-toolbox.exe	24220	IPv4 loopback	32553	IPv4 loopback	63345	0	-
+jetbrains-toolbox.exe	24220	IPv4 loopback	34338	IPv4 loopback	63342	0	-
+NitroSense.exe	19372	192.168.1.175	45951	172.217.215.188	5228	-	-
+msedgewebview2.exe	21684	192.168.1.175	26963	20.85.77.48	443	0	-
+ADESv2Svc.exe	5808	IPv4 loopback	51779	IPv4 loopback	27551	-	-
+backgroundTaskHost.exe	29472	192.168.1.175	51261	23.209.29.248	443	-	-
+WUDFHost.exe	11780	IPv4 loopback	49735	IPv4 loopback	49734	-	-
+WUDFHost.exe	11780	IPv4 loopback	49734	IPv4 loopback	49735	-	-
+ipfsvc.exe	6544	IPv4 loopback	49733	IPv4 loopback	49732	-	-
+ipfsvc.exe	6544	IPv4 loopback	49732	IPv4 loopback	49733	-	-
+NVDisplay.Container.exe	3960	IPv4 loopback	49731	IPv4 loopback	49730	-	-
+NVDisplay.Container.exe	3960	IPv4 loopback	49730	IPv4 loopback	49731	-	-
+WUDFHost.exe	11704	IPv4 loopback	49729	IPv4 loopback	49728	-	-
+WUDFHost.exe	11704	IPv4 loopback	49728	IPv4 loopback	49729	-	-
+AcerSysMonitorService.exe	13084	IPv4 loopback	49689	IPv4 loopback	49688	-	-
+AcerSysMonitorService.exe	13084	IPv4 loopback	49688	IPv4 loopback	49689	-	-
+AcerAgentService.exe	6832	IPv4 loopback	49673	IPv4 loopback	49672	-	-
+AcerAgentService.exe	6832	IPv4 loopback	49672	IPv4 loopback	49673	-	-
+ADESv2Svc.exe	5808	IPv4 loopback	49670	IPv4 loopback	49669	-	-
+ADESv2Svc.exe	5808	IPv4 loopback	49669	IPv4 loopback	49670	-	-
+AcerAgentService.exe	6832	IPv4 loopback	46933	IPv4 loopback	27550	-	-
+mc-fw-host.exe	6996	192.168.1.175	43942	13.223.19.204	443	-	-
+mc-fw-host.exe	6996	IPv4 loopback	43941	IPv4 loopback	43940	-	-
+mc-fw-host.exe	6996	IPv4 loopback	43940	IPv4 loopback	43941	-	-
+firefox.exe	24088	IPv4 loopback	37667	IPv4 loopback	37666	-	-
+firefox.exe	24088	IPv4 loopback	37666	IPv4 loopback	37667	-	-
+NitroSense.exe	19372	IPv4 loopback	27551	IPv4 loopback	51779	-	-
+NitroSense.exe	19372	IPv4 loopback	27550	IPv4 loopback	46933	-	-
+firefox.exe	8080	IPv4 loopback	27021	IPv4 loopback	27022	0	-
+cef_server.exe	52016	IPv4 loopback	26261	IPv4 loopback	6189	0	-
+cef_server.exe	52016	IPv4 loopback	26260	IPv4 loopback	6189	0	-
+cef_server.exe	52016	IPv4 loopback	26259	IPv4 loopback	6189	0	-
+rider64.exe	46880	IPv4 loopback	26256	IPv4 loopback	6188	-	-
+rider64.exe	46880	IPv4 loopback	26255	IPv4 loopback	6188	-	-
+cef_server.exe	52016	IPv4 loopback	26250	IPv4 loopback	26249	-	-
+cef_server.exe	52016	IPv4 loopback	26249	IPv4 loopback	26250	-	-
+cef_server.exe	52016	IPv4 loopback	26248	IPv4 loopback	26247	-	-
+cef_server.exe	52016	IPv4 loopback	26247	IPv4 loopback	26248	-	-
+firefox.exe	18356	IPv4 loopback	14750	IPv4 loopback	14749	-	-
+firefox.exe	18356	IPv4 loopback	14749	IPv4 loopback	14750	-	-
+firefox.exe	15256	IPv4 loopback	14668	IPv4 loopback	14669	0	-
+firefox.exe	25028	IPv4 loopback	14666	IPv4 loopback	14667	0	-
+firefox.exe	39668	IPv4 loopback	10156	IPv4 loopback	10157	0	-
+rider64.exe	46880	IPv4 loopback	6189	IPv4 loopback	26261	-	-
+rider64.exe	46880	IPv4 loopback	6189	IPv4 loopback	26260	-	-
+rider64.exe	46880	IPv4 loopback	6189	IPv4 loopback	26259	-	-
+cef_server.exe	52016	IPv4 loopback	6188	IPv4 loopback	26255	0	-
+cef_server.exe	52016	IPv4 loopback	6188	IPv4 loopback	26256	0	-
